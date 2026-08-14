@@ -308,12 +308,10 @@
   </div>
 
   <div class="card-block">
-    <h3>课文活动 3 — Xem hình, nói cách diễn đạt书面语/口语</h3>
-    <p class="tag-note">* Bài tập gốc trong sách dùng 4 hình ảnh minh họa (không có trong tài liệu chữ được cung cấp) để học sinh nói cách diễn đạt 书面语 hoặc 口语 tương ứng. Vì chưa có ảnh gốc nên phần này chỉ để trống cho bạn tự làm khi xem sách giấy, không đưa vào phần chấm điểm.</p>
-    <textarea class="answer-box" placeholder="(1) ..."></textarea>
-    <textarea class="answer-box" style="margin-top:8px" placeholder="(2) ..."></textarea>
-    <textarea class="answer-box" style="margin-top:8px" placeholder="(3) ..."></textarea>
-    <textarea class="answer-box" style="margin-top:8px" placeholder="(4) ..."></textarea>
+    <h3>课文活动 3 — Xem hình, nói cách diễn đạt 书面语/口语</h3>
+    <p class="tag-note">Nhìn 4 hình dưới đây, nói xem mỗi hình dùng từ/câu 书面语 (biển báo, văn viết trang trọng) và 口语 (cách nói thường ngày) như thế nào.</p>
+    <img src="images/bai2-hoatdong3.png" alt="4 hình minh họa hoạt động 3" style="max-width:100%;border-radius:10px;border:1px solid var(--moss-200);margin-bottom:14px;">
+    <div id="img4Wrap"></div>
   </div>
 </section>
 
@@ -1108,6 +1106,31 @@ function renderTextQA(){
   });
 }
 renderTextQA();
+
+// 课文活动 3 — xem hình nói 书面语/口语
+const img4Items = [
+  {label:"(1) 🚭 Biển cấm hút thuốc", hint:"书面语 (biển báo): 禁止吸烟 / 请勿吸烟。 口语 (nói thường ngày): 不能抽烟 / 别抽烟了。"},
+  {label:"(2) 👰🤵 Cô dâu chú rể", hint:"书面语: 举行婚礼 / 喜结连理。 口语: 办婚礼 / 结婚了。"},
+  {label:"(3) 📷 Biển cấm chụp ảnh", hint:"书面语 (biển báo): 禁止拍照 / 请勿拍照。 口语: 不能拍照 / 别照相了。"},
+  {label:"(4) 🍽️ Bàn tiệc bày biện trang trọng", hint:"书面语: 设宴 / 摆宴席。 口语: 请客吃饭 / 摆一桌请大家吃饭。"}
+];
+function renderImg4(){
+  const wrap = document.getElementById('img4Wrap');
+  wrap.innerHTML = '';
+  img4Items.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    div.innerHTML = `<div>${item.label}</div>
+      <textarea class="answer-box" placeholder="书面语: ... / 口语: ..."></textarea>
+      <button class="btn small secondary" data-hint="${idx}">👁 Xem gợi ý đáp án</button>
+      <div class="hint-box" id="img4hint-${idx}">${item.hint}</div>`;
+    wrap.appendChild(div);
+    div.querySelector('[data-hint]').addEventListener('click', ()=>{
+      document.getElementById('img4hint-'+idx).classList.toggle('show');
+    });
+  });
+}
+renderImg4();
 
 /* =========================================================
    TAB IV — 课文对照
