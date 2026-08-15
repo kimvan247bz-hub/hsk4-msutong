@@ -111,7 +111,7 @@
     background:var(--paper); border:2px dashed var(--moss-400);
   }
   .flip-face.front{ align-items:center; justify-content:center; text-align:center; background:linear-gradient(160deg,#fff,var(--moss-100)); }
-  .flip-face.back{ transform:rotateY(180deg); background:var(--moss-100); justify-content:flex-start; }
+  .flip-face.back{ transform:rotateY(180deg); background:var(--moss-100); justify-content:flex-start; overflow-y:auto; }
   .flip-face.front::before,.flip-face.front::after{
     content:''; position:absolute; width:16px; height:16px; background:var(--cream);
     border:2px dashed var(--moss-400); border-radius:50%; top:50%; transform:translateY(-50%);
@@ -215,8 +215,11 @@
     .toolbar label{ font-size:.85rem; }
     .rate-select{ font-size:.82rem; padding:4px 6px; }
     .cards-grid{ grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
-    .flip-card{ height:auto; min-height:200px; }
-    .card-hanzi{ font-size:1.4rem; }
+    .flip-card{ height:250px; }
+    .card-hanzi{ font-size:1.3rem; }
+    .back-pinyin{ font-size:.95rem; }
+    .back-meaning{ font-size:.92rem; }
+    .back-example{ font-size:.78rem; }
     .modal-overlay{ padding:14px 6px; }
     .modal-box{ padding:16px 14px; max-width:100%; }
     .char-analysis-grid{ grid-template-columns:1fr; gap:12px; }
