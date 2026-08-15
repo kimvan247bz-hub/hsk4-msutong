@@ -196,15 +196,19 @@
   /* ============ RESPONSIVE / MOBILE ============ */
   @media (max-width: 640px){
     html{ font-size:15px; }
-    .topbar{ padding:10px 12px; gap:8px; }
+    .topbar{ position:static; padding:10px 12px; gap:8px; box-shadow:none; }
     .topbar h1{ font-size:1.08rem; }
     .topbar .sub{ font-size:.75rem; }
     .home-btn{ padding:5px 10px; font-size:.8rem; }
-    nav.tabs{ padding:8px 8px; gap:4px; top:56px; }
+    nav.tabs{ position:sticky; top:0; padding:8px 8px; gap:4px; }
     nav.tabs button{ padding:6px 9px; font-size:.78rem; }
     main{ padding:12px 10px 40px; }
     .card-block{ padding:14px 12px; margin-bottom:14px; }
     .btn{ padding:7px 12px; font-size:.85rem; }
+    .btn.small{ padding:4px 8px; font-size:.76rem; }
+    .toolbar{ gap:8px; }
+    .toolbar label{ font-size:.85rem; }
+    .rate-select{ font-size:.82rem; padding:4px 6px; }
     .cards-grid{ grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
     .flip-card{ height:auto; min-height:200px; }
     .card-hanzi{ font-size:1.4rem; }
@@ -218,6 +222,7 @@
     .tile{ padding:5px 9px; font-size:.9rem; }
     .bi-line{ grid-template-columns:22px 1fr; gap:6px; }
     .bi-line .hanzi{ font-size:1rem; }
+    #dictationDiff{ font-size:.95rem !important; line-height:1.8 !important; }
     .audio-row{ gap:6px; }
     .audio-row audio{ max-width:100%; flex:1 1 100%; }
     .ex-item{ padding:8px 10px; }
