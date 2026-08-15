@@ -137,7 +137,7 @@
   .char-analysis-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:16px; margin-top:12px; }
   .char-block{ border:1px solid var(--moss-200); border-radius:12px; padding:14px; background:var(--moss-100); }
   .char-writer-row{ display:flex; gap:14px; align-items:flex-start; }
-  .writer-target{ width:110px; height:110px; background:#fff; border:1px solid var(--moss-300); border-radius:8px; flex:none; }
+  .writer-target{ width:110px; height:110px; background:#fff; border:1px solid var(--moss-300); border-radius:8px; flex:none; overflow:hidden; }
   .char-info{ flex:1; font-size:.85rem; }
   .char-info dt{ font-weight:700; color:var(--moss-800); margin-top:6px; }
   .char-info dd{ margin:0 0 2px; }
@@ -511,6 +511,8 @@
 
 // ---- charDict dùng chung toàn bộ file (chỉ thêm chữ mới) ----
 const charDict = {
+  "中": {r:"丨", f:"指事 (nguồn gốc còn nhiều thuyết) — nét sổ (丨) xuyên thẳng qua khung hình chữ nhật (口), chỉ vào đúng vị trí chính giữa", s:"Độc thể, 4 nét", m:"Một cây gậy (丨) cắm xuyên chính giữa cái khung (口) — chỉ đúng vị trí \"ở giữa, trung tâm\".", c:["中国","中间","中西合璧","中式"]},
+  "西": {r:"西", f:"象形 — vẽ hình tổ chim, khi mặt trời lặn (hướng Tây) chim mới về tổ nên mượn chỉ phương Tây", s:"Độc thể, 6 nét", m:"Chim bay về tổ đúng lúc mặt trời lặn ở hướng \"Tây\".", c:["西装","西式","东西","西方"]},
   "说": {r:"讠(言)", f:"形声 — 讠 biểu ý (lời nói), 兑 biểu âm", s:"Trái-phải, 9 nét", m:"Lời nói (讠) phát ra vui vẻ, hanh thông (兑) — tức là \"nói, giải thích\".", c:["说话","小说","听说","说明"]},
   "曹": {r:"曰", f:"会意／形声 (cách phân loại còn tranh luận) — liên quan 曰 (nói), nghĩa gốc \"bọn, nhóm người\", sau dùng làm họ", s:"Trên-dưới, 11 nét", m:"Hai bó \"东\" giản lược xếp trên chữ 曰 — vốn nghĩa \"nhóm người cùng nói\", nay quen dùng làm họ Tào.", c:["曹操","姓曹","曹雪芹","尔曹(văn ngôn)"]},
   "操": {r:"扌(手)", f:"形声 — 扌 biểu ý (tay), 喿 biểu âm", s:"Trái-phải, 16 nét", m:"Tay (扌) bận rộn thao tác giữa tiếng ồn ào (喿, nhiều miệng chim kêu) — \"thao tác, vận động\".", c:["操作","体操","操心","操场"]},
@@ -854,8 +856,11 @@ function openCharAnalysis(wordId){
     const key = ch + '_' + idx;
     setTimeout(()=>{
       try{
+        const targetEl = document.getElementById('w-'+key);
+        const size = (targetEl && targetEl.clientWidth) ? targetEl.clientWidth : 110;
+        const pad = Math.max(4, Math.round(size * 0.055));
         const writer = HanziWriter.create('w-'+key, ch, {
-          width: 110, height: 110, padding: 6,
+          width: size, height: size, padding: pad,
           strokeAnimationSpeed: 1, delayBetweenStrokes: 180,
           showOutline: true,
           charDataLoader: function(char, onComplete){

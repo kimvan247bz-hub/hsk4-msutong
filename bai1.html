@@ -137,7 +137,7 @@
   .char-analysis-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:16px; margin-top:12px; }
   .char-block{ border:1px solid var(--moss-200); border-radius:12px; padding:14px; background:var(--moss-100); }
   .char-writer-row{ display:flex; gap:14px; align-items:flex-start; }
-  .writer-target{ width:110px; height:110px; background:#fff; border:1px solid var(--moss-300); border-radius:8px; flex:none; }
+  .writer-target{ width:110px; height:110px; background:#fff; border:1px solid var(--moss-300); border-radius:8px; flex:none; overflow:hidden; }
   .char-info{ flex:1; font-size:.85rem; }
   .char-info dt{ font-weight:700; color:var(--moss-800); margin-top:6px; }
   .char-info dd{ margin:0 0 2px; }
@@ -815,8 +815,11 @@ function openCharAnalysis(wordId){
     const key = ch + '_' + idx;
     setTimeout(()=>{
       try{
+        const targetEl = document.getElementById('w-'+key);
+        const size = (targetEl && targetEl.clientWidth) ? targetEl.clientWidth : 110;
+        const pad = Math.max(4, Math.round(size * 0.055));
         const writer = HanziWriter.create('w-'+key, ch, {
-          width: 110, height: 110, padding: 6,
+          width: size, height: size, padding: pad,
           strokeAnimationSpeed: 1, delayBetweenStrokes: 180,
           showOutline: true,
           charDataLoader: function(char, onComplete){
