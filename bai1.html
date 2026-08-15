@@ -192,6 +192,40 @@
   .audio-row audio{ height:34px; max-width:280px; }
   .audio-row .audio-label{ font-size:.85rem; color:var(--moss-700); font-weight:700; white-space:nowrap; }
   .audio-missing{ font-size:.8rem; color:var(--red); display:none; }
+
+  /* ============ RESPONSIVE / MOBILE ============ */
+  @media (max-width: 640px){
+    html{ font-size:15px; }
+    .topbar{ padding:10px 12px; gap:8px; }
+    .topbar h1{ font-size:1.08rem; }
+    .topbar .sub{ font-size:.75rem; }
+    .home-btn{ padding:5px 10px; font-size:.8rem; }
+    nav.tabs{ padding:8px 8px; gap:4px; top:56px; }
+    nav.tabs button{ padding:6px 9px; font-size:.78rem; }
+    main{ padding:12px 10px 40px; }
+    .card-block{ padding:14px 12px; margin-bottom:14px; }
+    .btn{ padding:7px 12px; font-size:.85rem; }
+    .cards-grid{ grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
+    .flip-card{ height:auto; min-height:200px; }
+    .card-hanzi{ font-size:1.4rem; }
+    .modal-overlay{ padding:14px 6px; }
+    .modal-box{ padding:16px 14px; max-width:100%; }
+    .char-analysis-grid{ grid-template-columns:1fr; gap:12px; }
+    .char-writer-row{ flex-wrap:wrap; }
+    .writer-target{ width:90px; height:90px; }
+    .grammar-formula{ font-size:.92rem; padding:8px 10px; }
+    .tiles-wrap{ gap:6px; padding:8px; }
+    .tile{ padding:5px 9px; font-size:.9rem; }
+    .bi-line{ grid-template-columns:22px 1fr; gap:6px; }
+    .bi-line .hanzi{ font-size:1rem; }
+    .audio-row{ gap:6px; }
+    .audio-row audio{ max-width:100%; flex:1 1 100%; }
+    .ex-item{ padding:8px 10px; }
+    .choice-btn{ padding:4px 9px; font-size:.9rem; }
+  }
+  @media (max-width: 380px){
+    .cards-grid{ grid-template-columns:1fr 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -271,8 +305,6 @@
 <!-- ========== TAB III ========== -->
 <section class="panel" id="panel-tab3">
   <div class="card-block">
-    <h2>III. 课文练习</h2>
-
     <h3>词语活动 1 — Chọn từ đúng theo mô tả</h3>
     <div id="wordAct1"></div>
     <button class="btn" id="checkWordAct1">✅ Kiểm tra</button>
@@ -1001,7 +1033,7 @@ const wordAct2Items = [
   {hanzi:"太好了，今天能尝到李梅的拿手菜！喝的我来带！", vi:"Tuyệt quá, hôm nay được nếm món tủ của Lý Mai rồi! Đồ uống để tôi mang!"},
   {hanzi:"啊，今天有口福了，水煮鱼我最爱了。", vi:"A, hôm nay có phúc được ăn ngon rồi, cá thủy chử là món tôi thích nhất."},
   {hanzi:"杯子端起来，筷子拿起来，美味的晚餐吃起来！", vi:"Cầm ly lên, cầm đũa lên, bữa tối thơm ngon ăn thôi nào!"},
-  {hanzi:"糟了！忙着做菜，米饭我忘了煮了。", vi:"Chết rồi! Mải làm món ăn, cơm tôi quên nấu mất rồi."}
+  {hanzi:"糟了！忙着做菜，米饭我忘了煮了。", vi:"Chết rồi! Mải làm món ăn, cơm tôi quên nấu mất rồi。"}
 ];
 function renderWordAct2(){
   const wrap = document.getElementById('wordAct2');
