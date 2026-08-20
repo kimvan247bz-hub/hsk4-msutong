@@ -31,6 +31,7 @@
     --accent-4:#c69a2e;
     --accent-5:#b8586b;
     --accent-6:#1f6b4a;
+    --accent-7:#6b5090;
     font-size:16px;
   }
   *{box-sizing:border-box;}
@@ -77,12 +78,14 @@
   nav.tabs button[data-tab="tab4"].active{ background:var(--accent-4); border-color:var(--accent-4); }
   nav.tabs button[data-tab="tab5"].active{ background:var(--accent-5); border-color:var(--accent-5); }
   nav.tabs button[data-tab="tab6"].active{ background:var(--accent-6); border-color:var(--accent-6); }
+  nav.tabs button[data-tab="tab7"].active{ background:var(--accent-7); border-color:var(--accent-7); }
   #panel-tab2 h2{ color:var(--accent-2); }
   #panel-tab3 h2{ color:var(--accent-3); }
   #panel-tab4 h2{ color:var(--accent-4); }
   #panel-tab5 h2{ color:var(--accent-5); }
   #panel-tab6 h2{ color:var(--accent-6); }
-  #panel-tab2 .grammar-formula{ background:var(--accent-2); color:#fff5ec; }
+  #panel-tab7 h2{ color:var(--accent-7); }
+  #panel-tab3 .grammar-formula{ background:var(--accent-3); color:#fff5ec; }
   #panel-tab5 .hide-pct.active-pct{ background:var(--accent-5); border-color:var(--accent-5); }
   main{ max-width:980px; margin:0 auto; padding:18px 16px 60px; }
   section.panel{ display:none; animation:fade .25s ease; }
@@ -97,6 +100,7 @@
   .btn:hover{ background:var(--moss-700); }
   .btn.secondary{ background:var(--moss-200); color:var(--moss-900); }
   .btn.secondary:hover{ background:var(--moss-300); }
+  .btn.secondary.mode-active{ background:var(--moss-600); color:#fff; }
   .btn.small{ padding:4px 10px; font-size:.8rem; }
   label.chk{ font-size:.88rem; display:flex; align-items:center; gap:6px; cursor:pointer; }
 
@@ -178,6 +182,8 @@
   .bi-line .vi{ font-size:.92rem; color:#555; overflow-wrap:break-word; word-break:break-word; }
   .bi-line .stage{ font-style:italic; color:var(--gray); }
   .bi-line .sp-btn{ background:none; border:none; cursor:pointer; font-size:1.1rem; color:var(--moss-600); }
+  .hide-py .pinyin{ display:none; }
+  .hide-vi .vi{ display:none; }
 
   /* Dictation */
   .diff-char{ padding:0 1px; }
@@ -188,6 +194,24 @@
   .reveal-word{ background:var(--moss-300); color:var(--moss-300); border-radius:4px; cursor:pointer; padding:0 2px; }
   .reveal-word.shown{ background:transparent; color:var(--ink); }
   .hide-pct.active-pct{ background:var(--moss-700); color:#fff; border-color:var(--moss-700); }
+
+  /* Bước luyện tập (Tab IV) */
+  .step-dots{ display:flex; gap:6px; margin-bottom:10px; }
+  .step-dot{ width:10px; height:10px; border-radius:50%; background:var(--moss-300); }
+  .step-dot.active{ background:var(--accent-4); }
+  .step-indicator{ font-weight:700; color:var(--accent-4); margin-bottom:14px; font-size:.95rem; }
+  #stepPrevBtn:disabled{ opacity:.4; cursor:not-allowed; }
+
+  /* Sub-nav học thuộc (Tab V) */
+  .subrec-nav{ display:flex; gap:8px; margin-bottom:14px; flex-wrap:wrap; }
+  .subrec-nav button{ padding:6px 14px; border-radius:20px; border:1.5px solid var(--accent-5); background:#fff; color:var(--accent-5); cursor:pointer; font-weight:700; font-size:.88rem; }
+  .subrec-nav button.active{ background:var(--accent-5); color:#fff; }
+
+  /* Quiz nghe-đoán chữ (Tab II) */
+  .quiz-progress{ font-size:.92rem; color:var(--moss-700); margin-bottom:10px; font-weight:700; }
+
+  /* Test tổng hợp (Tab VII) */
+  .final-score-big{ font-size:1.4rem; font-weight:700; color:var(--moss-900); margin-top:14px; }
 
   footer{ text-align:center; font-size:.8rem; color:var(--gray); padding:24px; }
   .tag-note{ font-size:.82rem; color:var(--gray); font-style:italic; }
@@ -235,6 +259,8 @@
     .audio-row audio{ max-width:100%; flex:1 1 100%; }
     .ex-item{ padding:8px 10px; }
     .choice-btn{ padding:4px 9px; font-size:.9rem; }
+    .subrec-nav button{ padding:5px 10px; font-size:.8rem; }
+    .step-indicator{ font-size:.88rem; }
   }
   @media (max-width: 380px){
     .cards-grid{ grid-template-columns:1fr 1fr; }
@@ -252,31 +278,67 @@
 </div>
 
 <nav class="tabs">
-  <button class="tab-btn active" data-tab="tab1">I. 词语卡</button>
-  <button class="tab-btn" data-tab="tab2">II. 语法</button>
-  <button class="tab-btn" data-tab="tab3">III. 课文练习</button>
-  <button class="tab-btn" data-tab="tab4">IV. 课文对照</button>
-  <button class="tab-btn" data-tab="tab5">V. 听写背诵</button>
+  <button class="tab-btn active" data-tab="tab1">I. 课文</button>
+  <button class="tab-btn" data-tab="tab2">II. 词语卡</button>
+  <button class="tab-btn" data-tab="tab3">III. 语法</button>
+  <button class="tab-btn" data-tab="tab4">IV. 练习</button>
+  <button class="tab-btn" data-tab="tab5">V. 背诵</button>
   <button class="tab-btn" data-tab="tab6">VI. 拓展阅读</button>
+  <button class="tab-btn" data-tab="tab7">VII. 综合测试</button>
 </nav>
 
 <main>
 
-<!-- ========== TAB I ========== -->
+<!-- ========== TAB I — 课文 ========== -->
 <section class="panel active" id="panel-tab1">
+  <div class="card-block">
+    <h2>I. 课文 — 主课文 song ngữ</h2>
+    <p class="tag-note">Đọc lướt toàn bộ hội thoại trước khi làm bài tập. Bấm 🔊 để nghe lại từng câu (giọng tổng hợp).</p>
+    <div class="audio-row">
+      <span class="audio-label">🎧 Băng gốc 03-2 (toàn bài):</span>
+      <audio class="orig-audio" data-code="03-2" controls preload="metadata" src="audio/03-2.mp3"></audio>
+      <span class="audio-missing" data-for="03-2">⚠️ Chưa tìm thấy audio/03-2.mp3 (xem hướng dẫn ở đầu trang)</span>
+    </div>
+    <div class="toolbar">
+      <label class="chk"><input type="checkbox" id="toggleHidePinyin"> Ẩn pinyin</label>
+      <label class="chk"><input type="checkbox" id="toggleHideVi"> Ẩn nghĩa tiếng Việt</label>
+    </div>
+    <div id="mainTextWrap"></div>
+  </div>
+</section>
+
+<!-- ========== TAB II — 词语卡 ========== -->
+<section class="panel" id="panel-tab2">
   <div class="card-block">
     <h3>🔥 热身 — Khởi động</h3>
     <div id="warmupWrap"></div>
   </div>
 
   <div class="card-block">
-    <h2>I. 词语卡 — Thẻ từ vựng</h2>
+    <h2>II. 词语卡 — Thẻ từ vựng</h2>
     <div class="toolbar">
+      <button class="btn small secondary mode-active" id="btnCardMode">🔠 Lật thẻ</button>
+      <button class="btn small secondary" id="btnQuizMode">🎧 Nghe đoán chữ</button>
       <label class="chk"><input type="checkbox" id="filterUnmastered"> Chỉ hiện từ chưa thuộc</label>
       <button class="btn secondary" id="shuffleBtn">🔀 Xáo trộn</button>
       <span class="tag-note" id="masteredCount"></span>
     </div>
     <div class="cards-grid" id="vocabGrid"></div>
+    <div id="quizModeWrap" class="card-block" style="display:none; background:var(--moss-100); box-shadow:none;">
+      <div class="quiz-progress" id="quizProgress"></div>
+      <button class="btn secondary" id="quizPlayBtn">🔊 Nghe từ</button>
+      <p class="tag-note">Nghe rồi chọn đúng chữ Hán tương ứng bên dưới:</p>
+      <div id="quizOptions"></div>
+      <div class="explain-box show" id="quizFeedback" style="min-height:20px;"></div>
+      <button class="btn" id="quizNextBtn" style="display:none; margin-top:8px;">Câu tiếp theo →</button>
+    </div>
+  </div>
+
+  <div class="card-block">
+    <h3>词语活动 1 — Xem mô tả (hoặc hình), chọn đúng từ</h3>
+    <div id="wordAct1"></div>
+    <button class="btn" id="checkWordAct1">✅ Kiểm tra</button>
+    <div class="score-box" id="wordAct1Score"></div>
   </div>
 
   <div class="card-block">
@@ -288,10 +350,10 @@
   </div>
 </section>
 
-<!-- ========== TAB II ========== -->
-<section class="panel" id="panel-tab2">
+<!-- ========== TAB III — 语法 ========== -->
+<section class="panel" id="panel-tab3">
   <div class="card-block">
-    <h2>II. 语法 — 补语小结（一）：结果补语、趋向补语和可能补语</h2>
+    <h2>III. 语法 — 补语小结（一）：结果补语、趋向补语和可能补语</h2>
     <p>Bổ ngữ (补语) là thành phần đứng sau động từ để bổ sung ý nghĩa cho hành động. Bài này ôn tập lại ba loại bổ ngữ đã học ở sơ cấp: <b>结果补语</b> (bổ ngữ kết quả — nêu kết quả cụ thể của hành động), <b>趋向补语</b> (bổ ngữ xu hướng — nêu hướng di chuyển, có thể mang nghĩa thực hoặc nghĩa mở rộng) và <b>可能补语</b> (bổ ngữ khả năng — nêu khả năng đạt được/không đạt được kết quả, dùng dạng V+得/不+bổ ngữ).</p>
     <div class="grammar-formula">V + 结果补语 ｜ V + 趋向补语 ｜ V + 得/不 + 可能补语</div>
 
@@ -326,67 +388,62 @@
       <li><b>Nhầm hướng 上/下 và 来/去 trong bổ ngữ xu hướng:</b> dùng "拿上去" khi ý muốn nói "mang xuống" (phải là "拿下去"), hoặc nhầm 来 (hướng về phía người nói) với 去 (hướng ra xa người nói).</li>
       <li><b>Ít dùng dạng khẳng định của bổ ngữ khả năng:</b> HS quen dùng phủ định "V不+bổ ngữ" (như 跑不动) mà ít dùng dạng khẳng định "V得+bổ ngữ" (như 跑得了、拿得动), khiến câu khẳng định nghe gượng hoặc dùng sai ngữ cảnh.</li>
     </ol>
-  </div>
-</section>
 
-<!-- ========== TAB III ========== -->
-<section class="panel" id="panel-tab3">
-  <div class="card-block">
-    <h3>词语活动 1 — Xem mô tả (hoặc hình), chọn đúng từ</h3>
-    <div id="wordAct1"></div>
-    <button class="btn" id="checkWordAct1">✅ Kiểm tra</button>
-    <div class="score-box" id="wordAct1Score"></div>
-  </div>
-
-  <div class="card-block">
-    <h3>词语活动 2 — Nghe và nói lại ý nghĩa (03-1)</h3>
-    <div class="audio-row">
-      <span class="audio-label">🎧 Băng gốc 03-1:</span>
-      <audio class="orig-audio" data-code="03-1" controls preload="metadata" src="audio/03-1.mp3"></audio>
-      <span class="audio-missing" data-for="03-1">⚠️ Chưa tìm thấy audio/03-1.mp3 (xem hướng dẫn ở đầu trang)</span>
-    </div>
-    <div id="wordAct2"></div>
-  </div>
-
-  <div class="card-block">
-    <h3>课文活动 1 — Đọc phân vai & trả lời câu hỏi</h3>
-    <div id="textQA"></div>
-  </div>
-
-  <div class="card-block">
-    <h3>课文活动 2 — Không nhìn bài khoá, chọn từ đúng điền vào chỗ trống</h3>
-    <div id="choiceFillWrap"></div>
-    <button class="btn" id="checkChoiceFill">✅ Kiểm tra</button>
-    <div class="score-box" id="choiceFillScore"></div>
-  </div>
-
-  <div class="card-block">
     <h3>课文活动 3 — Giới thiệu môn thể thao bạn thích nhất</h3>
-    <p class="tag-note">Nhớ dùng các bổ ngữ (结果/趋向/可能补语) vừa học ở mục II vào bài nói/viết của bạn.</p>
+    <p class="tag-note">Nhớ dùng các bổ ngữ (结果/趋向/可能补语) vừa học ở mục trên vào bài nói/viết của bạn.</p>
     <textarea class="answer-box" id="introSportBox" placeholder="Ví dụ: 我最喜欢的运动是跑步。我每天早上都跑步，跑得很累但是很开心……" style="min-height:100px"></textarea>
     <button class="btn small secondary" id="introSportHintBtn">👁 Xem gợi ý đáp án</button>
     <div class="hint-box" id="introSportHint">Gợi ý mẫu: 我最喜欢的运动是打羽毛球。我每个星期都跟朋友约时间打一到两次。第一次打的时候，我打不好，后来练习多了，慢慢打得好一点儿了。运动前我们都会先热身，不然容易受伤。打完球，我常常觉得很累，但是很开心，因为运动让我更健康。</div>
   </div>
 </section>
 
-<!-- ========== TAB IV ========== -->
+<!-- ========== TAB IV — 练习 ========== -->
 <section class="panel" id="panel-tab4">
   <div class="card-block">
-    <h2>IV. 课文对照 — 主课文 song ngữ</h2>
-    <p class="tag-note">Chữ Hán — Pinyin — Nghĩa tiếng Việt, đối chiếu từng câu/lượt thoại. Bấm 🔊 để nghe lại (giọng tổng hợp).</p>
-    <div class="audio-row">
-      <span class="audio-label">🎧 Băng gốc 03-2 (toàn bài):</span>
-      <audio class="orig-audio" data-code="03-2" controls preload="metadata" src="audio/03-2.mp3"></audio>
-      <span class="audio-missing" data-for="03-2">⚠️ Chưa tìm thấy audio/03-2.mp3 (xem hướng dẫn ở đầu trang)</span>
+    <h2>IV. 练习 — Luyện tập bài khoá</h2>
+    <div class="step-dots" id="stepDots"></div>
+    <div class="step-indicator" id="stepIndicator"></div>
+
+    <div class="step-pane" id="step-0">
+      <h3>词语活动 2 — Nghe rồi chọn đúng nghĩa (03-1)</h3>
+      <div class="audio-row">
+        <span class="audio-label">🎧 Băng gốc 03-1:</span>
+        <audio class="orig-audio" data-code="03-1" controls preload="metadata" src="audio/03-1.mp3"></audio>
+        <span class="audio-missing" data-for="03-1">⚠️ Chưa tìm thấy audio/03-1.mp3 (xem hướng dẫn ở đầu trang)</span>
+      </div>
+      <div id="wordAct2"></div>
+      <button class="btn" id="checkWordAct2">✅ Kiểm tra</button>
+      <div class="score-box" id="wordAct2Score"></div>
     </div>
-    <div id="mainTextWrap"></div>
+
+    <div class="step-pane" id="step-1" style="display:none;">
+      <h3>课文活动 2 — Không nhìn bài khoá, chọn từ đúng điền vào chỗ trống</h3>
+      <div id="choiceFillWrap"></div>
+      <button class="btn" id="checkChoiceFill">✅ Kiểm tra</button>
+      <div class="score-box" id="choiceFillScore"></div>
+    </div>
+
+    <div class="step-pane" id="step-2" style="display:none;">
+      <h3>课文活动 1 — Đọc phân vai & trả lời câu hỏi</h3>
+      <div id="textQA"></div>
+    </div>
+
+    <div class="toolbar" style="margin-top:16px;">
+      <button class="btn secondary" id="stepPrevBtn">← Câu trước</button>
+      <button class="btn" id="stepNextBtn">Câu tiếp theo →</button>
+    </div>
   </div>
 </section>
 
-<!-- ========== TAB V ========== -->
+<!-- ========== TAB V — 背诵 ========== -->
 <section class="panel" id="panel-tab5">
   <div class="card-block">
-    <h2>V. 听写背诵</h2>
+    <h2>V. 背诵 — Học thuộc lòng</h2>
+    <div class="subrec-nav">
+      <button class="active" data-rec="main">主课文</button>
+      <button data-rec="fu">副课文</button>
+      <button data-rec="reading">拓展阅读《晨跑与生活》</button>
+    </div>
     <div class="toolbar">
       <label>Tốc độ đọc:
         <select class="rate-select" id="rateSelect">
@@ -398,10 +455,10 @@
       </label>
       <button class="btn" id="readAllBtn">🔊 Đọc cả bài (giọng tổng hợp)</button>
     </div>
-    <div class="audio-row">
-      <span class="audio-label">🎧 Băng gốc 03-2 (toàn bài):</span>
-      <audio class="orig-audio" data-code="03-2" controls preload="metadata" src="audio/03-2.mp3"></audio>
-      <span class="audio-missing" data-for="03-2">⚠️ Chưa tìm thấy audio/03-2.mp3 (xem hướng dẫn ở đầu trang)</span>
+    <div class="audio-row" id="recAudioRow">
+      <span class="audio-label" id="recAudioLabel">🎧 Băng gốc 03-2 (toàn bài):</span>
+      <audio class="orig-audio" id="recAudio" data-code="03-2" controls preload="metadata" src="audio/03-2.mp3"></audio>
+      <span class="audio-missing" id="recAudioMissing" data-for="03-2">⚠️ Chưa tìm thấy file audio (xem hướng dẫn ở đầu trang)</span>
     </div>
   </div>
 
@@ -409,7 +466,7 @@
     <h3>🙈 Học thuộc lòng — ẩn dần theo %</h3>
     <div class="toolbar">
       <span>Mức ẩn:</span>
-      <button class="btn small secondary hide-pct" data-pct="0">0%</button>
+      <button class="btn small secondary hide-pct active-pct" data-pct="0">0%</button>
       <button class="btn small secondary hide-pct" data-pct="30">30%</button>
       <button class="btn small secondary hide-pct" data-pct="60">60%</button>
       <button class="btn small secondary hide-pct" data-pct="100">100%</button>
@@ -420,14 +477,14 @@
 
   <div class="card-block">
     <h3>✍️ Gõ lại toàn bài từ trí nhớ</h3>
-    <textarea class="answer-box" id="dictationInput" placeholder="Gõ lại 主课文 mà bạn nhớ được (chỉ cần phần lời thoại, không cần chú thích sân khấu)..." style="min-height:120px"></textarea>
+    <textarea class="answer-box" id="dictationInput" placeholder="Gõ lại phần bạn nhớ được (chỉ cần phần lời thoại/câu văn, không cần chú thích sân khấu)..." style="min-height:120px"></textarea>
     <button class="btn" id="checkDictation">✅ So sánh với bản gốc</button>
     <div class="score-box" id="dictationScore"></div>
     <div id="dictationDiff" style="margin-top:10px; font-family:'Noto Serif SC',serif; font-size:1.1rem; line-height:2;"></div>
   </div>
 </section>
 
-<!-- ========== TAB VI ========== -->
+<!-- ========== TAB VI — 拓展阅读 ========== -->
 <section class="panel" id="panel-tab6">
   <div class="card-block">
     <h2>VI. 拓展阅读</h2>
@@ -447,6 +504,10 @@
       <span class="audio-missing" data-for="03-3">⚠️ Chưa tìm thấy audio/03-3.mp3 (xem hướng dẫn ở đầu trang)</span>
     </div>
     <p class="tag-note">📖 Trước khi làm bài tập bên dưới, hãy đọc/nghe kỹ bài này rồi thử hai người một nhóm, kể lại nội dung bằng lời của mình cho nhau nghe (读课文，两人一组，把课文的意思复述给对方听).</p>
+    <div class="toolbar">
+      <label class="chk"><input type="checkbox" id="toggleHidePinyinFu"> Ẩn pinyin</label>
+      <label class="chk"><input type="checkbox" id="toggleHideViFu"> Ẩn nghĩa tiếng Việt</label>
+    </div>
     <div id="fuTextWrap"></div>
   </div>
 
@@ -465,25 +526,41 @@
   </div>
 
   <div class="card-block">
-    <h3>听录音，回答问题 (03-4)</h3>
+    <h3>阅读《晨跑与生活》— song ngữ toàn văn</h3>
     <div class="audio-row">
-      <span class="audio-label">🎧 Băng gốc 03-4:</span>
+      <span class="audio-label">🎧 Băng gốc 03-4 (toàn bài — chính là bài đọc này):</span>
       <audio class="orig-audio" data-code="03-4" controls preload="metadata" src="audio/03-4.mp3"></audio>
       <span class="audio-missing" data-for="03-4">⚠️ Chưa tìm thấy audio/03-4.mp3 (xem hướng dẫn ở đầu trang)</span>
     </div>
-    <p class="tag-note">Băng 03-4 chính là bài đọc "晨跑与生活" ngay bên dưới. Hãy nghe rồi trả lời; nút 🔊 cạnh mỗi câu hỏi đọc lại đoạn liên quan bằng giọng tổng hợp, phần gợi ý đáp án lấy trực tiếp từ nội dung bài đọc.</p>
-    <div id="listenQWrap"></div>
+    <button class="btn secondary" id="readAllReading">🔊 Đọc lại bằng giọng tổng hợp (dự phòng)</button>
+    <div class="toolbar" style="margin-top:10px;">
+      <label class="chk"><input type="checkbox" id="toggleHidePinyinReading"> Ẩn pinyin</label>
+      <label class="chk"><input type="checkbox" id="toggleHideViReading"> Ẩn nghĩa tiếng Việt</label>
+    </div>
+    <div id="readingWrap" style="margin-top:10px;"></div>
   </div>
 
   <div class="card-block">
-    <h3>阅读《晨跑与生活》— song ngữ toàn văn</h3>
-    <button class="btn secondary" id="readAllReading">🔊 Nghe cả bài</button>
-    <div id="readingWrap" style="margin-top:10px;"></div>
+    <h3>听录音，回答问题 (03-4)</h3>
+    <p class="tag-note">🎧 Băng gốc 03-4 đã có ở mục "阅读《晨跑与生活》" ngay phía trên — vì đó chính là bản đọc gốc của bài đọc này. Hãy nghe lại ở mục trên rồi quay lại trả lời các câu hỏi bên dưới; nút 🔊 cạnh mỗi câu hỏi đọc lại đoạn liên quan bằng giọng tổng hợp, phần gợi ý đáp án lấy trực tiếp từ nội dung bài đọc.</p>
+    <div id="listenQWrap"></div>
   </div>
 
   <div class="card-block">
     <h3>活动 — Trả lời bằng câu hoàn chỉnh, dùng từ gợi ý trong ngoặc</h3>
     <div id="speakActWrap"></div>
+  </div>
+</section>
+
+<!-- ========== TAB VII — 综合测试 ========== -->
+<section class="panel" id="panel-tab7">
+  <div class="card-block">
+    <h2>VII. 综合测试 — Test tổng hợp cuối bài</h2>
+    <p class="tag-note">18 câu trắc nghiệm/đúng-sai trộn ngẫu nhiên: nghĩa từ vựng, điền đúng cụm từ trọng tâm, phân biệt 结果补语/趋向补语/可能补语, hiểu bài khoá chính và bài đọc thêm 晨跑与生活. Bấm "Làm lại" để đổi thứ tự câu hỏi và luyện lại nhiều lần.</p>
+    <button class="btn" id="startFinalTest">🎯 Bắt đầu / Làm lại</button>
+    <div id="finalTestWrap" style="margin-top:14px;"></div>
+    <button class="btn" id="checkFinalTest" style="display:none;">✅ Nộp bài</button>
+    <div class="score-box" id="finalTestScore"></div>
   </div>
 </section>
 
@@ -548,7 +625,7 @@ const charDict = {
   "材": {r:"木", f:"形声 — 木 biểu ý (gỗ), 才 biểu âm", s:"Trái-phải, 7 nét", m:"Gỗ (木) tốt vừa mới (才) đốn được, dùng làm \"vật liệu\"; nghĩa mở rộng \"tài năng, vóc dáng\" (身材).", c:["身材","材料","教材","人材"]}
 };
 
-// ---- Từ vựng chính (Tab I) ----
+// ---- Từ vựng chính (Tab II) ----
 const vocab = [
   {id:1, hanzi:"健身", pinyin:"jiànshēn", type:"V", meaning:"tập thể hình, rèn luyện thân thể", example:"我们一起去健身吧？"},
   {id:2, hanzi:"嘛", pinyin:"ma", type:"Pt", meaning:"trợ từ tạo khoảng ngừng trước khi nêu điều hiển nhiên muốn nói", example:"游泳嘛，我还没学会呢。"},
@@ -580,7 +657,7 @@ const extraVocab = [
 ];
 extraVocab.forEach(w=>{ w.chars = w.hanzi.split(''); });
 
-// ---- 主课文 (Tab IV, tái sử dụng ở Tab V) ----
+// ---- 主课文 (Tab I, tái sử dụng ở Tab V) ----
 const mainText = [
   {sp:"李梅", hanzi:"艾玛，下午没课，我们一起去{{健身}}吧？", pinyin:"Àimǎ, xiàwǔ méi kè, wǒmen yìqǐ qù jiànshēn ba?", vi:"Emma, chiều nay không có tiết, chúng ta cùng đi tập thể hình nhé?"},
   {sp:"艾玛", hanzi:"好啊，我已经快一个月没好好儿运动了，我们去跑步还是游泳？", pinyin:"Hǎo a, wǒ yǐjīng kuài yí ge yuè méi hǎohāor yùndòng le, wǒmen qù pǎobù háishi yóuyǒng?", vi:"Được đó, tôi gần một tháng rồi chưa vận động cho tử tế, chúng ta đi chạy bộ hay đi bơi đây?"},
@@ -694,7 +771,47 @@ document.querySelectorAll('.tab-btn').forEach(btn=>{
 });
 
 /* =========================================================
-   TAB I — 热身
+   TAB I — 课文
+========================================================= */
+function renderMainText(){
+  const wrap = document.getElementById('mainTextWrap');
+  wrap.innerHTML = '';
+  mainText.forEach((line, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'bi-line';
+    const hanziHtml = line.hanzi.replace(/\{\{(.*?)\}\}/g, '<b style="color:var(--gold)">$1</b>');
+    if(line.stage){
+      div.innerHTML = `<div></div><div>
+        <div class="hanzi stage">${line.hanzi}</div>
+        <div class="pinyin">${line.pinyin}</div>
+        <div class="vi">${line.vi}</div>
+      </div>`;
+    } else {
+      div.innerHTML = `<div class="speaker">${line.sp}</div><div>
+        <div class="hanzi">${hanziHtml} <button class="sp-btn" data-idx="${idx}">🔊</button></div>
+        <div class="pinyin">${line.pinyin}</div>
+        <div class="vi">${line.vi}</div>
+      </div>`;
+    }
+    wrap.appendChild(div);
+  });
+  wrap.querySelectorAll('.sp-btn').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      const idx = b.dataset.idx;
+      speak(stripMarks(mainText[idx].hanzi), 0.85);
+    });
+  });
+}
+renderMainText();
+document.getElementById('toggleHidePinyin').addEventListener('change', e=>{
+  document.getElementById('mainTextWrap').classList.toggle('hide-py', e.target.checked);
+});
+document.getElementById('toggleHideVi').addEventListener('change', e=>{
+  document.getElementById('mainTextWrap').classList.toggle('hide-vi', e.target.checked);
+});
+
+/* =========================================================
+   TAB II — 热身
 ========================================================= */
 const warmupItems = [
   {q:"1. 有人喜欢运动，有人不喜欢。你呢？", hint:"Gợi ý mẫu: 我很喜欢运动，我最喜欢跑步和游泳，运动能让我更健康。 / 我不太喜欢运动，我更喜欢在家看书、休息。"},
@@ -719,7 +836,7 @@ function renderWarmup(){
 renderWarmup();
 
 /* =========================================================
-   TAB I — VOCAB CARDS
+   TAB II — VOCAB CARDS
 ========================================================= */
 const mastered = {}; // {id: true}
 let vocabOrder = vocab.map(w=>w.id);
@@ -892,7 +1009,147 @@ document.getElementById('charModal').addEventListener('click', (e)=>{
 });
 
 /* =========================================================
-   TAB I — BÀI TẬP ĐIỀN TỪ (17 câu)
+   TAB II — CHẾ ĐỘ NGHE ĐOÁN CHỮ (2 chiều)
+========================================================= */
+let quizOrder = [];
+let quizIdx = 0;
+let quizScore = {correct:0, total:0};
+let quizAnswered = false;
+
+function startQuizMode(){
+  quizOrder = shuffleArr(vocab.map(w=>w.id));
+  quizIdx = 0;
+  quizScore = {correct:0, total:0};
+  document.getElementById('vocabGrid').style.display = 'none';
+  document.getElementById('quizModeWrap').style.display = 'block';
+  renderQuizQuestion();
+}
+function endQuizMode(){
+  document.getElementById('vocabGrid').style.display = '';
+  document.getElementById('quizModeWrap').style.display = 'none';
+}
+function renderQuizQuestion(){
+  quizAnswered = false;
+  if(quizIdx >= quizOrder.length){
+    document.getElementById('quizProgress').textContent = `Xong! Điểm: ${quizScore.correct}/${quizScore.total}`;
+    document.getElementById('quizPlayBtn').style.display = 'none';
+    document.getElementById('quizOptions').innerHTML = '';
+    document.getElementById('quizFeedback').textContent = '';
+    document.getElementById('quizNextBtn').style.display = '';
+    document.getElementById('quizNextBtn').textContent = '🔁 Làm lại';
+    document.getElementById('quizNextBtn').onclick = startQuizMode;
+    return;
+  }
+  const word = vocab.find(w=>w.id===quizOrder[quizIdx]);
+  document.getElementById('quizPlayBtn').style.display = '';
+  document.getElementById('quizProgress').textContent = `Câu ${quizIdx+1}/${quizOrder.length} — Điểm: ${quizScore.correct}/${quizScore.total}`;
+  document.getElementById('quizPlayBtn').onclick = ()=> speak(word.hanzi, 0.8);
+  setTimeout(()=> speak(word.hanzi, 0.8), 200);
+
+  const others = vocab.filter(w=>w.id!==word.id);
+  const distractors = shuffleArr(others.map(w=>w.id)).slice(0,3).map(id=>others.find(w=>w.id===id));
+  const opts = shuffleArr([word, ...distractors]);
+  const optWrap = document.getElementById('quizOptions');
+  optWrap.innerHTML = '';
+  opts.forEach(opt=>{
+    const b = document.createElement('button');
+    b.className = 'choice-btn';
+    b.style.display = 'block';
+    b.style.width = '100%';
+    b.style.textAlign = 'left';
+    b.style.marginBottom = '8px';
+    b.textContent = opt.hanzi;
+    b.addEventListener('click', ()=>{
+      if(quizAnswered) return;
+      quizAnswered = true;
+      quizScore.total++;
+      const isCorrect = opt.id === word.id;
+      if(isCorrect) quizScore.correct++;
+      optWrap.querySelectorAll('.choice-btn').forEach(bb=>{
+        if(bb.textContent === word.hanzi) bb.classList.add('correct');
+        else if(bb === b) bb.classList.add('wrong');
+      });
+      const fb = document.getElementById('quizFeedback');
+      fb.textContent = isCorrect ? `✓ Chính xác! — ${word.pinyin} — ${word.meaning}` : `✗ Sai rồi. Đáp án: ${word.hanzi} (${word.pinyin}) — ${word.meaning}`;
+      fb.style.color = isCorrect ? '#2f7d32' : 'var(--red)';
+      document.getElementById('quizProgress').textContent = `Câu ${quizIdx+1}/${quizOrder.length} — Điểm: ${quizScore.correct}/${quizScore.total}`;
+      document.getElementById('quizNextBtn').style.display = '';
+    });
+    optWrap.appendChild(b);
+  });
+  document.getElementById('quizFeedback').textContent = '';
+  document.getElementById('quizNextBtn').style.display = 'none';
+  document.getElementById('quizNextBtn').textContent = 'Câu tiếp theo →';
+  document.getElementById('quizNextBtn').onclick = ()=>{ quizIdx++; renderQuizQuestion(); };
+}
+document.getElementById('btnCardMode').addEventListener('click', ()=>{
+  document.getElementById('btnCardMode').classList.add('mode-active');
+  document.getElementById('btnQuizMode').classList.remove('mode-active');
+  endQuizMode();
+});
+document.getElementById('btnQuizMode').addEventListener('click', ()=>{
+  document.getElementById('btnQuizMode').classList.add('mode-active');
+  document.getElementById('btnCardMode').classList.remove('mode-active');
+  startQuizMode();
+});
+
+/* =========================================================
+   TAB II — 词语活动 1
+========================================================= */
+const wordAct1Items = [
+  {desc:"(1) 好吃的东西", answer:"美食", options:["美食","健康","共同","高手"]},
+  {desc:"(2) 打球或者跑步穿的鞋", answer:"运动鞋", options:["运动鞋","羽毛球","肌肉","业余"]},
+  {desc:"(3) 运动开始前要做的事情", answer:"热身", options:["热身","约","查","健身"]},
+  {desc:"(4) 一个人身体好，心理也没有问题", answer:"健康", options:["健康","体重","美食","共同"]},
+  {desc:"(5) 属于大家的，都具有的", answer:"共同", options:["共同","业余","高手","肌肉"]},
+  {desc:"(6) 技术、水平很好的人", answer:"高手", options:["高手","业余","肌肉","运动鞋"]},
+  {desc:"(7) 花很多时间，很努力，但是没成效", answer:"白", options:["白","查","约","热身"]},
+  {desc:"(8) 看图片：", answer:"体育馆", options:["体育馆","马拉松","羽毛球","健身"], img:"images/bai3-tiyuguan.png"},
+  {desc:"(9) 看图片：", answer:"查", options:["查","约","嘛","白"], img:"images/bai3-chazidian.png"}
+];
+function renderWordAct1(){
+  const wrap = document.getElementById('wordAct1');
+  wrap.innerHTML = '';
+  wordAct1Items.forEach((item,idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    const imgHtml = item.img ? `<img src="${item.img}" alt="hình minh họa" style="max-width:320px;width:100%;border-radius:10px;border:1px solid var(--moss-200);display:block;margin:6px 0;">` : '';
+    div.innerHTML = `<div>${item.desc} （ <span id="wa1-blank-${idx}">　　</span> ）</div>
+      ${imgHtml}
+      <div id="wa1-opts-${idx}"></div>`;
+    wrap.appendChild(div);
+    const optsWrap = div.querySelector(`#wa1-opts-${idx}`);
+    shuffleArr(item.options).forEach(opt=>{
+      const b = document.createElement('button');
+      b.className = 'choice-btn';
+      b.textContent = opt;
+      b.addEventListener('click', ()=>{
+        optsWrap.querySelectorAll('.choice-btn').forEach(x=>x.classList.remove('selected'));
+        b.classList.add('selected');
+        document.getElementById(`wa1-blank-${idx}`).textContent = opt;
+        div.dataset.selected = opt;
+      });
+      optsWrap.appendChild(b);
+    });
+  });
+}
+renderWordAct1();
+document.getElementById('checkWordAct1').addEventListener('click', ()=>{
+  let correct = 0;
+  wordAct1Items.forEach((item, idx)=>{
+    const div = document.querySelectorAll('#wordAct1 .ex-item')[idx];
+    const sel = div.dataset.selected;
+    div.querySelectorAll('.choice-btn').forEach(b=>{
+      if(b.textContent === item.answer) b.classList.add('correct');
+      else if(b.textContent === sel) b.classList.add('wrong');
+    });
+    if(sel === item.answer) correct++;
+  });
+  document.getElementById('wordAct1Score').textContent = `Điểm: ${correct}/${wordAct1Items.length}`;
+});
+
+/* =========================================================
+   TAB II — BÀI TẬP ĐIỀN TỪ (17 câu)
 ========================================================= */
 const fillVocabItems = [
   {sentence:"我每天下班以后都去____，锻炼身体。", answer:"健身"},
@@ -951,7 +1208,7 @@ document.getElementById('checkFillVocab').addEventListener('click', ()=>{
 });
 
 /* =========================================================
-   TAB II — NGỮ PHÁP: BÀI TẬP GHÉP CÂU DÙNG BỔ NGỮ
+   TAB III — NGỮ PHÁP: BÀI TẬP GHÉP CÂU DÙNG BỔ NGỮ
 ========================================================= */
 const grammarExercises = [
   {original:"小王去买电影票。小王买了两张电影票。 (V+到 结果补语)", tiles:["小王","买到了","两张","电影票"], answer:["小王","买到了","两张","电影票"], explain:"结果补语「到」diễn tả kết quả đã mua được vé."},
@@ -1022,63 +1279,14 @@ function renderGrammarEx(){
 }
 renderGrammarEx();
 
-/* =========================================================
-   TAB III — BÀI TẬP
-========================================================= */
-// 词语活动 1
-const wordAct1Items = [
-  {desc:"(1) 好吃的东西", answer:"美食", options:["美食","健康","共同","高手"]},
-  {desc:"(2) 打球或者跑步穿的鞋", answer:"运动鞋", options:["运动鞋","羽毛球","肌肉","业余"]},
-  {desc:"(3) 运动开始前要做的事情", answer:"热身", options:["热身","约","查","健身"]},
-  {desc:"(4) 一个人身体好，心理也没有问题", answer:"健康", options:["健康","体重","美食","共同"]},
-  {desc:"(5) 属于大家的，都具有的", answer:"共同", options:["共同","业余","高手","肌肉"]},
-  {desc:"(6) 技术、水平很好的人", answer:"高手", options:["高手","业余","肌肉","运动鞋"]},
-  {desc:"(7) 花很多时间，很努力，但是没成效", answer:"白", options:["白","查","约","热身"]},
-  {desc:"(8) 看图片：", answer:"体育馆", options:["体育馆","马拉松","羽毛球","健身"], img:"images/bai3-tiyuguan.png"},
-  {desc:"(9) 看图片：", answer:"查", options:["查","约","嘛","白"], img:"images/bai3-chazidian.png"}
-];
-function renderWordAct1(){
-  const wrap = document.getElementById('wordAct1');
-  wrap.innerHTML = '';
-  wordAct1Items.forEach((item,idx)=>{
-    const div = document.createElement('div');
-    div.className = 'ex-item';
-    const imgHtml = item.img ? `<img src="${item.img}" alt="hình minh họa" style="max-width:220px;border-radius:10px;border:1px solid var(--moss-200);display:block;margin:6px 0;">` : '';
-    div.innerHTML = `<div>${item.desc} （ <span id="wa1-blank-${idx}">　　</span> ）</div>
-      ${imgHtml}
-      <div id="wa1-opts-${idx}"></div>`;
-    wrap.appendChild(div);
-    const optsWrap = div.querySelector(`#wa1-opts-${idx}`);
-    shuffleArr(item.options).forEach(opt=>{
-      const b = document.createElement('button');
-      b.className = 'choice-btn';
-      b.textContent = opt;
-      b.addEventListener('click', ()=>{
-        optsWrap.querySelectorAll('.choice-btn').forEach(x=>x.classList.remove('selected'));
-        b.classList.add('selected');
-        document.getElementById(`wa1-blank-${idx}`).textContent = opt;
-        div.dataset.selected = opt;
-      });
-      optsWrap.appendChild(b);
-    });
-  });
-}
-renderWordAct1();
-document.getElementById('checkWordAct1').addEventListener('click', ()=>{
-  let correct = 0;
-  wordAct1Items.forEach((item, idx)=>{
-    const div = document.querySelectorAll('#wordAct1 .ex-item')[idx];
-    const sel = div.dataset.selected;
-    div.querySelectorAll('.choice-btn').forEach(b=>{
-      if(b.textContent === item.answer) b.classList.add('correct');
-      else if(b.textContent === sel) b.classList.add('wrong');
-    });
-    if(sel === item.answer) correct++;
-  });
-  document.getElementById('wordAct1Score').textContent = `Điểm: ${correct}/${wordAct1Items.length}`;
+// 课文活动 3 — giới thiệu môn thể thao yêu thích (dùng bổ ngữ vừa học)
+document.getElementById('introSportHintBtn').addEventListener('click', ()=>{
+  document.getElementById('introSportHint').classList.toggle('show');
 });
 
-// 词语活动 2 — nghe & nói ý nghĩa (03-1)
+/* =========================================================
+   TAB IV — 词语活动 2 (nghe rồi chọn đúng nghĩa, 03-1)
+========================================================= */
 const wordAct2Items = [
   {hanzi:"我可跑不动。游泳嘛，我还没学会呢。", vi:"Tôi chạy không nổi nữa đâu. Còn bơi thì tôi vẫn chưa biết bơi."},
   {hanzi:"羽毛球我打不好。杰克打得好。", vi:"Cầu lông tôi đánh không giỏi. Jack đánh giỏi."},
@@ -1094,43 +1302,50 @@ function renderWordAct2(){
     const div = document.createElement('div');
     div.className = 'ex-item';
     div.innerHTML = `<div>(${idx+1}) <button class="speak-btn" data-say="${item.hanzi}">🔊 Nghe</button> <span style="font-family:'Noto Serif SC',serif">${item.hanzi}</span></div>
-      <textarea class="answer-box" placeholder="Nói/viết lại ý nghĩa câu bạn nghe được..."></textarea>
-      <button class="btn small secondary" data-hint="${idx}">👁 Xem gợi ý đáp án</button>
-      <div class="hint-box" id="wa2hint-${idx}">${item.vi}</div>`;
+      <div class="tag-note">Nghe rồi chọn nghĩa tiếng Việt đúng:</div>
+      <div id="wa2-opts-${idx}"></div>
+      <div class="explain-box" id="wa2exp-${idx}"></div>`;
     wrap.appendChild(div);
     div.querySelector('.speak-btn').addEventListener('click', ()=> speak(item.hanzi, 0.85));
-    div.querySelector('[data-hint]').addEventListener('click', ()=>{
-      document.getElementById('wa2hint-'+idx).classList.toggle('show');
+    const optsWrap = div.querySelector(`#wa2-opts-${idx}`);
+    const others = wordAct2Items.filter((_,i)=>i!==idx).map(o=>o.vi);
+    const distractors = shuffleArr(others).slice(0,3);
+    const opts = shuffleArr([item.vi, ...distractors]);
+    opts.forEach(opt=>{
+      const b = document.createElement('button');
+      b.className = 'choice-btn';
+      b.style.display = 'block';
+      b.style.width = '100%';
+      b.style.textAlign = 'left';
+      b.style.marginBottom = '6px';
+      b.textContent = opt;
+      b.addEventListener('click', ()=>{
+        optsWrap.querySelectorAll('.choice-btn').forEach(x=>x.classList.remove('selected'));
+        b.classList.add('selected');
+        div.dataset.selected = opt;
+      });
+      optsWrap.appendChild(b);
     });
   });
 }
 renderWordAct2();
-
-// 课文活动 1 — Q&A
-const textQAItems = [
-  {q:"(1) 谁是跑步高手？为什么？", hint:"赵亮是跑步高手，因为他每年都要跑一次业余马拉松，最好成绩是跑进比赛的前五名，而且看他的肌肉就知道他是运动高手。"},
-  {q:"(2) 李梅羽毛球打得怎么样？", hint:"李梅羽毛球打得不太好，她说自己每次只打一个小时，第二天都感觉很累，还说要向打得很好的杰克学习。"},
-  {q:"(3) 他们运动结束以后，晚上要做什么？", hint:"晚上赵亮请大家吃饭，他在网上查到一家好吃的店，艾玛和杰克都会喜欢，几个人一起去吃饭。"}
-];
-function renderTextQA(){
-  const wrap = document.getElementById('textQA');
-  wrap.innerHTML = '';
-  textQAItems.forEach((item, idx)=>{
-    const div = document.createElement('div');
-    div.className = 'ex-item';
-    div.innerHTML = `<div>${item.q}</div>
-      <textarea class="answer-box" placeholder="Trả lời bằng tiếng Trung..."></textarea>
-      <button class="btn small secondary" data-hint="${idx}">👁 Xem gợi ý đáp án</button>
-      <div class="hint-box" id="qahint-${idx}">${item.hint}</div>`;
-    wrap.appendChild(div);
-    div.querySelector('[data-hint]').addEventListener('click', ()=>{
-      document.getElementById('qahint-'+idx).classList.toggle('show');
+document.getElementById('checkWordAct2').addEventListener('click', ()=>{
+  let correct = 0;
+  wordAct2Items.forEach((item, idx)=>{
+    const div = document.querySelectorAll('#wordAct2 .ex-item')[idx];
+    const sel = div.dataset.selected;
+    div.querySelectorAll('.choice-btn').forEach(b=>{
+      if(b.textContent === item.vi) b.classList.add('correct');
+      else if(b.textContent === sel) b.classList.add('wrong');
     });
+    if(sel === item.vi) correct++;
   });
-}
-renderTextQA();
+  document.getElementById('wordAct2Score').textContent = `Điểm: ${correct}/${wordAct2Items.length}`;
+});
 
-// 课文活动 2 — không nhìn bài, chọn từ đúng điền vào chỗ trống (dùng select, đúng option gốc trong sách)
+/* =========================================================
+   TAB IV — 课文活动 2 (không nhìn bài, chọn từ đúng điền vào chỗ trống)
+========================================================= */
 const choiceFillItems = [
   {parts:["艾玛喜欢的运动是","和","。"], options:[["打羽毛球","跑步","游泳"],["打羽毛球","跑步","游泳"]], answers:["跑步","游泳"]},
   {parts:["赵亮喜欢跑步，他每年都参加业余马拉松比赛，最好成绩是跑","比赛前五名。"], options:[["出","进"]], answers:["进"]},
@@ -1173,63 +1388,99 @@ document.getElementById('checkChoiceFill').addEventListener('click', ()=>{
   document.getElementById('choiceFillScore').textContent = `Điểm: ${correct}/${total}`;
 });
 
-// 课文活动 3 — giới thiệu môn thể thao yêu thích
-document.getElementById('introSportHintBtn').addEventListener('click', ()=>{
-  document.getElementById('introSportHint').classList.toggle('show');
-});
-
 /* =========================================================
-   TAB IV — 课文对照
+   TAB IV — 课文活动 1 (Q&A)
 ========================================================= */
-function renderMainText(){
-  const wrap = document.getElementById('mainTextWrap');
+const textQAItems = [
+  {q:"(1) 谁是跑步高手？为什么？", hint:"赵亮是跑步高手，因为他每年都要跑一次业余马拉松，最好成绩是跑进比赛的前五名，而且看他的肌肉就知道他是运动高手。"},
+  {q:"(2) 李梅羽毛球打得怎么样？", hint:"李梅羽毛球打得不太好，她说自己每次只打一个小时，第二天都感觉很累，还说要向打得很好的杰克学习。"},
+  {q:"(3) 他们运动结束以后，晚上要做什么？", hint:"晚上赵亮请大家吃饭，他在网上查到一家好吃的店，艾玛和杰克都会喜欢，几个人一起去吃饭。"}
+];
+function renderTextQA(){
+  const wrap = document.getElementById('textQA');
   wrap.innerHTML = '';
-  mainText.forEach((line, idx)=>{
+  textQAItems.forEach((item, idx)=>{
     const div = document.createElement('div');
-    div.className = 'bi-line';
-    const hanziHtml = line.hanzi.replace(/\{\{(.*?)\}\}/g, '<b style="color:var(--gold)">$1</b>');
-    if(line.stage){
-      div.innerHTML = `<div></div><div>
-        <div class="hanzi stage">${line.hanzi}</div>
-        <div class="pinyin">${line.pinyin}</div>
-        <div class="vi">${line.vi}</div>
-      </div>`;
-    } else {
-      div.innerHTML = `<div class="speaker">${line.sp}</div><div>
-        <div class="hanzi">${hanziHtml} <button class="sp-btn" data-idx="${idx}">🔊</button></div>
-        <div class="pinyin">${line.pinyin}</div>
-        <div class="vi">${line.vi}</div>
-      </div>`;
-    }
+    div.className = 'ex-item';
+    div.innerHTML = `<div>${item.q}</div>
+      <textarea class="answer-box" placeholder="Trả lời bằng tiếng Trung..."></textarea>
+      <button class="btn small secondary" data-hint="${idx}">👁 Xem gợi ý đáp án</button>
+      <div class="hint-box" id="qahint-${idx}">${item.hint}</div>`;
     wrap.appendChild(div);
-  });
-  wrap.querySelectorAll('.sp-btn').forEach(b=>{
-    b.addEventListener('click', ()=>{
-      const idx = b.dataset.idx;
-      speak(stripMarks(mainText[idx].hanzi), 0.85);
+    div.querySelector('[data-hint]').addEventListener('click', ()=>{
+      document.getElementById('qahint-'+idx).classList.toggle('show');
     });
   });
 }
-renderMainText();
+renderTextQA();
+
+// Stepper điều hướng 3 bước
+const stepCount = 3;
+let stepIdx = 0;
+function renderStepDots(){
+  const dotsWrap = document.getElementById('stepDots');
+  dotsWrap.innerHTML = '';
+  for(let i=0;i<stepCount;i++){
+    const d = document.createElement('span');
+    d.className = 'step-dot' + (i===stepIdx ? ' active':'');
+    dotsWrap.appendChild(d);
+  }
+}
+function showStep(i){
+  stepIdx = Math.max(0, Math.min(stepCount-1, i));
+  for(let k=0;k<stepCount;k++){
+    document.getElementById('step-'+k).style.display = (k===stepIdx) ? '' : 'none';
+  }
+  document.getElementById('stepIndicator').textContent = `Bài tập ${stepIdx+1}/${stepCount}`;
+  document.getElementById('stepPrevBtn').disabled = stepIdx===0;
+  document.getElementById('stepNextBtn').textContent = (stepIdx===stepCount-1) ? '✓ Đã xong các bài' : 'Câu tiếp theo →';
+  renderStepDots();
+}
+document.getElementById('stepPrevBtn').addEventListener('click', ()=> showStep(stepIdx-1));
+document.getElementById('stepNextBtn').addEventListener('click', ()=>{
+  if(stepIdx < stepCount-1) showStep(stepIdx+1);
+});
+showStep(0);
 
 /* =========================================================
-   TAB V — 听写背诵
+   TAB V — 背诵 (主课文 / 副课文 / 拓展阅读)
 ========================================================= */
-document.getElementById('readAllBtn').addEventListener('click', ()=>{
-  const rate = parseFloat(document.getElementById('rateSelect').value);
-  const fullText = mainText.filter(l=>!l.stage).map(l=>stripMarks(l.hanzi)).join('，');
-  speak(fullText, rate);
-});
+const recitationSets = {
+  main: { data: mainText, audio:'03-2', label:'Băng gốc 03-2 (toàn bài)' },
+  fu: { data: fuText, audio:'03-3', label:'Băng gốc 03-3 (toàn bài)' },
+  reading: { data: readingText, audio:'03-4', label:'Băng gốc 03-4 (toàn bài)' }
+};
+let activeRecKey = 'main';
+
+function setRecAudioTrack(code, label){
+  const a = document.getElementById('recAudio');
+  const warn = document.getElementById('recAudioMissing');
+  const row = document.getElementById('recAudioRow');
+  const labelEl = document.getElementById('recAudioLabel');
+  if(!code){
+    row.style.display = 'none';
+    return;
+  }
+  row.style.display = '';
+  a.style.display = '';
+  warn.style.display = 'none';
+  labelEl.textContent = `🎧 ${label}:`;
+  a.dataset.code = code;
+  warn.dataset.for = code;
+  a.src = `audio/${code}.mp3`;
+  a.load();
+}
 
 function renderMemorize(pct){
   const wrap = document.getElementById('memorizeWrap');
   wrap.innerHTML = '';
-  mainText.forEach((line, idx)=>{
+  const data = recitationSets[activeRecKey].data;
+  data.forEach((line, idx)=>{
     if(line.stage) return;
     const clean = stripMarks(line.hanzi);
     const div = document.createElement('div');
     div.className = 'bi-line';
-    let chars = clean.split('').map((ch, ci)=>{
+    let chars = clean.split('').map((ch)=>{
       const hide = Math.random()*100 < pct && !/[，。！？：“”‘’\s]/.test(ch);
       if(hide){
         return `<span class="reveal-word" data-ch="${ch}">${ch}</span>`;
@@ -1248,11 +1499,18 @@ function renderMemorize(pct){
     b.addEventListener('click', ()=>{
       const idx = b.dataset.idx;
       const rate = parseFloat(document.getElementById('rateSelect').value);
-      speak(stripMarks(mainText[idx].hanzi), rate);
+      speak(stripMarks(recitationSets[activeRecKey].data[idx].hanzi), rate);
     });
   });
 }
-renderMemorize(0);
+
+document.getElementById('readAllBtn').addEventListener('click', ()=>{
+  const rate = parseFloat(document.getElementById('rateSelect').value);
+  const data = recitationSets[activeRecKey].data;
+  const fullText = data.filter(l=>!l.stage).map(l=>stripMarks(l.hanzi)).join('，');
+  speak(fullText, rate);
+});
+
 document.querySelectorAll('.hide-pct').forEach(btn=>{
   btn.addEventListener('click', ()=>{
     document.querySelectorAll('.hide-pct').forEach(b=>b.classList.remove('active-pct'));
@@ -1261,9 +1519,29 @@ document.querySelectorAll('.hide-pct').forEach(btn=>{
   });
 });
 
+document.querySelectorAll('.subrec-nav button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.subrec-nav button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeRecKey = btn.dataset.rec;
+    const set = recitationSets[activeRecKey];
+    setRecAudioTrack(set.audio, set.label);
+    document.querySelectorAll('.hide-pct').forEach(b=>b.classList.remove('active-pct'));
+    document.querySelector('.hide-pct[data-pct="0"]').classList.add('active-pct');
+    renderMemorize(0);
+    document.getElementById('dictationInput').value = '';
+    document.getElementById('dictationScore').textContent = '';
+    document.getElementById('dictationDiff').innerHTML = '';
+  });
+});
+
+renderMemorize(0);
+setRecAudioTrack(recitationSets.main.audio, recitationSets.main.label);
+
 // Dictation diff
 document.getElementById('checkDictation').addEventListener('click', ()=>{
-  const original = mainText.filter(l=>!l.stage).map(l=>stripMarks(l.hanzi)).join('');
+  const data = recitationSets[activeRecKey].data;
+  const original = data.filter(l=>!l.stage).map(l=>stripMarks(l.hanzi)).join('');
   const input = document.getElementById('dictationInput').value.replace(/\s+/g,'');
   const maxLen = Math.max(original.length, input.length);
   let html = '';
@@ -1309,6 +1587,12 @@ function renderFuText(){
   });
 }
 renderFuText();
+document.getElementById('toggleHidePinyinFu').addEventListener('change', e=>{
+  document.getElementById('fuTextWrap').classList.toggle('hide-py', e.target.checked);
+});
+document.getElementById('toggleHideViFu').addEventListener('change', e=>{
+  document.getElementById('fuTextWrap').classList.toggle('hide-vi', e.target.checked);
+});
 
 // 判断对错
 const tfItems = [
@@ -1424,8 +1708,14 @@ renderReading();
 document.getElementById('readAllReading').addEventListener('click', ()=>{
   speak(readingText.map(l=>l.hanzi).join(''), 0.85);
 });
+document.getElementById('toggleHidePinyinReading').addEventListener('change', e=>{
+  document.getElementById('readingWrap').classList.toggle('hide-py', e.target.checked);
+});
+document.getElementById('toggleHideViReading').addEventListener('change', e=>{
+  document.getElementById('readingWrap').classList.toggle('hide-vi', e.target.checked);
+});
 
-// 听录音回答问题 03-4 (chính là bài đọc 晨跑与生活, có transcript đầy đủ)
+// 听录音回答问题 03-4 (chính là bài đọc 晨跑与生活, có transcript đầy đủ — băng gốc đã đặt ở mục 阅读 phía trên)
 const listenQItems = [
   {q:"(1) “我”是怎样开始晨跑的？第一次跑得怎么样？", hint:"“我”是在朋友的带动下开始跟着他晨跑的；第一次晨跑只跑了五分钟就累得不行，休息几分钟后接着跑，就这样跑跑停停，第一天一共运动了30分钟。", audio:"我是个不喜欢运动的人，在朋友的带动下，我开始跟着他晨跑。还记得第一次晨跑时，我才跑了五分钟，就累得不行。"},
   {q:"(2) “我”已经坚持晨跑多长时间了？", hint:"已经坚持晨跑一年半了。", audio:"已经一年半过去了，我的生活因为晨跑有了很多变化。"},
@@ -1476,6 +1766,96 @@ function renderSpeakAct(){
 }
 renderSpeakAct();
 
+/* =========================================================
+   TAB VII — 综合测试
+========================================================= */
+const finalTestBank = [
+  // (a) từ vựng nghĩa
+  {type:'mc', q:'“健身”是什么意思？', options:['tập thể hình, rèn luyện thân thể','khởi động (trước khi tập)','cao thủ, người giỏi','cân nặng, thể trọng'], answer:0, explain:'“健身”指去健身房或做运动来锻炼身体。'},
+  {type:'mc', q:'“业余”是什么意思？', options:['khỏe mạnh, lành mạnh','chung, cùng nhau','nghiệp dư, không chuyên','cao thủ, người giỏi'], answer:2, explain:'“业余”指不是专业的，工作之外做的（如业余运动员、业余爱好）。'},
+  {type:'mc', q:'“肌肉”是什么意思？', options:['giày thể thao','món ngon, đặc sản','cân nặng, thể trọng','cơ bắp'], answer:3, explain:'“肌肉”指身体上的muscle，如“看看他的肌肉就知道他是运动高手”。'},
+  {type:'mc', q:'课文里“今天是不是白跑了？”中的“白”是什么意思？', options:['tra cứu, tìm kiếm','uổng công, vô ích','hẹn, ước hẹn trước','khỏe mạnh, lành mạnh'], answer:1, explain:'“白”做副词时表示做了没有效果、白费力气，如“白跑了”“白等了”。'},
+  {type:'mc', q:'（拓展阅读词语）“活力”是什么意思？', options:['vóc dáng','tinh thần','sức sống, năng lượng','dẫn dắt, thúc đẩy'], answer:2, explain:'“活力”指充满生命力、精力旺盛的状态，如“每天充满活力”。'},
+  // (b) điền đúng cụm từ trọng tâm
+  {type:'mc', q:'完成句子：运动前一定要先____，不然容易受伤。', options:['热身','健身','查','业余'], answer:0, explain:'“热身”指运动开始前先活动身体，是固定搭配。'},
+  {type:'mc', q:'完成句子：我们俩都喜欢爬山，这是我们的____爱好。', options:['业余','共同','健康','美食'], answer:1, explain:'“共同爱好”指大家都有的、相同的爱好，“共同”常与“爱好/兴趣/努力”搭配。'},
+  {type:'mc', q:'完成句子：他不是专业运动员，只是____选手。', options:['高手','健康','共同','业余'], answer:3, explain:'“业余选手”指不是职业运动员，与“专业”相对。'},
+  {type:'mc', q:'完成句子：我已经跟朋友____好时间了，明天一起去看电影。', options:['查','热身','约','带动'], answer:2, explain:'“约时间”“约好”是固定搭配，表示事先约定。'},
+  // (c) ngữ pháp — 结果补语 / 趋向补语 / 可能补语
+  {type:'mc', q:'“我在网上查到一家好吃的店”中的“到”是哪种补语？', options:['结果补语','趋向补语','可能补语','程度补语'], answer:0, explain:'“到”在这里表示查找的结果（找到了），是结果补语。'},
+  {type:'mc', q:'“看上去还很新，还能再跑200公里”中的“上去”表示什么意思？', options:['字面方向：往楼上走去','引申义：趋向补语，表示"trông có vẻ, nhìn có vẻ"','可能补语，表示能够上去','结果补语，表示已经到达楼上'], answer:1, explain:'“看上去”是趋向补语“上去”的引申用法，不是字面方向，表示"nhìn/trông có vẻ như thế nào".'},
+  {type:'mc', q:'“我可跑不动”中的“不动”是哪种补语？表示什么？', options:['结果补语，表示已经停止','趋向补语，表示方向向下','可能补语，表示没有力气继续跑了','程度补语，表示跑得很慢'], answer:2, explain:'“V+不+动”是可能补语的否定式，表示没有能力/力气完成动作。'},
+  {type:'mc', q:'根据课文，“羽毛球我打____。杰克打____。”正确的可能补语搭配是？', options:['不好 / 得好','不了 / 得了','不到 / 得到','不动 / 得动'], answer:0, explain:'课文原句是“羽毛球我打不好。杰克打得好。”——“不好”表示打得不好，“得好”表示打得好，都是可能补语的用法（后面还带程度补语“好”）。'},
+  {type:'mc', q:'下面哪一句正确使用了趋向补语复合式，宾语插入在中间？', options:['我周末买来了跑步的运动鞋','我周末买运动鞋来了','我周末来买了运动鞋','我周末买了来运动鞋'], answer:0, explain:'趋向补语复合式（买来）中，宾语（运动鞋）可插入在“来”前面：买+来+了+运动鞋 → “买来了运动鞋”是正确语序。'},
+  // (d) đọc hiểu — mainText / fuText / readingText
+  {type:'tf', q:'艾玛喜欢跑步和游泳，李梅喜欢打羽毛球。', answer:true, explain:'副课文明确说“艾玛喜欢跑步和游泳，李梅喜欢打羽毛球”。'},
+  {type:'tf', q:'杰克不喜欢跑步，但是他喜欢打羽毛球，而且他说打羽毛球怎么打都不累。', answer:true, explain:'副课文和主课文都提到杰克说“打羽毛球可以，怎么打都不累”。'},
+  {type:'mc', q:'谁每年都要跑一次业余马拉松，最好成绩是跑进比赛前五名？', options:['赵亮','李梅','杰克','艾玛'], answer:0, explain:'课文和副课文都说“赵亮每年都要跑一次业余马拉松，最好成绩是跑进比赛的前五名”。'},
+  {type:'tf', q:'根据《晨跑与生活》，作者第一次晨跑就跑了很长时间，一点也不累。', answer:false, explain:'原文说“我才跑了五分钟，就累得不行”，第一次晨跑只跑了五分钟就很累，需要跑跑停停。'}
+];
+
+function startFinalTest(){
+  const order = shuffleArr(finalTestBank.map((_,i)=>i));
+  const wrap = document.getElementById('finalTestWrap');
+  wrap.innerHTML = '';
+  order.forEach((qi, idx)=>{
+    const item = finalTestBank[qi];
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    div.dataset.qi = qi;
+    if(item.type === 'mc'){
+      const optIdxArr = shuffleArr(item.options.map((_,i)=>i));
+      let optsHtml = optIdxArr.map(oi=>`<button class="choice-btn" data-oi="${oi}">${item.options[oi]}</button>`).join('');
+      div.innerHTML = `<div>${idx+1}. ${item.q}</div><div>${optsHtml}</div><div class="explain-box" id="ft-exp-${idx}"></div>`;
+    } else {
+      div.innerHTML = `<div>${idx+1}. ${item.q}</div>
+        <div><button class="choice-btn" data-val="true">对</button><button class="choice-btn" data-val="false">错</button></div>
+        <div class="explain-box" id="ft-exp-${idx}"></div>`;
+    }
+    wrap.appendChild(div);
+    div.querySelectorAll('.choice-btn').forEach(b=>{
+      b.addEventListener('click', ()=>{
+        div.querySelectorAll('.choice-btn').forEach(x=>x.classList.remove('selected'));
+        b.classList.add('selected');
+        div.dataset.selected = (item.type==='mc') ? b.dataset.oi : b.dataset.val;
+      });
+    });
+  });
+  document.getElementById('finalTestScore').innerHTML = '';
+  document.getElementById('checkFinalTest').style.display = '';
+}
+document.getElementById('startFinalTest').addEventListener('click', startFinalTest);
+document.getElementById('checkFinalTest').addEventListener('click', ()=>{
+  let correct = 0;
+  const items = document.querySelectorAll('#finalTestWrap .ex-item');
+  items.forEach((div, idx)=>{
+    const qi = parseInt(div.dataset.qi);
+    const item = finalTestBank[qi];
+    const sel = div.dataset.selected;
+    let isCorrect = false;
+    if(item.type === 'mc'){
+      isCorrect = (sel !== undefined && parseInt(sel) === item.answer);
+      div.querySelectorAll('.choice-btn').forEach(b=>{
+        if(parseInt(b.dataset.oi) === item.answer) b.classList.add('correct');
+        else if(b.dataset.oi === sel) b.classList.add('wrong');
+      });
+    } else {
+      isCorrect = (sel === String(item.answer));
+      div.querySelectorAll('.choice-btn').forEach(b=>{
+        if((b.dataset.val === 'true') === item.answer) b.classList.add('correct');
+        else if(b.dataset.val === sel) b.classList.add('wrong');
+      });
+    }
+    if(isCorrect) correct++;
+    if(item.explain){
+      const exp = document.getElementById('ft-exp-'+idx);
+      exp.textContent = item.explain;
+      exp.classList.add('show');
+    }
+  });
+  const pct = items.length ? Math.round((correct/items.length)*100) : 0;
+  document.getElementById('finalTestScore').innerHTML = `<div class="final-score-big">Kết quả: ${correct}/${items.length} (${pct}%)</div>`;
+});
 </script>
 </body>
 </html>
