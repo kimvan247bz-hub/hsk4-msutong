@@ -11,7 +11,7 @@
     /* Bảng màu lấy theo bìa giáo trình 速通汉语 Msutong — xanh ngọc lục bảo + be trang nhã */
     --moss-900:#0a3d34; --moss-800:#0e5c4d; --moss-700:#128a71; --moss-600:#1aa084;
     --moss-500:#2bb896; --moss-300:#a8e2cd; --moss-200:#d6f0e4; --moss-100:#eef8f3;
-    --cream:#f6efdf; --paper:#fffcf3; --ink:#2c2a22; --gold:#c9962f;
+    --cream:#f6efdf; --paper:#fffcf3; --ink:#2c2a22; --gold:#c9962f; --gray:#8a8578;
     --accent-2:#d9723c; --accent-3:#2f7f92; --accent-4:#c69a2e; --accent-5:#b8586b; --accent-6:#1f6b4a;
   }
   *{box-sizing:border-box;}
@@ -23,19 +23,35 @@
   header h1{ font-family:'Noto Serif SC',serif; margin:0 0 8px; font-size:2rem; }
   header p{ margin:0; opacity:.9; font-family:'Zilla Slab',serif; font-style:italic; }
   main{ max-width:960px; margin:0 auto; padding:32px 18px 60px; }
+  .book-label{ font-family:'Noto Serif SC',serif; font-weight:700; color:var(--moss-800); font-size:1.1rem; margin:34px 0 14px; padding-left:10px; border-left:5px solid var(--moss-600); }
+  .book-label:first-of-type{ margin-top:6px; }
   .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:20px; }
   .lesson-card{
-    display:block; background:var(--paper); border:1px solid var(--moss-200); border-radius:16px;
-    padding:22px 20px; text-decoration:none; color:var(--ink); box-shadow:0 1px 4px rgba(60,77,49,.08);
-    transition:transform .15s, box-shadow .15s; position:relative; min-height:120px;
+    display:flex; flex-direction:column; background:var(--paper); border:1px solid var(--moss-200); border-radius:16px;
+    padding:22px 20px; box-shadow:0 1px 4px rgba(60,77,49,.08);
+    transition:transform .15s, box-shadow .15s; position:relative; min-height:100px;
   }
   .lesson-card.unlocked:hover{ transform:translateY(-3px); box-shadow:0 6px 16px rgba(60,77,49,.18); }
-  .lesson-card.locked{ opacity:.55; cursor:not-allowed; }
+  .lesson-card.locked{ opacity:.75; }
+  .card-link{ display:block; text-decoration:none; color:inherit; }
   .lesson-num{ font-family:'Noto Serif SC',serif; font-weight:900; font-size:1.3rem; color:var(--moss-700); }
   .lesson-title{ font-family:'Noto Serif SC',serif; font-size:1.05rem; margin:6px 0 10px; color:var(--moss-900); }
   .lesson-status{ font-size:.8rem; color:var(--gold); font-weight:700; }
   .lesson-status.ok{ color:var(--moss-600); }
-  footer{ text-align:center; font-size:.8rem; color:#8a8578; padding:24px; }
+  footer{ text-align:center; font-size:.8rem; color:var(--gray); padding:24px; }
+
+  @media (max-width: 640px){
+    header{ padding:28px 16px; }
+    header h1{ font-size:1.5rem; }
+    header p{ font-size:.85rem; }
+    main{ padding:24px 12px 40px; }
+    .book-label{ font-size:1rem; margin:26px 0 12px; }
+    .grid{ grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; }
+    .lesson-card{ padding:16px 14px; min-height:auto; }
+    .lesson-num{ font-size:1.1rem; }
+    .lesson-title{ font-size:.92rem; margin:4px 0 8px; }
+    .lesson-status{ font-size:.74rem; }
+  }
 </style>
 </head>
 <body>
@@ -46,23 +62,145 @@
 </header>
 
 <main>
+
+  <div class="book-label">第一册</div>
   <div class="grid">
-    <a class="lesson-card unlocked" href="bai1.html">
-      <div class="lesson-num">第一课</div>
-      <div class="lesson-title">来几个家常菜吧</div>
-      <div class="lesson-status ok">✓ Đã cập nhật</div>
-    </a>
-    <a class="lesson-card unlocked" href="bai2.html">
-      <div class="lesson-num">第二课</div>
-      <div class="lesson-title">说曹操，曹操到</div>
-      <div class="lesson-status ok">✓ Đã cập nhật</div>
-    </a>
+
+    <div class="lesson-card unlocked">
+      <a class="card-link" href="bai1.html">
+        <div class="lesson-num">第一课</div>
+        <div class="lesson-title">来几个家常菜吧</div>
+        <div class="lesson-status ok">✓ Đã cập nhật</div>
+      </a>
+    </div>
+
+    <div class="lesson-card unlocked">
+      <a class="card-link" href="bai2.html">
+        <div class="lesson-num">第二课</div>
+        <div class="lesson-title">说曹操，曹操到</div>
+        <div class="lesson-status ok">✓ Đã cập nhật</div>
+      </a>
+    </div>
+
+    <div class="lesson-card unlocked">
+      <a class="card-link" href="bai3.html">
+        <div class="lesson-num">第三课</div>
+        <div class="lesson-title">我们爱运动</div>
+        <div class="lesson-status ok">✓ Đã cập nhật</div>
+      </a>
+    </div>
+
+    <div class="lesson-card unlocked">
+      <a class="card-link" href="bai4.html">
+        <div class="lesson-num">第四课</div>
+        <div class="lesson-title">自助游</div>
+        <div class="lesson-status ok">✓ Đã cập nhật</div>
+      </a>
+    </div>
+
     <div class="lesson-card locked">
-      <div class="lesson-num">第三课</div>
-      <div class="lesson-title">Bài 3 — sắp cập nhật</div>
+      <div class="lesson-num">第五课</div>
+      <div class="lesson-title">手机怎么了？</div>
       <div class="lesson-status">🔒 Sắp cập nhật</div>
     </div>
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第六课</div>
+      <div class="lesson-title">爱的礼物</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第七课</div>
+      <div class="lesson-title">微笑的力量</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第八课</div>
+      <div class="lesson-title">先凉菜后热菜</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第九课</div>
+      <div class="lesson-title">跟陌生人说话</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第十课</div>
+      <div class="lesson-title">你这样算老吗？</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
   </div>
+
+  <div class="book-label">第二册</div>
+  <div class="grid">
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第十一课</div>
+      <div class="lesson-title">世界无烟日</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第十二课</div>
+      <div class="lesson-title">到中国人家里做客</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第十三课</div>
+      <div class="lesson-title">中国的广场舞</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第十四课</div>
+      <div class="lesson-title">一张照片</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第十五课</div>
+      <div class="lesson-title">有点儿忙的人生</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第十六课</div>
+      <div class="lesson-title">时间都去哪儿了？</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第十七课</div>
+      <div class="lesson-title">我们不一样</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第十八课</div>
+      <div class="lesson-title">你想怎么支付？</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第十九课</div>
+      <div class="lesson-title">早高峰</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
+    <div class="lesson-card locked">
+      <div class="lesson-num">第二十课</div>
+      <div class="lesson-title">喝凉水都塞牙</div>
+      <div class="lesson-status">🔒 Sắp cập nhật</div>
+    </div>
+
+  </div>
+
 </main>
 
 <footer>速通汉语 中级1 · Tài liệu học tập nội bộ</footer>
