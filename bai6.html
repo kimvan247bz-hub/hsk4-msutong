@@ -177,6 +177,19 @@
   .bi-line .sp-btn{ background:none; border:none; cursor:pointer; font-size:1.1rem; color:var(--moss-600); }
   .hide-py .pinyin{ display:none; }
   .hide-vi .vi{ display:none; }
+  /* Ẩn chữ Hán — click vào ô mờ để hiện lại từng câu */
+  .hide-hz .bi-line .hanzi{
+    background:var(--moss-200) !important; color:transparent !important;
+    border-radius:6px; cursor:pointer; user-select:none;
+    transition:background .15s, color .15s;
+  }
+  .hide-hz .bi-line .hanzi b{ color:transparent !important; }
+  .hide-hz .bi-line .hanzi .sp-btn{ color:var(--moss-600) !important; }
+  .hide-hz .bi-line .hanzi.revealed{
+    background:transparent !important; color:var(--ink) !important; cursor:default;
+  }
+  .hide-hz .bi-line .hanzi.revealed b{ color:var(--gold) !important; }
+  .hide-hz .bi-line .hanzi.stage.revealed{ color:var(--gray) !important; }
 
   .diff-char{ padding:0 1px; }
   .diff-ok{ color:#2f7d32; }
@@ -287,6 +300,7 @@
       <span class="audio-missing" data-for="06-2">⚠️ Chưa tìm thấy audio/06-2.mp3 (xem hướng dẫn ở đầu trang)</span>
     </div>
     <div class="toolbar">
+      <label class="chk"><input type="checkbox" id="toggleHideHanzi"> Ẩn chữ Hán</label>
       <label class="chk"><input type="checkbox" id="toggleHidePinyin"> Ẩn pinyin</label>
       <label class="chk"><input type="checkbox" id="toggleHideVi"> Ẩn nghĩa tiếng Việt</label>
     </div>
@@ -499,6 +513,7 @@
       <span class="audio-missing" data-for="06-3">⚠️ Chưa tìm thấy audio/06-3.mp3 (xem hướng dẫn ở đầu trang)</span>
     </div>
     <div class="toolbar">
+      <label class="chk"><input type="checkbox" id="toggleHideHanziFu"> Ẩn chữ Hán</label>
       <label class="chk"><input type="checkbox" id="toggleHidePinyinFu"> Ẩn pinyin</label>
       <label class="chk"><input type="checkbox" id="toggleHideViFu"> Ẩn nghĩa tiếng Việt</label>
     </div>
@@ -529,6 +544,7 @@
     </div>
     <button class="btn secondary" id="readAllReading">🔊 Đọc lại bằng giọng tổng hợp</button>
     <div class="toolbar" style="margin-top:10px;">
+      <label class="chk"><input type="checkbox" id="toggleHideHanziReading"> Ẩn chữ Hán</label>
       <label class="chk"><input type="checkbox" id="toggleHidePinyinReading"> Ẩn pinyin</label>
       <label class="chk"><input type="checkbox" id="toggleHideViReading"> Ẩn nghĩa tiếng Việt</label>
     </div>
@@ -824,6 +840,11 @@ function renderMainText(){
   });
 }
 renderMainText();
+document.getElementById('toggleHideHanzi').addEventListener('change', e=>{
+  const w = document.getElementById('mainTextWrap');
+  w.classList.toggle('hide-hz', e.target.checked);
+  w.querySelectorAll('.hanzi.revealed').forEach(h=>h.classList.remove('revealed'));
+});
 document.getElementById('toggleHidePinyin').addEventListener('change', e=>{
   document.getElementById('mainTextWrap').classList.toggle('hide-py', e.target.checked);
 });
@@ -1586,6 +1607,11 @@ function renderFuText(){
   });
 }
 renderFuText();
+document.getElementById('toggleHideHanziFu').addEventListener('change', e=>{
+  const w = document.getElementById('fuTextWrap');
+  w.classList.toggle('hide-hz', e.target.checked);
+  w.querySelectorAll('.hanzi.revealed').forEach(h=>h.classList.remove('revealed'));
+});
 document.getElementById('toggleHidePinyinFu').addEventListener('change', e=>{
   document.getElementById('fuTextWrap').classList.toggle('hide-py', e.target.checked);
 });
@@ -1702,6 +1728,11 @@ function renderReading(){
 renderReading();
 document.getElementById('readAllReading').addEventListener('click', ()=>{
   speak(readingText.map(l=>l.hanzi).join(''), 0.85);
+});
+document.getElementById('toggleHideHanziReading').addEventListener('change', e=>{
+  const w = document.getElementById('readingWrap');
+  w.classList.toggle('hide-hz', e.target.checked);
+  w.querySelectorAll('.hanzi.revealed').forEach(h=>h.classList.remove('revealed'));
 });
 document.getElementById('toggleHidePinyinReading').addEventListener('change', e=>{
   document.getElementById('readingWrap').classList.toggle('hide-py', e.target.checked);
@@ -1846,6 +1877,17 @@ document.getElementById('checkFinalTest').addEventListener('click', ()=>{
   document.getElementById('finalTestScore').innerHTML = `<div class="final-score-big">Kết quả: ${correct}/${items.length} (${pct}%)</div>`;
 });
 
+
+/* ===== Ẩn chữ Hán: click ô mờ để hiện lại câu đó ===== */
+document.addEventListener('click', function(ev){
+  const hz = ev.target.closest ? ev.target.closest('.hanzi') : null;
+  if(!hz) return;
+  if(ev.target.closest('.sp-btn')) return;          /* nút loa vẫn phát audio */
+  const wrap = hz.closest('.hide-hz');
+  if(!wrap) return;
+  hz.classList.toggle('revealed');
+}, {capture:false});
+/* data-hz-reveal */
 </script>
 </body>
 </html>
