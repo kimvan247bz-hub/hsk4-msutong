@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第一课 · 世界无烟日 — Bài 1: HSK4 速通汉语 中级2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=Zilla+Slab:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.7/dist/hanzi-writer.min.js"></script>
+<style>
+  :root{
+    --moss-900:#0a3d34;
+    --moss-800:#0e5c4d;
+    --moss-700:#128a71;
+    --moss-600:#1aa084;
+    --moss-500:#2bb896;
+    --moss-400:#6ecfb2;
+    --moss-300:#a8e2cd;
+    --moss-200:#d6f0e4;
+    --moss-100:#eef8f3;
+    --cream:#f6efdf;
+    --paper:#fffcf3;
+    --ink:#2c2a22;
+    --gold:#c9962f;
+    --red:#b8412f;
+    --gray:#8a8578;
+    --accent-2:#d9723c;
+    --accent-3:#2f7f92;
+    --accent-4:#c69a2e;
+    --accent-5:#b8586b;
+    --accent-6:#1f6b4a;
+    --accent-7:#6b5090;
+    font-size:16px;
+  }
+  *{box-sizing:border-box;}
+  html{ max-width:100%; overflow-x:hidden; }
+  body{
+    margin:0;
+    max-width:100%;
+    overflow-x:hidden;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Noto Sans SC',sans-serif;
+    line-height:1.6;
+    padding-bottom:60px;
+  }
+  img{ max-width:100%; height:auto; }
+  h1,h2,h3,h4{ font-family:'Noto Serif SC',serif; color:var(--moss-900); margin:0 0 .5em; }
+  .pinyin{ font-family:'Zilla Slab',serif; font-style:italic; color:var(--moss-600); }
+  a{ color:var(--moss-700); }
+  .topbar{
+    background:linear-gradient(135deg,var(--moss-800),var(--moss-600));
+    color:#fff; padding:14px 20px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+    position:sticky; top:0; z-index:50; box-shadow:0 2px 8px rgba(0,0,0,.15);
+  }
+  .home-btn{
+    background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.4); color:#fff;
+    padding:6px 14px; border-radius:20px; text-decoration:none; font-size:.9rem; white-space:nowrap;
+  }
+  .home-btn:hover{ background:rgba(255,255,255,.3); }
+  .topbar .titles{ flex:1; min-width:200px; }
+  .topbar h1{ color:#fff; font-size:1.3rem; margin:0; }
+  .topbar .sub{ font-size:.85rem; opacity:.9; }
+  nav.tabs{
+    display:flex; flex-wrap:wrap; gap:6px; padding:10px 16px; background:var(--moss-100);
+    position:sticky; top:64px; z-index:40; border-bottom:2px solid var(--moss-300);
+  }
+  nav.tabs button{
+    font-family:'Noto Serif SC',serif; font-weight:700; cursor:pointer;
+    background:var(--paper); border:1.5px solid var(--moss-300); color:var(--moss-800);
+    padding:8px 14px; border-radius:10px 10px 0 0; font-size:.92rem;
+  }
+  nav.tabs button.active{ background:var(--moss-700); color:#fff; border-color:var(--moss-700); }
+  /* Màu nhấn theo tab: 一~六 theo sách, ⭐ = ôn luyện bổ sung */
+  nav.tabs button[data-tab="tab2"].active{ background:var(--accent-2); border-color:var(--accent-2); }
+  nav.tabs button[data-tab="tab3"].active{ background:var(--accent-3); border-color:var(--accent-3); }
+  nav.tabs button[data-tab="tab5"].active{ background:var(--accent-4); border-color:var(--accent-4); }
+  nav.tabs button[data-tab="tab6"].active{ background:var(--accent-6); border-color:var(--accent-6); }
+  nav.tabs button[data-tab="tab7"].active{ background:var(--gold); border-color:var(--gold); }
+  nav.tabs button[data-tab="tab8"].active{ background:var(--accent-5); border-color:var(--accent-5); }
+  nav.tabs button[data-tab="tab9"].active{ background:var(--accent-7); border-color:var(--accent-7); }
+  nav.tabs button.tab-extra{ border-style:dashed; }
+  nav.tabs .tab-sep{ width:1px; align-self:stretch; background:var(--moss-300); margin:0 4px; }
+  #panel-tab2 h2{ color:var(--accent-2); }
+  #panel-tab3 h2{ color:var(--accent-3); }
+  #panel-tab5 h2{ color:var(--accent-4); }
+  #panel-tab6 h2{ color:var(--accent-6); }
+  #panel-tab7 h2{ color:var(--gold); }
+  #panel-tab8 h2{ color:var(--accent-5); }
+  #panel-tab9 h2{ color:var(--accent-7); }
+  #panel-tab3 .grammar-formula{ background:var(--accent-3); color:#fff5ec; }
+  #panel-tab8 .hide-pct.active-pct{ background:var(--accent-5); border-color:var(--accent-5); }
+  .book-guide{ margin:0 0 14px; }
+  .extra-badge{ display:inline-block; font-size:.72rem; font-family:'Noto Sans SC',sans-serif; font-weight:700; color:#fff; background:var(--gold); padding:1px 8px; border-radius:10px; vertical-align:middle; margin-right:4px; }
+
+  /* ⭐ 造句 */
+  .zj-word{ border:1px solid var(--moss-200); border-radius:12px; padding:12px 14px; margin-bottom:14px; background:#fff; }
+  .zj-head{ display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; margin-bottom:8px; }
+  .zj-head .zj-hz{ font-family:'Noto Serif SC',serif; font-weight:700; font-size:1.3rem; color:var(--moss-900); }
+  .zj-head .zj-mean{ color:#555; font-size:.9rem; }
+  .zj-item{ padding:10px 12px; background:var(--moss-100); border-radius:10px; margin-bottom:8px; }
+  .zj-vi{ font-size:1rem; margin-bottom:6px; overflow-wrap:break-word; }
+  .zj-vi .zj-num{ font-weight:700; color:var(--moss-700); margin-right:4px; }
+  .src-badge{ display:inline-block; font-size:.7rem; padding:0 7px; border-radius:10px; background:var(--moss-200); color:var(--moss-800); margin-left:4px; vertical-align:middle; white-space:nowrap; }
+  .src-badge.book{ background:var(--gold); color:#fff; }
+  .zj-input{ width:100%; border:1px solid var(--moss-300); border-radius:8px; padding:6px 8px; font-family:'Noto Serif SC',serif; font-size:1rem; }
+  .zj-row{ display:flex; gap:6px; align-items:center; margin-top:6px; flex-wrap:wrap; }
+  .zj-hint{ font-size:.8rem; color:var(--gray); }
+  .zj-ans{ display:none; margin-top:6px; padding:8px 10px; border:1px dashed var(--gold); background:#fff8e6; border-radius:8px; }
+  .zj-ans.show{ display:block; }
+  .zj-ans .zj-zh{ font-family:'Noto Serif SC',serif; font-size:1.08rem; overflow-wrap:break-word; }
+  .zj-ans .zj-zh b{ color:var(--red); }
+  .zj-ans .pinyin{ font-size:.9rem; overflow-wrap:break-word; }
+  .zj-hide-book .zj-item.is-book{ display:none; }
+  #zaojuWrap .sp-btn{ background:none; border:none; cursor:pointer; font-size:1rem; color:var(--moss-600); }
+  main{ max-width:980px; margin:0 auto; padding:18px 16px 60px; }
+  section.panel{ display:none; animation:fade .25s ease; }
+  section.panel.active{ display:block; }
+  @keyframes fade{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+  .card-block{ background:var(--paper); border:1px solid var(--moss-200); border-radius:14px; padding:18px 20px; margin-bottom:18px; box-shadow:0 1px 4px rgba(60,77,49,.08); }
+  .toolbar{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:14px; }
+  .btn{
+    font-family:'Noto Sans SC',sans-serif; cursor:pointer; border:none; border-radius:8px;
+    padding:8px 16px; font-size:.9rem; font-weight:500; background:var(--moss-600); color:#fff;
+  }
+  .btn:hover{ background:var(--moss-700); }
+  .btn.secondary{ background:var(--moss-200); color:var(--moss-900); }
+  .btn.secondary:hover{ background:var(--moss-300); }
+  .btn.secondary.mode-active{ background:var(--moss-600); color:#fff; }
+  .btn.small{ padding:4px 10px; font-size:.8rem; }
+  label.chk{ font-size:.88rem; display:flex; align-items:center; gap:6px; cursor:pointer; }
+
+  .cards-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:16px; }
+  .flip-card{ perspective:1200px; height:190px; }
+  .flip-inner{ position:relative; width:100%; height:100%; transition:transform .5s; transform-style:preserve-3d; }
+  .flip-card.flipped .flip-inner{ transform:rotateY(180deg); }
+  .flip-face{
+    position:absolute; inset:0; backface-visibility:hidden; border-radius:12px;
+    padding:14px; display:flex; flex-direction:column; overflow:hidden;
+    background:var(--paper); border:2px dashed var(--moss-400);
+  }
+  .flip-face.front{ align-items:center; justify-content:center; text-align:center; background:linear-gradient(160deg,#fff,var(--moss-100)); }
+  .flip-face.back{ transform:rotateY(180deg); background:var(--moss-100); justify-content:flex-start; overflow-y:auto; }
+  .flip-face.front::before,.flip-face.front::after{
+    content:''; position:absolute; width:16px; height:16px; background:var(--cream);
+    border:2px dashed var(--moss-400); border-radius:50%; top:50%; transform:translateY(-50%);
+  }
+  .flip-face.front::before{ left:-9px; } .flip-face.front::after{ right:-9px; }
+  .word-type{ position:absolute; top:8px; left:10px; font-size:.68rem; background:var(--moss-500); color:#fff; padding:1px 7px; border-radius:10px; }
+  .mastered-badge{ position:absolute; top:8px; right:10px; font-size:.9rem; }
+  .card-hanzi{ font-family:'Noto Serif SC',serif; font-weight:700; font-size:1.7rem; color:var(--moss-900); margin-top:8px; word-break:break-word; line-height:1.25; padding:0 4px; }
+  .speak-btn{ margin-top:8px; background:none; border:1px solid var(--moss-400); border-radius:20px; padding:3px 12px; cursor:pointer; font-size:.85rem; color:var(--moss-700); }
+  .speak-btn:hover{ background:var(--moss-200); }
+  .back-pinyin{ font-size:1.05rem; margin-bottom:2px; }
+  .back-meaning{ font-weight:700; color:var(--moss-800); margin-bottom:6px; }
+  .back-example{ font-size:.82rem; color:#555; flex:1; overflow:auto; }
+  .card-actions{ display:flex; gap:6px; margin-top:6px; flex-wrap:wrap; }
+  .mini-btn{ font-size:.72rem; padding:3px 8px; border-radius:6px; border:1px solid var(--moss-400); background:#fff; cursor:pointer; color:var(--moss-800); }
+  .mini-btn.on{ background:var(--gold); color:#fff; border-color:var(--gold); }
+
+  .modal-overlay{ position:fixed; inset:0; background:rgba(30,35,20,.6); display:none; align-items:flex-start; justify-content:center; z-index:100; padding:30px 12px; overflow:auto; }
+  .modal-overlay.show{ display:flex; }
+  .modal-box{ background:var(--paper); border-radius:16px; max-width:820px; width:100%; padding:22px 24px; position:relative; }
+  .modal-close{ position:absolute; top:14px; right:16px; font-size:1.3rem; background:none; border:none; cursor:pointer; color:var(--moss-700); }
+  .char-analysis-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:16px; margin-top:12px; }
+  .char-block{ border:1px solid var(--moss-200); border-radius:12px; padding:14px; background:var(--moss-100); }
+  .char-writer-row{ display:flex; gap:14px; align-items:flex-start; }
+  .writer-target{ width:110px; height:110px; background:#fff; border:1px solid var(--moss-300); border-radius:8px; flex:none; overflow:hidden; }
+  .char-info{ flex:1; font-size:.85rem; }
+  .char-info dt{ font-weight:700; color:var(--moss-800); margin-top:6px; }
+  .char-info dd{ margin:0 0 2px; }
+  .replay-btn{ margin-top:6px; font-size:.75rem; padding:3px 10px; border-radius:6px; border:1px solid var(--moss-500); background:#fff; cursor:pointer; color:var(--moss-700); }
+
+  .grammar-formula{ background:var(--moss-900); color:var(--moss-100); font-family:'Zilla Slab',serif; padding:10px 14px; border-radius:8px; display:inline-block; margin:8px 0; font-size:1.05rem; }
+  .hl{ color:var(--red); font-weight:700; background:#fbe8d8; padding:0 2px; border-radius:3px; }
+  .ex-line{ margin:6px 0; font-size:1.02rem; }
+  .plane-box{ border-left:4px solid var(--moss-500); padding:6px 14px; margin:10px 0; background:var(--moss-100); border-radius:0 8px 8px 0; }
+  .plane-box h4{ margin-bottom:4px; color:var(--moss-700); }
+  .tiles-wrap{ display:flex; flex-wrap:wrap; gap:8px; min-height:44px; padding:10px; background:var(--moss-100); border-radius:8px; margin:8px 0; }
+  .tile{ background:#fff; border:1.5px solid var(--moss-500); padding:6px 12px; border-radius:8px; cursor:pointer; font-size:1rem; font-family:'Noto Serif SC',serif; }
+  .tile.used{ opacity:.3; pointer-events:none; }
+  .built-sentence{ min-height:40px; border-bottom:2px solid var(--moss-400); padding:8px; font-size:1.1rem; font-family:'Noto Serif SC',serif; cursor:pointer; }
+  .error-list li{ margin-bottom:8px; }
+  .compare-table{ width:100%; border-collapse:collapse; font-size:.9rem; margin:10px 0; }
+  .compare-table th, .compare-table td{ border:1px solid var(--moss-200); padding:6px 10px; text-align:left; }
+  .compare-table th{ background:var(--moss-100); color:var(--moss-800); }
+
+  .ex-item{ margin-bottom:14px; padding:10px 12px; background:var(--moss-100); border-radius:10px; }
+  select.blank-select{ font-family:'Noto Sans SC',sans-serif; padding:4px 8px; border-radius:6px; border:1px solid var(--moss-400); background:#fff; margin:0 4px; }
+  .choice-btn{ padding:5px 12px; border-radius:8px; border:1.5px solid var(--moss-400); background:#fff; cursor:pointer; margin:3px 4px 0 0; }
+  .choice-btn.selected{ background:var(--moss-500); color:#fff; }
+  .choice-btn.correct{ background:#5b9c5b !important; color:#fff !important; border-color:#5b9c5b; }
+  .choice-btn.wrong{ background:var(--red) !important; color:#fff !important; border-color:var(--red); }
+  .score-box{ font-weight:700; margin-top:10px; color:var(--moss-800); }
+  textarea.answer-box{ width:100%; min-height:70px; border:1px solid var(--moss-300); border-radius:8px; padding:8px; font-family:'Noto Sans SC',sans-serif; }
+  .hint-box{ display:none; background:#fff8e6; border:1px dashed var(--gold); padding:8px 10px; border-radius:8px; margin-top:6px; font-size:.9rem; }
+  .hint-box.show{ display:block; }
+  .explain-box{ font-size:.82rem; color:var(--moss-700); margin-top:4px; display:none; }
+  .explain-box.show{ display:block; }
+
+  .bi-line{ display:grid; grid-template-columns:26px minmax(0,1fr); gap:10px; padding:10px 0; border-bottom:1px solid var(--moss-200); }
+  .bi-line > div{ min-width:0; }
+  .bi-line .speaker{ font-weight:700; color:var(--moss-700); font-size:.85rem; }
+  .bi-line .hanzi{ font-family:'Noto Serif SC',serif; font-size:1.12rem; margin-bottom:2px; overflow-wrap:break-word; word-break:break-word; }
+  .bi-line .pinyin{ font-size:.92rem; overflow-wrap:break-word; word-break:break-word; }
+  .bi-line .vi{ font-size:.92rem; color:#555; overflow-wrap:break-word; word-break:break-word; }
+  .bi-line .stage{ font-style:italic; color:var(--gray); }
+  .bi-line .sp-btn{ background:none; border:none; cursor:pointer; font-size:1.1rem; color:var(--moss-600); }
+  .hide-py .pinyin{ display:none; }
+  .hide-vi .vi{ display:none; }
+  /* Ẩn chữ Hán — click vào ô mờ để hiện lại từng câu */
+  .hide-hz .bi-line .hanzi{
+    background:var(--moss-200) !important; color:transparent !important;
+    border-radius:6px; cursor:pointer; user-select:none;
+    transition:background .15s, color .15s;
+  }
+  .hide-hz .bi-line .hanzi b{ color:transparent !important; }
+  .hide-hz .bi-line .hanzi .sp-btn{ color:var(--moss-600) !important; }
+  .hide-hz .bi-line .hanzi.revealed{
+    background:transparent !important; color:var(--ink) !important; cursor:default;
+  }
+  .hide-hz .bi-line .hanzi.revealed b{ color:var(--gold) !important; }
+  .hide-hz .bi-line .hanzi.stage.revealed{ color:var(--gray) !important; }
+
+  .diff-char{ padding:0 1px; }
+  .diff-ok{ color:#2f7d32; }
+  .diff-bad{ color:var(--red); text-decoration:underline; }
+  .diff-missing{ color:var(--gray); }
+  .rate-select{ padding:4px 8px; border-radius:6px; border:1px solid var(--moss-400); }
+  .reveal-word{ background:var(--moss-300); color:var(--moss-300); border-radius:4px; cursor:pointer; padding:0 2px; }
+  .reveal-word.shown{ background:transparent; color:var(--ink); }
+  .hide-pct.active-pct{ background:var(--moss-700); color:#fff; border-color:var(--moss-700); }
+
+  .step-dots{ display:flex; gap:6px; margin-bottom:10px; }
+  .step-dot{ width:10px; height:10px; border-radius:50%; background:var(--moss-300); }
+  .step-dot.active{ background:var(--accent-4); }
+  .step-indicator{ font-weight:700; color:var(--accent-4); margin-bottom:14px; font-size:.95rem; }
+
+  .subrec-nav{ display:flex; gap:8px; margin-bottom:14px; flex-wrap:wrap; }
+  .subrec-nav button{ padding:6px 14px; border-radius:20px; border:1.5px solid var(--accent-5); background:#fff; color:var(--accent-5); cursor:pointer; font-weight:700; font-size:.88rem; }
+  .subrec-nav button.active{ background:var(--accent-5); color:#fff; }
+
+  .quiz-progress{ font-size:.92rem; color:var(--moss-700); margin-bottom:10px; font-weight:700; }
+
+  .final-score-big{ font-size:1.4rem; font-weight:700; color:var(--moss-900); margin-top:14px; }
+
+  footer{ text-align:center; font-size:.8rem; color:var(--gray); padding:24px; }
+  .tag-note{ font-size:.82rem; color:var(--gray); font-style:italic; }
+  .audio-row{ display:flex; align-items:center; gap:10px; margin:8px 0 14px; flex-wrap:wrap; }
+  .audio-row audio{ height:34px; max-width:280px; }
+  .audio-row .audio-label{ font-size:.85rem; color:var(--moss-700); font-weight:700; white-space:nowrap; }
+  .audio-missing{ font-size:.8rem; color:var(--red); display:none; }
+  .quiz-img{ max-width:220px; border-radius:10px; border:1px solid var(--moss-300); display:block; margin:8px 0; }
+
+  @media (max-width: 640px){
+    html{ font-size:15px; }
+    .topbar{ position:static; padding:10px 12px; gap:8px; box-shadow:none; }
+    .topbar h1{ font-size:1.08rem; }
+    .topbar .sub{ font-size:.75rem; }
+    .home-btn{ padding:5px 10px; font-size:.8rem; }
+    nav.tabs{ position:sticky; top:0; padding:8px 8px; gap:4px; }
+    nav.tabs button{ padding:6px 9px; font-size:.78rem; }
+    main{ padding:12px 10px 40px; }
+    .card-block{ padding:14px 12px; margin-bottom:14px; }
+    .btn{ padding:7px 12px; font-size:.85rem; }
+    .btn.small{ padding:4px 8px; font-size:.76rem; }
+    .toolbar{ gap:8px; }
+    .toolbar label{ font-size:.85rem; }
+    .rate-select{ font-size:.82rem; padding:4px 6px; }
+    .cards-grid{ grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
+    .flip-card{ height:250px; }
+    .card-hanzi{ font-size:1.3rem; }
+    .back-pinyin{ font-size:.95rem; }
+    .back-meaning{ font-size:.92rem; }
+    .back-example{ font-size:.78rem; }
+    .modal-overlay{ padding:14px 6px; }
+    .modal-box{ padding:16px 14px; max-width:100%; }
+    .char-analysis-grid{ grid-template-columns:1fr; gap:12px; }
+    .char-writer-row{ flex-wrap:wrap; }
+    .writer-target{ width:90px; height:90px; }
+    .grammar-formula{ font-size:.92rem; padding:8px 10px; }
+    .tiles-wrap{ gap:6px; padding:8px; }
+    .tile{ padding:5px 9px; font-size:.9rem; }
+    .bi-line{ grid-template-columns:22px minmax(0,1fr); gap:6px; }
+    .bi-line .hanzi{ font-size:1rem; }
+    #dictationDiff{ font-size:.95rem !important; line-height:1.8 !important; }
+    .audio-row{ gap:6px; }
+    .audio-row audio{ max-width:100%; flex:1 1 100%; }
+    .ex-item{ padding:8px 10px; }
+    .choice-btn{ padding:4px 9px; font-size:.9rem; }
+    .subrec-nav button{ padding:5px 10px; font-size:.8rem; }
+    nav.tabs .tab-sep{ display:none; }
+    .zj-word{ padding:10px; }
+    .zj-head .zj-hz{ font-size:1.15rem; }
+    .compare-table{ font-size:.8rem; }
+  }
+  @media (max-width: 380px){
+    .cards-grid{ grid-template-columns:1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="home-btn" href="../HSK4%20-%20Msutong%20Trung%20cấp%201/index.html">← Trang chủ</a>
+  <div class="titles">
+    <h1>第一课 · 世界无烟日</h1>
+    <div class="sub">速通汉语 中级2 · Bài 1 — Ngày Thế giới không thuốc lá</div>
+  </div>
+</div>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="tab1">一、热身</button>
+  <button class="tab-btn" data-tab="tab2">二、词语</button>
+  <button class="tab-btn" data-tab="tab3">三、语言点</button>
+  <button class="tab-btn" data-tab="tab4">四、主课文</button>
+  <button class="tab-btn" data-tab="tab5">五、副课文</button>
+  <button class="tab-btn" data-tab="tab6">六、拓展练习</button>
+  <span class="tab-sep" aria-hidden="true"></span>
+  <button class="tab-btn tab-extra" data-tab="tab7">⭐ 造句</button>
+  <button class="tab-btn tab-extra" data-tab="tab8">⭐ 背诵</button>
+  <button class="tab-btn tab-extra" data-tab="tab9">⭐ 综合测试</button>
+</nav>
+
+<main>
+
+<p class="tag-note book-guide">📘 Các tab <b>一 → 六</b> đi đúng thứ tự mục trong sách (热身 → 词语 → 语言点 → 主课文 → 副课文 → 拓展练习). Các tab <b>⭐</b> là phần ôn luyện bổ sung ngoài sách. Mục đánh dấu <span class="extra-badge">⭐ Bổ sung</span> là bài tập tự soạn thêm.</p>
+
+<!-- ========== 一、热身 ========== -->
+<section class="panel active" id="panel-tab1">
+  <div class="card-block">
+    <h2>一、热身 — Khởi động</h2>
+    <div id="warmupWrap"></div>
+  </div>
+</section>
+
+<!-- ========== 二、词语 ========== -->
+<section class="panel" id="panel-tab2">
+  <div class="card-block">
+    <h2>二、词语 — Từ mới (22 từ)</h2>
+    <div class="toolbar">
+      <button class="btn small secondary mode-active" id="btnCardMode">🔠 Lật thẻ</button>
+      <button class="btn small secondary" id="btnQuizMode">🎧 Nghe đoán chữ</button>
+      <label class="chk"><input type="checkbox" id="filterUnmastered"> Chỉ hiện từ chưa thuộc</label>
+      <button class="btn secondary" id="shuffleBtn">🔀 Xáo trộn</button>
+      <span class="tag-note" id="masteredCount"></span>
+    </div>
+    <div class="cards-grid" id="vocabGrid"></div>
+    <div id="quizModeWrap" class="card-block" style="display:none; background:var(--moss-100); box-shadow:none;">
+      <div class="quiz-progress" id="quizProgress"></div>
+      <button class="btn secondary" id="quizPlayBtn">🔊 Nghe từ</button>
+      <p class="tag-note">Nghe rồi chọn đúng chữ Hán tương ứng bên dưới:</p>
+      <div id="quizOptions"></div>
+      <div class="explain-box show" id="quizFeedback" style="min-height:20px;"></div>
+      <button class="btn" id="quizNextBtn" style="display:none; margin-top:8px;">Câu tiếp theo →</button>
+    </div>
+  </div>
+
+  <div class="card-block">
+    <h3>词语活动 1 — 看下面的文字或图片，说一说是你学习的哪个词语</h3>
+    <div id="wordAct1"></div>
+    <button class="btn" id="checkWordAct1">✅ Kiểm tra</button>
+    <div class="score-box" id="wordAct1Score"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>词语活动 2 — 听句子，将你听懂的意思说出来 (01-1)</h3>
+      <p class="tag-note">听句子，将你听懂的意思说出来。Chú ý nghe kỹ các con số lớn!</p>
+      <div class="audio-row">
+        <span class="audio-label">🎧 Băng gốc 01-1:</span>
+        <audio class="orig-audio" data-code="01-1" controls preload="metadata" src="audio/01-1.mp3"></audio>
+        <span class="audio-missing" data-for="01-1">⚠️ Chưa tìm thấy audio/01-1.mp3</span>
+      </div>
+      <div id="wordAct2"></div>
+      <button class="btn" id="checkWordAct2">✅ Kiểm tra</button>
+      <div class="score-box" id="wordAct2Score"></div>
+  </div>
+
+  <div class="card-block">
+    <h3><span class="extra-badge">⭐ Bổ sung</span> Bài tập điền từ (22 câu)</h3>
+    <p class="tag-note">Chọn từ đúng để hoàn thành câu giao tiếp hằng ngày (tự soạn, ngoài sách).</p>
+    <div id="fillVocabWrap"></div>
+    <button class="btn" id="checkFillVocab">✅ Kiểm tra</button>
+    <div class="score-box" id="fillVocabScore"></div>
+  </div>
+</section>
+
+<!-- ========== 三、语言点 ========== -->
+<section class="panel" id="panel-tab3">
+  <div class="card-block">
+    <h2>三、语言点 — 大数的表达法 (Cách đọc số lớn)</h2>
+    <p>Các đơn vị cơ bản để biểu đạt số trong tiếng Trung là: <b>十、百、千、万、亿</b>. Điểm khác biệt lớn nhất với tiếng Việt: tiếng Việt chia số theo nhóm <b>3 chữ số</b> (nghìn – triệu – tỷ), còn tiếng Trung chia theo nhóm <b>4 chữ số</b> (万 = 10.000, 亿 = 100.000.000).</p>
+    <div class="grammar-formula">Tách số từ phải sang trái thành nhóm 4 chữ số: [ … ]亿 [ … ]万 [ … ] — mỗi nhóm đọc bằng 千 · 百 · 十 · 个 rồi thêm 亿 / 万</div>
+
+    <h3>Ví dụ trong sách</h3>
+    <div class="ex-line">① 1324 → <span class="hl">一千三百二十四</span></div>
+    <div class="ex-line">② 1324|5001 → <span class="hl">一千三百二十四万</span>五千零一</div>
+    <div class="ex-line">③ 1324|5001|9600 → <span class="hl">一千三百二十四亿</span><span class="hl">五千零一万</span>九千六百</div>
+
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <tr><th>Số</th><th>Nhóm 4 chữ số</th><th>Cách đọc</th></tr>
+        <tr><td>10.000</td><td>1|0000</td><td class="hl">一万</td></tr>
+        <tr><td>1.000.000 (1 triệu)</td><td>100|0000</td><td class="hl">一百万</td></tr>
+        <tr><td>100.000.000 (100 triệu)</td><td>1|0000|0000</td><td class="hl">一亿</td></tr>
+        <tr><td>1.300.000.000 (1,3 tỷ)</td><td>13|0000|0000</td><td class="hl">十三亿</td></tr>
+        <tr><td>7.262.310.000</td><td>72|6231|0000</td><td class="hl">七十二亿六千二百三十一万</td></tr>
+      </table>
+    </div>
+
+    <div class="plane-box"><h4>① Cú pháp (syntax)</h4>Đọc từng nhóm 4 chữ số như một số nhỏ (千·百·十·个), sau nhóm thứ hai thêm 万, sau nhóm thứ ba thêm 亿. Quy tắc 零: giữa số có một hay nhiều số 0 liền nhau thì đọc <b>một</b> chữ "零" (1001 一千零一, 10005 一万零五); số 0 ở cuối nhóm/cuối số thì không đọc (3000 三千, 13245001 → 一千三百二十四万五千零一).</div>
+    <div class="plane-box"><h4>② Ngữ nghĩa (semantics)</h4>万 và 亿 là đơn vị đếm, không phải "nghìn/triệu": 一万 = mười nghìn, 十万 = một trăm nghìn, 一百万 = một triệu, 一千万 = mười triệu, 一亿 = một trăm triệu, 十亿 = một tỷ. Phân số/phần trăm: <b>百分之 + số</b> = "… phần trăm" (百分之二十五 = 25%), cấu trúc "分母 + 分之 + 分子" (三分之一 = 1/3).</div>
+    <div class="plane-box"><h4>③ Ngữ dụng (pragmatics)</h4>Trong báo cáo, tin tức hay dùng kiểu viết lai "chữ số + 万/亿" cho gọn: 13亿, 72亿6231万. Khi nói ước lượng thường kèm 约、左右、差不多、多: 约为13亿、百分之二十五左右. Số đứng đầu là 2 trước 千/万/亿 thường đọc 两 (两千、两万、两亿), còn hàng đơn vị/hàng chục luôn là 二 (十二、二十).</div>
+
+    <h3>语法活动 — 请将下面的数字用汉语说出来，并且写成汉字</h3>
+    <p class="tag-note">Chọn cách đọc đúng bằng chữ Hán. 例：38752 → 三万八千七百五十二</p>
+    <div id="grammarMCWrap"></div>
+    <button class="btn" id="checkGrammarMC">✅ Kiểm tra</button>
+    <div class="score-box" id="grammarMCScore"></div>
+
+    <h3><span class="extra-badge">⭐ Bổ sung</span> Nghe đọc số, chọn chữ số đúng</h3>
+    <p class="tag-note">Bấm 🔊 nghe giọng tổng hợp đọc số (có thể nghe nhiều lần), rồi chọn dãy chữ số tương ứng.</p>
+    <div id="numListenWrap"></div>
+    <button class="btn" id="checkNumListen">✅ Kiểm tra</button>
+    <div class="score-box" id="numListenScore"></div>
+
+    <h3><span class="extra-badge">⭐ Bổ sung</span> ⚠️ Dự đoán 6 lỗi học sinh Việt hay gặp</h3>
+    <ol class="error-list">
+      <li><b>Chia nhóm 3 chữ số theo thói quen tiếng Việt:</b> "1 triệu" dịch máy móc thành "一千千" hay "一兆" — đúng phải chia nhóm 4: 100|0000 → <b>一百万</b>; "10 triệu" là 一千万, "1 tỷ" là 十亿.</li>
+      <li><b>Bỏ sót chữ "零":</b> 1005 đọc thành "一千五" — sai, vì 一千五 là 1500. Đúng: <b>一千零五</b>. Tương tự 10005 = 一万零五.</li>
+      <li><b>Đọc nhiều chữ "零" liên tiếp:</b> 1001 đọc "一千零零一" — nhiều số 0 liền nhau chỉ đọc MỘT chữ 零: <b>一千零一</b>.</li>
+      <li><b>Đọc cả số 0 ở cuối:</b> 3000 đọc "三千零" hoặc 13240000 đọc "一千三百二十四万零" — số 0 ở cuối không đọc: <b>三千</b>, <b>一千三百二十四万</b>.</li>
+      <li><b>Lẫn lộn 二 và 两:</b> nói "二千块" vẫn hiểu nhưng không tự nhiên; trước 千/万/亿 ở đầu số thường dùng <b>两</b> (两千、两万). Nhưng hàng chục/đơn vị luôn dùng 二: 十二、二十二, không nói "两十".</li>
+      <li><b>Đảo trật tự phần trăm theo tiếng Việt:</b> "25 phần trăm" nói thành "二十五百分之" — đúng phải là <b>百分之二十五</b> (百分之 đứng trước con số).</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========== 四、主课文 ========== -->
+<section class="panel" id="panel-tab4">
+  <div class="card-block">
+    <h2>四、主课文 — 世界无烟日 (01-2)</h2>
+    <p class="tag-note">Chữ Hán — Pinyin — Nghĩa tiếng Việt, đối chiếu từng câu/lượt thoại. Bấm 🔊 để nghe lại (giọng tổng hợp).</p>
+    <div class="audio-row">
+      <span class="audio-label">🎧 Băng gốc 01-2 (toàn bài):</span>
+      <audio class="orig-audio" data-code="01-2" controls preload="metadata" src="audio/01-2.mp3"></audio>
+      <span class="audio-missing" data-for="01-2">⚠️ Chưa tìm thấy audio/01-2.mp3</span>
+    </div>
+    <div class="toolbar">
+      <label class="chk"><input type="checkbox" id="toggleHideHanzi"> Ẩn chữ Hán</label>
+      <label class="chk"><input type="checkbox" id="toggleHidePinyin"> Ẩn pinyin</label>
+      <label class="chk"><input type="checkbox" id="toggleHideVi"> Ẩn nghĩa tiếng Việt</label>
+    </div>
+    <div id="mainTextWrap"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>课文活动 1 — 分角色朗读课文，然后回答下面的问题</h3>
+      <p class="tag-note">分角色朗读课文，然后回答下面的问题。Chọn câu trả lời đúng theo bài khoá.</p>
+      <div id="textQA"></div>
+      <button class="btn" id="checkTextQA">✅ Kiểm tra</button>
+      <div class="score-box" id="textQAScore"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>课文活动 2 — 根据你读的课文，试着不看课文，选词填空</h3>
+      <div id="choiceFillWrap"></div>
+      <button class="btn" id="checkChoiceFill">✅ Kiểm tra</button>
+      <div class="score-box" id="choiceFillScore"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>课文活动 3 — 聊一聊：禁烟与抽烟</h3>
+      <p class="tag-note">你知道你们国家禁烟的情况吗？你的家人和朋友有抽烟的吗？他们怎么看抽烟这件事？你怎么看？两个人一组，聊一聊。</p>
+      <textarea class="answer-box" id="courseAct3Box" placeholder="Trả lời bằng tiếng Trung..." style="min-height:110px"></textarea>
+      <button class="btn small secondary" id="courseAct3HintBtn">👁 Xem gợi ý đáp án</button>
+      <div class="hint-box" id="courseAct3Hint">Gợi ý mẫu：在越南，现在很多公共场所，比如医院、学校、电影院都禁烟了，不过在饭馆和咖啡馆还常常能看到有人抽烟。我爸爸以前也抽烟，他觉得压力大的时候抽一支烟可以减轻压力。我觉得这只是一个借口，因为吸烟不但危害自己的身体，二手烟对家人的危害也不小。后来在我们全家的劝说下，爸爸终于把烟戒了。</div>
+  </div>
+</section>
+
+<!-- ========== 五、副课文 ========== -->
+<section class="panel" id="panel-tab5">
+  <div class="card-block">
+    <h2>五、副课文 — 世界无烟日 (01-3)</h2>
+    <h3>补充词语 — Từ bổ sung của 副课文</h3>
+    <div class="toolbar">
+      <label class="chk"><input type="checkbox" id="filterUnmasteredFu"> Chỉ hiện từ chưa thuộc</label>
+      <button class="btn secondary" id="shuffleFuBtn">🔀 Xáo trộn</button>
+    </div>
+    <div class="cards-grid" id="fuVocabGrid"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>副课文 song ngữ</h3>
+    <div class="audio-row">
+      <span class="audio-label">🎧 Băng gốc 01-3 (toàn bài):</span>
+      <audio class="orig-audio" data-code="01-3" controls preload="metadata" src="audio/01-3.mp3"></audio>
+      <span class="audio-missing" data-for="01-3">⚠️ Chưa tìm thấy audio/01-3.mp3</span>
+    </div>
+    <div class="toolbar">
+      <label class="chk"><input type="checkbox" id="toggleHideHanziFu"> Ẩn chữ Hán</label>
+      <label class="chk"><input type="checkbox" id="toggleHidePinyinFu"> Ẩn pinyin</label>
+      <label class="chk"><input type="checkbox" id="toggleHideViFu"> Ẩn nghĩa tiếng Việt</label>
+    </div>
+    <div id="fuTextWrap"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>课文活动 1 — 读课文，然后两人一组，把课文的意思复述给对方听</h3>
+    <p class="tag-note">Đọc kỹ bài ở trên rồi kể lại nội dung bằng lời của mình (luyện nói với bạn học, không chấm điểm).</p>
+  </div>
+
+  <div class="card-block">
+    <h3>课文活动 2 — 不看课文，判断对错</h3>
+    <div id="tfWrap"></div>
+    <button class="btn" id="checkTF">✅ Kiểm tra</button>
+    <div class="score-box" id="tfScore"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>课文活动 3 — 听课文，在下面句子中的空格里填上你听到的词语 (01-3)</h3>
+    <p class="tag-note">Nghe rồi gõ chữ Hán vào chỗ trống (không biết chữ thì có thể nghe lại câu bằng nút 🔊).</p>
+    <div id="dictFillWrap"></div>
+    <button class="btn" id="checkDictFill">✅ Kiểm tra</button>
+    <div class="score-box" id="dictFillScore"></div>
+  </div>
+</section>
+
+<!-- ========== 六、拓展练习 ========== -->
+<section class="panel" id="panel-tab6">
+  <div class="card-block">
+    <h2>六、拓展练习</h2>
+    <h3>1. 听录音，回答问题 (01-4)</h3>
+    <div class="audio-row">
+      <span class="audio-label">🎧 Băng gốc 01-4:</span>
+      <audio class="orig-audio" data-code="01-4" controls preload="metadata" src="audio/01-4.mp3"></audio>
+      <span class="audio-missing" data-for="01-4">⚠️ Chưa tìm thấy audio/01-4.mp3</span>
+    </div>
+    <p class="tag-note">Sách không in lời băng 01-4; cả 3 câu hỏi đều có đáp án nằm trong bài đọc 《世界无烟日》 ở mục 2 bên dưới nên đáp án lấy theo nội dung bài đọc. Nút 🔊 cạnh mỗi câu đọc lại đoạn liên quan bằng giọng tổng hợp.</p>
+    <div id="listenQWrap"></div>
+    <button class="btn" id="checkListenQ">✅ Kiểm tra</button>
+    <div class="score-box" id="listenQScore"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>2. 阅读《世界无烟日》 — song ngữ toàn văn</h3>
+    <button class="btn secondary" id="readAllReading">🔊 Đọc lại bằng giọng tổng hợp</button>
+    <div class="toolbar" style="margin-top:10px;">
+      <label class="chk"><input type="checkbox" id="toggleHideHanziReading"> Ẩn chữ Hán</label>
+      <label class="chk"><input type="checkbox" id="toggleHidePinyinReading"> Ẩn pinyin</label>
+      <label class="chk"><input type="checkbox" id="toggleHideViReading"> Ẩn nghĩa tiếng Việt</label>
+    </div>
+    <div id="readingWrap" style="margin-top:10px;"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>补充词语 & 专有名词 — Từ bổ sung của bài đọc</h3>
+    <div class="toolbar">
+      <label class="chk"><input type="checkbox" id="filterUnmasteredRead"> Chỉ hiện từ chưa thuộc</label>
+      <button class="btn secondary" id="shuffleReadBtn">🔀 Xáo trộn</button>
+    </div>
+    <div class="cards-grid" id="readVocabGrid"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>3. 活动 — 读后回答问题，用括号中的词说完整的句子</h3>
+    <div id="speakActWrap"></div>
+  </div>
+</section>
+
+<!-- ========== ⭐ 造句 ========== -->
+<section class="panel" id="panel-tab7">
+  <div class="card-block">
+    <h2>⭐ 造句 — Đặt câu với từ mới</h2>
+    <p class="tag-note">Mỗi từ mới có 3 câu tiếng Việt: câu <span class="src-badge book">📖 Sách</span> lấy từ nội dung bài học, 2 câu <span class="src-badge">💬 Giao tiếp</span> ở trình độ HSK4. Tự dịch sang tiếng Trung (gõ vào ô hoặc nói ra), rồi bấm 👁 để so đáp án.</p>
+    <div class="toolbar">
+      <label>Từ:
+        <select class="rate-select" id="zjWordFilter"></select>
+      </label>
+      <label class="chk"><input type="checkbox" id="zjHideBook"> Ẩn câu trong sách</label>
+      <button class="btn small secondary" id="zjShowAll">👁 Hiện tất cả đáp án</button>
+      <button class="btn small secondary" id="zjHideAll">🙈 Ẩn tất cả</button>
+      <button class="btn small secondary" id="zjShuffle">🔀 Trộn câu</button>
+      <button class="btn small secondary" id="zjGroupBtn" style="display:none;">↩ Nhóm theo từ</button>
+    </div>
+    <div id="zaojuWrap"></div>
+  </div>
+</section>
+
+<!-- ========== ⭐ 背诵 ========== -->
+<section class="panel" id="panel-tab8">
+  <div class="card-block">
+    <h2>⭐ 背诵 — Học thuộc lòng</h2>
+    <div class="subrec-nav">
+      <button class="active" data-rec="main">主课文</button>
+      <button data-rec="fu">副课文</button>
+      <button data-rec="reading">拓展阅读《世界无烟日》</button>
+    </div>
+    <div class="toolbar">
+      <label>Tốc độ đọc:
+        <select class="rate-select" id="rateSelect">
+          <option value="0.6">Chậm (0.6x)</option>
+          <option value="0.8" selected>Vừa (0.8x)</option>
+          <option value="1">Bình thường (1.0x)</option>
+          <option value="1.2">Nhanh (1.2x)</option>
+        </select>
+      </label>
+      <button class="btn" id="readAllBtn">🔊 Đọc cả bài (giọng tổng hợp)</button>
+    </div>
+    <div class="audio-row" id="recAudioRow">
+      <span class="audio-label" id="recAudioLabel">🎧 Băng gốc 01-2 (toàn bài):</span>
+      <audio class="orig-audio" id="recAudio" data-code="01-2" controls preload="metadata" src="audio/01-2.mp3"></audio>
+      <span class="audio-missing" id="recAudioMissing" data-for="01-2">⚠️ Chưa tìm thấy file audio</span>
+    </div>
+  </div>
+
+  <div class="card-block">
+    <h3>🙈 Học thuộc lòng — ẩn dần theo %</h3>
+    <div class="toolbar">
+      <span>Mức ẩn:</span>
+      <button class="btn small secondary hide-pct active-pct" data-pct="0">0%</button>
+      <button class="btn small secondary hide-pct" data-pct="30">30%</button>
+      <button class="btn small secondary hide-pct" data-pct="60">60%</button>
+      <button class="btn small secondary hide-pct" data-pct="100">100%</button>
+    </div>
+    <p class="tag-note">Bấm vào từ được che (nền xanh) để tự kiểm tra từng chữ.</p>
+    <div id="memorizeWrap"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>✍️ Gõ lại toàn bài từ trí nhớ</h3>
+    <textarea class="answer-box" id="dictationInput" placeholder="Gõ lại phần bạn nhớ được..." style="min-height:120px"></textarea>
+    <button class="btn" id="checkDictation">✅ So sánh với bản gốc</button>
+    <div class="score-box" id="dictationScore"></div>
+    <div id="dictationDiff" style="margin-top:10px; font-family:'Noto Serif SC',serif; font-size:1.1rem; line-height:2;"></div>
+  </div>
+</section>
+
+<!-- ========== ⭐ 综合测试 ========== -->
+<section class="panel" id="panel-tab9">
+  <div class="card-block">
+    <h2>⭐ 综合测试 — Test tổng hợp cuối bài</h2>
+    <p class="tag-note">Câu hỏi trắc nghiệm/đúng-sai trộn ngẫu nhiên: nghĩa từ vựng, cụm từ trọng tâm theo ngữ cảnh, cách đọc số lớn, hiểu bài khoá chính, 副课文 và bài đọc 世界无烟日. Bấm "Làm lại" để đổi thứ tự câu hỏi và luyện lại nhiều lần.</p>
+    <button class="btn" id="startFinalTest">🎯 Bắt đầu / Làm lại</button>
+    <div id="finalTestWrap" style="margin-top:14px;"></div>
+    <button class="btn" id="checkFinalTest" style="display:none;">✅ Nộp bài</button>
+    <div class="score-box" id="finalTestScore"></div>
+  </div>
+</section>
+
+</main>
+
+
+<footer>速通汉语 中级2 · 第一课 · Tài liệu học tập nội bộ</footer>
+
+<div class="modal-overlay" id="charModal">
+  <div class="modal-box">
+    <button class="modal-close" id="closeModalBtn">✕</button>
+    <h3 id="modalTitle">🈶 Phân tích chữ</h3>
+    <div class="char-analysis-grid" id="modalGrid"></div>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   DATA
+========================================================= */
+
+const charDict = {
+  "口": {r:"口", f:"象形 — vẽ hình miệng đang há", s:"Độc thể, 3 nét", m:"Một ô vuông nhỏ giống cái miệng đang mở.", c:["口福","口味","门口","人口"]},
+  "手": {r:"手", f:"象形 — vẽ hình bàn tay xòe với các ngón tay", s:"Độc thể, 4 nét", m:"Ba nét sổ tượng trưng ngón tay, một nét ngang là lòng bàn tay.", c:["拿手菜","手机","举手","助手"]},
+  "西": {r:"西", f:"象形 — vẽ hình tổ chim, khi mặt trời lặn (hướng Tây) chim mới về tổ nên mượn chỉ phương Tây", s:"Độc thể, 6 nét", m:"Chim bay về tổ đúng lúc mặt trời lặn ở hướng \"Tây\".", c:["西红柿","西瓜","东西","西方"]},
+  "感": {r:"心", f:"形声 — 心 biểu ý (tâm), 咸 biểu âm", s:"上下, 13 nét", m:"Trong lòng (心) rung động — \"cảm nhận, cảm giác\".", c:["感觉","感受","感兴趣","感情"]},
+  "觉": {r:"见", f:"会意 giản thể — 冖(giấc ngủ) + 见(nhìn thấy, tỉnh ra)", s:"上下, 9 nét", m:"Từ trong giấc ngủ (冖) bừng tỉnh nhìn ra (见) — \"cảm nhận, nhận ra; ngủ (睡觉)\".", c:["感觉","睡觉","觉得","发觉"]},
+  "量": {r:"日", f:"会意 — 日(mặt trời) + hình dụng cụ đo có vạch chia", s:"上下, 12 nét", m:"Dụng cụ đo lường có vạch chia — \"số lượng, đo lường\".", c:["质量","数量","力量","重量"]},
+  "分": {r:"八", f:"会意 — 八(tách ra hai bên) + 刀(dao)", s:"上下, 4 nét", m:"Dùng dao (刀) chia tách (八) ra từng phần — \"chia, phần; rõ ràng (分明)\".", c:["分明","分开","分别","部分"]},
+  "新": {r:"斤", f:"会意 — 亲(gần, mới chặt) + 斤(rìu)", s:"左右, 13 nét", m:"Dùng rìu (斤) chặt cây tươi mới (亲) — \"mới, mới mẻ\".", c:["新鲜","新年","新闻","更新"]},
+  "过": {r:"辶(辵)", f:"形声 — 辶 biểu ý (đi qua), 寸 biểu âm biến thể", s:"半包围, 6 nét", m:"Đi (辶) vượt qua một điểm mốc — \"đi qua, quá; trải qua\".", c:["难过","过去","经过","不过"]},
+  "无": {r:"一", f:"象形 giản thể — hình người múa với hai tay cầm dải lụa", s:"独体, 4 nét", m:"Hình dáng biến mất dần trong điệu múa — \"không có\".", c:["无限","无法","无论","无聊"]},
+  "加": {r:"力", f:"会意 — 力(sức) + 口(miệng), dùng sức và lời nói để trợ giúp/thêm vào", s:"Trái-phải, 5 nét", m:"Dùng thêm sức (力) và lời nói (口) để \"thêm vào, gia tăng\".", c:["参加","加油","加班","增加"]},
+  "装": {r:"衣", f:"形声 — 衣 biểu ý (quần áo), 壮 biểu âm", s:"Trên-dưới, 12 nét", m:"Quần áo (衣) mặc vào trông \"壮\" (khỏe khoắn, oai vệ) — \"trang phục, trang bị\".", c:["服装","西装","装饰","行装"]},
+  "子": {r:"子", f:"象形 — hình đứa trẻ sơ sinh quấn tã, hai tay giơ lên", s:"Độc thể, 3 nét", m:"Hình một em bé (子) đầu to, hai tay dang ra hai bên.", c:["孩子","儿子","桌子","子女"]},
+  "之": {r:"丿", f:"指事／象形 — mô phỏng bàn chân bước đi, nghĩa gốc \"đi tới\", sau mượn làm hư từ", s:"Độc thể, 3 nét", m:"Một nét như dấu chân đang bước tới, mượn làm trợ từ sở hữu \"của\".", c:["执子之手","总之","反之","之类"]},
+  "同": {r:"口", f:"会意 — 冂(mái che chung) + 口, mọi người cùng nói dưới một mái", s:"半包围, 6 nét", m:"Mọi miệng (口) cùng nói dưới một mái che chung (冂) — ý kiến \"giống nhau, đồng lòng\".", c:["共同","同学","不同","同意"]},
+  "力": {r:"力", f:"象形 — hình cái cày, biểu thị sức lao động", s:"独体, 2 nét", m:"Hình cái cày cong dùng sức để cày ruộng — \"sức lực\".", c:["活力","努力","力气","能力"]},
+  "行": {r:"行", f:"象形 — hình ngã tư đường", s:"独体, 6 nét", m:"Hình ngã tư đường có thể đi theo nhiều hướng — \"đi, thực hiện, được\" (xíng); cũng đọc háng nghĩa \"hàng, dòng\".", c:["行万里路","不行","旅行","银行"]},
+  "选": {r:"辶(辵)", f:"形声／会意 — 辶 biểu ý (đi), 先 biểu âm kiêm ý (đi trước, dẫn đầu)", s:"半包围, 9 nét", m:"Chọn ra người đi trước (先) dẫn đường (辶) — \"tuyển chọn\".", c:["挑选","选择","选举","当选"]},
+  "社": {r:"礻(示)", f:"会意 — 礻(bàn thờ, thần đất) + 土(đất)", s:"左右, 7 nét", m:"Nơi cúng tế (礻) thần đất (土) chung của một cộng đồng — \"làng xã, đoàn thể, công ty\".", c:["旅行社","社会","报社","社区"]},
+  "会": {r:"人", f:"会意 (giản thể từ 會, hình nắp đậy trên đồ vật)", s:"上下, 6 nét", m:"Nắp đậy khít lên đồ vật bên dưới — nhiều thứ \"hội tụ\" lại — \"cuộc họp, biết, sẽ\".", c:["音乐会","开会","会议","机会"]},
+  "响": {r:"口", f:"形声 — 口 biểu ý (âm thanh), 乡 biểu âm", s:"左右, 9 nét", m:"Âm thanh (口) lan tỏa mềm mại như những sợi tóc bay (乡) — \"âm vang, tiếng động\".", c:["响声","音响","影响","响应"]},
+  "得": {r:"彳", f:"会意 — 彳(bước đi) + 旦(sáng sớm) + 寸(đo lường, quy tắc)", s:"左右, 11 nét", m:"Bước đi (彳) từ sớm (旦) mới đạt được (寸) thành quả — \"đạt được, phải, được\".", c:["记得","得到","懂得","舍得"]},
+  "场": {r:"土", f:"形声 — 土 biểu ý (khoảnh đất), 场(昜) biểu âm", s:"左右, 6 nét", m:"Khoảnh đất (土) trống để tổ chức hoạt động — \"sân bãi, lượng từ chỉ trận\".", c:["虚惊一场","场地","市场","一场雨"]},
+  "所": {r:"户", f:"形声 — 户 biểu ý (cửa, nơi chốn), 斤 biểu âm", s:"左右, 8 nét", m:"Nơi có cánh cửa (户) và công cụ (斤) — chỉ \"nơi chốn\"; dùng làm trợ từ chỉ đối tượng.", c:["投其所好","所以","厕所","场所"]},
+  "人": {r:"人", f:"象形 — hình người đứng nghiêng", s:"独体, 2 nét", m:"Nét vẽ đơn giản hình người đang bước đi — \"con người\".", c:["人类","大人","人们","别人"]},
+  "不": {r:"一", f:"象形／指事 — hình cánh chim bay lên trời", s:"独体, 4 nét", m:"Nét vẽ như cánh chim bay mất — mượn để chỉ \"không\".", c:["忍不住","不错","不是","不用"]},
+  "轻": {r:"车(車)", f:"形声 — 车 biểu ý (xe), 圣(巠) biểu âm", s:"左右, 9 nét", m:"Chiếc xe (车) chở ít đồ nên \"nhẹ nhàng\".", c:["礼轻情意重","轻松","年轻","减轻"]},
+  "情": {r:"忄(心)", f:"形声 — 忄 biểu ý (tình cảm), 青 biểu âm kiêm ý (trong lành)", s:"左右, 11 nét", m:"Tình cảm (忄) trong sáng, thuần khiết (青) — \"tình cảm, tình huống\".", c:["礼轻情意重","心情","感情","爱情"]},
+  "而": {r:"而", f:"象形 — hình bộ râu cằm, mượn làm liên từ", s:"独体, 6 nét", m:"Hình bộ râu cằm được mượn làm từ nối \"mà, nhưng\".", c:["反而","而且","然而","因而"]},
+  "典": {r:"八", f:"会意 (gốc hình hai tay nâng cuốn sách quý trên giá)", s:"独体, 8 nét", m:"Hình hai tay nâng cuốn sách quý được lưu giữ trang trọng — \"điển tích, sách mẫu mực\".", c:["典故","词典","经典","典型"]},
+  "作": {r:"亻(人)", f:"形声 — 亻 biểu ý (người, hành động), 乍 biểu âm kiêm ý (bắt đầu làm)", s:"左右, 7 nét", m:"Người (亻) bắt tay vào bắt đầu (乍) làm việc gì đó — \"làm, sáng tác\".", c:["作家","工作","作业","写作"]},
+  "处": {r:"夂", f:"形声 giản thể — 夂 biểu ý (bước chân dừng lại), 卜 biểu âm", s:"独体, 5 nét", m:"Bước chân dừng lại ở một nơi để giải quyết việc — \"xử lý, nơi chốn\".", c:["处理","到处","好处","处于"]},
+  "用": {r:"用", f:"象形 — hình cái thùng/dụng cụ đang được sử dụng", s:"独体, 5 nét", m:"Hình dụng cụ đang trong lúc dùng đến — \"dùng, sử dụng\".", c:["用餐","用心","有用","作用"]},
+  "生": {r:"生", f:"象形 — hình mầm cây mọc lên khỏi mặt đất", s:"独体, 5 nét", m:"Hình chồi non nhô lên từ đất — \"sinh ra, sống, lạ (chưa quen)\".", c:["陌生","生活","学生","发生"]},
+  "二": {r:"二", f:"指事 — hai vạch ngang biểu thị số hai", s:"独体, 2 nét", m:"Hai nét gạch ngang — số \"hai\".", c:["二回熟","第二","二十","独一无二"]},
+  "举": {r:"丶", f:"会意 giản thể — hình hai tay cùng nâng vật lên cao", s:"上下, 9 nét", m:"Hai tay cùng nâng lên cao — \"nâng, cử chỉ, đưa ra\".", c:["举止","举行","举手","选举"]},
+  "总": {r:"纟(糸)", f:"会意 giản thể — 纟(các sợi) gộp lại thành một mối", s:"上下, 9 nét", m:"Gộp các sợi (纟) lại thành một mối chung — \"tổng, chung, luôn luôn\".", c:["总之","总是","总共","总结"]},
+  "起": {r:"走", f:"形声 — 走 biểu ý (đi, đứng dậy), 己 biểu âm", s:"半包围, 10 nét", m:"Đứng dậy (走) bắt đầu — \"dậy, nổi lên, bắt đầu (引起)\".", c:["引起","起来","一起","起床"]},
+  "烟": {r:"火", f:"形声 — 火 biểu ý (lửa), 因 biểu âm", s:"左右, 10 nét", m:"Lửa (火) cháy thì sinh ra khói — \"khói; thuốc lá\".", c:["抽烟","香烟","戒烟","烟花"]},
+  "抽": {r:"扌(手)", f:"形声 — 扌 biểu ý (tay), 由 biểu âm", s:"左右, 8 nét", m:"Dùng tay (扌) rút ra — \"rút, kéo; hút (thuốc)\".", c:["抽烟","抽屉","抽空","抽时间"]},
+  "吸": {r:"口", f:"形声 — 口 biểu ý (miệng), 及 biểu âm", s:"左右, 6 nét", m:"Dùng miệng (口) hít vào cho tới (及) — \"hít, hút vào\".", c:["吸烟","呼吸","吸引","吸管"]},
+  "影": {r:"彡", f:"形声 — 彡 biểu ý (vệt sáng, hình bóng), 景 biểu âm", s:"左右, 15 nét", m:"Cảnh vật (景) dưới ánh sáng in thành vệt bóng (彡) — \"bóng, hình ảnh\".", c:["影响","电影","影子","摄影"]},
+  "日": {r:"日", f:"象形 — hình mặt trời tròn có một chấm ở giữa", s:"独体, 4 nét", m:"Hình mặt trời — \"mặt trời, ngày\".", c:["无烟日","生日","日记","节日"]},
+  "卫": {r:"卩", f:"会意 (giản thể của 衛: 行 đi tuần + 韦 vây quanh)", s:"独体, 3 nét", m:"Đi tuần (行) vòng quanh (韦) để canh giữ — \"bảo vệ, vệ sinh\".", c:["卫生","保卫","卫生间","卫星"]},
+  "数": {r:"攵", f:"形声 — 攵 biểu ý (tay cầm que gõ, đếm), 娄 biểu âm", s:"左右, 13 nét", m:"Tay cầm que (攵) gõ từng cái để đếm — \"đếm (shǔ); con số (shù)\".", c:["总数","数量","数学","数字"]},
+  "占": {r:"卜", f:"会意 — 卜(vết nứt bói toán) + 口(miệng nói ra)", s:"上下, 5 nét", m:"Nhìn vết bói (卜) rồi nói (口) ra lời giải — gốc \"bói\" (zhān); nay đọc zhàn: \"chiếm\".", c:["占","占领","占线","占便宜"]},
+  "百": {r:"白", f:"形声 — 一 biểu ý (số đếm), 白 biểu âm", s:"上下, 6 nét", m:"Thêm một nét (一) trên chữ 白 — số \"một trăm\".", c:["百分之","一百","百货","百姓"]},
+  "危": {r:"㔾(卩)", f:"会意 — người (⺈) đứng trên vách đá cao (厂), bên dưới có người quỳ (㔾)", s:"半包围, 6 nét", m:"Người đứng chênh vênh trên vách núi cao — \"nguy hiểm\".", c:["危害","危险","危机","安危"]},
+  "害": {r:"宀", f:"会意 — 宀(nhà) + 丯 + 口 (lời nói gây tổn hại trong nhà); cách phân tích còn tranh luận", s:"上下, 10 nét", m:"Lời nói xấu (口) trong nhà (宀) làm tổn thương nhau — \"hại, có hại\".", c:["危害","害怕","伤害","厉害"]},
+  "严": {r:"一", f:"形声 (giản thể của 嚴: 吅 biểu ý — tiếng hô nghiêm, 厰 biểu âm)", s:"半包围, 7 nét", m:"Tiếng hô (吅 gốc) nghiêm khắc ra lệnh — \"nghiêm, nghiêm trọng\".", c:["严肃","严重","严格","尊严"]},
+  "肃": {r:"聿", f:"会意 (giản thể của 肅: tay cầm bút 聿 đứng bên vực sâu 㶇 — thận trọng)", s:"独体, 8 nét", m:"Cầm bút ghi chép bên vực sâu phải hết sức thận trọng — \"nghiêm trang, kính cẩn\".", c:["严肃","肃静","肃然起敬","整肃"]},
+  "香": {r:"香", f:"会意 — 禾(lúa) + 日(gốc 甘: ngọt)", s:"上下, 9 nét", m:"Lúa (禾) chín có vị ngọt (日←甘) toả mùi thơm — \"thơm\".", c:["香烟","香味","香蕉","香水"]},
+  "压": {r:"厂", f:"形声 (giản thể của 壓: 土 biểu ý, 厌 biểu âm)", s:"半包围, 6 nét", m:"Đất (土) đè dưới vách đá (厂) — \"ép, đè; áp lực\".", c:["压力","压迫","血压","压缩"]},
+  "减": {r:"冫", f:"形声 — 冫 biểu ý (băng tan, giảm đi), 咸 biểu âm", s:"左右, 11 nét", m:"Băng (冫) tan dần vơi đi — \"giảm, bớt\".", c:["减轻","减少","减肥","加减"]},
+  "禁": {r:"示", f:"形声 — 示 biểu ý (thần linh, điều cấm kỵ), 林 biểu âm", s:"上下, 13 nét", m:"Khu rừng (林) thiêng có thần (示) cai quản, không được vào — \"cấm\".", c:["禁烟","禁止","禁区","不禁"]},
+  "酷": {r:"酉", f:"形声 — 酉 biểu ý (rượu, vị nồng gắt), 告 biểu âm", s:"左右, 14 nét", m:"Rượu (酉) nồng gắt — gốc \"tàn khốc\"; nay mượn âm \"cool\": \"ngầu\".", c:["很酷","残酷","酷热","酷爱"]},
+  "存": {r:"子", f:"形声 — 子 biểu ý (con cái, gìn giữ), 才 biểu âm (biến thể)", s:"半包围, 6 nét", m:"Ôm giữ đứa con (子) cẩn thận — \"cất giữ, tồn tại; gửi (tiền)\".", c:["存钱","保存","存在","生存"]},
+  "灰": {r:"火", f:"会意 — 又(bàn tay, biến thể thành 𠂇) + 火(lửa)", s:"半包围, 6 nét", m:"Lửa (火) tắt rồi, tay (𠂇) có thể bốc được thứ còn lại — \"tro, màu xám\".", c:["烟灰缸","灰色","灰心","石灰"]},
+  "缸": {r:"缶", f:"形声 — 缶 biểu ý (đồ gốm), 工 biểu âm", s:"左右, 9 nét", m:"Đồ gốm (缶) to miệng rộng — \"cái chum, vại, bồn\".", c:["烟灰缸","鱼缸","水缸","浴缸"]},
+  "根": {r:"木", f:"形声 — 木 biểu ý (cây), 艮 biểu âm", s:"左右, 10 nét", m:"Phần cây (木) cắm sâu dưới đất — \"rễ, gốc; căn cứ\".", c:["根据","根本","树根","一根"]},
+  "据": {r:"扌(手)", f:"形声 — 扌 biểu ý (tay, nắm giữ), 居 biểu âm", s:"左右, 11 nét", m:"Tay (扌) bám chắc vào chỗ dựa — \"dựa vào, căn cứ\".", c:["根据","据说","数据","证据"]},
+  "差": {r:"工", f:"会意 — tay cầm (𠂇) bó lúa (羊-biến thể) xếp không đều; cách phân tích còn tranh luận", s:"上下, 9 nét", m:"Xếp không đều nhau nên có chênh lệch — \"kém, thiếu (chà); sai biệt (chā)\".", c:["差不多","差别","出差","很差"]},
+  "多": {r:"夕", f:"会意 — hai miếng thịt (夕夕) chồng lên nhau", s:"上下, 6 nét", m:"Hai miếng thịt xếp chồng lên — \"nhiều\".", c:["差不多","多少","很多","多么"]},
+  "借": {r:"亻(人)", f:"形声 — 亻 biểu ý (người), 昔 biểu âm", s:"左右, 10 nét", m:"Người (亻) mượn đồ của người khác từ trước (昔) — \"mượn, cho mượn; mượn cớ\".", c:["借口","借书","借钱","借用"]},
+  "因": {r:"囗", f:"会意 — người (大) nằm trên chiếu (囗)", s:"全包围, 6 nét", m:"Người nằm dựa trên chiếu — \"dựa vào\" → \"nguyên nhân, vì\".", c:["因此","因为","原因","因素"]},
+  "此": {r:"止", f:"会意 — 止(bàn chân) + 匕(người)", s:"左右, 6 nét", m:"Người (匕) dừng chân (止) ngay tại đây — \"này, đây\".", c:["因此","此外","从此","如此"]},
+  "兴": {r:"八", f:"会意 (giản thể của 興: nhiều bàn tay cùng nâng một vật lên)", s:"上下, 6 nét", m:"Nhiều tay cùng nâng lên — \"hưng thịnh (xīng); hứng thú (xìng)\".", c:["感兴趣","高兴","兴奋","兴趣"]},
+  "趣": {r:"走", f:"形声 — 走 biểu ý (chạy tới), 取 biểu âm kiêm ý (lấy)", s:"半包围, 15 nét", m:"Chạy (走) tới để lấy (取) điều mình thích — \"thú vị, hứng thú\".", c:["感兴趣","有趣","兴趣","乐趣"]},
+  "择": {r:"扌(手)", f:"形声 (giản thể của 擇: 扌 biểu ý, 睪 biểu âm)", s:"左右, 8 nét", m:"Dùng tay (扌) nhặt ra cái mình muốn — \"chọn\".", c:["选择","择业","择优","抉择"]},
+  "儿": {r:"儿", f:"象形 (giản thể của 兒: hình em bé thóp đầu chưa liền)", s:"独体, 2 nét", m:"Hai nét như đôi chân bé nhỏ — \"trẻ con, con\"; hậu tố 儿化.", c:["儿童节","儿子","女儿","一会儿"]},
+  "童": {r:"立", f:"形声 — 辛(gốc chỉ tội nô) + 重 biểu âm; nghĩa sau chuyển thành \"trẻ nhỏ\"", s:"上下, 12 nét", m:"立 (đứng) trên 里 (làng): đứa trẻ đứng chơi trong làng — \"trẻ em\".", c:["儿童","童年","童话","牧童"]},
+  "节": {r:"艹", f:"形声 (giản thể của 節: 竹 biểu ý — đốt tre, 即 biểu âm)", s:"上下, 5 nét", m:"Đốt (đoạn) trên cây tre — \"đốt, tiết; ngày lễ\".", c:["儿童节","节日","春节","节目"]},
+  "杂": {r:"木", f:"会意 (giản thể của 雜: nhiều màu vải trộn lẫn)", s:"上下, 6 nét", m:"Cây (木) mọc lẫn lộn đủ loại — \"tạp, lẫn lộn\".", c:["杂志","复杂","杂技","打杂"]},
+  "志": {r:"心", f:"形声 — 心 biểu ý (lòng), 士(gốc 之) biểu âm kiêm ý (hướng đi)", s:"上下, 7 nét", m:"Lòng (心) hướng tới (之) — \"chí hướng; ghi chép (杂志)\".", c:["杂志","志愿","意志","同志"]},
+  "包": {r:"勹", f:"象形 — hình bào thai (巳) được bọc trong bụng mẹ (勹)", s:"半包围, 5 nét", m:"Lớp bọc (勹) ôm lấy thứ bên trong — \"bao, gói, túi\".", c:["包装","书包","面包","包括"]},
+  "罚": {r:"罒(网)", f:"会意 — 罒(lưới pháp luật) + 讠(lời) + 刂(dao)", s:"上下, 9 nét", m:"Sa lưới (罒) pháp luật, bị lời (讠) phán và dao (刂) răn — \"phạt\".", c:["处罚","罚款","惩罚","罚球"]},
+  "款": {r:"欠", f:"会意 — 欠(há miệng, mong muốn) + 士/示 (gốc chỉ thành ý); cách phân tích còn tranh luận", s:"左右, 12 nét", m:"Há miệng (欠) bày tỏ thành ý — \"khoản (tiền), kiểu dáng\".", c:["罚款","存款","付款","款式"]},
+  "鞭": {r:"革", f:"形声 — 革 biểu ý (da thuộc), 便 biểu âm", s:"左右, 18 nét", m:"Sợi da (革) dùng để đánh — \"roi\".", c:["鞭子","鞭炮","皮鞭","快马加鞭"]},
+  "瑞": {r:"王(玉)", f:"形声 — 王 biểu ý (ngọc), 耑 biểu âm", s:"左右, 13 nét", m:"Viên ngọc (王) làm tín vật điềm lành — \"điềm lành\"; dùng phiên âm 瑞典 (Thụy Điển).", c:["瑞典","瑞士","祥瑞","瑞雪"]},
+  "丹": {r:"丶", f:"象形 — hình giếng mỏ (冂) có một hạt chu sa (丶) bên trong", s:"独体, 4 nét", m:"Hạt chu sa đỏ trong giếng mỏ — \"màu đỏ son\"; phiên âm 不丹 (Bhutan).", c:["不丹","丹麦","牡丹","丹心"]},
+  "兰": {r:"丷(八)", f:"形声 (giản thể của 蘭: 艹 biểu ý, 阑 biểu âm)", s:"独体, 5 nét", m:"Loài cỏ (艹) thơm quý — \"hoa lan\"; phiên âm 新西兰, 荷兰.", c:["新西兰","兰花","荷兰","芬兰"]},
+  "泰": {r:"氺(水)", f:"形声 — 氺 biểu ý (nước), 大 biểu âm; hai tay (𡗗) vốc nước", s:"上下, 10 nét", m:"Hai tay vốc nước (氺) thong thả tắm rửa — \"yên ổn, thái bình\"; 泰国 (Thái Lan).", c:["泰国","泰山","平安","国泰民安"]},
+  "国": {r:"囗", f:"会意 (giản thể) — 囗(biên giới bao quanh) + 玉(ngọc quý)", s:"全包围, 8 nét", m:"Báu vật (玉) được bảo vệ trong biên giới (囗) — \"đất nước\".", c:["泰国","中国","国家","外国"]},
+  "墨": {r:"土", f:"会意/形声 — 黑(đen) + 土(đất, bùn); 黑 kiêm biểu âm", s:"上下, 15 nét", m:"Đất (土) màu đen (黑) dùng để viết — \"mực\"; phiên âm 墨西哥 (Mexico).", c:["墨西哥","墨水","墨镜","笔墨"]},
+  "哥": {r:"口", f:"会意/形声 — hai chữ 可 chồng lên (gốc chỉ tiếng hát, sau mượn chỉ anh trai)", s:"上下, 10 nét", m:"Hai chữ 可 chồng lên nhau — \"anh trai\"; phiên âm 墨西哥.", c:["哥哥","大哥","墨西哥","帅哥"]},
+  "坡": {r:"土", f:"形声 — 土 biểu ý (đất), 皮 biểu âm kiêm ý (bề mặt nghiêng)", s:"左右, 8 nét", m:"Mặt đất (土) nghiêng như lớp da (皮) — \"dốc\"; phiên âm 新加坡 (Singapore).", c:["新加坡","山坡","上坡","下坡"]}
+};
+
+// ---- Từ vựng chính (tab 二、词语) ----
+const vocab = [
+  {id:1, hanzi:"抽烟", pinyin:"chōu yān", type:"VP", meaning:"hút thuốc", example:"有个人一直在我前面抽烟。"},
+  {id:2, hanzi:"吸", pinyin:"xī", type:"V", meaning:"hít, hút vào", example:"我跟在他后面，吸了不少二手烟。"},
+  {id:3, hanzi:"二手烟", pinyin:"èrshǒuyān", type:"N", meaning:"khói thuốc thụ động", example:"吸二手烟对人的身体危害不小。"},
+  {id:4, hanzi:"影响", pinyin:"yǐngxiǎng", type:"V", meaning:"ảnh hưởng, tác động", example:"那样的话，也影响我后面的人。"},
+  {id:5, hanzi:"无烟日", pinyin:"Wúyān Rì", type:"PN", meaning:"Ngày không thuốc lá", example:"真希望今天是世界无烟日。"},
+  {id:6, hanzi:"卫生", pinyin:"wèishēng", type:"N", meaning:"vệ sinh, y tế (sức khoẻ cộng đồng)", example:"吸烟是当今世界最大的公共卫生问题之一。"},
+  {id:7, hanzi:"总数", pinyin:"zǒngshù", type:"N", meaning:"tổng số", example:"全世界吸烟者总数约为13亿。"},
+  {id:8, hanzi:"占", pinyin:"zhàn", type:"V", meaning:"chiếm", example:"占世界人口的百分之二十五左右。"},
+  {id:9, hanzi:"人口", pinyin:"rénkǒu", type:"N", meaning:"dân số", example:"占世界人口的百分之二十五左右。"},
+  {id:10, hanzi:"百分之……", pinyin:"bǎi fēn zhī…", type:"", meaning:"… phần trăm", example:"占百分之十；百分之二十五左右。"},
+  {id:11, hanzi:"危害", pinyin:"wēihài", type:"V", meaning:"gây hại, làm nguy hại", example:"二手烟对人的身体危害不小。"},
+  {id:12, hanzi:"严肃", pinyin:"yánsù", type:"A", meaning:"nghiêm túc, nghiêm trọng", example:"你们俩在聊什么呢？这么严肃。"},
+  {id:13, hanzi:"香烟", pinyin:"xiāngyān", type:"N", meaning:"thuốc lá (điếu)", example:"我不喜欢香烟的味道。"},
+  {id:14, hanzi:"压力", pinyin:"yālì", type:"N", meaning:"áp lực, căng thẳng", example:"他说压力大的时候抽一支烟，可以减轻压力。"},
+  {id:15, hanzi:"减轻", pinyin:"jiǎnqīng", type:"V", meaning:"giảm nhẹ, giảm bớt", example:"抽一支烟，可以减轻压力。"},
+  {id:16, hanzi:"场所", pinyin:"chǎngsuǒ", type:"N", meaning:"nơi, địa điểm", example:"现在中国在公共场所都禁烟了。"},
+  {id:17, hanzi:"禁烟", pinyin:"jìn yān", type:"VP", meaning:"cấm hút thuốc", example:"现在中国在公共场所都禁烟了。"},
+  {id:18, hanzi:"觉得", pinyin:"juéde", type:"V", meaning:"cảm thấy, cho rằng", example:"那时她觉得女孩子抽烟很酷。"},
+  {id:19, hanzi:"酷", pinyin:"kù", type:"A", meaning:"ngầu, \"cool\"", example:"那时她觉得女孩子抽烟很酷。"},
+  {id:20, hanzi:"存", pinyin:"cún", type:"V", meaning:"cất giữ, để dành, gửi (tiền)", example:"让奶奶存起来，一年下来，奶奶存了好多钱。"},
+  {id:21, hanzi:"不过", pinyin:"búguò", type:"Conj", meaning:"nhưng, có điều", example:"不过，最后还是奶奶的一句话让爷爷决定不抽烟了。"},
+  {id:22, hanzi:"烟灰缸", pinyin:"yānhuīgāng", type:"N", meaning:"cái gạt tàn thuốc", example:"抽烟的时候，你自己就是个烟灰缸。"}
+];
+vocab.forEach(w=>{ w.chars = w.hanzi.match(/[一-鿿]/g) || []; });
+
+// ---- Từ vựng bổ sung (101–107: tab 五 副课文; 108+: tab 六 拓展练习 + 专有名词) ----
+const extraVocab = [
+  {id:101, hanzi:"同情", pinyin:"tóngqíng", type:"V", meaning:"thông cảm, đồng cảm", example:"赵亮非常同情杰克。"},
+  {id:102, hanzi:"根据", pinyin:"gēnjù", type:"Prep", meaning:"căn cứ vào, theo", example:"根据世界卫生组织2008年的报告……"},
+  {id:103, hanzi:"差不多", pinyin:"chàbuduō", type:"A&Adv", meaning:"gần như, xấp xỉ", example:"差不多占世界人口的百分之二十五。"},
+  {id:104, hanzi:"借口", pinyin:"jièkǒu", type:"N", meaning:"cái cớ, lý do thoái thác", example:"这是吸烟的人为自己吸烟找的借口。"},
+  {id:105, hanzi:"因此", pinyin:"yīncǐ", type:"Conj", meaning:"vì vậy, do đó", example:"奶奶因此存了好多钱。"},
+  {id:106, hanzi:"起作用", pinyin:"qǐ zuòyòng", type:"VP", meaning:"có tác dụng, phát huy tác dụng", example:"最后还是奶奶说的一句话起了作用。"},
+  {id:107, hanzi:"感兴趣", pinyin:"gǎn xìngqù", type:"VP", meaning:"có hứng thú, quan tâm", example:"艾玛对李梅奶奶的办法很感兴趣。"},
+  {id:108, hanzi:"举行", pinyin:"jǔxíng", type:"V", meaning:"tổ chức (hội nghị, cuộc thi…)", example:"世界卫生组织在日本东京举行了第六届吸烟与健康国际会议。"},
+  {id:109, hanzi:"选择", pinyin:"xuǎnzé", type:"V", meaning:"lựa chọn", example:"选择5月31日作为世界无烟日。"},
+  {id:110, hanzi:"儿童节", pinyin:"Értóng Jié", type:"N", meaning:"Ngày Quốc tế Thiếu nhi (1/6)", example:"第二天是国际儿童节。"},
+  {id:111, hanzi:"数量", pinyin:"shùliàng", type:"N", meaning:"số lượng", example:"为减少吸烟者的数量……"},
+  {id:112, hanzi:"社会", pinyin:"shèhuì", type:"N", meaning:"xã hội", example:"减轻吸烟对社会带来的危害。"},
+  {id:113, hanzi:"杂志", pinyin:"zázhì", type:"N", meaning:"tạp chí", example:"瑞典的一本杂志上说……"},
+  {id:114, hanzi:"而", pinyin:"ér", type:"Conj", meaning:"mà, còn (biểu thị đối lập)", example:"女人一般希望找一个不吸烟的男士，而女士要小心吸烟会让自己老得快。"},
+  {id:115, hanzi:"包装", pinyin:"bāozhuāng", type:"N", meaning:"bao bì, vỏ hộp", example:"香烟的外包装上必须印上警示句子和图片。"},
+  {id:116, hanzi:"处罚", pinyin:"chǔfá", type:"V", meaning:"xử phạt", example:"有的国家则对在公共场所吸烟者实施很重的处罚。"},
+  {id:117, hanzi:"罚款", pinyin:"fákuǎn", type:"N", meaning:"tiền phạt", example:"要交50～150美元不等的罚款。"},
+  {id:118, hanzi:"鞭子", pinyin:"biānzi", type:"N", meaning:"roi", example:"要交500新加坡元的罚款或被打4鞭子。"},
+  {id:119, hanzi:"瑞典", pinyin:"Ruìdiǎn", type:"PN", meaning:"Thụy Điển", example:"瑞典的一本杂志上说……"},
+  {id:120, hanzi:"不丹", pinyin:"Bùdān", type:"PN", meaning:"Bhutan", example:"2004年，不丹全面禁烟。"},
+  {id:121, hanzi:"新西兰", pinyin:"Xīnxīlán", type:"PN", meaning:"New Zealand", example:"新西兰和泰国的香烟外包装就让人看了非常不舒服。"},
+  {id:122, hanzi:"泰国", pinyin:"Tàiguó", type:"PN", meaning:"Thái Lan", example:"新西兰和泰国的香烟外包装就让人看了非常不舒服。"},
+  {id:123, hanzi:"墨西哥", pinyin:"Mòxīgē", type:"PN", meaning:"Mexico", example:"在墨西哥，在公共场所吸烟的人要交罚款。"},
+  {id:124, hanzi:"新加坡", pinyin:"Xīnjiāpō", type:"PN", meaning:"Singapore", example:"在新加坡，在公共场所吸烟者最高要交2000新加坡元的罚款。"}
+];
+extraVocab.forEach(w=>{ w.chars = w.hanzi.match(/[一-鿿]/g) || []; });
+
+// ---- 主课文 01-2 (tab 四, tái sử dụng ở tab ⭐背诵) ----
+const mainText = [
+  {sp:"杰克", hanzi:"今天早晨走在路上的时候，有个人一直在我前面{{抽烟}}，我跟在他后面，{{吸}}了不少{{二手烟}}。", pinyin:"Jīntiān zǎochen zǒu zài lù shang de shíhou, yǒu ge rén yìzhí zài wǒ qiánmiàn chōu yān, wǒ gēn zài tā hòumiàn, xīle bù shǎo èrshǒuyān.", vi:"Sáng nay lúc đi trên đường, có một người cứ hút thuốc mãi ở phía trước tôi, tôi đi theo sau anh ta, hít phải không ít khói thuốc thụ động."},
+  {sp:"赵亮", hanzi:"你怎么不超过他，走到他前面去呢？", pinyin:"Nǐ zěnme bù chāoguò tā, zǒudào tā qiánmiàn qù ne?", vi:"Sao cậu không vượt lên, đi lên trước anh ta?"},
+  {sp:"杰克", hanzi:"那是一条小路，我只能跟在他后面。", pinyin:"Nà shì yì tiáo xiǎo lù, wǒ zhǐ néng gēn zài tā hòumiàn.", vi:"Đó là một con đường nhỏ, tôi chỉ có thể đi theo sau anh ta."},
+  {sp:"赵亮", hanzi:"那你可以走慢点儿，等他走远啊。", pinyin:"Nà nǐ kěyǐ zǒu màn diǎnr, děng tā zǒu yuǎn a.", vi:"Thế thì cậu có thể đi chậm lại một chút, đợi anh ta đi xa đã."},
+  {sp:"杰克", hanzi:"可是他一边走一边打电话，走得很慢，而且我后面还有人呢。那样的话，也{{影响}}我后面的人。真希望今天是世界{{无烟日}}。", pinyin:"Kěshì tā yìbiān zǒu yìbiān dǎ diànhuà, zǒu de hěn màn, érqiě wǒ hòumiàn hái yǒu rén ne. Nàyàng dehuà, yě yǐngxiǎng wǒ hòumiàn de rén. Zhēn xīwàng jīntiān shì Shìjiè Wúyān Rì.", vi:"Nhưng anh ta vừa đi vừa gọi điện thoại, đi rất chậm, mà phía sau tôi còn có người nữa. Như thế thì lại ảnh hưởng đến người đi sau tôi. Thật mong hôm nay là Ngày Thế giới không thuốc lá."},
+  {sp:"赵亮", hanzi:"世界无烟日是哪一天？", pinyin:"Shìjiè Wúyān Rì shì nǎ yì tiān?", vi:"Ngày Thế giới không thuốc lá là ngày nào?"},
+  {sp:"杰克", hanzi:"每年的5月31日。", pinyin:"Měi nián de wǔ yuè sānshíyī rì.", vi:"Ngày 31 tháng 5 hằng năm."},
+  {sp:"赵亮", hanzi:"真希望能有那么一天，世界上没有人抽烟。", pinyin:"Zhēn xīwàng néng yǒu nàme yì tiān, shìjiè shang méiyǒu rén chōu yān.", vi:"Thật mong sẽ có một ngày, trên thế giới không còn ai hút thuốc."},
+  {sp:"杰克", hanzi:"世界{{卫生}}组织（WHO）在2008年的报告中指出，全世界吸烟者{{总数}}约为13亿，{{占}}世界{{人口}}的{{百分之}}二十五左右。", pinyin:"Shìjiè Wèishēng Zǔzhī (WHO) zài èr líng líng bā nián de bàogào zhōng zhǐchū, quán shìjiè xīyānzhě zǒngshù yuē wéi shísān yì, zhàn shìjiè rénkǒu de bǎi fēn zhī èrshíwǔ zuǒyòu.", vi:"Tổ chức Y tế Thế giới (WHO) chỉ ra trong báo cáo năm 2008 rằng tổng số người hút thuốc trên toàn thế giới khoảng 1,3 tỷ, chiếm khoảng 25% dân số thế giới."},
+  {sp:"赵亮", hanzi:"吸烟现在是当今世界最大的公共卫生问题之一，特别是二手烟，对人的身体{{危害}}不小。", pinyin:"Xīyān xiànzài shì dāngjīn shìjiè zuì dà de gōnggòng wèishēng wèntí zhī yī, tèbié shì èrshǒuyān, duì rén de shēntǐ wēihài bù xiǎo.", vi:"Hút thuốc hiện là một trong những vấn đề sức khoẻ cộng đồng lớn nhất của thế giới ngày nay, đặc biệt là khói thuốc thụ động, gây hại không nhỏ cho cơ thể con người."},
+  {sp:"李梅", hanzi:"你们俩在聊什么呢？这么{{严肃}}。", pinyin:"Nǐmen liǎ zài liáo shénme ne? Zhème yánsù.", vi:"Hai cậu đang nói chuyện gì thế? Nghiêm túc vậy."},
+  {sp:"艾玛", hanzi:"是啊，好像很担心的样子。", pinyin:"Shì a, hǎoxiàng hěn dānxīn de yàngzi.", vi:"Đúng đấy, trông có vẻ lo lắng lắm."},
+  {sp:"杰克", hanzi:"我跟赵亮在谈吸烟和二手烟有什么不好。", pinyin:"Wǒ gēn Zhào Liàng zài tán xīyān hé èrshǒuyān yǒu shénme bù hǎo.", vi:"Tôi với Triệu Lượng đang bàn xem hút thuốc và khói thuốc thụ động có hại thế nào."},
+  {sp:"艾玛", hanzi:"我不喜欢{{香烟}}的味道。有人从我身边经过，我一下子就能知道他抽不抽烟。", pinyin:"Wǒ bù xǐhuan xiāngyān de wèidào. Yǒu rén cóng wǒ shēnbiān jīngguò, wǒ yíxiàzi jiù néng zhīdào tā chōu bu chōu yān.", vi:"Tôi không thích mùi thuốc lá. Có người đi ngang qua bên cạnh là tôi biết ngay người đó có hút thuốc hay không."},
+  {sp:"李梅", hanzi:"我也不喜欢，但是我问过一个抽烟的人，他说{{压力}}大的时候抽一支烟，可以{{减轻}}压力。", pinyin:"Wǒ yě bù xǐhuan, dànshì wǒ wènguo yí ge chōu yān de rén, tā shuō yālì dà de shíhou chōu yì zhī yān, kěyǐ jiǎnqīng yālì.", vi:"Tôi cũng không thích, nhưng tôi từng hỏi một người hút thuốc, anh ấy nói lúc áp lực lớn hút một điếu thuốc có thể giảm bớt áp lực."},
+  {sp:"杰克", hanzi:"可是吸烟真的对身体很不好。", pinyin:"Kěshì xīyān zhēn de duì shēntǐ hěn bù hǎo.", vi:"Nhưng hút thuốc thật sự rất có hại cho sức khoẻ."},
+  {sp:"赵亮", hanzi:"是啊，所以现在中国在公共{{场所}}都{{禁烟}}了。", pinyin:"Shì a, suǒyǐ xiànzài Zhōngguó zài gōnggòng chǎngsuǒ dōu jìn yān le.", vi:"Đúng vậy, cho nên bây giờ ở Trung Quốc, nơi công cộng đều cấm hút thuốc rồi."},
+  {sp:"李梅", hanzi:"我爷爷以前也爱抽烟，后来我奶奶就想办法让他成功戒烟了。", pinyin:"Wǒ yéye yǐqián yě ài chōu yān, hòulái wǒ nǎinai jiù xiǎng bànfǎ ràng tā chénggōng jiè yān le.", vi:"Ông tôi trước đây cũng thích hút thuốc, sau đó bà tôi nghĩ cách giúp ông cai thuốc thành công."},
+  {sp:"艾玛", hanzi:"你奶奶用了什么办法？快告诉我，我回国后让我奶奶也戒烟。", pinyin:"Nǐ nǎinai yòngle shénme bànfǎ? Kuài gàosu wǒ, wǒ huí guó hòu ràng wǒ nǎinai yě jiè yān.", vi:"Bà cậu dùng cách gì vậy? Mau kể tôi nghe, về nước tôi sẽ bảo bà tôi cũng cai thuốc."},
+  {sp:"杰克", hanzi:"什么？艾玛，你奶奶也抽烟？", pinyin:"Shénme? Àimǎ, nǐ nǎinai yě chōu yān?", vi:"Gì cơ? Emma, bà cậu cũng hút thuốc à?"},
+  {sp:"艾玛", hanzi:"是啊，奶奶说她十四五岁就开始抽烟了，那时她{{觉得}}女孩子抽烟很{{酷}}，后来就再也戒不了了。", pinyin:"Shì a, nǎinai shuō tā shísì-wǔ suì jiù kāishǐ chōu yān le, nàshí tā juéde nǚháizi chōu yān hěn kù, hòulái jiù zài yě jiè bu liǎo le.", vi:"Đúng thế, bà nói bà bắt đầu hút thuốc từ năm mười bốn, mười lăm tuổi, hồi đó bà thấy con gái hút thuốc rất ngầu, về sau thì không cai được nữa."},
+  {sp:"李梅", hanzi:"我奶奶开始是不让爷爷在家里抽烟，要抽得出去抽。", pinyin:"Wǒ nǎinai kāishǐ shì bú ràng yéye zài jiā li chōu yān, yào chōu děi chūqù chōu.", vi:"Lúc đầu bà tôi không cho ông hút thuốc trong nhà, muốn hút thì phải ra ngoài hút."},
+  {sp:"赵亮", hanzi:"这难不倒你爷爷吧？", pinyin:"Zhè nán bu dǎo nǐ yéye ba?", vi:"Chuyện này chắc chẳng làm khó được ông cậu nhỉ?"},
+  {sp:"李梅", hanzi:"是啊，奶奶是想让爷爷每天少抽烟，可是爷爷不听。后来，奶奶换了一种办法，只要爷爷抽一支烟，就要拿出一支烟的钱给奶奶，让奶奶{{存}}起来，一年下来，奶奶存了好多钱，这让爷爷吓了一跳。{{不过}}，最后还是奶奶的一句话让爷爷决定不抽烟了。", pinyin:"Shì a, nǎinai shì xiǎng ràng yéye měi tiān shǎo chōu yān, kěshì yéye bù tīng. Hòulái, nǎinai huànle yì zhǒng bànfǎ, zhǐyào yéye chōu yì zhī yān, jiù yào náchū yì zhī yān de qián gěi nǎinai, ràng nǎinai cún qǐlái, yì nián xiàlái, nǎinai cúnle hǎo duō qián, zhè ràng yéye xiàle yí tiào. Búguò, zuìhòu háishi nǎinai de yí jù huà ràng yéye juédìng bù chōu yān le.", vi:"Đúng thế, bà muốn ông mỗi ngày hút ít đi, nhưng ông không nghe. Sau đó, bà đổi sang một cách khác: hễ ông hút một điếu thuốc thì phải đưa cho bà số tiền bằng một điếu thuốc để bà cất đi. Sau một năm, bà để dành được rất nhiều tiền, khiến ông giật cả mình. Có điều, cuối cùng chính một câu nói của bà mới khiến ông quyết định bỏ thuốc."},
+  {sp:"艾玛", hanzi:"什么话？", pinyin:"Shénme huà?", vi:"Câu gì thế?"},
+  {sp:"李梅", hanzi:"奶奶对爷爷说：\"抽烟的时候，你自己就是个{{烟灰缸}}。\"爷爷听了，就真的戒烟了。", pinyin:"Nǎinai duì yéye shuō: \"Chōu yān de shíhou, nǐ zìjǐ jiù shì ge yānhuīgāng.\" Yéye tīngle, jiù zhēn de jiè yān le.", vi:"Bà nói với ông: \"Lúc hút thuốc, chính ông là một cái gạt tàn.\" Ông nghe xong thì bỏ thuốc thật."},
+  {sp:"艾玛", hanzi:"你奶奶真有办法，我回国后也试试这个办法。", pinyin:"Nǐ nǎinai zhēn yǒu bànfǎ, wǒ huí guó hòu yě shìshi zhège bànfǎ.", vi:"Bà cậu thật có cách, về nước tôi cũng sẽ thử cách này."}
+];
+
+// ---- 副课文 01-3《世界无烟日》 ----
+const fuText = [
+  {hanzi:"今天早晨，走在杰克前面的一个人一直在抽烟，而且还一边走一边打电话，走得很慢。那条路很窄，只能一个人走，杰克没办法走到他前面，但是走慢了又会影响到后面的人。就这样，杰克跟着那个人吸了不少二手烟。赵亮非常{{同情}}杰克。", pinyin:"Jīntiān zǎochen, zǒu zài Jiékè qiánmiàn de yí ge rén yìzhí zài chōu yān, érqiě hái yìbiān zǒu yìbiān dǎ diànhuà, zǒu de hěn màn. Nà tiáo lù hěn zhǎi, zhǐ néng yí ge rén zǒu, Jiékè méi bànfǎ zǒudào tā qiánmiàn, dànshì zǒu mànle yòu huì yǐngxiǎng dào hòumiàn de rén. Jiù zhèyàng, Jiékè gēnzhe nàge rén xīle bù shǎo èrshǒuyān. Zhào Liàng fēicháng tóngqíng Jiékè.", vi:"Sáng nay, một người đi phía trước Jack cứ hút thuốc mãi, lại còn vừa đi vừa gọi điện thoại, đi rất chậm. Con đường đó rất hẹp, chỉ đủ một người đi, Jack không có cách nào vượt lên trước, mà đi chậm lại thì sẽ ảnh hưởng đến người phía sau. Cứ như vậy, Jack đi theo người đó và hít phải không ít khói thuốc thụ động. Triệu Lượng rất thông cảm với Jack."},
+  {hanzi:"{{根据}}世界卫生组织2008年的报告，全世界吸烟者总数有13亿，{{差不多}}占世界人口的百分之二十五。吸烟已经成为当今世界最大的公共卫生问题之一，尤其是二手烟，对人的健康影响很大。所以，世界卫生组织把每年的5月31日定为世界无烟日，让大家都能知道吸烟对身体的危害。为此，中国在公共场所也都禁烟了。杰克特别希望每天都是世界无烟日。", pinyin:"Gēnjù Shìjiè Wèishēng Zǔzhī èr líng líng bā nián de bàogào, quán shìjiè xīyānzhě zǒngshù yǒu shísān yì, chàbuduō zhàn shìjiè rénkǒu de bǎi fēn zhī èrshíwǔ. Xīyān yǐjīng chéngwéi dāngjīn shìjiè zuì dà de gōnggòng wèishēng wèntí zhī yī, yóuqí shì èrshǒuyān, duì rén de jiànkāng yǐngxiǎng hěn dà. Suǒyǐ, Shìjiè Wèishēng Zǔzhī bǎ měi nián de wǔ yuè sānshíyī rì dìngwéi Shìjiè Wúyān Rì, ràng dàjiā dōu néng zhīdào xīyān duì shēntǐ de wēihài. Wèi cǐ, Zhōngguó zài gōnggòng chǎngsuǒ yě dōu jìn yān le. Jiékè tèbié xīwàng měi tiān dōu shì Shìjiè Wúyān Rì.", vi:"Theo báo cáo năm 2008 của Tổ chức Y tế Thế giới, tổng số người hút thuốc trên toàn thế giới là 1,3 tỷ, chiếm gần 25% dân số thế giới. Hút thuốc đã trở thành một trong những vấn đề sức khoẻ cộng đồng lớn nhất thế giới hiện nay, nhất là khói thuốc thụ động, ảnh hưởng rất lớn đến sức khoẻ con người. Vì vậy, Tổ chức Y tế Thế giới lấy ngày 31 tháng 5 hằng năm làm Ngày Thế giới không thuốc lá, để mọi người đều biết tác hại của thuốc lá đối với cơ thể. Vì mục đích đó, Trung Quốc cũng đã cấm hút thuốc ở nơi công cộng. Jack đặc biệt mong ngày nào cũng là Ngày Thế giới không thuốc lá."},
+  {hanzi:"艾玛和李梅也都不喜欢香烟，但是，李梅问过吸烟的人，他们说吸烟可以减轻压力，艾玛认为这是吸烟的人为自己吸烟找的{{借口}}。李梅的爷爷以前也吸烟，李梅的奶奶想了很多办法让爷爷戒烟。刚开始，李梅的奶奶不让爷爷在家里抽，再后来，爷爷抽一支烟，就得拿出一支烟的钱给奶奶，奶奶{{因此}}存了好多钱，这也吓了爷爷一跳。但是，最后还是奶奶说的一句话{{起}}了{{作用}}。奶奶说，当爷爷抽烟的时候，他自己就是个烟灰缸。李梅的爷爷听了这句话，真的把烟戒了。", pinyin:"Àimǎ hé Lǐ Méi yě dōu bù xǐhuan xiāngyān, dànshì, Lǐ Méi wènguo xīyān de rén, tāmen shuō xīyān kěyǐ jiǎnqīng yālì, Àimǎ rènwéi zhè shì xīyān de rén wèi zìjǐ xīyān zhǎo de jièkǒu. Lǐ Méi de yéye yǐqián yě xīyān, Lǐ Méi de nǎinai xiǎngle hěn duō bànfǎ ràng yéye jiè yān. Gāng kāishǐ, Lǐ Méi de nǎinai bú ràng yéye zài jiā li chōu, zài hòulái, yéye chōu yì zhī yān, jiù děi náchū yì zhī yān de qián gěi nǎinai, nǎinai yīncǐ cúnle hǎo duō qián, zhè yě xiàle yéye yí tiào. Dànshì, zuìhòu háishi nǎinai shuō de yí jù huà qǐle zuòyòng. Nǎinai shuō, dāng yéye chōu yān de shíhou, tā zìjǐ jiù shì ge yānhuīgāng. Lǐ Méi de yéye tīngle zhè jù huà, zhēn de bǎ yān jiè le.", vi:"Emma và Lý Mai cũng đều không thích thuốc lá, nhưng Lý Mai từng hỏi những người hút thuốc, họ nói hút thuốc có thể giảm bớt áp lực; Emma cho rằng đây là cái cớ người hút thuốc tự tìm cho mình. Ông của Lý Mai trước đây cũng hút thuốc, bà của Lý Mai đã nghĩ ra nhiều cách để ông cai thuốc. Lúc đầu, bà không cho ông hút trong nhà; về sau, cứ hút một điếu thì ông phải đưa bà số tiền bằng một điếu thuốc, nhờ vậy bà để dành được rất nhiều tiền, điều này cũng làm ông giật mình. Nhưng cuối cùng, chính một câu nói của bà mới có tác dụng. Bà nói, khi ông hút thuốc, chính ông là một cái gạt tàn. Ông của Lý Mai nghe câu đó xong đã thật sự bỏ thuốc."},
+  {hanzi:"艾玛对李梅奶奶的办法很{{感兴趣}}，希望能用这种办法让自己的奶奶也把烟戒了。艾玛的奶奶十四五岁就开始抽烟，那时觉得很酷，可是抽上了就戒不了了。", pinyin:"Àimǎ duì Lǐ Méi nǎinai de bànfǎ hěn gǎn xìngqù, xīwàng néng yòng zhè zhǒng bànfǎ ràng zìjǐ de nǎinai yě bǎ yān jiè le. Àimǎ de nǎinai shísì-wǔ suì jiù kāishǐ chōu yān, nàshí juéde hěn kù, kěshì chōushàngle jiù jiè bu liǎo le.", vi:"Emma rất hứng thú với cách của bà Lý Mai, hy vọng có thể dùng cách này giúp bà mình cũng bỏ được thuốc. Bà của Emma bắt đầu hút thuốc từ năm mười bốn, mười lăm tuổi, hồi đó thấy rất ngầu, nhưng đã nghiện rồi thì không cai được nữa."}
+];
+
+// ---- 拓展练习 阅读《世界无烟日》(băng 01-4 dùng cho câu hỏi nghe) ----
+const readingText = [
+  {hanzi:"香烟和二手烟会危害人类健康。1987年11月，世界卫生组织在日本东京{{举行}}了第六届吸烟与健康国际会议，建议把每年的4月7日定为世界无烟日（World No Tobacco Day）。但是从1989年开始，世界无烟日改为每年的5月31日。{{选择}}5月31日作为世界无烟日是因为第二天是国际{{儿童节}}，人们希望下一代不受烟草的危害。", pinyin:"Xiāngyān hé èrshǒuyān huì wēihài rénlèi jiànkāng. Yī jiǔ bā qī nián shíyī yuè, Shìjiè Wèishēng Zǔzhī zài Rìběn Dōngjīng jǔxíngle dì-liù jiè Xīyān yǔ Jiànkāng Guójì Huìyì, jiànyì bǎ měi nián de sì yuè qī rì dìngwéi Shìjiè Wúyān Rì (World No Tobacco Day). Dànshì cóng yī jiǔ bā jiǔ nián kāishǐ, Shìjiè Wúyān Rì gǎiwéi měi nián de wǔ yuè sānshíyī rì. Xuǎnzé wǔ yuè sānshíyī rì zuòwéi Shìjiè Wúyān Rì shì yīnwèi dì-èr tiān shì Guójì Értóng Jié, rénmen xīwàng xià yí dài bú shòu yāncǎo de wēihài.", vi:"Thuốc lá và khói thuốc thụ động gây hại cho sức khoẻ con người. Tháng 11 năm 1987, Tổ chức Y tế Thế giới tổ chức Hội nghị quốc tế lần thứ sáu về Thuốc lá và Sức khoẻ tại Tokyo, Nhật Bản, đề nghị lấy ngày 7 tháng 4 hằng năm làm Ngày Thế giới không thuốc lá. Nhưng từ năm 1989, Ngày Thế giới không thuốc lá đổi thành ngày 31 tháng 5 hằng năm. Chọn ngày 31/5 vì hôm sau là Ngày Quốc tế Thiếu nhi, mọi người mong thế hệ sau không phải chịu tác hại của thuốc lá."},
+  {hanzi:"为减少吸烟者的{{数量}}，减轻吸烟对{{社会}}带来的危害，世界各国都在想办法让大家知道吸烟的危害，比如{{瑞典}}的一本{{杂志}}上说，女人一般希望找一个不吸烟的男士，{{而}}女士要小心吸烟会让自己老得快。2004年，{{不丹}}全面禁烟，成为世界上第一个也是唯一一个全面禁烟的国家。", pinyin:"Wèi jiǎnshǎo xīyānzhě de shùliàng, jiǎnqīng xīyān duì shèhuì dàilái de wēihài, shìjiè gè guó dōu zài xiǎng bànfǎ ràng dàjiā zhīdào xīyān de wēihài, bǐrú Ruìdiǎn de yì běn zázhì shang shuō, nǚrén yìbān xīwàng zhǎo yí ge bù xīyān de nánshì, ér nǚshì yào xiǎoxīn xīyān huì ràng zìjǐ lǎo de kuài. Èr líng líng sì nián, Bùdān quánmiàn jìn yān, chéngwéi shìjiè shang dì-yī ge yě shì wéiyī yí ge quánmiàn jìn yān de guójiā.", vi:"Để giảm số người hút thuốc và giảm bớt tác hại mà thuốc lá gây ra cho xã hội, các nước trên thế giới đều tìm cách cho mọi người biết tác hại của thuốc lá. Ví dụ một tạp chí ở Thụy Điển viết: phụ nữ thường mong tìm được một người đàn ông không hút thuốc, còn phụ nữ thì phải cẩn thận vì hút thuốc sẽ khiến mình già nhanh. Năm 2004, Bhutan cấm thuốc lá hoàn toàn, trở thành quốc gia đầu tiên và cũng là duy nhất trên thế giới cấm thuốc lá toàn diện."},
+  {hanzi:"还有很多国家规定，香烟的外{{包装}}上必须印上吸烟有害健康的警示句子和图片，希望能以此减少吸烟人数，比如{{新西兰}}和{{泰国}}的香烟外包装就让人看了非常不舒服。", pinyin:"Hái yǒu hěn duō guójiā guīdìng, xiāngyān de wài bāozhuāng shang bìxū yìnshàng xīyān yǒuhài jiànkāng de jǐngshì jùzi hé túpiàn, xīwàng néng yǐ cǐ jiǎnshǎo xīyān rénshù, bǐrú Xīnxīlán hé Tàiguó de xiāngyān wài bāozhuāng jiù ràng rén kànle fēicháng bù shūfu.", vi:"Còn nhiều nước quy định, trên vỏ bao thuốc lá bắt buộc phải in câu và hình ảnh cảnh báo hút thuốc có hại cho sức khoẻ, mong nhờ đó giảm số người hút thuốc; ví dụ vỏ bao thuốc lá của New Zealand và Thái Lan khiến người ta nhìn thấy rất khó chịu."},
+  {hanzi:"有的国家则对在公共场所吸烟者实施很重的{{处罚}}。在{{墨西哥}}，在公共场所吸烟的人要交50～150美元（约合人民币340～1021元）不等的{{罚款}}。在{{新加坡}}，在公共场所吸烟者最高要交2000新加坡元（约合人民币10045元）的罚款，在公共场所扔一个烟头要交500新加坡元（约合人民币2511元）的罚款或被打4{{鞭子}}。", pinyin:"Yǒude guójiā zé duì zài gōnggòng chǎngsuǒ xīyānzhě shíshī hěn zhòng de chǔfá. Zài Mòxīgē, zài gōnggòng chǎngsuǒ xīyān de rén yào jiāo wǔshí zhì yìbǎi wǔshí měiyuán (yuē hé rénmínbì sānbǎi sìshí zhì yìqiān líng èrshíyī yuán) bù děng de fákuǎn. Zài Xīnjiāpō, zài gōnggòng chǎngsuǒ xīyānzhě zuì gāo yào jiāo liǎngqiān Xīnjiāpō yuán (yuē hé rénmínbì yíwàn líng sìshíwǔ yuán) de fákuǎn, zài gōnggòng chǎngsuǒ rēng yí ge yāntóu yào jiāo wǔbǎi Xīnjiāpō yuán (yuē hé rénmínbì liǎngqiān wǔbǎi yīshíyī yuán) de fákuǎn huò bèi dǎ sì biānzi.", vi:"Có nước lại áp dụng hình phạt rất nặng với người hút thuốc nơi công cộng. Ở Mexico, người hút thuốc nơi công cộng phải nộp tiền phạt từ 50 đến 150 đô la Mỹ (khoảng 340–1021 nhân dân tệ). Ở Singapore, người hút thuốc nơi công cộng bị phạt cao nhất 2000 đô la Singapore (khoảng 10045 nhân dân tệ), vứt một mẩu tàn thuốc nơi công cộng phải nộp phạt 500 đô la Singapore (khoảng 2511 nhân dân tệ) hoặc bị đánh 4 roi."}
+];
+
+/* =========================================================
+   TIỆN ÍCH CHUNG
+========================================================= */
+let zhVoice = null;
+function pickVoice(){
+  const voices = speechSynthesis.getVoices();
+  zhVoice = voices.find(v=>v.lang && v.lang.toLowerCase().startsWith('zh')) || null;
+}
+if('speechSynthesis' in window){
+  pickVoice();
+  speechSynthesis.onvoiceschanged = pickVoice;
+}
+function speak(text, rate){
+  if(!('speechSynthesis' in window)){ alert('Trình duyệt không hỗ trợ đọc giọng nói.'); return; }
+  const clean = text.replace(/\{\{|\}\}/g,'');
+  const u = new SpeechSynthesisUtterance(clean);
+  u.lang = 'zh-CN';
+  if(zhVoice) u.voice = zhVoice;
+  u.rate = rate || 0.9;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+}
+function stripMarks(s){ return s.replace(/\{\{|\}\}/g,''); }
+
+document.querySelectorAll('audio.orig-audio').forEach(a=>{
+  a.addEventListener('error', ()=>{
+    a.style.display = 'none';
+    const warn = a.parentElement ? a.parentElement.querySelector('.audio-missing') : null;
+    if(warn) warn.style.display = 'inline';
+  });
+});
+function shuffleArr(a){
+  const arr = a.slice();
+  for(let i=arr.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+  }
+  return arr;
+}
+
+/* =========================================================
+   TAB SWITCHING
+========================================================= */
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('section.panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-'+btn.dataset.tab).classList.add('active');
+  });
+});
+
+/* =========================================================
+   四、主课文 — render bài khoá
+========================================================= */
+function renderMainText(){
+  const wrap = document.getElementById('mainTextWrap');
+  wrap.innerHTML = '';
+  mainText.forEach((line, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'bi-line';
+    const hanziHtml = line.hanzi.replace(/\{\{(.*?)\}\}/g, '<b style="color:var(--gold)">$1</b>');
+    div.innerHTML = `<div class="speaker">${line.sp}</div><div>
+      <div class="hanzi">${hanziHtml} <button class="sp-btn" data-idx="${idx}">🔊</button></div>
+      <div class="pinyin">${line.pinyin}</div>
+      <div class="vi">${line.vi}</div>
+    </div>`;
+    wrap.appendChild(div);
+  });
+  wrap.querySelectorAll('.sp-btn').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      const idx = b.dataset.idx;
+      speak(stripMarks(mainText[idx].hanzi), 0.85);
+    });
+  });
+}
+renderMainText();
+document.getElementById('toggleHideHanzi').addEventListener('change', e=>{
+  const w = document.getElementById('mainTextWrap');
+  w.classList.toggle('hide-hz', e.target.checked);
+  w.querySelectorAll('.hanzi.revealed').forEach(h=>h.classList.remove('revealed'));
+});
+document.getElementById('toggleHidePinyin').addEventListener('change', e=>{
+  document.getElementById('mainTextWrap').classList.toggle('hide-py', e.target.checked);
+});
+document.getElementById('toggleHideVi').addEventListener('change', e=>{
+  document.getElementById('mainTextWrap').classList.toggle('hide-vi', e.target.checked);
+});
+
+/* =========================================================
+   一、热身
+========================================================= */
+const warmupItems = [
+  {q:"1. 你知道世界无烟日吗？你觉得这个节日的意义是什么？", hint:"Gợi ý mẫu: 我知道，世界无烟日是每年的5月31日。我觉得这个节日的意义是让大家都知道吸烟和二手烟对身体的危害，希望抽烟的人越来越少。"},
+  {q:"2. 你觉得香烟对人类有什么影响？", hint:"Gợi ý mẫu: 我觉得香烟对人类的健康影响很大，不但危害抽烟的人自己的身体，二手烟对家人和身边的人危害也不小。"}
+]
+function renderWarmup(){
+  const wrap = document.getElementById('warmupWrap');
+  wrap.innerHTML = '';
+  warmupItems.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    div.innerHTML = `<div>${item.q}</div>
+      <textarea class="answer-box" placeholder="Trả lời bằng tiếng Trung..."></textarea>
+      <button class="btn small secondary" data-hint="${idx}">👁 Xem gợi ý đáp án</button>
+      <div class="hint-box" id="wuhint-${idx}">${item.hint}</div>`;
+    wrap.appendChild(div);
+    div.querySelector('[data-hint]').addEventListener('click', ()=>{
+      document.getElementById('wuhint-'+idx).classList.toggle('show');
+    });
+  });
+}
+renderWarmup();
+
+/* =========================================================
+   二、词语 — VOCAB CARDS (+ thẻ bổ sung tab 五/六)
+========================================================= */
+const mastered = {};
+let vocabOrder = vocab.map(w=>w.id);
+// 副课文 补充词语 (id 101–107) ở tab 五; bài đọc 补充词语 + 专有名词 (id 108+) ở tab 六
+let fuOrder = extraVocab.filter(w=>w.id<=107).map(w=>w.id);
+let readOrder = extraVocab.filter(w=>w.id>107).map(w=>w.id);
+
+function renderCards(containerId, dataArr, order, masteredFilterId){
+  const grid = document.getElementById(containerId);
+  const onlyUnmastered = document.getElementById(masteredFilterId).checked;
+  grid.innerHTML = '';
+  order.forEach(id=>{
+    const w = dataArr.find(x=>x.id===id);
+    if(!w) return;
+    if(onlyUnmastered && mastered[w.id]) return;
+    const card = document.createElement('div');
+    card.className = 'flip-card';
+    card.innerHTML = `
+      <div class="flip-inner">
+        <div class="flip-face front">
+          <span class="word-type">${typeLabel(w.type)}</span>
+          <span class="mastered-badge">${mastered[w.id] ? '⭐' : ''}</span>
+          <div class="card-hanzi">${w.hanzi}</div>
+          <button class="speak-btn" data-say="${w.hanzi}">🔊 Phát âm</button>
+        </div>
+        <div class="flip-face back">
+          <div class="back-pinyin pinyin">${w.pinyin}</div>
+          <div class="back-meaning">${w.meaning}</div>
+          <div class="back-example">VD: ${stripMarks(w.example)}</div>
+          <div class="card-actions">
+            <button class="mini-btn analyze-btn" data-id="${w.id}">🈶 Phân tích chữ</button>
+            <button class="mini-btn master-btn ${mastered[w.id]?'on':''}" data-id="${w.id}">${mastered[w.id] ? '✔ Đã thuộc' : 'Đánh dấu đã thuộc'}</button>
+          </div>
+        </div>
+      </div>`;
+    card.addEventListener('click', (e)=>{
+      if(e.target.closest('button')) return;
+      card.classList.toggle('flipped');
+    });
+    card.querySelector('.speak-btn').addEventListener('click', (e)=>{
+      e.stopPropagation();
+      speak(w.hanzi, 0.85);
+    });
+    card.querySelector('.analyze-btn').addEventListener('click', (e)=>{
+      e.stopPropagation();
+      openCharAnalysis(w.id);
+    });
+    card.querySelector('.master-btn').addEventListener('click', (e)=>{
+      e.stopPropagation();
+      toggleMastered(w.id);
+    });
+    grid.appendChild(card);
+  });
+  document.getElementById('masteredCount') && (document.getElementById('masteredCount').textContent =
+    `Đã thuộc: ${vocab.filter(w=>mastered[w.id]).length}/${vocab.length}`);
+}
+
+function typeLabel(t){
+  return {N:'Danh từ', V:'Động từ', A:'Tính từ', Pt:'Trợ từ', IDM:'Thành ngữ/Tục ngữ', PN:'Danh từ riêng', VO:'Động từ ly hợp', Adv:'Phó từ', Conj:'Liên từ', VP:'Cụm động từ', Prep:'Giới từ', 'A&Adv':'Tính từ/Phó từ', 'N&A':'Danh từ/Tính từ', 'N&V':'Danh từ/Động từ', 'V&N':'Động từ/Danh từ', 'A&N':'Tính từ/Danh từ', 'V&A':'Động từ/Tính từ', 'N&V&A':'Danh từ/Động từ/Tính từ', 'Adv&V':'Phó từ/Động từ', 'Pron&Adv':'Đại từ/Phó từ'}[t] || t;
+}
+
+function toggleMastered(id){
+  mastered[id] = !mastered[id];
+  renderCards('vocabGrid', vocab, vocabOrder, 'filterUnmastered');
+  renderCards('fuVocabGrid', extraVocab, fuOrder, 'filterUnmasteredFu');
+  renderCards('readVocabGrid', extraVocab, readOrder, 'filterUnmasteredRead');
+}
+
+document.getElementById('filterUnmastered').addEventListener('change', ()=> renderCards('vocabGrid', vocab, vocabOrder, 'filterUnmastered'));
+document.getElementById('filterUnmasteredFu').addEventListener('change', ()=> renderCards('fuVocabGrid', extraVocab, fuOrder, 'filterUnmasteredFu'));
+document.getElementById('filterUnmasteredRead').addEventListener('change', ()=> renderCards('readVocabGrid', extraVocab, readOrder, 'filterUnmasteredRead'));
+document.getElementById('shuffleBtn').addEventListener('click', ()=>{ vocabOrder = shuffleArr(vocabOrder); renderCards('vocabGrid', vocab, vocabOrder, 'filterUnmastered'); });
+document.getElementById('shuffleFuBtn').addEventListener('click', ()=>{ fuOrder = shuffleArr(fuOrder); renderCards('fuVocabGrid', extraVocab, fuOrder, 'filterUnmasteredFu'); });
+document.getElementById('shuffleReadBtn').addEventListener('click', ()=>{ readOrder = shuffleArr(readOrder); renderCards('readVocabGrid', extraVocab, readOrder, 'filterUnmasteredRead'); });
+
+/* =========================================================
+   二、词语 — CHẾ ĐỘ NGHE ĐOÁN CHỮ
+========================================================= */
+let quizOrder = [];
+let quizIdx = 0;
+let quizScore = {correct:0, total:0};
+let quizAnswered = false;
+
+function startQuizMode(){
+  quizOrder = shuffleArr(vocab.map(w=>w.id));
+  quizIdx = 0;
+  quizScore = {correct:0, total:0};
+  document.getElementById('vocabGrid').style.display = 'none';
+  document.getElementById('quizModeWrap').style.display = 'block';
+  renderQuizQuestion();
+}
+function endQuizMode(){
+  document.getElementById('vocabGrid').style.display = '';
+  document.getElementById('quizModeWrap').style.display = 'none';
+}
+function renderQuizQuestion(){
+  quizAnswered = false;
+  if(quizIdx >= quizOrder.length){
+    document.getElementById('quizProgress').textContent = `Xong! Điểm: ${quizScore.correct}/${quizScore.total}`;
+    document.getElementById('quizPlayBtn').style.display = 'none';
+    document.getElementById('quizOptions').innerHTML = '';
+    document.getElementById('quizFeedback').textContent = '';
+    document.getElementById('quizNextBtn').style.display = '';
+    document.getElementById('quizNextBtn').textContent = '🔁 Làm lại';
+    document.getElementById('quizNextBtn').onclick = startQuizMode;
+    return;
+  }
+  const word = vocab.find(w=>w.id===quizOrder[quizIdx]);
+  document.getElementById('quizPlayBtn').style.display = '';
+  document.getElementById('quizProgress').textContent = `Câu ${quizIdx+1}/${quizOrder.length} — Điểm: ${quizScore.correct}/${quizScore.total}`;
+  document.getElementById('quizPlayBtn').onclick = ()=> speak(word.hanzi, 0.8);
+  setTimeout(()=> speak(word.hanzi, 0.8), 200);
+
+  const others = vocab.filter(w=>w.id!==word.id);
+  const distractors = shuffleArr(others.map(w=>w.id)).slice(0,3).map(id=>others.find(w=>w.id===id));
+  const opts = shuffleArr([word, ...distractors]);
+  const optWrap = document.getElementById('quizOptions');
+  optWrap.innerHTML = '';
+  opts.forEach(opt=>{
+    const b = document.createElement('button');
+    b.className = 'choice-btn';
+    b.style.display = 'block';
+    b.style.width = '100%';
+    b.style.textAlign = 'left';
+    b.style.marginBottom = '8px';
+    b.textContent = opt.hanzi;
+    b.addEventListener('click', ()=>{
+      if(quizAnswered) return;
+      quizAnswered = true;
+      quizScore.total++;
+      const isCorrect = opt.id === word.id;
+      if(isCorrect) quizScore.correct++;
+      optWrap.querySelectorAll('.choice-btn').forEach(bb=>{
+        if(bb.textContent === word.hanzi) bb.classList.add('correct');
+        else if(bb === b) bb.classList.add('wrong');
+      });
+      const fb = document.getElementById('quizFeedback');
+      fb.textContent = isCorrect ? `✓ Chính xác! — ${word.pinyin} — ${word.meaning}` : `✗ Sai rồi. Đáp án: ${word.hanzi} (${word.pinyin}) — ${word.meaning}`;
+      fb.style.color = isCorrect ? '#2f7d32' : 'var(--red)';
+      document.getElementById('quizProgress').textContent = `Câu ${quizIdx+1}/${quizOrder.length} — Điểm: ${quizScore.correct}/${quizScore.total}`;
+      document.getElementById('quizNextBtn').style.display = '';
+    });
+    optWrap.appendChild(b);
+  });
+  document.getElementById('quizFeedback').textContent = '';
+  document.getElementById('quizNextBtn').style.display = 'none';
+  document.getElementById('quizNextBtn').textContent = 'Câu tiếp theo →';
+  document.getElementById('quizNextBtn').onclick = ()=>{ quizIdx++; renderQuizQuestion(); };
+}
+document.getElementById('btnCardMode').addEventListener('click', ()=>{
+  document.getElementById('btnCardMode').classList.add('mode-active');
+  document.getElementById('btnQuizMode').classList.remove('mode-active');
+  endQuizMode();
+});
+document.getElementById('btnQuizMode').addEventListener('click', ()=>{
+  document.getElementById('btnQuizMode').classList.add('mode-active');
+  document.getElementById('btnCardMode').classList.remove('mode-active');
+  startQuizMode();
+});
+
+/* =========================================================
+   MODAL PHÂN TÍCH CHỮ HÁN + HANZIWRITER
+========================================================= */
+let currentWriters = {};
+
+function openCharAnalysis(wordId){
+  const word = vocab.find(w=>w.id===wordId) || extraVocab.find(w=>w.id===wordId);
+  if(!word) return;
+  const uniqueChars = [...new Set(word.chars)];
+  document.getElementById('modalTitle').textContent = `🈶 Phân tích chữ — ${word.hanzi} (${word.pinyin})`;
+  const grid = document.getElementById('modalGrid');
+  grid.innerHTML = '';
+  currentWriters = {};
+
+  uniqueChars.forEach((ch, idx)=>{
+    const info = charDict[ch];
+    const key = ch + '_' + idx;
+    const block = document.createElement('div');
+    block.className = 'char-block';
+    if(!info){
+      block.innerHTML = `<div class="char-writer-row">
+        <div class="writer-target" id="w-${key}" style="display:flex;align-items:center;justify-content:center;font-size:2.4rem;font-family:'Noto Serif SC',serif;">${ch}</div>
+        <div class="char-info"><p><i>Chưa có dữ liệu phân tích cho chữ này trong charDict.</i></p></div>
+      </div>`;
+      grid.appendChild(block);
+      return;
+    }
+    block.innerHTML = `<div class="char-writer-row">
+        <div class="writer-target" id="w-${key}"></div>
+        <div class="char-info">
+          <dl>
+            <dt>部首 (Bộ thủ)</dt><dd>${info.r}</dd>
+            <dt>造字法</dt><dd>${info.f}</dd>
+            <dt>结构 & số nét</dt><dd>${info.s}</dd>
+            <dt>💡 Mẹo nhớ</dt><dd>${info.m}</dd>
+            <dt>4 từ ghép thông dụng</dt><dd>${info.c.join('、')}</dd>
+          </dl>
+          <button class="replay-btn" data-key="${key}">↻ Xem lại nét</button>
+        </div>
+      </div>`;
+    grid.appendChild(block);
+  });
+
+  document.getElementById('charModal').classList.add('show');
+
+  uniqueChars.forEach((ch, idx)=>{
+    if(!charDict[ch]) return;
+    const key = ch + '_' + idx;
+    setTimeout(()=>{
+      try{
+        const targetEl = document.getElementById('w-'+key);
+        const size = (targetEl && targetEl.clientWidth) ? targetEl.clientWidth : 110;
+        const pad = Math.max(4, Math.round(size * 0.055));
+        const writer = HanziWriter.create('w-'+key, ch, {
+          width: size, height: size, padding: pad,
+          strokeAnimationSpeed: 1, delayBetweenStrokes: 180,
+          showOutline: true,
+          charDataLoader: function(char, onComplete){
+            fetch(`https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0.1/${encodeURIComponent(char)}.json`)
+              .then(res=>{ if(!res.ok) throw new Error('no data'); return res.json(); })
+              .then(onComplete)
+              .catch(()=>{ onLoadFail(key, ch); });
+          },
+          onLoadCharDataError: function(){ onLoadFail(key, ch); }
+        });
+        currentWriters[key] = writer;
+        setTimeout(()=>{ try{ writer.animateCharacter(); }catch(e){} }, 80);
+      }catch(err){ onLoadFail(key, ch); }
+    }, idx * 350);
+  });
+
+  grid.querySelectorAll('.replay-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const key = btn.dataset.key;
+      const w = currentWriters[key];
+      if(w){ w.animateCharacter(); }
+    });
+  });
+}
+
+function onLoadFail(key, ch){
+  const el = document.getElementById('w-'+key);
+  if(el){
+    el.style.display = 'flex';
+    el.style.alignItems = 'center';
+    el.style.justifyContent = 'center';
+    el.style.fontSize = '2.4rem';
+    el.style.fontFamily = "'Noto Serif SC',serif";
+    el.textContent = ch;
+  }
+}
+
+document.getElementById('closeModalBtn').addEventListener('click', ()=>{
+  document.getElementById('charModal').classList.remove('show');
+});
+document.getElementById('charModal').addEventListener('click', (e)=>{
+  if(e.target.id === 'charModal') document.getElementById('charModal').classList.remove('show');
+});
+
+/* =========================================================
+   TIỆN ÍCH: trắc nghiệm chung (dùng cho nhiều bài tập có đáp án cố định)
+   items: [{q, options:[...], answer:<chuỗi đáp án đúng>, explain?, say?}]
+========================================================= */
+function renderMCList(wrapId, items, opts){
+  opts = opts || {};
+  const wrap = document.getElementById(wrapId);
+  wrap.innerHTML = '';
+  items.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    const sayBtn = item.say ? ` <button class="speak-btn">🔊 ${opts.sayLabel || 'Nghe'}</button>` : '';
+    div.innerHTML = `<div>${item.q}${sayBtn}</div>
+      ${item.img ? `<img src="${item.img}" alt="" style="max-width:100%;width:180px;border-radius:10px;border:1px solid var(--moss-200);margin:6px 0;">` : ''}
+      <div class="mc-opts"></div>
+      <div class="explain-box"></div>`;
+    wrap.appendChild(div);
+    if(item.say) div.querySelector('.speak-btn').addEventListener('click', ()=> speak(item.say, opts.rate || 0.85));
+    const optsWrap = div.querySelector('.mc-opts');
+    shuffleArr(item.options).forEach(opt=>{
+      const b = document.createElement('button');
+      b.className = 'choice-btn';
+      if(opts.block){ b.style.display = 'block'; b.style.width = '100%'; b.style.textAlign = 'left'; b.style.marginBottom = '6px'; }
+      b.textContent = opt;
+      b.addEventListener('click', ()=>{
+        optsWrap.querySelectorAll('.choice-btn').forEach(x=>x.classList.remove('selected'));
+        b.classList.add('selected');
+        div.dataset.selected = opt;
+      });
+      optsWrap.appendChild(b);
+    });
+  });
+}
+function checkMCList(wrapId, items, scoreId){
+  let correct = 0;
+  const divs = document.querySelectorAll('#'+wrapId+' > .ex-item');
+  items.forEach((item, idx)=>{
+    const div = divs[idx];
+    const sel = div.dataset.selected;
+    div.querySelectorAll('.choice-btn').forEach(b=>{
+      b.classList.remove('correct','wrong');
+      if(b.textContent === item.answer) b.classList.add('correct');
+      else if(b.textContent === sel) b.classList.add('wrong');
+    });
+    if(sel === item.answer) correct++;
+    const exp = div.querySelector('.explain-box');
+    exp.textContent = (sel === item.answer ? '✓ Đúng. ' : `✗ Đáp án đúng: ${item.answer}. `) + (item.explain || '');
+    exp.classList.add('show');
+  });
+  document.getElementById(scoreId).textContent = `Điểm: ${correct}/${items.length}`;
+}
+
+/* =========================================================
+   二、词语 — 词语活动 1 (6 câu mô tả + 2 hình)
+========================================================= */
+const wordAct1Items = [
+  {q:"(1) 把钱或者东西留着，以后用", answer:"存", options:["存","占","吸","减轻"]},
+  {q:"(2) 做一件事的地方", answer:"场所", options:["场所","人口","卫生","总数"]},
+  {q:"(3) 不可以抽烟的一天", answer:"无烟日", options:["无烟日","禁烟","二手烟","烟灰缸"]},
+  {q:"(4) 减少或降低", answer:"减轻", options:["减轻","危害","影响","存"]},
+  {q:"(5) 对人或事物产生很不好的影响或作用", answer:"危害", options:["危害","影响","严肃","压力"]},
+  {q:"(6) 有个性，觉得不一样", answer:"酷", options:["酷","严肃","觉得","不过"]},
+  {q:"(7) 看图，这个标志是什么意思？", img:"images/bai1-jinyan.png", answer:"禁烟", options:["禁烟","抽烟","香烟","无烟日"]},
+  {q:"(8) 看图，这个符号用汉语怎么说？", img:"images/bai1-baifenzhi.png", answer:"百分之……", options:["百分之……","总数","人口","占"]}
+];
+renderMCList('wordAct1', wordAct1Items);
+document.getElementById('checkWordAct1').addEventListener('click', ()=> checkMCList('wordAct1', wordAct1Items, 'wordAct1Score'));
+
+/* =========================================================
+   二、词语 — ⭐ BÀI TẬP ĐIỀN TỪ (22 câu)
+========================================================= */
+const fillVocabItems = [
+  {sentence:"我爸爸以前每天都____，现在已经戒了。", answer:"抽烟"},
+  {sentence:"早上去公园跑步，可以多____一些新鲜空气。", answer:"吸"},
+  {sentence:"孩子在家里吸____，对身体的危害很大。", answer:"二手烟"},
+  {sentence:"晚上喝咖啡会____睡觉。", answer:"影响"},
+  {sentence:"每年的5月31日是世界____。", answer:"无烟日"},
+  {sentence:"饭馆的厨房一定要注意____。", answer:"卫生"},
+  {sentence:"我们班男生和女生的____是三十个人。", answer:"总数"},
+  {sentence:"女生____我们班学生的一半。", answer:"占"},
+  {sentence:"中国是世界上____最多的国家之一。", answer:"人口"},
+  {sentence:"这次考试，____九十的同学都通过了。", answer:"百分之"},
+  {sentence:"喝太多酒会____身体健康。", answer:"危害"},
+  {sentence:"老师今天的表情很____，大家都不敢说话。", answer:"严肃"},
+  {sentence:"这家小商店不卖____，你去别的地方买吧。", answer:"香烟"},
+  {sentence:"快考试了，我的学习____很大。", answer:"压力"},
+  {sentence:"听听音乐可以____工作带来的压力。", answer:"减轻"},
+  {sentence:"图书馆、电影院这样的公共____都不能大声说话。", answer:"场所"},
+  {sentence:"飞机上全程____，请大家不要抽烟。", answer:"禁烟"},
+  {sentence:"我____这部电影很有意思，你也去看看吧。", answer:"觉得"},
+  {sentence:"他骑着摩托车、戴着墨镜的样子真____！", answer:"酷"},
+  {sentence:"我每个月都把一部分工资____在银行里。", answer:"存"},
+  {sentence:"这件衣服很好看，____有点儿贵。", answer:"不过"},
+  {sentence:"客人想抽烟，请给他拿一个____。", answer:"烟灰缸"}
+];
+const fillVocabOptions = fillVocabItems.map(i=>i.answer);
+
+function renderFillVocab(){
+  const wrap = document.getElementById('fillVocabWrap');
+  wrap.innerHTML = '';
+  fillVocabItems.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    const parts = item.sentence.split('____');
+    const opts = shuffleArr(fillVocabOptions);
+    let optHtml = '<option value="">--Chọn từ--</option>' + opts.map(o=>`<option value="${o}">${o}</option>`).join('');
+    div.innerHTML = `<span>${idx+1}. ${parts[0]}</span><select class="blank-select" data-idx="${idx}">${optHtml}</select><span>${parts[1]}</span><span class="explain-box" id="fillVocabExp${idx}"></span>`;
+    wrap.appendChild(div);
+  });
+}
+renderFillVocab();
+
+document.getElementById('checkFillVocab').addEventListener('click', ()=>{
+  let correct = 0;
+  fillVocabItems.forEach((item, idx)=>{
+    const sel = document.querySelector(`#fillVocabWrap select[data-idx="${idx}"]`);
+    const exp = document.getElementById('fillVocabExp'+idx);
+    if(sel.value === item.answer){
+      correct++;
+      sel.style.borderColor = '#5b9c5b';
+      exp.textContent = '✓ Đúng';
+      exp.style.color = '#2f7d32';
+    } else {
+      sel.style.borderColor = '#a83c34';
+      exp.textContent = `✗ Đáp án đúng: ${item.answer}`;
+      exp.style.color = '#a83c34';
+    }
+    exp.classList.add('show');
+  });
+  document.getElementById('fillVocabScore').textContent = `Điểm: ${correct}/${fillVocabItems.length}`;
+});
+
+/* =========================================================
+   三、语言点 — 大数的表达法
+========================================================= */
+const grammarMCItems = [
+  {q:"(1) 5683", answer:"五千六百八十三", options:["五千六百八十三","五千六百八三","五万六千八百三","五千六十八百三"], explain:"Số 4 chữ số đọc đủ 千·百·十: 五千 / 六百 / 八十 / 三."},
+  {q:"(2) 1726496", answer:"一百七十二万六千四百九十六", options:["一百七十二万六千四百九十六","一千七百二十六万四千九百六十","十七万二千六百四十九万六","一百七十二千六百四十九六"], explain:"Tách nhóm 4: 172|6496 → 一百七十二万 + 六千四百九十六."},
+  {q:"(3) 23873201", answer:"两千三百八十七万三千二百零一", options:["两千三百八十七万三千二百零一","两千三百八十七万三千二百一","两亿三千八百七十三万二千零一","二百三十八万七千三百二十一"], explain:"Tách nhóm 4: 2387|3201 → 两千三百八十七万 + 三千二百零一 (hàng chục là 0 nên phải đọc 零). Viết 二千三百八十七万… cũng được chấp nhận."},
+  {q:"(4) 873412886429", answer:"八千七百三十四亿一千二百八十八万六千四百二十九", options:["八千七百三十四亿一千二百八十八万六千四百二十九","八千七百三十四万一千二百八十八亿六千四百二十九","八千七百三十四亿零一千二百八十八万六千四百二十九","八百七十三亿四千一百二十八万八千六百四十二"], explain:"Tách nhóm 4: 8734|1288|6429 → 八千七百三十四亿 + 一千二百八十八万 + 六千四百二十九. Nhóm giữa đủ 4 chữ số nên không cần 零."},
+  {q:"(5) 10005", answer:"一万零五", options:["一万零五","一万五","一万零零五","十万零五"], explain:"1|0005: giữa có nhiều số 0 liền nhau chỉ đọc một chữ 零. \"一万五\" là 15000."},
+  {q:"(6) 3020", answer:"三千零二十", options:["三千零二十","三千二十","三千零二","三百零二十"], explain:"Hàng trăm là 0 → đọc 零; số 0 cuối cùng không đọc."},
+  {q:"(7) 1300000000 (1,3 tỷ)", answer:"十三亿", options:["十三亿","一亿三千万","一百三十万","十三千万"], explain:"13|0000|0000 → 十三亿 (một tỷ = 十亿)."},
+  {q:"(8) 25%", answer:"百分之二十五", options:["百分之二十五","二十五百分之","百分二十五","二十五分之百"], explain:"Phần trăm: 百分之 + số."}
+];
+renderMCList('grammarMCWrap', grammarMCItems, {block:true});
+document.getElementById('checkGrammarMC').addEventListener('click', ()=> checkMCList('grammarMCWrap', grammarMCItems, 'grammarMCScore'));
+
+const numListenItems = [
+  {q:"(1)", say:"一千三百二十四", answer:"1324", options:["1324","1234","10324","13024"]},
+  {q:"(2)", say:"两千零八", answer:"2008", options:["2008","2080","2800","20008"]},
+  {q:"(3)", say:"三万八千七百五十二", answer:"38752", options:["38752","3872","387520","30875"]},
+  {q:"(4)", say:"一千三百二十四万五千零一", answer:"13245001", options:["13245001","1324501","132450001","13240501"]},
+  {q:"(5)", say:"七十二亿六千二百三十一万", answer:"7262310000", options:["7262310000","726231000","72623100","72006231"]}
+];
+renderMCList('numListenWrap', numListenItems, {sayLabel:'Nghe số', rate:0.75});
+document.getElementById('checkNumListen').addEventListener('click', ()=>{
+  checkMCList('numListenWrap', numListenItems, 'numListenScore');
+  document.querySelectorAll('#numListenWrap > .ex-item').forEach((div, idx)=>{
+    div.querySelector('.explain-box').textContent += ` (${numListenItems[idx].say})`;
+  });
+});
+
+/* =========================================================
+   二、词语活动 2 (01-1) + 四、主课文 课文活动 1-3
+========================================================= */
+const wordAct2Items = [
+  {q:"(1) 世界卫生组织（WHO）在2008年的报告中指出，全世界吸烟者总数约为13亿，占世界人口的百分之二十五左右。", say:"世界卫生组织在2008年的报告中指出，全世界吸烟者总数约为13亿，占世界人口的百分之二十五左右。",
+   answer:"Báo cáo năm 2008 của WHO chỉ ra: tổng số người hút thuốc toàn thế giới khoảng 1,3 tỷ, chiếm khoảng 25% dân số thế giới.",
+   options:["Báo cáo năm 2008 của WHO chỉ ra: tổng số người hút thuốc toàn thế giới khoảng 1,3 tỷ, chiếm khoảng 25% dân số thế giới.",
+            "Báo cáo năm 2008 của WHO chỉ ra: tổng số người hút thuốc toàn thế giới khoảng 13 triệu, chiếm khoảng 25% dân số thế giới.",
+            "Báo cáo năm 2008 của WHO chỉ ra: tổng số người hút thuốc toàn thế giới khoảng 1,3 tỷ, chiếm khoảng 52% dân số thế giới."],
+   explain:"13亿 = 1.300.000.000 (1,3 tỷ); 百分之二十五 = 25%."},
+  {q:"(2) 2016年，世界人口达到了72亿6231万人。", say:"2016年，世界人口达到了七十二亿六千二百三十一万人。",
+   answer:"Năm 2016, dân số thế giới đạt 7.262.310.000 người (khoảng 7,26 tỷ).",
+   options:["Năm 2016, dân số thế giới đạt 7.262.310.000 người (khoảng 7,26 tỷ).",
+            "Năm 2016, dân số thế giới đạt 726.231.000 người (khoảng 726 triệu).",
+            "Năm 2016, dân số thế giới đạt 72.623.100.000 người (khoảng 72,6 tỷ)."],
+   explain:"72亿6231万 → 72|6231|0000 = 7.262.310.000."}
+];
+renderMCList('wordAct2', wordAct2Items, {block:true, sayLabel:'Nghe (giọng tổng hợp)'});
+document.getElementById('checkWordAct2').addEventListener('click', ()=> checkMCList('wordAct2', wordAct2Items, 'wordAct2Score'));
+
+const textQAItems = [
+  {q:"(1) 杰克今天早晨为什么吸了不少二手烟？", answer:"有个人一直在他前面抽烟，那是一条小路，他只能跟在那个人后面。",
+   options:["有个人一直在他前面抽烟，那是一条小路，他只能跟在那个人后面。","他跟赵亮一起在公共场所抽烟。","他喜欢走在抽烟的人后面。","他在饭馆里坐在一个抽烟的人旁边。"]},
+  {q:"(2) 世界无烟日是哪一天？", answer:"每年的5月31日", options:["每年的5月31日","每年的4月7日","每年的6月1日","每年的11月1日"],
+   explain:"4月7日 là ngày được đề nghị ban đầu (năm 1987), từ 1989 đổi thành 5月31日; 6月1日 là 儿童节."},
+  {q:"(3) 抽烟的人说抽烟有什么作用？", answer:"压力大的时候抽一支烟，可以减轻压力。",
+   options:["压力大的时候抽一支烟，可以减轻压力。","抽烟可以让人变得很酷。","抽烟可以让身体更健康。","抽烟可以帮助人存钱。"]},
+  {q:"(4) 现在中国怎样禁烟？", answer:"在公共场所都禁烟了。",
+   options:["在公共场所都禁烟了。","全面禁烟，在家里也不能抽烟。","只在世界无烟日那天禁烟。","抽一支烟就要交很多罚款。"]}
+];
+renderMCList('textQA', textQAItems, {block:true});
+document.getElementById('checkTextQA').addEventListener('click', ()=> checkMCList('textQA', textQAItems, 'textQAScore'));
+
+const choiceFillItems = [
+  {parts:["世界","组织（WHO）在2008年的报告中指出，全世界吸烟者","约为13亿，","世界人口的","二十五左右。"],
+   bank:["总数","百分之","卫生","占"], answers:["卫生","总数","占","百分之"]},
+  {parts:["现在中国在公共","都禁烟了。"], bank:["场地","场所"], answers:["场所"]},
+  {parts:["后来，奶奶","了一种办法，只要爷爷","一支烟，就要拿出一支烟的钱给奶奶，让奶奶","起来，一年下来，奶奶","了好多钱，这让爷爷","了一跳。"],
+   bank:["存","换","抽","吓"], answers:["换","抽","存","存","吓"]}
+];
+function renderChoiceFill(){
+  const wrap = document.getElementById('choiceFillWrap');
+  wrap.innerHTML = '';
+  choiceFillItems.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    let html = `<div>(${idx+1}) ${item.parts[0]}`;
+    item.answers.forEach((_, bi)=>{
+      let optHtml = '<option value="">--选择--</option>' + item.bank.map(o=>`<option value="${o}">${o}</option>`).join('');
+      html += `<select class="blank-select" data-idx="${idx}" data-bi="${bi}">${optHtml}</select>${item.parts[bi+1]}`;
+    });
+    html += `</div><div class="tag-note">（${item.bank.join('、')}）</div><span class="explain-box" id="cfexp-${idx}"></span>`;
+    div.innerHTML = html;
+    wrap.appendChild(div);
+  });
+}
+renderChoiceFill();
+document.getElementById('checkChoiceFill').addEventListener('click', ()=>{
+  let correct = 0, total = 0;
+  choiceFillItems.forEach((item, idx)=>{
+    const div = document.querySelectorAll('#choiceFillWrap .ex-item')[idx];
+    const selects = div.querySelectorAll('select');
+    let allOk = true;
+    item.answers.forEach((ans, bi)=>{
+      total++;
+      if(selects[bi].value === ans){ correct++; selects[bi].style.borderColor = '#5b9c5b'; }
+      else { selects[bi].style.borderColor = '#a83c34'; allOk = false; }
+    });
+    const exp = document.getElementById('cfexp-'+idx);
+    exp.textContent = allOk ? '✓ Đúng' : `✗ Đáp án đúng: ${item.answers.join('、')}`;
+    exp.style.color = allOk ? '#2f7d32' : '#a83c34';
+    exp.classList.add('show');
+  });
+  document.getElementById('choiceFillScore').textContent = `Điểm: ${correct}/${total}`;
+});
+
+document.getElementById('courseAct3HintBtn').addEventListener('click', ()=>{
+  document.getElementById('courseAct3Hint').classList.toggle('show');
+});
+
+
+/* =========================================================
+   ⭐ 背诵 (主课文 / 副课文 / 拓展阅读)
+========================================================= */
+const recitationSets = {
+  main: { data: mainText, audio:'01-2', label:'Băng gốc 01-2 (toàn bài)' },
+  fu: { data: fuText, audio:'01-3', label:'Băng gốc 01-3 (toàn bài)' },
+  reading: { data: readingText, audio:'01-4', label:'Băng gốc 01-4' }
+};
+let activeRecKey = 'main';
+
+function setRecAudioTrack(code, label){
+  const a = document.getElementById('recAudio');
+  const warn = document.getElementById('recAudioMissing');
+  const row = document.getElementById('recAudioRow');
+  const labelEl = document.getElementById('recAudioLabel');
+  if(!code){
+    row.style.display = 'none';
+    return;
+  }
+  row.style.display = '';
+  a.style.display = '';
+  warn.style.display = 'none';
+  labelEl.textContent = `🎧 ${label}:`;
+  a.dataset.code = code;
+  warn.dataset.for = code;
+  a.src = `audio/${code}.mp3`;
+  a.load();
+}
+
+function renderMemorize(pct){
+  const wrap = document.getElementById('memorizeWrap');
+  wrap.innerHTML = '';
+  const data = recitationSets[activeRecKey].data;
+  data.forEach((line, idx)=>{
+    if(line.stage) return;
+    const clean = stripMarks(line.hanzi);
+    const div = document.createElement('div');
+    div.className = 'bi-line';
+    let chars = clean.split('').map((ch)=>{
+      const hide = Math.random()*100 < pct && !/[，。！？：；、""''（）()～\s\dA-Za-z]/.test(ch);
+      if(hide){
+        return `<span class="reveal-word" data-ch="${ch}">${ch}</span>`;
+      }
+      return `<span>${ch}</span>`;
+    }).join('');
+    div.innerHTML = `<div class="speaker">${line.sp||''}</div><div>
+      <div class="hanzi">${chars} <button class="sp-btn" data-idx="${idx}">🔊</button></div>
+    </div>`;
+    wrap.appendChild(div);
+  });
+  wrap.querySelectorAll('.reveal-word').forEach(el=>{
+    el.addEventListener('click', ()=>{ el.classList.toggle('shown'); });
+  });
+  wrap.querySelectorAll('.sp-btn').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      const idx = b.dataset.idx;
+      const rate = parseFloat(document.getElementById('rateSelect').value);
+      speak(stripMarks(recitationSets[activeRecKey].data[idx].hanzi), rate);
+    });
+  });
+}
+
+document.getElementById('readAllBtn').addEventListener('click', ()=>{
+  const rate = parseFloat(document.getElementById('rateSelect').value);
+  const data = recitationSets[activeRecKey].data;
+  const fullText = data.filter(l=>!l.stage).map(l=>stripMarks(l.hanzi)).join('，');
+  speak(fullText, rate);
+});
+
+document.querySelectorAll('.hide-pct').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.hide-pct').forEach(b=>b.classList.remove('active-pct'));
+    btn.classList.add('active-pct');
+    renderMemorize(parseInt(btn.dataset.pct));
+  });
+});
+
+document.querySelectorAll('.subrec-nav button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.subrec-nav button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeRecKey = btn.dataset.rec;
+    const set = recitationSets[activeRecKey];
+    setRecAudioTrack(set.audio, set.label);
+    document.querySelectorAll('.hide-pct').forEach(b=>b.classList.remove('active-pct'));
+    document.querySelector('.hide-pct[data-pct="0"]').classList.add('active-pct');
+    renderMemorize(0);
+    document.getElementById('dictationInput').value = '';
+    document.getElementById('dictationScore').textContent = '';
+    document.getElementById('dictationDiff').innerHTML = '';
+  });
+});
+
+renderMemorize(0);
+setRecAudioTrack(recitationSets.main.audio, recitationSets.main.label);
+
+document.getElementById('checkDictation').addEventListener('click', ()=>{
+  const data = recitationSets[activeRecKey].data;
+  const original = data.filter(l=>!l.stage).map(l=>stripMarks(l.hanzi)).join('');
+  const input = document.getElementById('dictationInput').value.replace(/\s+/g,'');
+  const maxLen = Math.max(original.length, input.length);
+  let html = '';
+  let matchCount = 0;
+  for(let i=0;i<maxLen;i++){
+    const oc = original[i];
+    const ic = input[i];
+    if(ic === undefined){
+      if(oc !== undefined) html += `<span class="diff-char diff-missing">${oc}</span>`;
+    } else if(oc === ic){
+      html += `<span class="diff-char diff-ok">${ic}</span>`;
+      matchCount++;
+    } else {
+      html += `<span class="diff-char diff-bad">${ic}</span>`;
+    }
+  }
+  const pct = original.length ? Math.round((matchCount/original.length)*100) : 0;
+  document.getElementById('dictationScore').textContent = `Độ chính xác: ${pct}% (${matchCount}/${original.length} chữ đúng vị trí)`;
+  document.getElementById('dictationDiff').innerHTML = html;
+});
+
+/* =========================================================
+   五、副课文 + 六、拓展练习
+========================================================= */
+renderCards('vocabGrid', vocab, vocabOrder, 'filterUnmastered');
+renderCards('fuVocabGrid', extraVocab, fuOrder, 'filterUnmasteredFu');
+renderCards('readVocabGrid', extraVocab, readOrder, 'filterUnmasteredRead');
+
+function renderFuText(){
+  const wrap = document.getElementById('fuTextWrap');
+  wrap.innerHTML = '';
+  fuText.forEach((line, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'bi-line';
+    const hanziHtml = line.hanzi.replace(/\{\{(.*?)\}\}/g, '<b style="color:var(--gold)">$1</b>');
+    div.innerHTML = `<div></div><div>
+      <div class="hanzi">${hanziHtml} <button class="sp-btn" data-idx="${idx}">🔊</button></div>
+      <div class="pinyin">${line.pinyin}</div>
+      <div class="vi">${line.vi}</div>
+    </div>`;
+    wrap.appendChild(div);
+  });
+  wrap.querySelectorAll('.sp-btn').forEach(b=>{
+    b.addEventListener('click', ()=> speak(stripMarks(fuText[b.dataset.idx].hanzi), 0.85));
+  });
+}
+renderFuText();
+document.getElementById('toggleHideHanziFu').addEventListener('change', e=>{
+  const w = document.getElementById('fuTextWrap');
+  w.classList.toggle('hide-hz', e.target.checked);
+  w.querySelectorAll('.hanzi.revealed').forEach(h=>h.classList.remove('revealed'));
+});
+document.getElementById('toggleHidePinyinFu').addEventListener('change', e=>{
+  document.getElementById('fuTextWrap').classList.toggle('hide-py', e.target.checked);
+});
+document.getElementById('toggleHideViFu').addEventListener('change', e=>{
+  document.getElementById('fuTextWrap').classList.toggle('hide-vi', e.target.checked);
+});
+
+const tfItems = [
+  {q:"(1) 杰克今天早晨吸了不少二手烟，因为他喜欢走在吸烟的人后面。", answer:false, explain:"Sai — vì con đường rất hẹp, chỉ đủ một người đi, Jack không thể vượt lên trước, đi chậm lại thì ảnh hưởng người phía sau, chứ không phải anh ấy thích đi sau người hút thuốc."},
+  {q:"(2) 虽然每年5月31日为世界无烟日，但还是有不少人吸烟。", answer:true, explain:"Đúng — theo báo cáo của WHO, số người hút thuốc toàn thế giới vẫn lên tới 1,3 tỷ, chiếm gần 25% dân số."},
+  {q:"(3) 艾玛认为那些说吸烟可以减轻压力的人是给自己吸烟找借口。", answer:true, explain:"Đúng — 艾玛认为这是吸烟的人为自己吸烟找的借口。"},
+  {q:"(4) 艾玛的奶奶十四五岁就开始抽烟，一直到现在都觉得很酷。", answer:false, explain:"Sai — bà Emma thấy hút thuốc rất ngầu là \"那时\" (hồi đó, lúc 14-15 tuổi); bài không nói đến giờ bà vẫn thấy ngầu, chỉ nói đã nghiện thì không cai được."},
+  {q:"(5) 李梅的爷爷戒烟是因为李梅奶奶的一句话。", answer:true, explain:"Đúng — 最后还是奶奶说的一句话起了作用：\"他自己就是个烟灰缸\"。"}
+];
+function renderTF(){
+  const wrap = document.getElementById('tfWrap');
+  wrap.innerHTML = '';
+  tfItems.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    div.innerHTML = `<div>${item.q}</div>
+      <div>
+        <button class="choice-btn" data-val="true">对</button>
+        <button class="choice-btn" data-val="false">错</button>
+      </div>
+      <div class="explain-box" id="tfexp-${idx}">${item.explain}</div>`;
+    wrap.appendChild(div);
+    div.querySelectorAll('.choice-btn').forEach(b=>{
+      b.addEventListener('click', ()=>{
+        div.querySelectorAll('.choice-btn').forEach(x=>x.classList.remove('selected'));
+        b.classList.add('selected');
+        div.dataset.selected = b.dataset.val;
+      });
+    });
+  });
+}
+renderTF();
+document.getElementById('checkTF').addEventListener('click', ()=>{
+  let correct = 0;
+  tfItems.forEach((item, idx)=>{
+    const div = document.querySelectorAll('#tfWrap .ex-item')[idx];
+    const sel = div.dataset.selected;
+    const isCorrect = (sel === String(item.answer));
+    div.querySelectorAll('.choice-btn').forEach(b=>{
+      if((b.dataset.val === 'true') === item.answer) b.classList.add('correct');
+      else if(b.dataset.val === sel) b.classList.add('wrong');
+    });
+    if(isCorrect) correct++;
+    document.getElementById('tfexp-'+idx).classList.add('show');
+  });
+  document.getElementById('tfScore').textContent = `Điểm: ${correct}/${tfItems.length}`;
+});
+
+const dictFillItems = [
+  {parts:["那条路很窄，只能一个人走，杰克没办法走到他前面，但是走慢了又会（","）到后面的人。就这样，杰克吸了不少（","）。赵亮非常（","）杰克。"], answers:["影响","二手烟","同情"], audio:"那条路很窄，只能一个人走，杰克没办法走到他前面，但是走慢了又会影响到后面的人。就这样，杰克吸了不少二手烟。赵亮非常同情杰克。"},
+  {parts:["艾玛和李梅也都不喜欢香烟，但是，李梅问过吸烟的人，他们说吸烟可以（","）压力，艾玛认为这是吸烟的人为自己吸烟找的（","）。"], answers:["减轻","借口"], audio:"艾玛和李梅也都不喜欢香烟，但是，李梅问过吸烟的人，他们说吸烟可以减轻压力，艾玛认为这是吸烟的人为自己吸烟找的借口。"},
+  {parts:["艾玛对李梅奶奶的办法很（","），希望能用这种办法让自己的奶奶也（","）。艾玛的奶奶十四五岁就开始抽烟，那时觉得很（","），可是抽上了就戒不了了。"], answers:["感兴趣","把烟戒了","酷"], audio:"艾玛对李梅奶奶的办法很感兴趣，希望能用这种办法让自己的奶奶也把烟戒了。艾玛的奶奶十四五岁就开始抽烟，那时觉得很酷，可是抽上了就戒不了了。"}
+];
+function renderDictFill(){
+  const wrap = document.getElementById('dictFillWrap');
+  wrap.innerHTML = '';
+  dictFillItems.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    let bodyHtml = item.parts[0];
+    item.answers.forEach((ans, k)=>{
+      bodyHtml += `<input type="text" maxlength="8" class="blank-select" style="width:80px" data-k="${k}"/>` + item.parts[k+1];
+    });
+    div.innerHTML = `<div>(${idx+1}) <button class="speak-btn" data-say="${item.audio}">🔊 Nghe câu</button></div>
+      <div style="margin-top:6px;">${bodyHtml}</div>
+      <div class="explain-box" id="dfexp-${idx}"></div>`;
+    wrap.appendChild(div);
+    div.querySelector('.speak-btn').addEventListener('click', ()=> speak(item.audio, 0.8));
+  });
+}
+renderDictFill();
+document.getElementById('checkDictFill').addEventListener('click', ()=>{
+  let correct = 0, total = 0;
+  dictFillItems.forEach((item, idx)=>{
+    const div = document.querySelectorAll('#dictFillWrap .ex-item')[idx];
+    const inputs = div.querySelectorAll('input');
+    item.answers.forEach((ans, k)=>{
+      total++;
+      const val = inputs[k].value.trim();
+      if(val === ans){ correct++; inputs[k].style.borderColor = '#5b9c5b'; }
+      else inputs[k].style.borderColor = '#a83c34';
+    });
+    document.getElementById('dfexp-'+idx).textContent = `Đáp án: ${item.answers.join('、')}`;
+    document.getElementById('dfexp-'+idx).classList.add('show');
+  });
+  document.getElementById('dictFillScore').textContent = `Điểm: ${correct}/${total}`;
+});
+
+function renderReading(){
+  const wrap = document.getElementById('readingWrap');
+  wrap.innerHTML = '';
+  readingText.forEach((line, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'bi-line';
+    const hanziHtml = line.hanzi.replace(/\{\{(.*?)\}\}/g, '<b style="color:var(--gold)">$1</b>');
+    div.innerHTML = `<div></div><div>
+      <div class="hanzi">${hanziHtml} <button class="sp-btn" data-idx="${idx}">🔊</button></div>
+      <div class="pinyin">${line.pinyin}</div>
+      <div class="vi">${line.vi}</div>
+    </div>`;
+    wrap.appendChild(div);
+  });
+  wrap.querySelectorAll('.sp-btn').forEach(b=>{
+    b.addEventListener('click', ()=> speak(stripMarks(readingText[b.dataset.idx].hanzi), 0.85));
+  });
+}
+renderReading();
+document.getElementById('readAllReading').addEventListener('click', ()=>{
+  speak(readingText.map(l=>stripMarks(l.hanzi)).join(''), 0.85);
+});
+document.getElementById('toggleHideHanziReading').addEventListener('change', e=>{
+  const w = document.getElementById('readingWrap');
+  w.classList.toggle('hide-hz', e.target.checked);
+  w.querySelectorAll('.hanzi.revealed').forEach(h=>h.classList.remove('revealed'));
+});
+document.getElementById('toggleHidePinyinReading').addEventListener('change', e=>{
+  document.getElementById('readingWrap').classList.toggle('hide-py', e.target.checked);
+});
+document.getElementById('toggleHideViReading').addEventListener('change', e=>{
+  document.getElementById('readingWrap').classList.toggle('hide-vi', e.target.checked);
+});
+
+const listenQItems = [
+  {q:"(1) 世界上第一个全面禁烟的国家是哪一个？", say:"2004年，不丹全面禁烟，成为世界上第一个也是唯一一个全面禁烟的国家。",
+   answer:"不丹", options:["不丹","瑞典","新加坡","泰国"]},
+  {q:"(2) 为了减少吸烟者的数量，不少国家怎么做？", say:"还有很多国家规定，香烟的外包装上必须印上吸烟有害健康的警示句子和图片，希望能以此减少吸烟人数。",
+   answer:"规定香烟的外包装上必须印上吸烟有害健康的警示句子和图片。",
+   options:["规定香烟的外包装上必须印上吸烟有害健康的警示句子和图片。","规定每个人每天只能抽一支烟。","不让香烟在商店里卖。","把每年的4月7日定为世界无烟日。"]},
+  {q:"(3) 新加坡对在公共场所吸烟的人怎样处罚？", say:"在新加坡，在公共场所吸烟者最高要交2000新加坡元的罚款，在公共场所扔一个烟头要交500新加坡元的罚款或被打4鞭子。",
+   answer:"最高罚2000新加坡元；扔一个烟头要罚500新加坡元或被打4鞭子。",
+   options:["最高罚2000新加坡元；扔一个烟头要罚500新加坡元或被打4鞭子。","罚50～150美元。","最高罚500新加坡元；扔烟头要被打2000鞭子。","没有处罚，只是不让他们进商店。"]}
+];
+renderMCList('listenQWrap', listenQItems, {block:true, sayLabel:'Nghe đoạn liên quan'});
+document.getElementById('checkListenQ').addEventListener('click', ()=> checkMCList('listenQWrap', listenQItems, 'listenQScore'));
+
+const speakActItems = [
+  {q:"(1) 第一个世界无烟日是哪一年定下来的？为什么改为每年的5月31日？", words:"世界卫生组织、日本东京、1987年、国际儿童节", hint:"1987年11月，世界卫生组织在日本东京举行了第六届吸烟与健康国际会议，建议把每年的4月7日定为世界无烟日。从1989年开始改为每年的5月31日，因为第二天是国际儿童节，人们希望下一代不受烟草的危害。"},
+  {q:"(2) 瑞典的一本杂志上是怎么说抽烟不好的？", words:"男士、女生、老得快、不吸烟", hint:"瑞典的一本杂志上说，女生一般希望找一个不吸烟的男士，而女生自己也要小心，因为吸烟会让自己老得快。"},
+  {q:"(3) 为什么新西兰和泰国的香烟外包装让人看了非常不舒服？", words:"印上、警示、有害健康、句子、图片", hint:"因为新西兰和泰国规定香烟的外包装上必须印上吸烟有害健康的警示句子和图片，人们看了这些图片会觉得非常不舒服。"}
+];
+function renderSpeakAct(){
+  const wrap = document.getElementById('speakActWrap');
+  wrap.innerHTML = '';
+  speakActItems.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    div.innerHTML = `<div>${item.q}</div>
+      <div class="tag-note">Từ gợi ý: ${item.words}</div>
+      <textarea class="answer-box" placeholder="Viết/nói câu trả lời của bạn..."></textarea>
+      <button class="btn small secondary" data-hint="${idx}">👁 Xem gợi ý đáp án</button>
+      <div class="hint-box" id="sahint-${idx}">${item.hint}</div>`;
+    wrap.appendChild(div);
+    div.querySelector('[data-hint]').addEventListener('click', ()=>{
+      document.getElementById('sahint-'+idx).classList.toggle('show');
+    });
+  });
+}
+renderSpeakAct();
+
+/* =========================================================
+   ⭐ 造句 — Đặt câu với từ mới (3 câu/từ: 1 câu trong sách + 2 câu giao tiếp HSK4)
+   src: nơi lấy câu trong sách (null = câu tự soạn)
+========================================================= */
+const zaojuData = [
+  {w:1, items:[
+    {src:"主课文", vi:"Sáng nay lúc đi trên đường, có một người cứ hút thuốc mãi ở phía trước tôi.", zh:"今天早晨走在路上的时候，有个人一直在我前面{{抽烟}}。", py:"Jīntiān zǎochen zǒu zài lù shang de shíhou, yǒu ge rén yìzhí zài wǒ qiánmiàn chōu yān."},
+    {src:null, vi:"Ở đây không được hút thuốc, nếu anh muốn hút thì mời ra ngoài.", zh:"这里不能{{抽烟}}，你要抽的话，请到外面去。", py:"Zhèli bù néng chōu yān, nǐ yào chōu dehuà, qǐng dào wàimiàn qù."},
+    {src:null, vi:"Bố tôi đã ba năm không hút thuốc rồi.", zh:"我爸爸已经三年没{{抽烟}}了。", py:"Wǒ bàba yǐjīng sān nián méi chōu yān le."}
+  ]},
+  {w:2, items:[
+    {src:"主课文", vi:"Tôi đi theo sau anh ta, hít phải không ít khói thuốc thụ động.", zh:"我跟在他后面，{{吸}}了不少二手烟。", py:"Wǒ gēn zài tā hòumiàn, xīle bù shǎo èrshǒuyān."},
+    {src:null, vi:"Buổi sáng ra công viên đi dạo, hít chút không khí trong lành, rất tốt cho sức khoẻ.", zh:"早上去公园散散步，{{吸}}点儿新鲜空气，对身体很好。", py:"Zǎoshang qù gōngyuán sànsan bù, xī diǎnr xīnxiān kōngqì, duì shēntǐ hěn hǎo."},
+    {src:null, vi:"Bác sĩ nói người hút thuốc dễ bị ốm hơn.", zh:"医生说，{{吸}}烟的人更容易生病。", py:"Yīshēng shuō, xī yān de rén gèng róngyì shēngbìng."}
+  ]},
+  {w:3, items:[
+    {src:"主课文", vi:"Đặc biệt là khói thuốc thụ động, gây hại không nhỏ cho cơ thể con người.", zh:"特别是{{二手烟}}，对人的身体危害不小。", py:"Tèbié shì èrshǒuyān, duì rén de shēntǐ wēihài bù xiǎo."},
+    {src:null, vi:"Nhiều người không biết rằng khói thuốc thụ động còn gây hại cho trẻ em nhiều hơn.", zh:"很多人不知道，{{二手烟}}对孩子的危害更大。", py:"Hěn duō rén bù zhīdào, èrshǒuyān duì háizi de wēihài gèng dà."},
+    {src:null, vi:"Tôi không muốn hít khói thuốc thụ động nên đã đổi sang chỗ ngồi khác.", zh:"我不想吸{{二手烟}}，所以换了一个座位。", py:"Wǒ bù xiǎng xī èrshǒuyān, suǒyǐ huànle yí ge zuòwèi."}
+  ]},
+  {w:4, items:[
+    {src:"主课文", vi:"Như thế thì lại ảnh hưởng đến người đi sau tôi.", zh:"那样的话，也{{影响}}我后面的人。", py:"Nàyàng dehuà, yě yǐngxiǎng wǒ hòumiàn de rén."},
+    {src:null, vi:"Buổi tối đừng chơi điện thoại khuya quá, sẽ ảnh hưởng đến giấc ngủ đấy.", zh:"晚上别玩儿手机玩儿得太晚，会{{影响}}睡觉的。", py:"Wǎnshang bié wánr shǒujī wánr de tài wǎn, huì yǐngxiǎng shuìjiào de."},
+    {src:null, vi:"Cuốn sách này có ảnh hưởng rất lớn đối với tôi.", zh:"这本书对我的{{影响}}很大。", py:"Zhè běn shū duì wǒ de yǐngxiǎng hěn dà."}
+  ]},
+  {w:5, items:[
+    {src:"主课文", vi:"Thật mong hôm nay là Ngày Thế giới không thuốc lá.", zh:"真希望今天是世界{{无烟日}}。", py:"Zhēn xīwàng jīntiān shì Shìjiè Wúyān Rì."},
+    {src:null, vi:"Ngày 31 tháng 5 hằng năm là Ngày Thế giới không thuốc lá.", zh:"每年的5月31日是世界{{无烟日}}。", py:"Měi nián de wǔ yuè sānshíyī rì shì Shìjiè Wúyān Rì."},
+    {src:null, vi:"Vào Ngày Thế giới không thuốc lá, trường chúng tôi đã tổ chức nhiều hoạt động.", zh:"世界{{无烟日}}那天，我们学校举行了很多活动。", py:"Shìjiè Wúyān Rì nà tiān, wǒmen xuéxiào jǔxíngle hěn duō huódòng."}
+  ]},
+  {w:6, items:[
+    {src:"主课文", vi:"Hút thuốc hiện là một trong những vấn đề sức khoẻ cộng đồng lớn nhất thế giới ngày nay.", zh:"吸烟现在是当今世界最大的公共{{卫生}}问题之一。", py:"Xīyān xiànzài shì dāngjīn shìjiè zuì dà de gōnggòng wèishēng wèntí zhī yī."},
+    {src:null, vi:"Trước khi ăn phải rửa tay, chú ý vệ sinh.", zh:"吃东西以前要洗手，注意{{卫生}}。", py:"Chī dōngxi yǐqián yào xǐ shǒu, zhùyì wèishēng."},
+    {src:null, vi:"Quán ăn nhỏ này tuy rẻ nhưng vệ sinh không tốt lắm.", zh:"这家小饭馆虽然便宜，但是{{卫生}}不太好。", py:"Zhè jiā xiǎo fànguǎn suīrán piányi, dànshì wèishēng bú tài hǎo."}
+  ]},
+  {w:7, items:[
+    {src:"副课文", vi:"Theo báo cáo năm 2008 của Tổ chức Y tế Thế giới, tổng số người hút thuốc trên toàn thế giới là 1,3 tỷ.", zh:"根据世界卫生组织2008年的报告，全世界吸烟者{{总数}}有13亿。", py:"Gēnjù Shìjiè Wèishēng Zǔzhī èr líng líng bā nián de bàogào, quán shìjiè xīyānzhě zǒngshù yǒu shísān yì."},
+    {src:null, vi:"Tổng số học sinh lớp tôi là 32, trong đó có 20 bạn nữ.", zh:"我们班学生的{{总数}}是三十二个，其中女生有二十个。", py:"Wǒmen bān xuésheng de zǒngshù shì sānshí'èr ge, qízhōng nǚshēng yǒu èrshí ge."},
+    {src:null, vi:"Năm ngoái, tổng số người đến thành phố này du lịch đã vượt quá 10 triệu.", zh:"去年来这个城市旅游的人，{{总数}}超过了一千万。", py:"Qùnián lái zhège chéngshì lǚyóu de rén, zǒngshù chāoguòle yìqiān wàn."}
+  ]},
+  {w:8, items:[
+    {src:"副课文", vi:"Người hút thuốc trên toàn thế giới chiếm gần 25% dân số thế giới.", zh:"全世界吸烟者差不多{{占}}世界人口的百分之二十五。", py:"Quán shìjiè xīyānzhě chàbuduō zhàn shìjiè rénkǒu de bǎi fēn zhī èrshíwǔ."},
+    {src:null, vi:"Ở công ty chúng tôi, nhân viên nữ chiếm 60%.", zh:"在我们公司，女员工{{占}}百分之六十。", py:"Zài wǒmen gōngsī, nǚ yuángōng zhàn bǎi fēn zhī liùshí."},
+    {src:null, vi:"Chơi điện thoại chiếm mất rất nhiều thời gian của tôi.", zh:"玩儿手机{{占}}了我很多时间。", py:"Wánr shǒujī zhànle wǒ hěn duō shíjiān."}
+  ]},
+  {w:9, items:[
+    {src:"词语活动 2", vi:"Năm 2016, dân số thế giới đã đạt 7 tỷ 262 triệu 310 nghìn người.", zh:"2016年，世界{{人口}}达到了72亿6231万人。", py:"Èr líng yī liù nián, shìjiè rénkǒu dádàole qīshí'èr yì liùqiān èrbǎi sānshíyī wàn rén."},
+    {src:null, vi:"Dân số Việt Nam khoảng 100 triệu người.", zh:"越南的{{人口}}大概有一亿。", py:"Yuènán de rénkǒu dàgài yǒu yí yì."},
+    {src:null, vi:"Thành phố này dân số đông quá, ngày nào cũng tắc đường.", zh:"这个城市{{人口}}太多了，每天都堵车。", py:"Zhège chéngshì rénkǒu tài duō le, měi tiān dōu dǔchē."}
+  ]},
+  {w:10, items:[
+    {src:"主课文", vi:"Tổ chức Y tế Thế giới chỉ ra trong báo cáo năm 2008 rằng tổng số người hút thuốc toàn thế giới khoảng 1,3 tỷ, chiếm khoảng 25% dân số thế giới.", zh:"世界卫生组织在2008年的报告中指出，全世界吸烟者总数约为13亿，占世界人口的{{百分之}}二十五左右。", py:"Shìjiè Wèishēng Zǔzhī zài èr líng líng bā nián de bàogào zhōng zhǐchū, quán shìjiè xīyānzhě zǒngshù yuē wéi shísān yì, zhàn shìjiè rénkǒu de bǎi fēn zhī èrshíwǔ zuǒyòu."},
+    {src:null, vi:"Kỳ thi lần này, 90% học sinh lớp tôi đều đỗ.", zh:"这次考试，我们班{{百分之}}九十的同学都通过了。", py:"Zhè cì kǎoshì, wǒmen bān bǎi fēn zhī jiǔshí de tóngxué dōu tōngguò le."},
+    {src:null, vi:"Chiếc áo này đang giảm giá, rẻ hơn trước 30%.", zh:"这件衣服现在打折，比原来便宜了{{百分之}}三十。", py:"Zhè jiàn yīfu xiànzài dǎzhé, bǐ yuánlái piányile bǎi fēn zhī sānshí."}
+  ]},
+  {w:11, items:[
+    {src:"拓展阅读", vi:"Thuốc lá và khói thuốc thụ động gây hại cho sức khoẻ con người.", zh:"香烟和二手烟会{{危害}}人类健康。", py:"Xiāngyān hé èrshǒuyān huì wēihài rénlèi jiànkāng."},
+    {src:null, vi:"Uống quá nhiều rượu sẽ gây hại cho sức khoẻ.", zh:"喝太多酒会{{危害}}身体健康。", py:"Hē tài duō jiǔ huì wēihài shēntǐ jiànkāng."},
+    {src:null, vi:"Chơi game quá nhiều gây hại rất lớn cho trẻ em.", zh:"玩儿太多游戏对孩子的{{危害}}很大。", py:"Wánr tài duō yóuxì duì háizi de wēihài hěn dà."}
+  ]},
+  {w:12, items:[
+    {src:"主课文", vi:"Hai cậu đang nói chuyện gì thế? Nghiêm túc vậy.", zh:"你们俩在聊什么呢？这么{{严肃}}。", py:"Nǐmen liǎ zài liáo shénme ne? Zhème yánsù."},
+    {src:null, vi:"Thầy giáo chúng tôi trong giờ học rất nghiêm túc, nhưng tan học thì lại rất hài hước.", zh:"我们老师上课的时候很{{严肃}}，下课以后却很幽默。", py:"Wǒmen lǎoshī shàngkè de shíhou hěn yánsù, xiàkè yǐhòu què hěn yōumò."},
+    {src:null, vi:"Đây là một vấn đề rất nghiêm túc, chúng ta phải thảo luận kỹ một chút.", zh:"这是一个很{{严肃}}的问题，我们得好好儿讨论一下。", py:"Zhè shì yí ge hěn yánsù de wèntí, wǒmen děi hǎohāor tǎolùn yíxià."}
+  ]},
+  {w:13, items:[
+    {src:"主课文", vi:"Tôi không thích mùi thuốc lá.", zh:"我不喜欢{{香烟}}的味道。", py:"Wǒ bù xǐhuan xiāngyān de wèidào."},
+    {src:null, vi:"Cửa hàng không được bán thuốc lá cho người chưa đủ 18 tuổi.", zh:"商店不能把{{香烟}}卖给不满十八岁的人。", py:"Shāngdiàn bù néng bǎ xiāngyān mài gěi bù mǎn shíbā suì de rén."},
+    {src:null, vi:"Mỗi tháng anh ấy tốn mấy trăm tệ để mua thuốc lá.", zh:"他每个月买{{香烟}}要花好几百块钱。", py:"Tā měi ge yuè mǎi xiāngyān yào huā hǎo jǐ bǎi kuài qián."}
+  ]},
+  {w:14, items:[
+    {src:"主课文", vi:"Anh ấy nói lúc áp lực lớn hút một điếu thuốc có thể giảm bớt áp lực.", zh:"他说{{压力}}大的时候抽一支烟，可以减轻{{压力}}。", py:"Tā shuō yālì dà de shíhou chōu yì zhī yān, kěyǐ jiǎnqīng yālì."},
+    {src:null, vi:"Dạo này áp lực công việc rất lớn, tôi thường ngủ không ngon.", zh:"最近工作{{压力}}很大，我常常睡不好觉。", py:"Zuìjìn gōngzuò yālì hěn dà, wǒ chángcháng shuì bu hǎo jiào."},
+    {src:null, vi:"Bạn đừng tạo cho mình áp lực quá lớn, cứ từ từ.", zh:"你别给自己太大的{{压力}}，慢慢来。", py:"Nǐ bié gěi zìjǐ tài dà de yālì, mànmàn lái."}
+  ]},
+  {w:15, items:[
+    {src:"副课文", vi:"Họ nói hút thuốc có thể giảm bớt áp lực.", zh:"他们说吸烟可以{{减轻}}压力。", py:"Tāmen shuō xīyān kěyǐ jiǎnqīng yālì."},
+    {src:null, vi:"Sau khi uống thuốc, cơn đau đầu của tôi đã giảm đi nhiều.", zh:"吃了药以后，我的头疼{{减轻}}了不少。", py:"Chīle yào yǐhòu, wǒ de tóuténg jiǎnqīngle bù shǎo."},
+    {src:null, vi:"Tập thể thao là cách hay để giảm áp lực.", zh:"运动是{{减轻}}压力的好办法。", py:"Yùndòng shì jiǎnqīng yālì de hǎo bànfǎ."}
+  ]},
+  {w:16, items:[
+    {src:"拓展阅读", vi:"Ở Singapore, vứt một mẩu tàn thuốc nơi công cộng phải nộp phạt 500 đô la Singapore.", zh:"在新加坡，在公共{{场所}}扔一个烟头要交500新加坡元的罚款。", py:"Zài Xīnjiāpō, zài gōnggòng chǎngsuǒ rēng yí ge yāntóu yào jiāo wǔbǎi Xīnjiāpō yuán de fákuǎn."},
+    {src:null, vi:"Ở nơi công cộng nói chuyện nên nhỏ tiếng một chút.", zh:"在公共{{场所}}说话要小声一点儿。", py:"Zài gōnggòng chǎngsuǒ shuōhuà yào xiǎoshēng yìdiǎnr."},
+    {src:null, vi:"Quán cà phê này là nơi lý tưởng để bạn bè gặp gỡ trò chuyện.", zh:"这家咖啡馆是朋友们见面聊天的好{{场所}}。", py:"Zhè jiā kāfēiguǎn shì péngyoumen jiànmiàn liáotiān de hǎo chǎngsuǒ."}
+  ]},
+  {w:17, items:[
+    {src:"主课文", vi:"Đúng vậy, cho nên bây giờ ở Trung Quốc nơi công cộng đều cấm hút thuốc rồi.", zh:"是啊，所以现在中国在公共场所都{{禁烟}}了。", py:"Shì a, suǒyǐ xiànzài Zhōngguó zài gōnggòng chǎngsuǒ dōu jìn yān le."},
+    {src:null, vi:"Trên máy bay cấm hút thuốc, xin mọi người đừng hút thuốc trong nhà vệ sinh.", zh:"飞机上{{禁烟}}，请大家不要在洗手间里抽烟。", py:"Fēijī shang jìn yān, qǐng dàjiā búyào zài xǐshǒujiān li chōu yān."},
+    {src:null, vi:"Bạn không nhìn thấy ở cửa có ghi hai chữ “Cấm hút thuốc” à?", zh:"你没看见门口写着“{{禁烟}}”两个字吗？", py:"Nǐ méi kànjiàn ménkǒu xiězhe “jìn yān” liǎng ge zì ma?"}
+  ]},
+  {w:18, items:[
+    {src:"主课文", vi:"Hồi đó bà thấy con gái hút thuốc rất ngầu.", zh:"那时她{{觉得}}女孩子抽烟很酷。", py:"Nàshí tā juéde nǚháizi chōu yān hěn kù."},
+    {src:null, vi:"Tôi thấy cách này không tệ, chúng ta thử xem.", zh:"我{{觉得}}这个办法不错，我们试试吧。", py:"Wǒ juéde zhège bànfǎ búcuò, wǒmen shìshi ba."},
+    {src:null, vi:"Bạn thấy chiếc áo này thế nào?", zh:"你{{觉得}}这件衣服怎么样？", py:"Nǐ juéde zhè jiàn yīfu zěnmeyàng?"}
+  ]},
+  {w:19, items:[
+    {src:"副课文", vi:"Bà của Emma bắt đầu hút thuốc từ năm mười bốn, mười lăm tuổi, hồi đó thấy rất ngầu.", zh:"艾玛的奶奶十四五岁就开始抽烟，那时觉得很{{酷}}。", py:"Àimǎ de nǎinai shísì-wǔ suì jiù kāishǐ chōu yān, nàshí juéde hěn kù."},
+    {src:null, vi:"Kiểu tóc mới của bạn ngầu thật!", zh:"你的新发型真{{酷}}！", py:"Nǐ de xīn fàxíng zhēn kù!"},
+    {src:null, vi:"Em trai tôi thấy biết nói mấy thứ tiếng nước ngoài thì cực kỳ ngầu.", zh:"我弟弟觉得会说好几门外语特别{{酷}}。", py:"Wǒ dìdi juéde huì shuō hǎo jǐ mén wàiyǔ tèbié kù."}
+  ]},
+  {w:20, items:[
+    {src:"主课文", vi:"Sau một năm, bà đã để dành được rất nhiều tiền.", zh:"一年下来，奶奶{{存}}了好多钱。", py:"Yì nián xiàlái, nǎinai cúnle hǎo duō qián."},
+    {src:null, vi:"Mỗi tháng tôi đều để dành một ít tiền, định sang năm đi du lịch Trung Quốc.", zh:"我每个月都{{存}}一点儿钱，打算明年去中国旅游。", py:"Wǒ měi ge yuè dōu cún yìdiǎnr qián, dǎsuàn míngnián qù Zhōngguó lǚyóu."},
+    {src:null, vi:"Bạn có thể gửi hành lý ở khách sạn trước, chiều quay lại lấy.", zh:"你可以先把行李{{存}}在宾馆，下午再来拿。", py:"Nǐ kěyǐ xiān bǎ xíngli cún zài bīnguǎn, xiàwǔ zài lái ná."}
+  ]},
+  {w:21, items:[
+    {src:"主课文", vi:"Có điều, cuối cùng chính một câu nói của bà mới khiến ông quyết định bỏ thuốc.", zh:"{{不过}}，最后还是奶奶的一句话让爷爷决定不抽烟了。", py:"Búguò, zuìhòu háishi nǎinai de yí jù huà ràng yéye juédìng bù chōu yān le."},
+    {src:null, vi:"Món ăn ở nhà hàng này rất ngon, có điều hơi đắt.", zh:"这家饭馆的菜很好吃，{{不过}}有点儿贵。", py:"Zhè jiā fànguǎn de cài hěn hǎochī, búguò yǒudiǎnr guì."},
+    {src:null, vi:"Tôi rất muốn đi cùng các bạn, có điều ngày mai tôi phải tăng ca.", zh:"我很想跟你们一起去，{{不过}}明天我得加班。", py:"Wǒ hěn xiǎng gēn nǐmen yìqǐ qù, búguò míngtiān wǒ děi jiābān."}
+  ]},
+  {w:22, items:[
+    {src:"主课文", vi:"Lúc hút thuốc, chính ông là một cái gạt tàn.", zh:"抽烟的时候，你自己就是个{{烟灰缸}}。", py:"Chōu yān de shíhou, nǐ zìjǐ jiù shì ge yānhuīgāng."},
+    {src:null, vi:"Phục vụ ơi, phiền lấy giúp tôi một cái gạt tàn.", zh:"服务员，麻烦给我拿一个{{烟灰缸}}。", py:"Fúwùyuán, máfan gěi wǒ ná yí ge yānhuīgāng."},
+    {src:null, vi:"Nhà tôi không ai hút thuốc nên không có gạt tàn.", zh:"我家没有人抽烟，所以没有{{烟灰缸}}。", py:"Wǒ jiā méiyǒu rén chōu yān, suǒyǐ méiyǒu yānhuīgāng."}
+  ]}
+];
+
+let zjMixed = false;   // true = trộn tất cả câu, không nhóm theo từ
+let zjOrder = [];
+
+function zjItemHtml(it, key, num, wordHint){
+  const zhHtml = it.zh.replace(/\{\{(.+?)\}\}/g, '<b>$1</b>');
+  const badge = it.src ? `<span class="src-badge book">📖 ${it.src}</span>` : `<span class="src-badge">💬 Giao tiếp</span>`;
+  return `<div class="zj-item${it.src ? ' is-book' : ''}">
+    <div class="zj-vi"><span class="zj-num">${num}.</span>${it.vi} ${badge}${wordHint ? ` <span class="zj-hint">— dùng từ: <b>${wordHint}</b></span>` : ''}</div>
+    <input class="zj-input" type="text" placeholder="Viết câu tiếng Trung…" autocomplete="off">
+    <div class="zj-row"><button class="btn small secondary zj-toggle" data-key="${key}">👁 Đáp án</button></div>
+    <div class="zj-ans" id="zj-ans-${key}">
+      <div class="zj-zh">${zhHtml} <button class="sp-btn" data-say="${stripMarks(it.zh)}" title="Nghe">🔊</button></div>
+      <div class="pinyin">${it.py}</div>
+    </div>
+  </div>`;
+}
+
+function renderZaoju(){
+  const wrap = document.getElementById('zaojuWrap');
+  const filter = document.getElementById('zjWordFilter').value;
+  let html = '';
+  if(zjMixed){
+    zjOrder.forEach((ref, i)=>{
+      const g = zaojuData[ref.g];
+      if(filter !== 'all' && String(g.w) !== filter) return;
+      const w = vocab.find(v=>v.id===g.w);
+      html += zjItemHtml(g.items[ref.i], `${ref.g}-${ref.i}`, i+1, w.hanzi);
+    });
+  } else {
+    zaojuData.forEach((g, gi)=>{
+      if(filter !== 'all' && String(g.w) !== filter) return;
+      const w = vocab.find(v=>v.id===g.w);
+      html += `<div class="zj-word">
+        <div class="zj-head"><span class="zj-hz">${w.hanzi}</span><span class="pinyin">${w.pinyin}</span><span class="zj-mean">— ${w.meaning}</span>
+          <button class="sp-btn" data-say="${w.hanzi}" title="Nghe">🔊</button></div>
+        ${g.items.map((it, ii)=> zjItemHtml(it, `${gi}-${ii}`, ii+1, null)).join('')}
+      </div>`;
+    });
+  }
+  wrap.innerHTML = html;
+}
+
+(function initZaoju(){
+  const sel = document.getElementById('zjWordFilter');
+  sel.innerHTML = '<option value="all">Tất cả (22 từ)</option>' +
+    zaojuData.map(g=>{ const w = vocab.find(v=>v.id===g.w); return `<option value="${g.w}">${g.w}. ${w.hanzi}</option>`; }).join('');
+  sel.addEventListener('change', renderZaoju);
+  document.getElementById('zjHideBook').addEventListener('change', e=>{
+    document.getElementById('zaojuWrap').classList.toggle('zj-hide-book', e.target.checked);
+  });
+  document.getElementById('zjShowAll').addEventListener('click', ()=>{
+    document.querySelectorAll('#zaojuWrap .zj-ans').forEach(a=>a.classList.add('show'));
+  });
+  document.getElementById('zjHideAll').addEventListener('click', ()=>{
+    document.querySelectorAll('#zaojuWrap .zj-ans').forEach(a=>a.classList.remove('show'));
+  });
+  const shuffleBtn = document.getElementById('zjShuffle');
+  shuffleBtn.addEventListener('click', ()=>{
+    zjMixed = true;
+    const refs = [];
+    zaojuData.forEach((g, gi)=> g.items.forEach((_, ii)=> refs.push({g:gi, i:ii})));
+    zjOrder = shuffleArr(refs);
+    document.getElementById('zjGroupBtn').style.display = '';
+    renderZaoju();
+  });
+  document.getElementById('zjGroupBtn').addEventListener('click', e=>{
+    zjMixed = false;
+    e.target.style.display = 'none';
+    renderZaoju();
+  });
+  document.getElementById('zaojuWrap').addEventListener('click', e=>{
+    const t = e.target.closest('.zj-toggle');
+    if(t){ document.getElementById('zj-ans-'+t.dataset.key).classList.toggle('show'); return; }
+    const sp = e.target.closest('.sp-btn[data-say]');
+    if(sp) speak(sp.dataset.say, 0.85);
+  });
+  renderZaoju();
+})();
+
+/* =========================================================
+   ⭐ 综合测试
+========================================================= */
+const finalTestBank = [
+  {type:'mc', q:'"二手烟"是什么意思？', options:['不抽烟的人吸进别人抽烟时的烟','第二次买的香烟','很便宜的香烟','用过的烟灰缸'], answer:0},
+  {type:'mc', q:'"减轻"最接近哪个意思？', options:['减少，降低','增加，变多','完全没有','变得严肃'], answer:0},
+  {type:'mc', q:'"借口"是什么意思？', options:['为自己做的事找的理由','借别人的东西','嘴巴','一种香烟'], answer:0},
+  {type:'mc', q:'"差不多"在"差不多占世界人口的百分之二十五"中是什么意思？', options:['几乎，大约','差很多','完全一样','比较差'], answer:0},
+  {type:'mc', q:'完成句子：抽烟对身体的____很大。', options:['危害','卫生','场所','总数'], answer:0},
+  {type:'mc', q:'完成句子：现在中国在公共____都禁烟了。', options:['场所','场地','人口','包装'], answer:0},
+  {type:'mc', q:'完成句子：最后还是奶奶说的一句话____了作用。', options:['起','做','有','用'], answer:0},
+  {type:'mc', q:'"23873201"用汉语怎么说？', options:['两千三百八十七万三千二百零一','两千三百八十七万三千二百一','二百三十八万七千三百二十一','两亿三千八百七十三万二千零一'], answer:0},
+  {type:'mc', q:'"十三亿"是多少？', options:['1 300 000 000','130 000 000','13 000 000','1 300 000'], answer:0},
+  {type:'mc', q:'"25%"用汉语怎么说？', options:['百分之二十五','二十五百分之','百分二十五','二十五分之百'], answer:0},
+  {type:'mc', q:'根据主课文，杰克为什么不超过前面抽烟的人？', options:['那是一条小路，他只能跟在后面','他走得太慢了','他也在抽烟','他在打电话'], answer:0},
+  {type:'tf', q:'根据主课文，世界卫生组织2008年的报告指出，全世界吸烟者总数约为13亿。', answer:true, explain:'原文：全世界吸烟者总数约为13亿，占世界人口的百分之二十五左右。'},
+  {type:'mc', q:'根据主课文，李梅的奶奶后来换了什么办法？', options:['爷爷抽一支烟，就要拿出一支烟的钱给奶奶存起来','不让爷爷出门','把爷爷的香烟都扔了','每天给爷爷买一个烟灰缸'], answer:0},
+  {type:'tf', q:'根据主课文，奶奶对爷爷说："抽烟的时候，你自己就是个烟灰缸。"', answer:true, explain:'爷爷听了这句话，就真的戒烟了。'},
+  {type:'tf', q:'根据副课文，艾玛认为吸烟真的可以减轻压力。', answer:false, explain:'艾玛认为"吸烟可以减轻压力"是吸烟的人为自己吸烟找的借口。'},
+  {type:'mc', q:'根据拓展阅读，为什么选择5月31日作为世界无烟日？', options:['因为第二天是国际儿童节','因为那天是WHO成立的日子','因为那天在日本举行了会议','因为那天天气最好'], answer:0},
+  {type:'mc', q:'根据拓展阅读，世界上第一个全面禁烟的国家是哪个？', options:['不丹','瑞典','新西兰','墨西哥'], answer:0},
+  {type:'tf', q:'根据拓展阅读，1987年世界卫生组织建议把每年的5月31日定为世界无烟日。', answer:false, explain:'1987年建议的是每年的4月7日，从1989年开始才改为每年的5月31日。'},
+  {type:'mc', q:'根据拓展阅读，在新加坡的公共场所扔一个烟头会怎么样？', options:['要交500新加坡元的罚款或被打4鞭子','要交50美元的罚款','要交2000新加坡元的罚款','没有处罚'], answer:0}
+];
+
+function startFinalTest(){
+  const order = shuffleArr(finalTestBank.map((_,i)=>i));
+  const wrap = document.getElementById('finalTestWrap');
+  wrap.innerHTML = '';
+  order.forEach((qi, idx)=>{
+    const item = finalTestBank[qi];
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    div.dataset.qi = qi;
+    if(item.type === 'mc'){
+      const optIdxArr = shuffleArr(item.options.map((_,i)=>i));
+      let optsHtml = optIdxArr.map(oi=>`<button class="choice-btn" data-oi="${oi}">${item.options[oi]}</button>`).join('');
+      div.innerHTML = `<div>${idx+1}. ${item.q}</div><div>${optsHtml}</div><div class="explain-box" id="ft-exp-${idx}"></div>`;
+    } else {
+      div.innerHTML = `<div>${idx+1}. ${item.q}</div>
+        <div><button class="choice-btn" data-val="true">对</button><button class="choice-btn" data-val="false">错</button></div>
+        <div class="explain-box" id="ft-exp-${idx}"></div>`;
+    }
+    wrap.appendChild(div);
+    div.querySelectorAll('.choice-btn').forEach(b=>{
+      b.addEventListener('click', ()=>{
+        div.querySelectorAll('.choice-btn').forEach(x=>x.classList.remove('selected'));
+        b.classList.add('selected');
+        div.dataset.selected = (item.type==='mc') ? b.dataset.oi : b.dataset.val;
+      });
+    });
+  });
+  document.getElementById('finalTestScore').innerHTML = '';
+  document.getElementById('checkFinalTest').style.display = '';
+}
+document.getElementById('startFinalTest').addEventListener('click', startFinalTest);
+document.getElementById('checkFinalTest').addEventListener('click', ()=>{
+  let correct = 0;
+  const items = document.querySelectorAll('#finalTestWrap .ex-item');
+  items.forEach((div, idx)=>{
+    const qi = parseInt(div.dataset.qi);
+    const item = finalTestBank[qi];
+    const sel = div.dataset.selected;
+    let isCorrect = false;
+    if(item.type === 'mc'){
+      isCorrect = (sel !== undefined && parseInt(sel) === item.answer);
+      div.querySelectorAll('.choice-btn').forEach(b=>{
+        if(parseInt(b.dataset.oi) === item.answer) b.classList.add('correct');
+        else if(b.dataset.oi === sel) b.classList.add('wrong');
+      });
+    } else {
+      isCorrect = (sel === String(item.answer));
+      div.querySelectorAll('.choice-btn').forEach(b=>{
+        if((b.dataset.val === 'true') === item.answer) b.classList.add('correct');
+        else if(b.dataset.val === sel) b.classList.add('wrong');
+      });
+    }
+    if(isCorrect) correct++;
+    if(item.explain){
+      const exp = document.getElementById('ft-exp-'+idx);
+      exp.textContent = item.explain;
+      exp.classList.add('show');
+    }
+  });
+  const pct = items.length ? Math.round((correct/items.length)*100) : 0;
+  document.getElementById('finalTestScore').innerHTML = `<div class="final-score-big">Kết quả: ${correct}/${items.length} (${pct}%)</div>`;
+});
+
+/* ===== Ẩn chữ Hán: click ô mờ để hiện lại câu đó ===== */
+document.addEventListener('click', function(ev){
+  const hz = ev.target.closest ? ev.target.closest('.hanzi') : null;
+  if(!hz) return;
+  if(ev.target.closest('.sp-btn')) return;          /* nút loa vẫn phát audio */
+  const wrap = hz.closest('.hide-hz');
+  if(!wrap) return;
+  hz.classList.toggle('revealed');
+}, {capture:false});
+/* data-hz-reveal */
+</script>
+</body>
+</html>
