@@ -1,0 +1,2125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第六课 · 时间都去哪儿了 — Bài 6: HSK4 速通汉语 中级2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=Zilla+Slab:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.7/dist/hanzi-writer.min.js"></script>
+<style>
+  :root{
+    --moss-900:#0a3d34;
+    --moss-800:#0e5c4d;
+    --moss-700:#128a71;
+    --moss-600:#1aa084;
+    --moss-500:#2bb896;
+    --moss-400:#6ecfb2;
+    --moss-300:#a8e2cd;
+    --moss-200:#d6f0e4;
+    --moss-100:#eef8f3;
+    --cream:#f6efdf;
+    --paper:#fffcf3;
+    --ink:#2c2a22;
+    --gold:#c9962f;
+    --red:#b8412f;
+    --gray:#8a8578;
+    --accent-2:#d9723c;
+    --accent-3:#2f7f92;
+    --accent-4:#c69a2e;
+    --accent-5:#b8586b;
+    --accent-6:#1f6b4a;
+    --accent-7:#6b5090;
+    font-size:16px;
+  }
+  *{box-sizing:border-box;}
+  html{ max-width:100%; overflow-x:hidden; }
+  body{
+    margin:0;
+    max-width:100%;
+    overflow-x:hidden;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Noto Sans SC',sans-serif;
+    line-height:1.6;
+    padding-bottom:60px;
+  }
+  img{ max-width:100%; height:auto; }
+  h1,h2,h3,h4{ font-family:'Noto Serif SC',serif; color:var(--moss-900); margin:0 0 .5em; }
+  .pinyin{ font-family:'Zilla Slab',serif; font-style:italic; color:var(--moss-600); }
+  a{ color:var(--moss-700); }
+  .topbar{
+    background:linear-gradient(135deg,var(--moss-800),var(--moss-600));
+    color:#fff; padding:14px 20px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+    position:sticky; top:0; z-index:50; box-shadow:0 2px 8px rgba(0,0,0,.15);
+  }
+  .home-btn{
+    background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.4); color:#fff;
+    padding:6px 14px; border-radius:20px; text-decoration:none; font-size:.9rem; white-space:nowrap;
+  }
+  .home-btn:hover{ background:rgba(255,255,255,.3); }
+  .topbar .titles{ flex:1; min-width:200px; }
+  .topbar h1{ color:#fff; font-size:1.3rem; margin:0; }
+  .topbar .sub{ font-size:.85rem; opacity:.9; }
+  nav.tabs{
+    display:flex; flex-wrap:wrap; gap:6px; padding:10px 16px; background:var(--moss-100);
+    position:sticky; top:64px; z-index:40; border-bottom:2px solid var(--moss-300);
+  }
+  nav.tabs button{
+    font-family:'Noto Serif SC',serif; font-weight:700; cursor:pointer;
+    background:var(--paper); border:1.5px solid var(--moss-300); color:var(--moss-800);
+    padding:8px 14px; border-radius:10px 10px 0 0; font-size:.92rem;
+  }
+  nav.tabs button.active{ background:var(--moss-700); color:#fff; border-color:var(--moss-700); }
+  /* Màu nhấn theo tab: 一~六 theo sách, ⭐ = ôn luyện bổ sung */
+  nav.tabs button[data-tab="tab2"].active{ background:var(--accent-2); border-color:var(--accent-2); }
+  nav.tabs button[data-tab="tab3"].active{ background:var(--accent-3); border-color:var(--accent-3); }
+  nav.tabs button[data-tab="tab5"].active{ background:var(--accent-4); border-color:var(--accent-4); }
+  nav.tabs button[data-tab="tab6"].active{ background:var(--accent-6); border-color:var(--accent-6); }
+  nav.tabs button[data-tab="tab7"].active{ background:var(--gold); border-color:var(--gold); }
+  nav.tabs button[data-tab="tab8"].active{ background:var(--accent-5); border-color:var(--accent-5); }
+  nav.tabs button[data-tab="tab9"].active{ background:var(--accent-7); border-color:var(--accent-7); }
+  nav.tabs button.tab-extra{ border-style:dashed; }
+  nav.tabs .tab-sep{ width:1px; align-self:stretch; background:var(--moss-300); margin:0 4px; }
+  #panel-tab2 h2{ color:var(--accent-2); }
+  #panel-tab3 h2{ color:var(--accent-3); }
+  #panel-tab5 h2{ color:var(--accent-4); }
+  #panel-tab6 h2{ color:var(--accent-6); }
+  #panel-tab7 h2{ color:var(--gold); }
+  #panel-tab8 h2{ color:var(--accent-5); }
+  #panel-tab9 h2{ color:var(--accent-7); }
+  #panel-tab3 .grammar-formula{ background:var(--accent-3); color:#fff5ec; }
+  #panel-tab8 .hide-pct.active-pct{ background:var(--accent-5); border-color:var(--accent-5); }
+  .book-guide{ margin:0 0 14px; }
+  .extra-badge{ display:inline-block; font-size:.72rem; font-family:'Noto Sans SC',sans-serif; font-weight:700; color:#fff; background:var(--gold); padding:1px 8px; border-radius:10px; vertical-align:middle; margin-right:4px; }
+
+  /* ⭐ 造句 */
+  .zj-word{ border:1px solid var(--moss-200); border-radius:12px; padding:12px 14px; margin-bottom:14px; background:#fff; }
+  .zj-head{ display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; margin-bottom:8px; }
+  .zj-head .zj-hz{ font-family:'Noto Serif SC',serif; font-weight:700; font-size:1.3rem; color:var(--moss-900); }
+  .zj-head .zj-mean{ color:#555; font-size:.9rem; }
+  .zj-item{ padding:10px 12px; background:var(--moss-100); border-radius:10px; margin-bottom:8px; }
+  .zj-vi{ font-size:1rem; margin-bottom:6px; overflow-wrap:break-word; }
+  .zj-vi .zj-num{ font-weight:700; color:var(--moss-700); margin-right:4px; }
+  .src-badge{ display:inline-block; font-size:.7rem; padding:0 7px; border-radius:10px; background:var(--moss-200); color:var(--moss-800); margin-left:4px; vertical-align:middle; white-space:nowrap; }
+  .src-badge.book{ background:var(--gold); color:#fff; }
+  .zj-input{ width:100%; border:1px solid var(--moss-300); border-radius:8px; padding:6px 8px; font-family:'Noto Serif SC',serif; font-size:1rem; }
+  .zj-row{ display:flex; gap:6px; align-items:center; margin-top:6px; flex-wrap:wrap; }
+  .zj-hint{ font-size:.8rem; color:var(--gray); }
+  .zj-ans{ display:none; margin-top:6px; padding:8px 10px; border:1px dashed var(--gold); background:#fff8e6; border-radius:8px; }
+  .zj-ans.show{ display:block; }
+  .zj-ans .zj-zh{ font-family:'Noto Serif SC',serif; font-size:1.08rem; overflow-wrap:break-word; }
+  .zj-ans .zj-zh b{ color:var(--red); }
+  .zj-ans .pinyin{ font-size:.9rem; overflow-wrap:break-word; }
+  .zj-hide-book .zj-item.is-book{ display:none; }
+  #zaojuWrap .sp-btn{ background:none; border:none; cursor:pointer; font-size:1rem; color:var(--moss-600); }
+  main{ max-width:980px; margin:0 auto; padding:18px 16px 60px; }
+  section.panel{ display:none; animation:fade .25s ease; }
+  section.panel.active{ display:block; }
+  @keyframes fade{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+  .card-block{ background:var(--paper); border:1px solid var(--moss-200); border-radius:14px; padding:18px 20px; margin-bottom:18px; box-shadow:0 1px 4px rgba(60,77,49,.08); }
+  .toolbar{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:14px; }
+  .btn{
+    font-family:'Noto Sans SC',sans-serif; cursor:pointer; border:none; border-radius:8px;
+    padding:8px 16px; font-size:.9rem; font-weight:500; background:var(--moss-600); color:#fff;
+  }
+  .btn:hover{ background:var(--moss-700); }
+  .btn.secondary{ background:var(--moss-200); color:var(--moss-900); }
+  .btn.secondary:hover{ background:var(--moss-300); }
+  .btn.secondary.mode-active{ background:var(--moss-600); color:#fff; }
+  .btn.small{ padding:4px 10px; font-size:.8rem; }
+  label.chk{ font-size:.88rem; display:flex; align-items:center; gap:6px; cursor:pointer; }
+
+  .cards-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:16px; }
+  .flip-card{ perspective:1200px; height:190px; }
+  .flip-inner{ position:relative; width:100%; height:100%; transition:transform .5s; transform-style:preserve-3d; }
+  .flip-card.flipped .flip-inner{ transform:rotateY(180deg); }
+  .flip-face{
+    position:absolute; inset:0; backface-visibility:hidden; border-radius:12px;
+    padding:14px; display:flex; flex-direction:column; overflow:hidden;
+    background:var(--paper); border:2px dashed var(--moss-400);
+  }
+  .flip-face.front{ align-items:center; justify-content:center; text-align:center; background:linear-gradient(160deg,#fff,var(--moss-100)); }
+  .flip-face.back{ transform:rotateY(180deg); background:var(--moss-100); justify-content:flex-start; overflow-y:auto; }
+  .flip-face.front::before,.flip-face.front::after{
+    content:''; position:absolute; width:16px; height:16px; background:var(--cream);
+    border:2px dashed var(--moss-400); border-radius:50%; top:50%; transform:translateY(-50%);
+  }
+  .flip-face.front::before{ left:-9px; } .flip-face.front::after{ right:-9px; }
+  .word-type{ position:absolute; top:8px; left:10px; font-size:.68rem; background:var(--moss-500); color:#fff; padding:1px 7px; border-radius:10px; }
+  .mastered-badge{ position:absolute; top:8px; right:10px; font-size:.9rem; }
+  .card-hanzi{ font-family:'Noto Serif SC',serif; font-weight:700; font-size:1.7rem; color:var(--moss-900); margin-top:8px; word-break:break-word; line-height:1.25; padding:0 4px; }
+  .speak-btn{ margin-top:8px; background:none; border:1px solid var(--moss-400); border-radius:20px; padding:3px 12px; cursor:pointer; font-size:.85rem; color:var(--moss-700); }
+  .speak-btn:hover{ background:var(--moss-200); }
+  .back-pinyin{ font-size:1.05rem; margin-bottom:2px; }
+  .back-meaning{ font-weight:700; color:var(--moss-800); margin-bottom:6px; }
+  .back-example{ font-size:.82rem; color:#555; flex:1; overflow:auto; }
+  .card-actions{ display:flex; gap:6px; margin-top:6px; flex-wrap:wrap; }
+  .mini-btn{ font-size:.72rem; padding:3px 8px; border-radius:6px; border:1px solid var(--moss-400); background:#fff; cursor:pointer; color:var(--moss-800); }
+  .mini-btn.on{ background:var(--gold); color:#fff; border-color:var(--gold); }
+
+  .modal-overlay{ position:fixed; inset:0; background:rgba(30,35,20,.6); display:none; align-items:flex-start; justify-content:center; z-index:100; padding:30px 12px; overflow:auto; }
+  .modal-overlay.show{ display:flex; }
+  .modal-box{ background:var(--paper); border-radius:16px; max-width:820px; width:100%; padding:22px 24px; position:relative; }
+  .modal-close{ position:absolute; top:14px; right:16px; font-size:1.3rem; background:none; border:none; cursor:pointer; color:var(--moss-700); }
+  .char-analysis-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:16px; margin-top:12px; }
+  .char-block{ border:1px solid var(--moss-200); border-radius:12px; padding:14px; background:var(--moss-100); }
+  .char-writer-row{ display:flex; gap:14px; align-items:flex-start; }
+  .writer-target{ width:110px; height:110px; background:#fff; border:1px solid var(--moss-300); border-radius:8px; flex:none; overflow:hidden; }
+  .char-info{ flex:1; font-size:.85rem; }
+  .char-info dt{ font-weight:700; color:var(--moss-800); margin-top:6px; }
+  .char-info dd{ margin:0 0 2px; }
+  .replay-btn{ margin-top:6px; font-size:.75rem; padding:3px 10px; border-radius:6px; border:1px solid var(--moss-500); background:#fff; cursor:pointer; color:var(--moss-700); }
+
+  .grammar-formula{ background:var(--moss-900); color:var(--moss-100); font-family:'Zilla Slab',serif; padding:10px 14px; border-radius:8px; display:inline-block; margin:8px 0; font-size:1.05rem; }
+  .hl{ color:var(--red); font-weight:700; background:#fbe8d8; padding:0 2px; border-radius:3px; }
+  .ex-line{ margin:6px 0; font-size:1.02rem; }
+  .plane-box{ border-left:4px solid var(--moss-500); padding:6px 14px; margin:10px 0; background:var(--moss-100); border-radius:0 8px 8px 0; }
+  .plane-box h4{ margin-bottom:4px; color:var(--moss-700); }
+  .tiles-wrap{ display:flex; flex-wrap:wrap; gap:8px; min-height:44px; padding:10px; background:var(--moss-100); border-radius:8px; margin:8px 0; }
+  .tile{ background:#fff; border:1.5px solid var(--moss-500); padding:6px 12px; border-radius:8px; cursor:pointer; font-size:1rem; font-family:'Noto Serif SC',serif; }
+  .tile.used{ opacity:.3; pointer-events:none; }
+  .built-sentence{ min-height:40px; border-bottom:2px solid var(--moss-400); padding:8px; font-size:1.1rem; font-family:'Noto Serif SC',serif; cursor:pointer; }
+  .error-list li{ margin-bottom:8px; }
+  .compare-table{ width:100%; border-collapse:collapse; font-size:.9rem; margin:10px 0; }
+  .compare-table th, .compare-table td{ border:1px solid var(--moss-200); padding:6px 10px; text-align:left; }
+  .compare-table th{ background:var(--moss-100); color:var(--moss-800); }
+
+  .ex-item{ margin-bottom:14px; padding:10px 12px; background:var(--moss-100); border-radius:10px; }
+  select.blank-select{ font-family:'Noto Sans SC',sans-serif; padding:4px 8px; border-radius:6px; border:1px solid var(--moss-400); background:#fff; margin:0 4px; }
+  .choice-btn{ padding:5px 12px; border-radius:8px; border:1.5px solid var(--moss-400); background:#fff; cursor:pointer; margin:3px 4px 0 0; }
+  .choice-btn.selected{ background:var(--moss-500); color:#fff; }
+  .choice-btn.correct{ background:#5b9c5b !important; color:#fff !important; border-color:#5b9c5b; }
+  .choice-btn.wrong{ background:var(--red) !important; color:#fff !important; border-color:var(--red); }
+  .score-box{ font-weight:700; margin-top:10px; color:var(--moss-800); }
+  textarea.answer-box{ width:100%; min-height:70px; border:1px solid var(--moss-300); border-radius:8px; padding:8px; font-family:'Noto Sans SC',sans-serif; }
+  .hint-box{ display:none; background:#fff8e6; border:1px dashed var(--gold); padding:8px 10px; border-radius:8px; margin-top:6px; font-size:.9rem; }
+  .hint-box.show{ display:block; }
+  .explain-box{ font-size:.82rem; color:var(--moss-700); margin-top:4px; display:none; }
+  .explain-box.show{ display:block; }
+
+  .bi-line{ display:grid; grid-template-columns:26px minmax(0,1fr); gap:10px; padding:10px 0; border-bottom:1px solid var(--moss-200); }
+  .bi-line > div{ min-width:0; }
+  .bi-line .speaker{ font-weight:700; color:var(--moss-700); font-size:.85rem; }
+  .bi-line .hanzi{ font-family:'Noto Serif SC',serif; font-size:1.12rem; margin-bottom:2px; overflow-wrap:break-word; word-break:break-word; }
+  .bi-line .pinyin{ font-size:.92rem; overflow-wrap:break-word; word-break:break-word; }
+  .bi-line .vi{ font-size:.92rem; color:#555; overflow-wrap:break-word; word-break:break-word; }
+  .bi-line .stage{ font-style:italic; color:var(--gray); }
+  .bi-line .sp-btn{ background:none; border:none; cursor:pointer; font-size:1.1rem; color:var(--moss-600); }
+  .hide-py .pinyin{ display:none; }
+  .hide-vi .vi{ display:none; }
+  /* Ẩn chữ Hán — click vào ô mờ để hiện lại từng câu */
+  .hide-hz .bi-line .hanzi{
+    background:var(--moss-200) !important; color:transparent !important;
+    border-radius:6px; cursor:pointer; user-select:none;
+    transition:background .15s, color .15s;
+  }
+  .hide-hz .bi-line .hanzi b{ color:transparent !important; }
+  .hide-hz .bi-line .hanzi .sp-btn{ color:var(--moss-600) !important; }
+  .hide-hz .bi-line .hanzi.revealed{
+    background:transparent !important; color:var(--ink) !important; cursor:default;
+  }
+  .hide-hz .bi-line .hanzi.revealed b{ color:var(--gold) !important; }
+  .hide-hz .bi-line .hanzi.stage.revealed{ color:var(--gray) !important; }
+
+  .diff-char{ padding:0 1px; }
+  .diff-ok{ color:#2f7d32; }
+  .diff-bad{ color:var(--red); text-decoration:underline; }
+  .diff-missing{ color:var(--gray); }
+  .rate-select{ padding:4px 8px; border-radius:6px; border:1px solid var(--moss-400); }
+  .reveal-word{ background:var(--moss-300); color:var(--moss-300); border-radius:4px; cursor:pointer; padding:0 2px; }
+  .reveal-word.shown{ background:transparent; color:var(--ink); }
+  .hide-pct.active-pct{ background:var(--moss-700); color:#fff; border-color:var(--moss-700); }
+
+  .step-dots{ display:flex; gap:6px; margin-bottom:10px; }
+  .step-dot{ width:10px; height:10px; border-radius:50%; background:var(--moss-300); }
+  .step-dot.active{ background:var(--accent-4); }
+  .step-indicator{ font-weight:700; color:var(--accent-4); margin-bottom:14px; font-size:.95rem; }
+
+  .subrec-nav{ display:flex; gap:8px; margin-bottom:14px; flex-wrap:wrap; }
+  .subrec-nav button{ padding:6px 14px; border-radius:20px; border:1.5px solid var(--accent-5); background:#fff; color:var(--accent-5); cursor:pointer; font-weight:700; font-size:.88rem; }
+  .subrec-nav button.active{ background:var(--accent-5); color:#fff; }
+
+  .quiz-progress{ font-size:.92rem; color:var(--moss-700); margin-bottom:10px; font-weight:700; }
+
+  .final-score-big{ font-size:1.4rem; font-weight:700; color:var(--moss-900); margin-top:14px; }
+
+  footer{ text-align:center; font-size:.8rem; color:var(--gray); padding:24px; }
+  .tag-note{ font-size:.82rem; color:var(--gray); font-style:italic; }
+  .audio-row{ display:flex; align-items:center; gap:10px; margin:8px 0 14px; flex-wrap:wrap; }
+  .audio-row audio{ height:34px; max-width:280px; }
+  .audio-row .audio-label{ font-size:.85rem; color:var(--moss-700); font-weight:700; white-space:nowrap; }
+  .audio-missing{ font-size:.8rem; color:var(--red); display:none; }
+  .quiz-img{ max-width:220px; border-radius:10px; border:1px solid var(--moss-300); display:block; margin:8px 0; }
+
+  @media (max-width: 640px){
+    html{ font-size:15px; }
+    .topbar{ position:static; padding:10px 12px; gap:8px; box-shadow:none; }
+    .topbar h1{ font-size:1.08rem; }
+    .topbar .sub{ font-size:.75rem; }
+    .home-btn{ padding:5px 10px; font-size:.8rem; }
+    nav.tabs{ position:sticky; top:0; padding:8px 8px; gap:4px; }
+    nav.tabs button{ padding:6px 9px; font-size:.78rem; }
+    main{ padding:12px 10px 40px; }
+    .card-block{ padding:14px 12px; margin-bottom:14px; }
+    .btn{ padding:7px 12px; font-size:.85rem; }
+    .btn.small{ padding:4px 8px; font-size:.76rem; }
+    .toolbar{ gap:8px; }
+    .toolbar label{ font-size:.85rem; }
+    .rate-select{ font-size:.82rem; padding:4px 6px; }
+    .cards-grid{ grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
+    .flip-card{ height:250px; }
+    .card-hanzi{ font-size:1.3rem; }
+    .back-pinyin{ font-size:.95rem; }
+    .back-meaning{ font-size:.92rem; }
+    .back-example{ font-size:.78rem; }
+    .modal-overlay{ padding:14px 6px; }
+    .modal-box{ padding:16px 14px; max-width:100%; }
+    .char-analysis-grid{ grid-template-columns:1fr; gap:12px; }
+    .char-writer-row{ flex-wrap:wrap; }
+    .writer-target{ width:90px; height:90px; }
+    .grammar-formula{ font-size:.92rem; padding:8px 10px; }
+    .tiles-wrap{ gap:6px; padding:8px; }
+    .tile{ padding:5px 9px; font-size:.9rem; }
+    .bi-line{ grid-template-columns:22px minmax(0,1fr); gap:6px; }
+    .bi-line .hanzi{ font-size:1rem; }
+    #dictationDiff{ font-size:.95rem !important; line-height:1.8 !important; }
+    .audio-row{ gap:6px; }
+    .audio-row audio{ max-width:100%; flex:1 1 100%; }
+    .ex-item{ padding:8px 10px; }
+    .choice-btn{ padding:4px 9px; font-size:.9rem; }
+    .subrec-nav button{ padding:5px 10px; font-size:.8rem; }
+    nav.tabs .tab-sep{ display:none; }
+    .zj-word{ padding:10px; }
+    .zj-head .zj-hz{ font-size:1.15rem; }
+    .compare-table{ font-size:.8rem; }
+  }
+  @media (max-width: 380px){
+    .cards-grid{ grid-template-columns:1fr 1fr; }
+  }
+  .photo-pair{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:6px auto 12px; max-width:560px; }
+  .photo-pair figure{ margin:0; text-align:center; }
+  .photo-pair img{ width:100%; border-radius:10px; display:block; }
+  .photo-pair figcaption{ font-family:'Noto Serif SC',serif; font-size:.9rem; margin-top:4px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="home-btn" href="index.html">← Trang chủ</a>
+  <div class="titles">
+    <h1>第六课 · 时间都去哪儿了</h1>
+    <div class="sub">速通汉语 中级2 · Bài 6 — Thời gian đã đi đâu mất rồi</div>
+  </div>
+</div>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="tab1">一、热身</button>
+  <button class="tab-btn" data-tab="tab2">二、词语</button>
+  <button class="tab-btn" data-tab="tab3">三、语言点</button>
+  <button class="tab-btn" data-tab="tab4">四、主课文</button>
+  <button class="tab-btn" data-tab="tab5">五、副课文</button>
+  <button class="tab-btn" data-tab="tab6">六、拓展练习</button>
+  <span class="tab-sep" aria-hidden="true"></span>
+  <button class="tab-btn tab-extra" data-tab="tab7">⭐ 造句</button>
+  <button class="tab-btn tab-extra" data-tab="tab8">⭐ 背诵</button>
+  <button class="tab-btn tab-extra" data-tab="tab9">⭐ 综合测试</button>
+</nav>
+
+<main>
+
+<p class="tag-note book-guide">📘 Các tab <b>一 → 六</b> đi đúng thứ tự mục trong sách (热身 → 词语 → 语言点 → 主课文 → 副课文 → 拓展练习). Các tab <b>⭐</b> là phần ôn luyện bổ sung ngoài sách. Mục đánh dấu <span class="extra-badge">⭐ Bổ sung</span> là bài tập tự soạn thêm.</p>
+
+<!-- ========== 一、热身 ========== -->
+<section class="panel active" id="panel-tab1">
+  <div class="card-block">
+    <h2>一、热身 — Khởi động</h2>
+    <div id="warmupWrap"></div>
+  </div>
+</section>
+
+<!-- ========== 二、词语 ========== -->
+<section class="panel" id="panel-tab2">
+  <div class="card-block">
+    <h2>二、词语 — Từ mới (16 mục · 19 thẻ)</h2>
+    <p class="tag-note">Mục 9 trong sách là thành ngữ 哪壶不开提哪壶, kèm 3 từ cấu thành 壶 · 开 · 提 — mỗi từ có thẻ riêng.</p>
+    <div class="toolbar">
+      <button class="btn small secondary mode-active" id="btnCardMode">🔠 Lật thẻ</button>
+      <button class="btn small secondary" id="btnQuizMode">🎧 Nghe đoán chữ</button>
+      <label class="chk"><input type="checkbox" id="filterUnmastered"> Chỉ hiện từ chưa thuộc</label>
+      <button class="btn secondary" id="shuffleBtn">🔀 Xáo trộn</button>
+      <span class="tag-note" id="masteredCount"></span>
+    </div>
+    <div class="cards-grid" id="vocabGrid"></div>
+    <div id="quizModeWrap" class="card-block" style="display:none; background:var(--moss-100); box-shadow:none;">
+      <div class="quiz-progress" id="quizProgress"></div>
+      <button class="btn secondary" id="quizPlayBtn">🔊 Nghe từ</button>
+      <p class="tag-note">Nghe rồi chọn đúng chữ Hán tương ứng bên dưới:</p>
+      <div id="quizOptions"></div>
+      <div class="explain-box show" id="quizFeedback" style="min-height:20px;"></div>
+      <button class="btn" id="quizNextBtn" style="display:none; margin-top:8px;">Câu tiếp theo →</button>
+    </div>
+  </div>
+
+  <div class="card-block">
+    <h3>专有名词 / 称呼 — Tên riêng trong bài</h3>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <tr><th>Chữ Hán</th><th>Pinyin</th><th>Nghĩa</th></tr>
+        <tr><td>朱自清 <button class="sp-btn" data-say="朱自清">🔊</button></td><td class="pinyin">Zhū Zìqīng</td><td>Chu Tự Thanh (1898–1948), nhà văn Trung Quốc. Câu “洗手的时候，日子从水盆里过去……” trong bài trích từ tản văn nổi tiếng của ông về thời gian trôi nhanh.</td></tr>
+        <tr><td>《时间都去哪儿了》 <button class="sp-btn" data-say="时间都去哪儿了">🔊</button></td><td class="pinyin">Shíjiān dōu qù nǎr le</td><td>“Thời gian đã đi đâu mất rồi” — tên một bài hát rất nổi tiếng ở Trung Quốc, có câu hát “门前老树长新芽，院里枯木又开花”.</td></tr>
+        <tr><td>公斤 <button class="sp-btn" data-say="公斤">🔊</button></td><td class="pinyin">gōngjīn</td><td>ki-lô-gam (kg) — 1 公斤 = 2 斤</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card-block">
+    <h3>词语活动 1 — 看下面的意思，说一说是你学习的哪个词，然后写在后面的括号里</h3>
+    <div id="wordAct1"></div>
+    <button class="btn" id="checkWordAct1">✅ Kiểm tra</button>
+    <div class="score-box" id="wordAct1Score"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>词语活动 2 — 听句子，将你听懂的意思说出来 (06-1)</h3>
+      <p class="tag-note">听句子，将你听懂的意思说出来。Nghe từng câu rồi chọn nghĩa tiếng Việt đúng.</p>
+      <div class="audio-row">
+        <span class="audio-label">🎧 Băng gốc 06-1:</span>
+        <audio class="orig-audio" data-code="16-1" controls preload="metadata" src="audio/16-1.mp3"></audio>
+        <span class="audio-missing" data-for="16-1">⚠️ Chưa tìm thấy audio/16-1.mp3</span>
+      </div>
+      <div id="wordAct2"></div>
+      <button class="btn" id="checkWordAct2">✅ Kiểm tra</button>
+      <div class="score-box" id="wordAct2Score"></div>
+  </div>
+
+  <div class="card-block">
+    <h3><span class="extra-badge">⭐ Bổ sung</span> Bài tập điền từ (19 câu)</h3>
+    <p class="tag-note">Chọn từ đúng để hoàn thành câu giao tiếp hằng ngày (tự soạn, ngoài sách).</p>
+    <div id="fillVocabWrap"></div>
+    <button class="btn" id="checkFillVocab">✅ Kiểm tra</button>
+    <div class="score-box" id="fillVocabScore"></div>
+  </div>
+</section>
+
+<!-- ========== 三、语言点 ========== -->
+<section class="panel" id="panel-tab3">
+  <div class="card-block">
+    <h2>三、语言点 — 小数、分数、倍数</h2>
+    <p>Bài này học cách <b>đọc và dùng số thập phân, phân số, số lần (bội số)</b> — rất hay gặp khi nói về thời gian, cân nặng, tiền bạc, dân số, và là dạng câu hỏi quen thuộc trong đề HSK4 (phần đọc hiểu, tính toán đơn giản).</p>
+
+    <h3>1. 小数 — Số thập phân</h3>
+    <div class="grammar-formula">整数 + 点 + 各位数字逐个读　|　0.5 → 零点五</div>
+    <p>Dấu phẩy thập phân đọc là <b>点 (diǎn)</b>. Phần nguyên đọc như số bình thường; phần sau 点 đọc <b>từng chữ số một</b>.</p>
+    <div class="ex-line">① 3.14 <span class="hl">三点一四</span> <span class="tag-note">(không đọc “三点十四”)</span></div>
+    <div class="ex-line">② 56.67 <span class="hl">五十六点六七</span></div>
+    <div class="ex-line">📖 Trong bài khoá: 我体重<span class="hl">七十六点五</span>公斤 (76.5) / 我只有<span class="hl">六十一点二</span>公斤 (61.2) / 是杰克的<span class="hl">二点五</span>倍 (2.5).</div>
+
+    <h3>2. 分数 — Phân số (và 百分数 — phần trăm)</h3>
+    <div class="grammar-formula">分母 + 分之 + 分子　|　百分之 + 数字</div>
+    <p>Tiếng Trung đọc <b>mẫu số trước, tử số sau</b> — ngược với tiếng Việt (“ba phần tư” = 四分之三).</p>
+    <div class="ex-line">③ 1/3 <span class="hl">三分之一</span></div>
+    <div class="ex-line">④ 4/7 <span class="hl">七分之四</span></div>
+    <div class="ex-line">⑤ 我们班有15个学生，他们班有30个，我们班的学生人数是他们班学生人数的<span class="hl">二分之一</span>。 <span class="tag-note">(Lớp tôi 15 học sinh, lớp họ 30, số học sinh lớp tôi bằng một nửa lớp họ.)</span></div>
+    <div class="ex-line">➕ Phần trăm: 20% <span class="hl">百分之二十</span>, 78.5% <span class="hl">百分之七十八点五</span>.</div>
+    <div class="ex-line">📖 Trong bài khoá: 我每天的时间有<span class="hl">三分之一</span>用来睡觉 / 杰克发呆的时间是李梅的<span class="hl">二分之一</span> / 赵亮差不多<span class="hl">十分之九</span>的时间都在图书馆里 / 赵亮比杰克轻了<span class="hl">百分之二十</span>。</div>
+
+    <h3>3. 倍数 — Số lần (gấp … lần)</h3>
+    <div class="grammar-formula">A 是 B 的 N 倍　=　A 比 B 多 (N−1) 倍</div>
+    <div class="ex-line">⑥ 他们班的学生人数是我们班学生人数的<span class="hl">两倍</span>。 <span class="tag-note">(Số học sinh lớp họ gấp đôi lớp tôi.)</span></div>
+    <div class="ex-line">⑦ 他们班的学生人数比我们班学生人数<span class="hl">多一倍</span>。 <span class="tag-note">(= câu ⑥: nhiều hơn lớp tôi “một lần” nữa, tức gấp đôi.)</span></div>
+    <div class="ex-line">📖 Trong bài khoá: 我睡觉的时间是杰克的<span class="hl">2.5倍</span> / 她却能吃两碗，吃的比我<span class="hl">多一倍</span> / 李梅发呆的时间是杰克的<span class="hl">两倍</span>。</div>
+
+    <div class="plane-box"><h4>① Cú pháp (syntax)</h4><b>倍</b> là lượng từ, đứng sau số từ: 两倍, 三倍, 2.5倍 (“gấp đôi” nói <b>两倍</b>, không nói “二倍” trong khẩu ngữ). Hai khung câu chính: <b>A + 是 + B + 的 + N倍</b> và <b>A + 比 + B + 多 + (N−1)倍</b>. Phân số làm định ngữ hoặc chủ ngữ: <b>三分之一的时间</b>用来睡觉 / 时间有<b>三分之一</b>用来睡觉. So sánh giảm dùng phân số/phần trăm, <b>không dùng 倍</b>: 赵亮比杰克轻了20% (không nói “轻了0.8倍”).</div>
+    <div class="plane-box"><h4>② Ngữ nghĩa (semantics)</h4><b>是……的N倍</b> = gấp N lần (tính cả gốc). <b>比……多N倍</b> = nhiều hơn N lần (không tính gốc) → <b>多一倍 = 是两倍</b>. <b>A是B的N分之M</b> = A bằng M/N của B. <b>比……轻/少 + 百分数</b> = ít hơn bao nhiêu phần trăm: 61.2 ÷ 76.5 = 80% → 轻了20%.</div>
+    <div class="plane-box"><h4>③ Ngữ dụng (pragmatics)</h4>Người Trung Quốc rất hay dùng phân số và bội số để <b>so sánh sinh động, phóng đại cho vui</b> trong hội thoại (我睡觉的时间是杰克的2.5倍, 十分之九的时间都在图书馆里). Trong văn bản tin tức, báo cáo, đề thi HSK thì dùng để nêu số liệu: “人口是……的六倍”, “大脑重量是大人的75%”. Khi viết bài 写作 nên dùng 分数/倍数 để câu văn có số liệu cụ thể, thuyết phục hơn.</div>
+
+    <h3>语法活动 1 — 读出下面的数字</h3>
+    <p class="tag-note">Chọn cách đọc đúng cho từng số.</p>
+    <div id="grammarActWrap"></div>
+    <button class="btn" id="checkGrammarAct">✅ Kiểm tra</button>
+    <div class="score-box" id="grammarActScore"></div>
+
+    <h3>语法活动 2 — 计算</h3>
+    <p class="tag-note">Tính rồi chọn đáp án đúng điền vào chỗ trống.</p>
+    <div id="grammarCalcWrap"></div>
+    <button class="btn" id="checkGrammarCalc">✅ Kiểm tra</button>
+    <div class="score-box" id="grammarCalcScore"></div>
+
+    <h3><span class="extra-badge">⭐ Bổ sung</span> Chọn câu / nghĩa đúng</h3>
+    <div id="grammarMCWrap"></div>
+    <button class="btn" id="checkGrammarMC">✅ Kiểm tra</button>
+    <div class="score-box" id="grammarMCScore"></div>
+
+    <h3><span class="extra-badge">⭐ Bổ sung</span> ⚠️ Dự đoán 6 lỗi học sinh Việt hay gặp</h3>
+    <ol class="error-list">
+      <li><b>Đọc phân số theo thứ tự tiếng Việt:</b> “ba phần tư” nói thành "<s>三分之四</s>" — phải đọc mẫu trước: <b>四分之三</b>. Tương tự 5/22 = <b>二十二分之五</b>.</li>
+      <li><b>Đọc phần thập phân như số nguyên:</b> 3.14 đọc "<s>三点十四</s>" — đúng là <b>三点一四</b>; 89.226 = <b>八十九点二二六</b>.</li>
+      <li><b>Hiểu sai “比……多一倍”:</b> nhiều bạn dịch là “nhiều hơn 1 lần = bằng nhau thêm chút”. Thực ra 多一倍 = <b>gấp đôi</b> (= 是……的两倍); “多两倍” = gấp ba.</li>
+      <li><b>Dùng 倍 cho sự giảm:</b> "<s>他比我轻了一倍</s>" là sai logic — giảm thì dùng phân số/phần trăm: 他比我轻了<b>百分之二十</b> / 他的体重是我的<b>五分之四</b>.</li>
+      <li><b>Dùng 二 / 两 lẫn lộn:</b> trước 倍 nói <b>两倍</b> (không “二倍” trong khẩu ngữ); nhưng trong số thập phân, phân số phải dùng <b>二</b>: 二点五, 二分之一 (không “两点五”, “两分之一”).</li>
+      <li><b>Quên 的 trong “是……的N倍 / N分之M”:</b> "<s>我的时间是杰克2.5倍</s>" → 我的时间是杰克<b>的</b>2.5倍 / 我的年龄是他年龄<b>的</b>三分之一.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========== 四、主课文 ========== -->
+<section class="panel" id="panel-tab4">
+  <div class="card-block">
+    <h2>四、主课文 — 时间都去哪儿了 (06-2)</h2>
+    <p class="tag-note">Chữ Hán — Pinyin — Nghĩa tiếng Việt, đối chiếu từng lượt thoại. Bấm 🔊 để nghe lại (giọng tổng hợp). Từ mới tô màu vàng.</p>
+    <div class="audio-row">
+      <span class="audio-label">🎧 Băng gốc 06-2 (toàn bài):</span>
+      <audio class="orig-audio" data-code="16-2" controls preload="metadata" src="audio/16-2.mp3"></audio>
+      <span class="audio-missing" data-for="16-2">⚠️ Chưa tìm thấy audio/16-2.mp3</span>
+    </div>
+    <div class="toolbar">
+      <label class="chk"><input type="checkbox" id="toggleHideHanzi"> Ẩn chữ Hán</label>
+      <label class="chk"><input type="checkbox" id="toggleHidePinyin"> Ẩn pinyin</label>
+      <label class="chk"><input type="checkbox" id="toggleHideVi"> Ẩn nghĩa tiếng Việt</label>
+    </div>
+    <div id="mainTextWrap"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>课文活动 1 — 分角色朗读课文，然后回答下面的问题</h3>
+      <p class="tag-note">分角色朗读课文，然后回答下面的问题。Chọn câu trả lời đúng theo bài khoá.</p>
+      <div id="textQA"></div>
+      <button class="btn" id="checkTextQA">✅ Kiểm tra</button>
+      <div class="score-box" id="textQAScore"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>课文活动 2 — 根据你读的课文，试着不看课文，选词填空</h3>
+      <div id="choiceFillWrap"></div>
+      <button class="btn" id="checkChoiceFill">✅ Kiểm tra</button>
+      <div class="score-box" id="choiceFillScore"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>课文活动 3 — 请跟你的同桌讨论一下：你们一天的时间都去哪儿了？</h3>
+      <p class="tag-note">表达中请试着用上“小数、分数和倍数”。</p>
+      <textarea class="answer-box" id="courseAct3Box" placeholder="Trả lời bằng tiếng Trung..." style="min-height:110px"></textarea>
+      <button class="btn small secondary" id="courseAct3HintBtn">👁 Xem gợi ý đáp án</button>
+      <div class="hint-box" id="courseAct3Hint">Gợi ý mẫu：我每天的时间有三分之一用来睡觉，差不多八个小时。上课和做作业的时间也是八个小时左右，占了一天的三分之一。剩下的时间，我差不多一半用来吃饭、坐地铁，另一半用来玩儿手机、看电视。我同桌每天只睡六个小时，我睡觉的时间是她的一点三倍。她玩儿手机的时间比我多一倍。我们都觉得，时间看不见，但是跑得飞快，以后要好好儿珍惜时间。</div>
+  </div>
+</section>
+
+<!-- ========== 五、副课文 ========== -->
+<section class="panel" id="panel-tab5">
+  <div class="card-block">
+    <h2>五、副课文 — 时间都去哪儿了 (06-3)</h2>
+    <h3>补充词语 — Từ bổ sung của 副课文</h3>
+    <div class="toolbar">
+      <label class="chk"><input type="checkbox" id="filterUnmasteredFu"> Chỉ hiện từ chưa thuộc</label>
+      <button class="btn secondary" id="shuffleFuBtn">🔀 Xáo trộn</button>
+    </div>
+    <div class="cards-grid" id="fuVocabGrid"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>副课文 song ngữ</h3>
+    <div class="audio-row">
+      <span class="audio-label">🎧 Băng gốc 06-3 (toàn bài):</span>
+      <audio class="orig-audio" data-code="16-3" controls preload="metadata" src="audio/16-3.mp3"></audio>
+      <span class="audio-missing" data-for="16-3">⚠️ Chưa tìm thấy audio/16-3.mp3</span>
+    </div>
+    <div class="toolbar">
+      <label class="chk"><input type="checkbox" id="toggleHideHanziFu"> Ẩn chữ Hán</label>
+      <label class="chk"><input type="checkbox" id="toggleHidePinyinFu"> Ẩn pinyin</label>
+      <label class="chk"><input type="checkbox" id="toggleHideViFu"> Ẩn nghĩa tiếng Việt</label>
+    </div>
+    <div id="fuTextWrap"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>课文活动 1 — 读课文，然后两人一组，把课文的意思复述给对方听</h3>
+    <p class="tag-note">Đọc kỹ bài ở trên rồi kể lại nội dung bằng lời của mình (luyện nói với bạn học, không chấm điểm).</p>
+  </div>
+
+  <div class="card-block">
+    <h3>课文活动 2 — 不看课文，判断对错</h3>
+    <div id="tfWrap"></div>
+    <button class="btn" id="checkTF">✅ Kiểm tra</button>
+    <div class="score-box" id="tfScore"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>课文活动 3 — 听课文，在下面句子中的空格里填上你听到的词语 (06-3)</h3>
+    <p class="tag-note">Nghe rồi gõ chữ Hán vào chỗ trống (không biết chữ thì có thể nghe lại câu bằng nút 🔊).</p>
+    <div id="dictFillWrap"></div>
+    <button class="btn" id="checkDictFill">✅ Kiểm tra</button>
+    <div class="score-box" id="dictFillScore"></div>
+  </div>
+</section>
+
+<!-- ========== 六、拓展练习 ========== -->
+<section class="panel" id="panel-tab6">
+  <div class="card-block">
+    <h2>六、拓展练习</h2>
+    <h3>1. 听录音，回答问题 (06-4)</h3>
+    <div class="audio-row">
+      <span class="audio-label">🎧 Băng gốc 06-4:</span>
+      <audio class="orig-audio" data-code="16-4" controls preload="metadata" src="audio/16-4.mp3"></audio>
+      <span class="audio-missing" data-for="16-4">⚠️ Chưa tìm thấy audio/16-4.mp3</span>
+    </div>
+    <p class="tag-note">Nghe băng gốc rồi chọn đáp án. Đáp án lấy theo nội dung bài đọc 《三岁看大，七岁看老》 ở mục 2 bên dưới. Nút 🔊 cạnh mỗi câu đọc lại đoạn liên quan bằng giọng tổng hợp.</p>
+    <div id="listenQWrap"></div>
+    <button class="btn" id="checkListenQ">✅ Kiểm tra</button>
+    <div class="score-box" id="listenQScore"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>2. 阅读《三岁看大，七岁看老》 — song ngữ toàn văn</h3>
+    <button class="btn secondary" id="readAllReading">🔊 Đọc lại bằng giọng tổng hợp</button>
+    <div class="toolbar" style="margin-top:10px;">
+      <label class="chk"><input type="checkbox" id="toggleHideHanziReading"> Ẩn chữ Hán</label>
+      <label class="chk"><input type="checkbox" id="toggleHidePinyinReading"> Ẩn pinyin</label>
+      <label class="chk"><input type="checkbox" id="toggleHideViReading"> Ẩn nghĩa tiếng Việt</label>
+    </div>
+    <div id="readingWrap" style="margin-top:10px;"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>补充词语 — Từ bổ sung của bài đọc</h3>
+    <div class="toolbar">
+      <label class="chk"><input type="checkbox" id="filterUnmasteredRead"> Chỉ hiện từ chưa thuộc</label>
+      <button class="btn secondary" id="shuffleReadBtn">🔀 Xáo trộn</button>
+    </div>
+    <div class="cards-grid" id="readVocabGrid"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>活动 — 读课文后回答问题。两人一组，回答的一方要用括号里的词说完整的句子</h3>
+    <div id="speakActWrap"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>3. 写作训练（课后练习）— 时间总是过得一样快吗？</h3>
+    <p>你觉得时间总是过得一样快吗？跟你身边的朋友聊一聊这个话题，然后写一篇 150~200 字的作文，题目可以自己定。请使用分数、小数和倍数。</p>
+    <textarea class="answer-box" id="writingBox" placeholder="Viết bài 150~200 chữ..." style="min-height:160px"></textarea>
+    <div class="tag-note" id="writingCount">Số chữ Hán: 0</div>
+    <button class="btn small secondary" id="writingHintBtn">👁 Xem bài mẫu</button>
+    <div class="hint-box" id="writingHint">《快乐的时间过得快》<br>你觉得时间总是过得一样快吗？我问了身边的五个朋友，其中五分之四的人都说：“不一样！”<br>我的朋友小林说，上课的时候，一个小时好像有两个小时那么长；可是跟朋友聊天儿的时候，两个小时就像半个小时，一下子就过去了。我也有同样的感觉。上个周末我去朋友家玩儿，我们一边吃饭一边聊天儿，聊了四个多小时，可我觉得只过了一个小时，真实的时间是我感觉的四倍！<br>我觉得，快乐的时候时间过得特别快，不开心的时候时间就过得特别慢。所以我们应该珍惜快乐的日子，也要学会让无聊的时间变得有意思。<br><span class="tag-note">(≈200 chữ · dùng 五分之四、两倍/四倍、半个小时)</span></div>
+  </div>
+
+  <div class="card-block">
+    <h3>七、聚宝盆 — 写下这一课新学会的词语和句子</h3>
+    <p class="tag-note">Ghi lại từ và câu hay của bài này (lưu tạm trong trình duyệt của bạn).</p>
+    <textarea class="answer-box" id="jubaopenBox" placeholder="例：哪壶不开提哪壶、睡神、发呆、珍惜时间、吃的比我多一倍、三岁看大，七岁看老" style="min-height:110px"></textarea>
+  </div>
+</section>
+
+<!-- ========== ⭐ 造句 ========== -->
+<section class="panel" id="panel-tab7">
+  <div class="card-block">
+    <h2>⭐ 造句 — Đặt câu với từ mới</h2>
+    <p class="tag-note">Mỗi từ mới có 3 câu tiếng Việt: câu <span class="src-badge book">📖 Sách</span> lấy từ nội dung bài học, 2 câu <span class="src-badge">💬 Giao tiếp</span> ở trình độ HSK4. Tự dịch sang tiếng Trung (gõ vào ô hoặc nói ra), rồi bấm 👁 để so đáp án.</p>
+    <div class="toolbar">
+      <label>Từ:
+        <select class="rate-select" id="zjWordFilter"></select>
+      </label>
+      <label class="chk"><input type="checkbox" id="zjHideBook"> Ẩn câu trong sách</label>
+      <button class="btn small secondary" id="zjShowAll">👁 Hiện tất cả đáp án</button>
+      <button class="btn small secondary" id="zjHideAll">🙈 Ẩn tất cả</button>
+      <button class="btn small secondary" id="zjShuffle">🔀 Trộn câu</button>
+      <button class="btn small secondary" id="zjGroupBtn" style="display:none;">↩ Nhóm theo từ</button>
+    </div>
+    <div id="zaojuWrap"></div>
+  </div>
+</section>
+
+<!-- ========== ⭐ 背诵 ========== -->
+<section class="panel" id="panel-tab8">
+  <div class="card-block">
+    <h2>⭐ 背诵 — Học thuộc lòng</h2>
+    <div class="subrec-nav">
+      <button class="active" data-rec="main">主课文</button>
+      <button data-rec="fu">副课文</button>
+      <button data-rec="reading">拓展阅读（三岁看大，七岁看老）</button>
+    </div>
+    <div class="toolbar">
+      <label>Tốc độ đọc:
+        <select class="rate-select" id="rateSelect">
+          <option value="0.6">Chậm (0.6x)</option>
+          <option value="0.8" selected>Vừa (0.8x)</option>
+          <option value="1">Bình thường (1.0x)</option>
+          <option value="1.2">Nhanh (1.2x)</option>
+        </select>
+      </label>
+      <button class="btn" id="readAllBtn">🔊 Đọc cả bài (giọng tổng hợp)</button>
+    </div>
+    <div class="audio-row" id="recAudioRow">
+      <span class="audio-label" id="recAudioLabel">🎧 Băng gốc 06-2 (toàn bài):</span>
+      <audio class="orig-audio" id="recAudio" data-code="16-2" controls preload="metadata" src="audio/16-2.mp3"></audio>
+      <span class="audio-missing" id="recAudioMissing" data-for="16-2">⚠️ Chưa tìm thấy file audio</span>
+    </div>
+  </div>
+
+  <div class="card-block">
+    <h3>🙈 Học thuộc lòng — ẩn dần theo %</h3>
+    <div class="toolbar">
+      <span>Mức ẩn:</span>
+      <button class="btn small secondary hide-pct active-pct" data-pct="0">0%</button>
+      <button class="btn small secondary hide-pct" data-pct="30">30%</button>
+      <button class="btn small secondary hide-pct" data-pct="60">60%</button>
+      <button class="btn small secondary hide-pct" data-pct="100">100%</button>
+    </div>
+    <p class="tag-note">Bấm vào từ được che (nền xanh) để tự kiểm tra từng chữ.</p>
+    <div id="memorizeWrap"></div>
+  </div>
+
+  <div class="card-block">
+    <h3>✍️ Gõ lại toàn bài từ trí nhớ</h3>
+    <textarea class="answer-box" id="dictationInput" placeholder="Gõ lại phần bạn nhớ được..." style="min-height:120px"></textarea>
+    <button class="btn" id="checkDictation">✅ So sánh với bản gốc</button>
+    <div class="score-box" id="dictationScore"></div>
+    <div id="dictationDiff" style="margin-top:10px; font-family:'Noto Serif SC',serif; font-size:1.1rem; line-height:2;"></div>
+  </div>
+</section>
+
+<!-- ========== ⭐ 综合测试 ========== -->
+<section class="panel" id="panel-tab9">
+  <div class="card-block">
+    <h2>⭐ 综合测试 — Test tổng hợp cuối bài</h2>
+    <p class="tag-note">Câu hỏi trắc nghiệm/đúng-sai trộn ngẫu nhiên: nghĩa từ vựng, từ trọng tâm theo ngữ cảnh, đọc số thập phân/phân số/bội số, hiểu bài khoá chính, 副课文 và bài đọc 《三岁看大，七岁看老》. Bấm "Làm lại" để đổi thứ tự câu hỏi và luyện lại nhiều lần.</p>
+    <button class="btn" id="startFinalTest">🎯 Bắt đầu / Làm lại</button>
+    <div id="finalTestWrap" style="margin-top:14px;"></div>
+    <button class="btn" id="checkFinalTest" style="display:none;">✅ Nộp bài</button>
+    <div class="score-box" id="finalTestScore"></div>
+  </div>
+</section>
+
+</main>
+
+
+<footer>速通汉语 中级2 · 第六课 · Tài liệu học tập nội bộ</footer>
+
+<div class="modal-overlay" id="charModal">
+  <div class="modal-box">
+    <button class="modal-close" id="closeModalBtn">✕</button>
+    <h3 id="modalTitle">🈶 Phân tích chữ</h3>
+    <div class="char-analysis-grid" id="modalGrid"></div>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   DATA
+========================================================= */
+
+const charDict = {
+  "量": {r:"日", f:"会意 — 日(mặt trời) + hình dụng cụ đo có vạch chia", s:"上下, 12 nét", m:"Dụng cụ đo lường có vạch chia — \"số lượng, đo lường\".", c:["质量","数量","力量","重量"]},
+  "过": {r:"辶(辵)", f:"形声 — 辶 biểu ý (đi qua), 寸 biểu âm biến thể", s:"半包围, 6 nét", m:"Đi (辶) vượt qua một điểm mốc — \"đi qua, quá; trải qua\".", c:["难过","过去","经过","不过"]},
+  "子": {r:"子", f:"象形 — hình đứa trẻ sơ sinh quấn tã, hai tay giơ lên", s:"Độc thể, 3 nét", m:"Hình một em bé (子) đầu to, hai tay dang ra hai bên.", c:["孩子","儿子","桌子","子女"]},
+  "不": {r:"一", f:"象形／指事 — hình cánh chim bay lên trời", s:"独体, 4 nét", m:"Nét vẽ như cánh chim bay mất — mượn để chỉ \"không\".", c:["忍不住","不错","不是","不用"]},
+  "生": {r:"生", f:"象形 — hình mầm cây mọc lên khỏi mặt đất", s:"独体, 5 nét", m:"Hình chồi non nhô lên từ đất — \"sinh ra, sống, lạ (chưa quen)\".", c:["陌生","生活","学生","发生"]},
+  "日": {r:"日", f:"象形 — hình mặt trời tròn có một chấm ở giữa", s:"独体, 4 nét", m:"Hình mặt trời — \"mặt trời, ngày\".", c:["无烟日","生日","日记","节日"]},
+  "建": {r:"廴", f:"会意 — 聿(bút, quy tắc) + 廴(bước dài, thi công)", s:"半包围, 8 nét", m:"Dùng quy tắc, bản vẽ (聿) để thi công dài lâu (廴) — \"xây dựng, thiết lập\".", c:["建议","建设","建立","建筑"]},
+  "习": {r:"乙(乛)", f:"会意 (giản thể từ 習: 羽 lông chim + 白, chim non tập bay nhiều lần)", s:"独体, 3 nét", m:"Một chiếc cánh (羽 rút gọn) vỗ đi vỗ lại — \"luyện tập, quen\".", c:["习惯","学习","练习","复习"]},
+  "实": {r:"宀", f:"会意 (giản thể từ 實: trong nhà 宀 có đầy tiền của)", s:"上下, 8 nét", m:"Trong nhà (宀) đầy ắp thật sự — \"thật, thực\".", c:["真实","其实","实在","事实"]},
+  "亲": {r:"立", f:"形声 (giản thể từ 親: 見 biểu ý, 亲 biểu âm)", s:"上下, 9 nét", m:"Đứng (立) bên cây (木) nhìn nhau thân thiết — \"thân, người thân\".", c:["亲切","亲人","父亲","母亲"]},
+  "热": {r:"灬(火)", f:"形声 — 灬 biểu ý (lửa), 埶 biểu âm", s:"Trên-dưới, 10 nét", m:"Ngọn lửa (灬) bốc lên bên dưới khiến mọi thứ trở nên \"nóng\".", c:["热身","热闹","加热","天气很热"]},
+  "水": {r:"水", f:"象形 — vẽ dòng nước chảy uốn lượn", s:"Độc thể, 4 nét", m:"Nét sổ ở giữa là dòng chảy chính, hai bên là các nhánh nước nhỏ.", c:["水煮鱼","喝水","水果","下水"]},
+  "脑": {r:"月(肉)", f:"形声 — 月(肉) biểu ý, 㐫 biểu âm (giản thể của 腦)", s:"左右, 10 nét", m:"Phần thịt (月) trong đầu — \"não\".", c:["脑海","电脑","大脑","头脑"]},
+  "发": {r:"又", f:"形声 — giản thể của 發 (弓 biểu ý: bắn cung, 癹 biểu âm); đồng thời gộp chữ 髮 (tóc)", s:"独体, 5 nét", m:"Gốc là bắn mũi tên (弓) đi ra — \"phát ra, phát hiện, phát triển\".", c:["发现","发展","出发","头发"]},
+  "院": {r:"阝(阜, bên trái)", f:"形声 — 阝 biểu ý (tường đất), 完 biểu âm", s:"左右, 9 nét", m:"Khoảng sân có tường đất (阝) bao quanh trọn vẹn (完) — \"sân, viện\".", c:["学院","医院","院子","电影院"]},
+  "成": {r:"戈", f:"会意/形声 — 戊(vũ khí) + 丁(đóng đinh hoàn thiện)", s:"独体, 6 nét", m:"Dùng vũ khí (戈-gốc) hoàn tất công việc — \"thành công, trở thành\".", c:["老成","成功","完成","变成"]},
+  "重": {r:"里", f:"象形/会意 — hình người gánh vật nặng trên vai", s:"独体, 9 nét", m:"Hình dáng gánh vật nặng — \"nặng, coi trọng; lặp lại (重复)\".", c:["注重","重要","重量","严重"]},
+  "长": {r:"长", f:"象形 — hình người tóc dài chống gậy", s:"独体, 4 nét", m:"Hình mái tóc dài buông — \"dài; tăng trưởng, lớn lên\".", c:["增长","长大","校长","长短"]},
+  "展": {r:"尸", f:"会意 — 尸(thân người) + 𧝓(gốc chỉ trải rộng quần áo)", s:"半包围, 10 nét", m:"Thân người (尸) duỗi trải (𧝓) ra — \"triển lãm, mở rộng\".", c:["画展","发展","展开","展示"]},
+  "育": {r:"月(肉)", f:"会意 — trên là hình đứa trẻ mới sinh lộn ngược, dưới là 月(肉) chỉ thân thể", s:"Trên-dưới, 8 nét", m:"Phần trên như hình hài đứa trẻ vừa lọt lòng, phần dưới là thân thể (月) mẹ nuôi dưỡng — \"sinh dưỡng, giáo dục\".", c:["体育馆","教育","体育","育儿"]},
+  "神": {r:"礻(示)", f:"形声 — 礻 biểu ý (tế lễ, thần linh), 申 biểu âm", s:"Trái-phải, 9 nét", m:"Nơi thờ cúng (礻) hướng lên trời như tia chớp (申) — \"thần linh, tinh thần\".", c:["精神","神奇","眼神","神话"]},
+  "惜": {r:"忄(心)", f:"形声 — 忄 biểu ý (tình cảm), 昔 biểu âm", s:"左右, 11 nét", m:"Trong lòng (忄) nhớ tiếc chuyện xưa (昔) — \"tiếc nuối, quý trọng\".", c:["可惜","珍惜","爱惜","惋惜"]},
+  "惊": {r:"忄(心)", f:"形声 — 忄 biểu ý (tâm trạng), 京 biểu âm", s:"左右, 11 nét", m:"Trong lòng (忄) giật mình như ở kinh đô (京) náo động — \"kinh hãi\".", c:["虚惊一场","惊讶","吃惊","惊喜"]},
+  "议": {r:"讠(言)", f:"形声 — 讠 biểu ý (lời nói, bàn bạc), 义 biểu âm kiêm ý", s:"左右, 5 nét", m:"Dùng lời (讠) bàn bạc sao cho hợp nghĩa lý (义) — \"bàn luận, đề nghị\".", c:["建议","会议","商议","议论"]},
+  "克": {r:"儿", f:"会意 (gốc hình người đội mũ giáp, thắng được gánh nặng)", s:"独体, 7 nét", m:"Hình người mang vác vượt qua khó khăn — \"khắc phục, thắng\"; còn dùng phiên âm \"gram\" hoặc \"cola/chocolate\".", c:["巧克力","克服","可克","攻克"]},
+"芽": {r:"艹(艸)", f:"形声 — 艹 biểu ý (cây cỏ), 牙 biểu âm", s:"上下, 7 nét", m:"Cỏ cây (艹) nhú lên như chiếc răng (牙) nhỏ — \"mầm, chồi non\".", c:["发芽","新芽","豆芽","嫩芽"]},
+  "枯": {r:"木", f:"形声 — 木 biểu ý (cây), 古 biểu âm kiêm ý (cũ, lâu đời)", s:"左右, 9 nét", m:"Cây (木) đã quá cũ (古) thì khô héo — \"khô, héo\".", c:["枯木","枯黄","干枯","枯燥"]},
+  "木": {r:"木", f:"象形 — hình cái cây có cành trên, rễ dưới", s:"独体, 4 nét", m:"Nét ngang là cành, nét sổ là thân, hai nét phẩy mác là rễ — \"cây, gỗ\".", c:["木头","树木","枯木","木板"]},
+  "里": {r:"里", f:"会意 — 田 + 土 (gốc: làng xóm); đồng thời là giản thể của 裏/裡 (bên trong)", s:"独体, 7 nét", m:"Trong bài dùng nghĩa \"bên trong\": 院里 = trong sân, 水盆里 = trong chậu nước.", c:["院里","这里","心里","公里"]},
+  "开": {r:"一", f:"会意 (giản thể từ 開: hai tay mở then cửa)", s:"独体, 4 nét", m:"Hai tay đẩy then cài ra — \"mở\"; mở rộng: hoa nở (开花), nước sôi (水开了).", c:["开花","水开了","开门","开心"]},
+  "花": {r:"艹(艸)", f:"形声 — 艹 biểu ý (cỏ cây), 化 biểu âm", s:"上下, 7 nét", m:"Cây cỏ (艹) biến hóa (化) nở ra thành \"bông hoa\"; mở rộng nghĩa \"tiêu tốn\" (花钱).", c:["开花","花园","花钱","鲜花"]},
+  "倍": {r:"亻(人)", f:"形声 — 亻 biểu ý, 咅 biểu âm", s:"左右, 10 nét", m:"Người (亻) đứng nhân đôi lên — \"lần, gấp (bội)\". Nhớ: 亻 + 立 + 口.", c:["两倍","倍数","加倍","几倍"]},
+  "睡": {r:"目", f:"形声／会意 — 目 (mắt) + 垂 (rủ xuống)", s:"左右, 13 nét", m:"Mắt (目) rủ xuống (垂) — \"ngủ\".", c:["睡觉","睡神","午睡","睡着"]},
+  "碗": {r:"石", f:"形声 — 石 biểu ý (đồ gốm/sứ cứng như đá), 宛 biểu âm", s:"左右, 13 nét", m:"Đồ dùng bằng sứ cứng như đá (石), lòng tròn uốn cong (宛) — \"cái bát\".", c:["饭碗","一碗面","洗碗","碗筷"]},
+  "却": {r:"卩", f:"形声 — 卩 biểu ý (người quỳ), 去 biểu âm", s:"左右, 7 nét", m:"Người lùi lại (去 + 卩) — gốc nghĩa \"lùi\"; nay chỉ sự chuyển ý \"nhưng, lại\".", c:["却是","冷却","忘却","却又"]},
+  "哪": {r:"口", f:"形声 — 口 biểu ý (lời hỏi), 那 biểu âm", s:"左右, 9 nét", m:"Miệng (口) hỏi \"cái kia (那)\" là cái nào — \"nào, đâu\".", c:["哪儿","哪里","哪个","哪壶不开提哪壶"]},
+  "壶": {r:"士", f:"象形 — hình cái bình có nắp, bụng phình", s:"上下, 10 nét", m:"Trên là nắp (士), dưới là thân bình — \"ấm, bình\".", c:["水壶","茶壶","酒壶","一壶茶"]},
+  "提": {r:"扌(手)", f:"形声 — 扌 biểu ý (tay), 是 biểu âm", s:"左右, 12 nét", m:"Dùng tay (扌) nhấc lên — \"xách\"; mở rộng: \"nhắc đến\" (提起).", c:["提起","提高","提出","提问"]},
+  "珍": {r:"王(玉)", f:"形声 — 王(玉) biểu ý, 㐱 biểu âm", s:"左右, 9 nét", m:"Ngọc (王) quý hiếm — \"quý báu\".", c:["珍惜","珍贵","珍珠","珍藏"]},
+  "盆": {r:"皿", f:"形声 — 皿 biểu ý (đồ đựng), 分 biểu âm", s:"上下, 9 nét", m:"Đồ đựng (皿) rộng miệng, chia (分) nước ra dùng — \"cái chậu\".", c:["水盆","花盆","脸盆","盆地"]},
+  "去": {r:"厶", f:"会意 — gốc là hình người (大) rời khỏi cửa hang (口)", s:"独体, 5 nét", m:"Người rời khỏi chỗ cũ — \"đi; qua đi\" (过去).", c:["过去","去年","出去","失去"]},
+  "呆": {r:"口", f:"会意 — 口 + 木: miệng đứng im như khúc gỗ", s:"上下, 7 nét", m:"Miệng (口) cứng đờ như gỗ (木) — \"ngây, đờ đẫn\".", c:["发呆","呆子","书呆子","呆板"]},
+  "吃": {r:"口", f:"形声 — 口 biểu ý, 乞 biểu âm", s:"左右, 6 nét", m:"Miệng (口) xin (乞) đồ ăn — \"ăn\"; 吃惊 = \"bị (chịu) giật mình\".", c:["吃饭","吃惊","好吃","小吃"]},
+  "凑": {r:"冫", f:"形声 — 冫 biểu ý (nước tụ lại), 奏 biểu âm", s:"左右, 11 nét", m:"Nước (冫) dồn tụ lại một chỗ — \"góp lại, xúm lại\".", c:["凑热闹","凑钱","凑合","凑巧"]},
+  "闹": {r:"门", f:"会意 — 门 + 市: chợ búa ồn ào ngay trước cửa", s:"半包围, 8 nét", m:"Chợ (市) họp trong cửa (门) — \"ồn ào, náo nhiệt\".", c:["热闹","闹钟","凑热闹","吵闹"]},
+  "大": {r:"大", f:"象形 — hình người dang rộng hai tay hai chân", s:"独体, 3 nét", m:"Người dang tay chân hết cỡ — \"to, lớn\".", c:["大脑","大人","长大","大家"]},
+  "出": {r:"凵", f:"会意 — gốc: bàn chân bước ra khỏi hố", s:"独体, 5 nét", m:"Hai ngọn núi (山) chồng lên — bước \"ra\" ngoài.", c:["出生","出去","出现","出发"]},
+  "把": {r:"扌(手)", f:"形声 — 扌 biểu ý (tay), 巴 biểu âm", s:"左右, 7 nét", m:"Tay (扌) nắm chặt — \"cầm, nắm\"; 把握 = nắm chắc.", c:["把握","把手","一把","把门关上"]},
+  "握": {r:"扌(手)", f:"形声 — 扌 biểu ý (tay), 屋 biểu âm", s:"左右, 12 nét", m:"Tay (扌) khép lại như mái nhà (屋) che kín — \"nắm\".", c:["握手","把握","掌握","握住"]},
+  "戚": {r:"戈", f:"形声 — gốc là tên một loại rìu (戉), mượn nghĩa \"thân thích\"", s:"半包围, 11 nét", m:"Nhớ: 戊 + 上 + 小 — \"họ hàng\" (亲戚).", c:["亲戚","戚友","休戚","远亲近戚"]}
+};
+// ---- Từ vựng chính (tab 二、词语) ----
+const vocab = [
+  {id:1, hanzi:"芽", pinyin:"yá", type:"N", meaning:"mầm, chồi non", example:"门前老树长新芽。"},
+  {id:2, hanzi:"院里", pinyin:"yuàn li", type:"NP", meaning:"trong sân", example:"院里枯木又开花。"},
+  {id:3, hanzi:"枯木", pinyin:"kūmù", type:"N", meaning:"cây khô, cây héo", example:"院里枯木又开花。"},
+  {id:4, hanzi:"开花", pinyin:"kāi huā", type:"V", meaning:"nở hoa, ra hoa", example:"院里枯木又开花。"},
+  {id:5, hanzi:"倍", pinyin:"bèi", type:"M", meaning:"lần, gấp (bội số)", example:"我睡觉的时间是杰克的2.5倍。"},
+  {id:6, hanzi:"睡神", pinyin:"shuìshén", type:"NP", meaning:"“thần ngủ” — người rất ham ngủ, ngủ nhiều (đùa)", example:"艾玛，你这么能睡，我们可以叫你“睡神”。"},
+  {id:7, hanzi:"碗", pinyin:"wǎn", type:"N", meaning:"cái bát, chén; (lượng từ) bát", example:"我吃一碗面，她却能吃两碗。"},
+  {id:8, hanzi:"却", pinyin:"què", type:"Conj", meaning:"nhưng, lại (biểu thị chuyển ý, trái với dự đoán)", example:"我吃一碗面，她却能吃两碗。"},
+  {id:9, hanzi:"哪壶不开提哪壶", pinyin:"nǎ hú bù kāi tí nǎ hú", type:"IDM", meaning:"ấm nào chưa sôi lại xách ấm ấy — nhắc đúng chuyện người khác không muốn nhắc, “chọc đúng chỗ đau”", example:"别哪壶不开提哪壶，你们知道我吃不胖。"},
+  {id:10, hanzi:"壶", pinyin:"hú", type:"N", meaning:"ấm, bình (đun nước, pha trà)", example:"水壶 / 茶壶"},
+  {id:11, hanzi:"开", pinyin:"kāi", type:"V", meaning:"(nước) sôi", example:"水开了。"},
+  {id:12, hanzi:"提", pinyin:"tí", type:"V", meaning:"xách; nhắc đến", example:"提起这件事"},
+  {id:13, hanzi:"珍惜", pinyin:"zhēnxī", type:"V", meaning:"trân trọng, quý trọng", example:"我们的父母和老师总是要我们珍惜时间。"},
+  {id:14, hanzi:"日子", pinyin:"rìzi", type:"N", meaning:"ngày, ngày tháng; cuộc sống", example:"洗手的时候，日子从水盆里过去。"},
+  {id:15, hanzi:"水盆", pinyin:"shuǐpén", type:"NP", meaning:"chậu nước", example:"洗手的时候，日子从水盆里过去。"},
+  {id:16, hanzi:"过去", pinyin:"guò qu", type:"V", meaning:"trôi qua, đi qua", example:"吃饭的时候，日子从饭碗里过去。"},
+  {id:17, hanzi:"发呆", pinyin:"fā dāi", type:"V", meaning:"ngẩn người, thẫn thờ, ngồi thừ ra", example:"我也常常在休息的时候发呆。"},
+  {id:18, hanzi:"建议", pinyin:"jiànyì", type:"N", meaning:"lời đề nghị, kiến nghị (cũng dùng làm động từ: đề nghị)", example:"哈哈，我同意艾玛的建议。"},
+  {id:19, hanzi:"实习", pinyin:"shíxí", type:"V", meaning:"thực tập", example:"我要去公司实习，会不会迟到？"}
+];
+vocab.forEach(w=>{ w.chars = w.hanzi.match(/[一-鿿]/g) || []; });
+
+// ---- Từ vựng bổ sung (101–103: tab 五 副课文; 201+: tab 六 拓展练习) ----
+const extraVocab = [
+  {id:101, hanzi:"吃惊", pinyin:"chī jīng", type:"V", meaning:"ngạc nhiên, giật mình", example:"艾玛非常吃惊。"},
+  {id:102, hanzi:"凑热闹", pinyin:"còu rènao", type:"VP", meaning:"góp vui, hùa theo cho vui; (đùa) thêm rắc rối", example:"杰克过来凑热闹，说艾玛不但能睡，还能吃。"},
+  {id:201, hanzi:"大脑", pinyin:"dànǎo", type:"N", meaning:"đại não, bộ não", example:"3岁以前是一个人大脑发育非常重要的时期。"},
+  {id:202, hanzi:"发育", pinyin:"fāyù", type:"V", meaning:"phát triển (cơ thể, trí não)", example:"在这之后的发育就变慢了。"},
+  {id:203, hanzi:"出生", pinyin:"chūshēng", type:"V", meaning:"ra đời, được sinh ra", example:"一个人出生时，大脑的重量只有370克。"},
+  {id:204, hanzi:"重量", pinyin:"zhòngliàng", type:"N", meaning:"trọng lượng, cân nặng", example:"孩子的大脑重量已经跟大人的差不多了。"},
+  {id:205, hanzi:"克", pinyin:"kè", type:"M", meaning:"gam (g)", example:"大脑的重量只有370克。"},
+  {id:206, hanzi:"发展", pinyin:"fāzhǎn", type:"V", meaning:"phát triển", example:"3岁以前的时间确实会影响人一生的发展变化。"},
+  {id:207, hanzi:"把握", pinyin:"bǎwò", type:"V", meaning:"nắm bắt, tận dụng (thời cơ, thời gian)", example:"爸爸、妈妈要好好儿把握孩子3岁以前的时间。"},
+  {id:208, hanzi:"成长", pinyin:"chéngzhǎng", type:"V", meaning:"trưởng thành, lớn lên", example:"让孩子健康成长。"},
+  {id:209, hanzi:"亲戚", pinyin:"qīnqi", type:"N", meaning:"họ hàng, bà con", example:"科学家们向他们的亲戚了解情况。"}
+];
+extraVocab.forEach(w=>{ w.chars = w.hanzi.match(/[一-鿿]/g) || []; });
+
+// ---- 主课文 06-2 (tab 四, tái sử dụng ở tab ⭐背诵) ----
+const mainText = [
+  {sp:"李梅", hanzi:"我最近很喜欢一首歌——《时间都去哪儿了》。", pinyin:"Wǒ zuìjìn hěn xǐhuan yì shǒu gē——《Shíjiān dōu qù nǎr le》.", vi:"Dạo này tớ rất thích một bài hát — “Thời gian đã đi đâu mất rồi”."},
+  {sp:"杰克", hanzi:"我知道，就是那首很多人在唱的“门前老树长新{{芽}}，{{院里}}{{枯木}}又{{开花}}”的歌。", pinyin:"Wǒ zhīdào, jiù shì nà shǒu hěn duō rén zài chàng de “mén qián lǎo shù zhǎng xīn yá, yuàn li kūmù yòu kāi huā” de gē.", vi:"Tớ biết, chính là bài mà rất nhiều người đang hát: “Cây già trước cửa đâm chồi mới, cây khô trong sân lại nở hoa”."},
+  {sp:"艾玛", hanzi:"杰克，你怎么会唱这首歌？", pinyin:"Jiékè, nǐ zěnme huì chàng zhè shǒu gē?", vi:"Jack, sao cậu lại biết hát bài này?"},
+  {sp:"杰克", hanzi:"我的中国阿姨教我的。", pinyin:"Wǒ de Zhōngguó āyí jiāo wǒ de.", vi:"Cô người Trung Quốc của tớ dạy tớ đấy."},
+  {sp:"赵亮", hanzi:"这首歌很多人都喜欢。时间都去哪儿了？我也想知道我自己的时间都去哪儿了。", pinyin:"Zhè shǒu gē hěn duō rén dōu xǐhuan. Shíjiān dōu qù nǎr le? Wǒ yě xiǎng zhīdào wǒ zìjǐ de shíjiān dōu qù nǎr le.", vi:"Bài này rất nhiều người thích. Thời gian đi đâu hết rồi nhỉ? Tớ cũng muốn biết thời gian của chính mình đi đâu hết rồi."},
+  {sp:"李梅", hanzi:"我每天的时间有三分之一用来睡觉，三分之一在学校学习。", pinyin:"Wǒ měi tiān de shíjiān yǒu sān fēn zhī yī yònglái shuìjiào, sān fēn zhī yī zài xuéxiào xuéxí.", vi:"Thời gian mỗi ngày của tớ có một phần ba dùng để ngủ, một phần ba học ở trường."},
+  {sp:"艾玛", hanzi:"我记得杰克说，他每天只要睡4个小时就够了，而我每天睡10小时还不够，我睡觉的时间是杰克的2.5{{倍}}。", pinyin:"Wǒ jìde Jiékè shuō, tā měi tiān zhǐyào shuì sì ge xiǎoshí jiù gòu le, ér wǒ měi tiān shuì shí xiǎoshí hái bú gòu, wǒ shuìjiào de shíjiān shì Jiékè de èr diǎn wǔ bèi.", vi:"Tớ nhớ Jack nói mỗi ngày cậu ấy chỉ cần ngủ 4 tiếng là đủ, còn tớ ngủ 10 tiếng mỗi ngày vẫn chưa đủ, thời gian ngủ của tớ gấp 2,5 lần Jack."},
+  {sp:"赵亮", hanzi:"艾玛，你这么能睡，我们可以叫你“{{睡神}}”。", pinyin:"Àimǎ, nǐ zhème néng shuì, wǒmen kěyǐ jiào nǐ “shuìshén”.", vi:"Emma, cậu ngủ giỏi thế, bọn tớ có thể gọi cậu là “thần ngủ”."},
+  {sp:"杰克", hanzi:"艾玛不但能睡，而且能吃。我吃一{{碗}}面，她{{却}}能吃两碗，吃的比我多一倍。", pinyin:"Àimǎ búdàn néng shuì, érqiě néng chī. Wǒ chī yì wǎn miàn, tā què néng chī liǎng wǎn, chī de bǐ wǒ duō yí bèi.", vi:"Emma không chỉ ngủ giỏi mà còn ăn khoẻ. Tớ ăn một bát mì, cậu ấy lại ăn được hai bát, ăn nhiều gấp đôi tớ."},
+  {sp:"艾玛", hanzi:"杰克，虽然你吃饭没我多，但体重却不比我少吧？", pinyin:"Jiékè, suīrán nǐ chī fàn méi wǒ duō, dàn tǐzhòng què bù bǐ wǒ shǎo ba?", vi:"Jack, tuy cậu ăn không nhiều bằng tớ, nhưng cân nặng thì đâu có kém tớ nhỉ?"},
+  {sp:"杰克", hanzi:"我体重76.5公斤。", pinyin:"Wǒ tǐzhòng qīshíliù diǎn wǔ gōngjīn.", vi:"Tớ nặng 76,5 cân (kg)."},
+  {sp:"李梅", hanzi:"你们猜猜赵亮的体重是多少。", pinyin:"Nǐmen cāicai Zhào Liàng de tǐzhòng shì duōshao.", vi:"Các cậu đoán thử xem Triệu Lượng nặng bao nhiêu."},
+  {sp:"赵亮", hanzi:"别{{哪壶不开提哪壶}}，你们知道我吃不胖，我只有61.2公斤。", pinyin:"Bié nǎ hú bù kāi tí nǎ hú, nǐmen zhīdào wǒ chī bú pàng, wǒ zhǐ yǒu liùshíyī diǎn èr gōngjīn.", vi:"Đừng có chọc đúng chỗ đau thế chứ, các cậu biết tớ ăn mãi không béo mà, tớ chỉ có 61,2 cân thôi."},
+  {sp:"艾玛", hanzi:"赵亮比杰克轻了20%。", pinyin:"Zhào Liàng bǐ Jiékè qīngle bǎi fēn zhī èrshí.", vi:"Triệu Lượng nhẹ hơn Jack 20%."},
+  {sp:"杰克", hanzi:"我们不是在说时间都去哪儿了吗？怎么说起体重了？", pinyin:"Wǒmen bú shì zài shuō shíjiān dōu qù nǎr le ma? Zěnme shuō qǐ tǐzhòng le?", vi:"Chẳng phải chúng ta đang nói thời gian đi đâu hết rồi sao? Sao lại chuyển sang nói cân nặng thế?"},
+  {sp:"赵亮", hanzi:"时间看不见，但是跑得飞快。", pinyin:"Shíjiān kàn bu jiàn, dànshì pǎo de fēikuài.", vi:"Thời gian thì không nhìn thấy được, nhưng chạy nhanh như bay."},
+  {sp:"李梅", hanzi:"是啊，所以我们的父母和老师总是要我们{{珍惜}}时间。", pinyin:"Shì a, suǒyǐ wǒmen de fùmǔ hé lǎoshī zǒngshì yào wǒmen zhēnxī shíjiān.", vi:"Đúng thế, cho nên bố mẹ và thầy cô lúc nào cũng bảo chúng ta phải quý trọng thời gian."},
+  {sp:"杰克", hanzi:"我记得朱自清的书里说“洗手的时候，{{日子}}从{{水盆}}里{{过去}}；吃饭的时候，日子从饭碗里过去”。", pinyin:"Wǒ jìde Zhū Zìqīng de shū li shuō “xǐ shǒu de shíhou, rìzi cóng shuǐpén li guòqu; chī fàn de shíhou, rìzi cóng fànwǎn li guòqu”.", vi:"Tớ nhớ trong sách của Chu Tự Thanh có viết: “Lúc rửa tay, ngày tháng trôi qua từ chậu nước; lúc ăn cơm, ngày tháng trôi qua từ bát cơm”."},
+  {sp:"艾玛", hanzi:"现在我们说话的时候，日子从声音里过去了。", pinyin:"Xiànzài wǒmen shuōhuà de shíhou, rìzi cóng shēngyīn li guòqu le.", vi:"Bây giờ lúc chúng ta nói chuyện, ngày tháng đang trôi qua từ trong tiếng nói đấy."},
+  {sp:"赵亮", hanzi:"虽然我们不知道时间去哪儿了，但是我们每天在一起很快乐。", pinyin:"Suīrán wǒmen bù zhīdào shíjiān qù nǎr le, dànshì wǒmen měi tiān zài yìqǐ hěn kuàilè.", vi:"Tuy chúng ta không biết thời gian đi đâu mất, nhưng ngày nào ở bên nhau chúng ta cũng rất vui."},
+  {sp:"杰克", hanzi:"赵亮说得对。我们每天在一起很快乐，学习、生活都很有意思。我每天还会发发呆呢！", pinyin:"Zhào Liàng shuō de duì. Wǒmen měi tiān zài yìqǐ hěn kuàilè, xuéxí, shēnghuó dōu hěn yǒu yìsi. Wǒ měi tiān hái huì fāfa dāi ne!", vi:"Triệu Lượng nói đúng. Ngày nào chúng ta ở cùng nhau cũng rất vui, học tập hay cuộc sống đều rất thú vị. Mỗi ngày tớ còn ngồi ngẩn ra một lúc nữa cơ!"},
+  {sp:"李梅", hanzi:"我也常常在休息的时候{{发呆}}，我觉得发呆也是一种休息。", pinyin:"Wǒ yě chángcháng zài xiūxi de shíhou fā dāi, wǒ juéde fā dāi yě shì yì zhǒng xiūxi.", vi:"Tớ cũng hay ngồi thẫn thờ lúc nghỉ ngơi, tớ thấy ngẩn người cũng là một cách nghỉ ngơi."},
+  {sp:"艾玛", hanzi:"等等，快说说你们每天发呆的时间，让我看看你们谁更“呆”。", pinyin:"Děngdeng, kuài shuōshuo nǐmen měi tiān fā dāi de shíjiān, ràng wǒ kànkan nǐmen shéi gèng “dāi”.", vi:"Khoan đã, mau nói xem mỗi ngày các cậu ngẩn người bao lâu, để tớ xem ai “ngố” hơn."},
+  {sp:"赵亮", hanzi:"哈哈，我同意艾玛的{{建议}}。", pinyin:"Hāha, wǒ tóngyì Àimǎ de jiànyì.", vi:"Haha, tớ đồng ý với đề nghị của Emma."},
+  {sp:"杰克", hanzi:"说就说，我每天差不多发10~15分钟的呆。", pinyin:"Shuō jiù shuō, wǒ měi tiān chàbuduō fā shí dào shíwǔ fēnzhōng de dāi.", vi:"Nói thì nói, mỗi ngày tớ ngẩn người khoảng 10–15 phút."},
+  {sp:"李梅", hanzi:"我每天发呆要半个小时以上。", pinyin:"Wǒ měi tiān fā dāi yào bàn ge xiǎoshí yǐshàng.", vi:"Mỗi ngày tớ ngẩn người phải hơn nửa tiếng."},
+  {sp:"赵亮", hanzi:"哦，李梅发呆的时间是杰克的两倍，杰克发呆的时间是李梅的二分之一。", pinyin:"Ò, Lǐ Méi fā dāi de shíjiān shì Jiékè de liǎng bèi, Jiékè fā dāi de shíjiān shì Lǐ Méi de èr fēn zhī yī.", vi:"Ồ, thời gian ngẩn người của Lý Mai gấp đôi Jack, thời gian ngẩn người của Jack bằng một nửa Lý Mai."},
+  {sp:"艾玛", hanzi:"赵亮，你会发呆吗？", pinyin:"Zhào Liàng, nǐ huì fā dāi ma?", vi:"Triệu Lượng, cậu có hay ngẩn người không?"},
+  {sp:"赵亮", hanzi:"我？我不发呆，我的时间都用在……不告诉你们。", pinyin:"Wǒ? Wǒ bù fā dāi, wǒ de shíjiān dōu yòng zài…… bú gàosu nǐmen.", vi:"Tớ á? Tớ không ngẩn người, thời gian của tớ đều dùng vào… không nói cho các cậu đâu."},
+  {sp:"杰克", hanzi:"赵亮嘛，时间都用来运动和陪女朋友了。", pinyin:"Zhào Liàng ma, shíjiān dōu yònglái yùndòng hé péi nǚpéngyou le.", vi:"Triệu Lượng ấy à, thời gian đều dùng để tập thể thao và ở bên bạn gái rồi."},
+  {sp:"李梅", hanzi:"不对，赵亮差不多十分之九的时间都在图书馆里，只有十分之一的时间用来运动和陪女朋友。", pinyin:"Bú duì, Zhào Liàng chàbuduō shí fēn zhī jiǔ de shíjiān dōu zài túshūguǎn li, zhǐ yǒu shí fēn zhī yī de shíjiān yònglái yùndòng hé péi nǚpéngyou.", vi:"Không đúng, Triệu Lượng gần chín phần mười thời gian đều ở trong thư viện, chỉ có một phần mười thời gian dùng để tập thể thao và ở bên bạn gái."},
+  {sp:"赵亮", hanzi:"那我不就是“神”了？不吃、不喝、不睡觉。", pinyin:"Nà wǒ bú jiù shì “shén” le? Bù chī, bù hē, bú shuìjiào.", vi:"Thế chẳng phải tớ thành “thần” rồi à? Không ăn, không uống, không ngủ."},
+  {sp:"艾玛", hanzi:"哎呀，现在几点了？我要去公司{{实习}}，会不会迟到？", pinyin:"Āiyā, xiànzài jǐ diǎn le? Wǒ yào qù gōngsī shíxí, huì bu huì chídào?", vi:"Ối, bây giờ mấy giờ rồi? Tớ phải đến công ty thực tập, liệu có bị muộn không?"},
+  {sp:"杰克", hanzi:"现在12:48。", pinyin:"Xiànzài shí'èr diǎn sìshíbā.", vi:"Bây giờ là 12 giờ 48."},
+  {sp:"艾玛", hanzi:"天啊，时间都去哪儿了？都是跟你们聊天儿聊没的。", pinyin:"Tiān a, shíjiān dōu qù nǎr le? Dōu shì gēn nǐmen liáotiānr liáo méi de.", vi:"Trời ơi, thời gian đi đâu hết rồi? Toàn là do tán gẫu với các cậu mà hết sạch đấy."}
+];
+
+// ---- 副课文 06-3《时间都去哪儿了》 ----
+const fuText = [
+  {hanzi:"李梅告诉大家，她最近很喜欢一首歌，歌名是“时间都去哪儿了”。想不到，杰克马上就说出了两句歌词，“门前老树长新芽，院里枯木又开花”。艾玛非常{{吃惊}}，原来这首歌是杰克的中国阿姨教给他的。", pinyin:"Lǐ Méi gàosu dàjiā, tā zuìjìn hěn xǐhuan yì shǒu gē, gē míng shì “Shíjiān dōu qù nǎr le”. Xiǎng bu dào, Jiékè mǎshàng jiù shuō chūle liǎng jù gēcí, “mén qián lǎo shù zhǎng xīn yá, yuàn li kūmù yòu kāi huā”. Àimǎ fēicháng chī jīng, yuánlái zhè shǒu gē shì Jiékè de Zhōngguó āyí jiāo gěi tā de.", vi:"Lý Mai kể với mọi người rằng dạo này cô rất thích một bài hát tên là “Thời gian đã đi đâu mất rồi”. Không ngờ Jack lập tức đọc ra hai câu hát: “Cây già trước cửa đâm chồi mới, cây khô trong sân lại nở hoa”. Emma vô cùng ngạc nhiên, hoá ra bài hát này là do cô người Trung Quốc của Jack dạy cho cậu."},
+  {hanzi:"赵亮对“时间都去哪儿了”这个话题很感兴趣，想跟大家讨论一下他们各自的时间都去哪儿了。", pinyin:"Zhào Liàng duì “shíjiān dōu qù nǎr le” zhège huàtí hěn gǎn xìngqù, xiǎng gēn dàjiā tǎolùn yíxià tāmen gèzì de shíjiān dōu qù nǎr le.", vi:"Triệu Lượng rất hứng thú với chủ đề “thời gian đi đâu hết rồi”, muốn cùng mọi người thảo luận xem thời gian của mỗi người đã đi đâu."},
+  {hanzi:"李梅每天要睡8个小时，还有三分之一的时间在学校学习。杰克睡得不多，每天只要睡4个小时就够了。艾玛却要睡10个小时，是杰克的2.5倍。因此，赵亮开玩笑说艾玛是“睡神”。", pinyin:"Lǐ Méi měi tiān yào shuì bā ge xiǎoshí, hái yǒu sān fēn zhī yī de shíjiān zài xuéxiào xuéxí. Jiékè shuì de bù duō, měi tiān zhǐyào shuì sì ge xiǎoshí jiù gòu le. Àimǎ què yào shuì shí ge xiǎoshí, shì Jiékè de èr diǎn wǔ bèi. Yīncǐ, Zhào Liàng kāi wánxiào shuō Àimǎ shì “shuìshén”.", vi:"Mỗi ngày Lý Mai ngủ 8 tiếng, còn một phần ba thời gian học ở trường. Jack ngủ không nhiều, mỗi ngày chỉ cần ngủ 4 tiếng là đủ. Emma thì lại phải ngủ 10 tiếng, gấp 2,5 lần Jack. Vì thế, Triệu Lượng đùa rằng Emma là “thần ngủ”."},
+  {hanzi:"杰克过来{{凑热闹}}，说艾玛不但能睡，还能吃，他自己吃一碗面，艾玛却要吃两碗，是自己的两倍。艾玛聪明地换了话题，问杰克的体重是多少。杰克说自己体重是76.5公斤。李梅问赵亮，赵亮很不好意思，觉得李梅哪壶不开提哪壶。赵亮是吃不胖的人，体重只有61.2公斤，比杰克轻了20%。", pinyin:"Jiékè guòlái còu rènao, shuō Àimǎ búdàn néng shuì, hái néng chī, tā zìjǐ chī yì wǎn miàn, Àimǎ què yào chī liǎng wǎn, shì zìjǐ de liǎng bèi. Àimǎ cōngming de huànle huàtí, wèn Jiékè de tǐzhòng shì duōshao. Jiékè shuō zìjǐ tǐzhòng shì qīshíliù diǎn wǔ gōngjīn. Lǐ Méi wèn Zhào Liàng, Zhào Liàng hěn bù hǎoyìsi, juéde Lǐ Méi nǎ hú bù kāi tí nǎ hú. Zhào Liàng shì chī bú pàng de rén, tǐzhòng zhǐ yǒu liùshíyī diǎn èr gōngjīn, bǐ Jiékè qīngle bǎi fēn zhī èrshí.", vi:"Jack cũng hùa vào góp vui, nói Emma không chỉ ngủ giỏi mà còn ăn khoẻ: cậu ăn một bát mì thì Emma lại phải ăn hai bát, gấp đôi cậu. Emma khéo léo đổi chủ đề, hỏi Jack nặng bao nhiêu. Jack nói mình nặng 76,5 cân. Lý Mai hỏi Triệu Lượng, Triệu Lượng rất ngại, thấy Lý Mai đúng là nhắc đúng chuyện mình không muốn nhắc. Triệu Lượng là người ăn mãi không béo, chỉ nặng 61,2 cân, nhẹ hơn Jack 20%."},
+  {hanzi:"回到“时间都去哪儿了”这个话题，大家都认为时间看不见，但是跑得飞快，所以老师和父母总是要大家珍惜时间。就像朱自清在文章里写的，“洗手的时候，日子从水盆里过去；吃饭的时候，日子从饭碗里过去”。艾玛说，现在大家说话的时候，日子从声音里过去了。", pinyin:"Huídào “shíjiān dōu qù nǎr le” zhège huàtí, dàjiā dōu rènwéi shíjiān kàn bu jiàn, dànshì pǎo de fēikuài, suǒyǐ lǎoshī hé fùmǔ zǒngshì yào dàjiā zhēnxī shíjiān. Jiù xiàng Zhū Zìqīng zài wénzhāng li xiě de, “xǐ shǒu de shíhou, rìzi cóng shuǐpén li guòqu; chī fàn de shíhou, rìzi cóng fànwǎn li guòqu”. Àimǎ shuō, xiànzài dàjiā shuōhuà de shíhou, rìzi cóng shēngyīn li guòqu le.", vi:"Quay lại chủ đề “thời gian đi đâu hết rồi”, mọi người đều cho rằng thời gian không nhìn thấy được nhưng chạy nhanh như bay, cho nên thầy cô và bố mẹ lúc nào cũng bảo mọi người phải quý trọng thời gian. Giống như Chu Tự Thanh viết trong bài văn: “Lúc rửa tay, ngày tháng trôi qua từ chậu nước; lúc ăn cơm, ngày tháng trôi qua từ bát cơm”. Emma nói, bây giờ lúc mọi người nói chuyện, ngày tháng đang trôi qua từ trong tiếng nói."},
+  {hanzi:"赵亮的看法是，虽然不知道时间去哪儿了，但是他们每天在一起很快乐。杰克说自己每天还要发一会儿呆，差不多10~15分钟，李梅也会发呆，一发呆就要半个小时以上，是杰克的两倍。赵亮不会发呆，他的时间都用在哪儿了呢？杰克觉得，赵亮的时间都用来运动和陪女朋友了。可是李梅说，赵亮只有十分之一的时间用来运动和陪女朋友，还有差不多十分之九的时间都在图书馆里。赵亮笑着说，那样的话，他就没有时间吃饭、喝水、睡觉了。", pinyin:"Zhào Liàng de kànfǎ shì, suīrán bù zhīdào shíjiān qù nǎr le, dànshì tāmen měi tiān zài yìqǐ hěn kuàilè. Jiékè shuō zìjǐ měi tiān hái yào fā yíhuìr dāi, chàbuduō shí dào shíwǔ fēnzhōng, Lǐ Méi yě huì fā dāi, yì fā dāi jiù yào bàn ge xiǎoshí yǐshàng, shì Jiékè de liǎng bèi. Zhào Liàng bú huì fā dāi, tā de shíjiān dōu yòng zài nǎr le ne? Jiékè juéde, Zhào Liàng de shíjiān dōu yònglái yùndòng hé péi nǚpéngyou le. Kěshì Lǐ Méi shuō, Zhào Liàng zhǐ yǒu shí fēn zhī yī de shíjiān yònglái yùndòng hé péi nǚpéngyou, hái yǒu chàbuduō shí fēn zhī jiǔ de shíjiān dōu zài túshūguǎn li. Zhào Liàng xiàozhe shuō, nàyàng dehuà, tā jiù méiyǒu shíjiān chī fàn, hē shuǐ, shuìjiào le.", vi:"Ý kiến của Triệu Lượng là: tuy không biết thời gian đi đâu, nhưng ngày nào họ ở bên nhau cũng rất vui. Jack nói mỗi ngày mình còn ngẩn người một lúc, khoảng 10–15 phút; Lý Mai cũng hay ngẩn người, mà hễ ngẩn ra là hơn nửa tiếng, gấp đôi Jack. Triệu Lượng không ngẩn người, vậy thời gian của cậu dùng vào đâu? Jack cho rằng thời gian của Triệu Lượng đều dùng để tập thể thao và ở bên bạn gái. Nhưng Lý Mai nói Triệu Lượng chỉ có một phần mười thời gian dùng để tập thể thao và ở bên bạn gái, còn gần chín phần mười thời gian đều ở trong thư viện. Triệu Lượng cười nói, nếu thế thì cậu chẳng còn thời gian ăn cơm, uống nước, ngủ nghỉ nữa."},
+  {hanzi:"他们聊得很开心，艾玛几乎忘了自己要去公司实习。", pinyin:"Tāmen liáo de hěn kāixīn, Àimǎ jīhū wàngle zìjǐ yào qù gōngsī shíxí.", vi:"Họ trò chuyện rất vui, Emma suýt nữa quên mất mình phải đến công ty thực tập."}
+];
+
+// ---- 拓展练习 阅读《三岁看大，七岁看老》 (băng 06-4) ----
+const readingText = [
+  {hanzi:"中国人常说一句话，“三岁看大，七岁看老”。这句话的意思是，一个孩子3岁的时候，就能看出他/她长大后是什么样的人；7岁的时候，就能看出他/她老的时候的情况。是这样的吗？", pinyin:"Zhōngguó rén cháng shuō yí jù huà, “sān suì kàn dà, qī suì kàn lǎo”. Zhè jù huà de yìsi shì, yí ge háizi sān suì de shíhou, jiù néng kàn chū tā zhǎngdà hòu shì shénme yàng de rén; qī suì de shíhou, jiù néng kàn chū tā lǎo de shíhou de qíngkuàng. Shì zhèyàng de ma?", vi:"Người Trung Quốc hay nói một câu: “Ba tuổi nhìn ra lúc lớn, bảy tuổi nhìn ra lúc già”. Ý của câu này là: lúc một đứa trẻ 3 tuổi đã có thể nhìn ra lớn lên nó sẽ là người như thế nào; lúc 7 tuổi đã có thể nhìn ra tình trạng của nó khi về già. Có đúng như vậy không?"},
+  {hanzi:"有研究结果说，3岁以前是一个人{{大脑}}{{发育}}非常重要的时期。一个人{{出生}}时，大脑的{{重量}}只有370{{克}}；1岁时，孩子的大脑重量已经差不多是大人的60%；2岁时，孩子的大脑重量差不多是出生时的3倍，是大人大脑重量的75%；到3岁时，孩子的大脑重量已经跟大人的差不多了，在这之后的发育就变慢了。", pinyin:"Yǒu yánjiū jiéguǒ shuō, sān suì yǐqián shì yí ge rén dànǎo fāyù fēicháng zhòngyào de shíqī. Yí ge rén chūshēng shí, dànǎo de zhòngliàng zhǐ yǒu sānbǎi qīshí kè; yí suì shí, háizi de dànǎo zhòngliàng yǐjīng chàbuduō shì dàrén de bǎi fēn zhī liùshí; liǎng suì shí, háizi de dànǎo zhòngliàng chàbuduō shì chūshēng shí de sān bèi, shì dàrén dànǎo zhòngliàng de bǎi fēn zhī qīshíwǔ; dào sān suì shí, háizi de dànǎo zhòngliàng yǐjīng gēn dàrén de chàbuduō le, zài zhè zhīhòu de fāyù jiù biàn màn le.", vi:"Có kết quả nghiên cứu cho biết, trước 3 tuổi là giai đoạn cực kỳ quan trọng đối với sự phát triển não bộ của một người. Lúc mới sinh, não chỉ nặng 370 gam; lúc 1 tuổi, trọng lượng não của trẻ đã gần bằng 60% người lớn; lúc 2 tuổi, não nặng gần gấp 3 lần lúc mới sinh, bằng 75% não người lớn; đến 3 tuổi, trọng lượng não của trẻ đã gần bằng người lớn, sau đó sự phát triển chậm lại."},
+  {hanzi:"这样来看，3岁以前的时间确实会影响人一生的{{发展}}变化。所以，爸爸、妈妈要好好儿{{把握}}孩子3岁以前的时间，让孩子健康{{成长}}。", pinyin:"Zhèyàng lái kàn, sān suì yǐqián de shíjiān quèshí huì yǐngxiǎng rén yìshēng de fāzhǎn biànhuà. Suǒyǐ, bàba, māma yào hǎohāor bǎwò háizi sān suì yǐqián de shíjiān, ràng háizi jiànkāng chéngzhǎng.", vi:"Xét như vậy, khoảng thời gian trước 3 tuổi quả thật sẽ ảnh hưởng đến sự phát triển, thay đổi suốt cả đời người. Vì thế, bố mẹ phải nắm bắt thật tốt khoảng thời gian trước 3 tuổi của con, để con lớn lên khoẻ mạnh."},
+  {hanzi:"1980年，英国科学家们做了一个研究：他们找了1000名3岁的孩子，观察了这些孩子的性格特点，等这些孩子长到26岁时，科学家们再跟这些人谈话，并且向他们的{{亲戚}}了解情况。", pinyin:"Yī jiǔ bā líng nián, Yīngguó kēxuéjiāmen zuòle yí ge yánjiū: tāmen zhǎole yìqiān míng sān suì de háizi, guānchále zhèxiē háizi de xìnggé tèdiǎn, děng zhèxiē háizi zhǎng dào èrshíliù suì shí, kēxuéjiāmen zài gēn zhèxiē rén tánhuà, bìngqiě xiàng tāmen de qīnqi liǎojiě qíngkuàng.", vi:"Năm 1980, các nhà khoa học Anh đã làm một nghiên cứu: họ tìm 1000 đứa trẻ 3 tuổi, quan sát đặc điểm tính cách của chúng; đợi đến khi những đứa trẻ này 26 tuổi, các nhà khoa học lại nói chuyện với họ, đồng thời tìm hiểu tình hình qua họ hàng của họ."},
+  {hanzi:"最后发现，这些人在26岁时的性格真的跟他们3岁时差不多。科学家们非常吃惊，这也说明，“三岁看大”还真有些道理。", pinyin:"Zuìhòu fāxiàn, zhèxiē rén zài èrshíliù suì shí de xìnggé zhēn de gēn tāmen sān suì shí chàbuduō. Kēxuéjiāmen fēicháng chī jīng, zhè yě shuōmíng, “sān suì kàn dà” hái zhēn yǒuxiē dàolǐ.", vi:"Cuối cùng phát hiện ra, tính cách của những người này lúc 26 tuổi thật sự gần giống hồi 3 tuổi. Các nhà khoa học vô cùng ngạc nhiên; điều này cũng cho thấy câu “ba tuổi nhìn ra lúc lớn” quả thật cũng có lý."},
+  {hanzi:"如果一个人在3岁以前的成长时期会对他/她以后的人生有那么大的影响，那么，每一个爸爸、妈妈的确应该好好儿珍惜孩子在3岁前的时光，让孩子有健康的性格，这样才会让孩子长大后更容易感受到幸福。", pinyin:"Rúguǒ yí ge rén zài sān suì yǐqián de chéngzhǎng shíqī huì duì tā yǐhòu de rénshēng yǒu nàme dà de yǐngxiǎng, nàme, měi yí ge bàba, māma díquè yīnggāi hǎohāor zhēnxī háizi zài sān suì qián de shíguāng, ràng háizi yǒu jiànkāng de xìnggé, zhèyàng cái huì ràng háizi zhǎngdà hòu gèng róngyì gǎnshòu dào xìngfú.", vi:"Nếu giai đoạn trưởng thành trước 3 tuổi có ảnh hưởng lớn đến thế tới cuộc đời sau này của một người, thì mỗi người bố, người mẹ quả thật nên trân trọng thật tốt quãng thời gian trước 3 tuổi của con, giúp con có một tính cách lành mạnh — như vậy lớn lên con mới dễ cảm nhận được hạnh phúc hơn."}
+];
+
+/* =========================================================
+   TIỆN ÍCH CHUNG
+========================================================= */
+let zhVoice = null;
+function pickVoice(){
+  const voices = speechSynthesis.getVoices();
+  zhVoice = voices.find(v=>v.lang && v.lang.toLowerCase().startsWith('zh')) || null;
+}
+if('speechSynthesis' in window){
+  pickVoice();
+  speechSynthesis.onvoiceschanged = pickVoice;
+}
+function speak(text, rate){
+  if(!('speechSynthesis' in window)){ alert('Trình duyệt không hỗ trợ đọc giọng nói.'); return; }
+  const clean = text.replace(/\{\{|\}\}/g,'');
+  const u = new SpeechSynthesisUtterance(clean);
+  u.lang = 'zh-CN';
+  if(zhVoice) u.voice = zhVoice;
+  u.rate = rate || 0.9;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+}
+function stripMarks(s){ return s.replace(/\{\{|\}\}/g,''); }
+
+document.querySelectorAll('audio.orig-audio').forEach(a=>{
+  a.addEventListener('error', ()=>{
+    a.style.display = 'none';
+    const warn = a.parentElement ? a.parentElement.querySelector('.audio-missing') : null;
+    if(warn) warn.style.display = 'inline';
+  });
+});
+function shuffleArr(a){
+  const arr = a.slice();
+  for(let i=arr.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+  }
+  return arr;
+}
+
+/* =========================================================
+   TAB SWITCHING
+========================================================= */
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('section.panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-'+btn.dataset.tab).classList.add('active');
+  });
+});
+
+/* =========================================================
+   四、主课文 — render bài khoá
+========================================================= */
+function renderMainText(){
+  const wrap = document.getElementById('mainTextWrap');
+  wrap.innerHTML = '';
+  mainText.forEach((line, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'bi-line';
+    const hanziHtml = line.hanzi.replace(/\{\{(.*?)\}\}/g, '<b style="color:var(--gold)">$1</b>');
+    div.innerHTML = `<div class="speaker">${line.sp}</div><div>
+      <div class="hanzi${line.stage ? ' stage' : ''}">${hanziHtml} <button class="sp-btn" data-idx="${idx}">🔊</button></div>
+      <div class="pinyin">${line.pinyin}</div>
+      <div class="vi">${line.vi}</div>
+    </div>`;
+    wrap.appendChild(div);
+  });
+  wrap.querySelectorAll('.sp-btn').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      const idx = b.dataset.idx;
+      speak(stripMarks(mainText[idx].hanzi), 0.85);
+    });
+  });
+}
+renderMainText();
+document.getElementById('toggleHideHanzi').addEventListener('change', e=>{
+  const w = document.getElementById('mainTextWrap');
+  w.classList.toggle('hide-hz', e.target.checked);
+  w.querySelectorAll('.hanzi.revealed').forEach(h=>h.classList.remove('revealed'));
+});
+document.getElementById('toggleHidePinyin').addEventListener('change', e=>{
+  document.getElementById('mainTextWrap').classList.toggle('hide-py', e.target.checked);
+});
+document.getElementById('toggleHideVi').addEventListener('change', e=>{
+  document.getElementById('mainTextWrap').classList.toggle('hide-vi', e.target.checked);
+});
+
+/* =========================================================
+   一、热身
+========================================================= */
+const warmupItems = [
+  {q:"1. 说一说你每天大部分的时间都在做什么。", hint:"Gợi ý mẫu: 我每天大部分的时间都在学习和工作。早上八点到下午五点我在公司上班，晚上还要学两个小时汉语。剩下的时间，我差不多三分之一用来睡觉，有时候也会玩儿玩儿手机、看看电视。"},
+  {q:"2. 时间看不见，但是跑得快，你能说说时间都去哪儿了吗？", hint:"Gợi ý mẫu: 我觉得我的时间都在手机上过去了。每天早上一起床就看手机，坐地铁的时候看手机，吃饭的时候也看手机，一天差不多有四分之一的时间都用在手机上。所以，我觉得我应该更珍惜时间。"}
+];
+function renderWarmup(){
+  const wrap = document.getElementById('warmupWrap');
+  wrap.innerHTML = '';
+  warmupItems.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    div.innerHTML = `<div>${item.q}</div>
+      <textarea class="answer-box" placeholder="Trả lời bằng tiếng Trung..."></textarea>
+      <button class="btn small secondary" data-hint="${idx}">👁 Xem gợi ý đáp án</button>
+      <div class="hint-box" id="wuhint-${idx}">${item.hint}</div>`;
+    wrap.appendChild(div);
+    div.querySelector('[data-hint]').addEventListener('click', ()=>{
+      document.getElementById('wuhint-'+idx).classList.toggle('show');
+    });
+  });
+}
+renderWarmup();
+
+/* =========================================================
+   二、词语 — VOCAB CARDS (+ thẻ bổ sung tab 五/六)
+========================================================= */
+const mastered = {};
+let vocabOrder = vocab.map(w=>w.id);
+// 副课文 补充词语 (id 101–102) ở tab 五; bài đọc 补充词语 (id 201–209) ở tab 六
+let fuOrder = extraVocab.filter(w=>w.id<200).map(w=>w.id);
+let readOrder = extraVocab.filter(w=>w.id>200).map(w=>w.id);
+
+function renderCards(containerId, dataArr, order, masteredFilterId){
+  const grid = document.getElementById(containerId);
+  const onlyUnmastered = document.getElementById(masteredFilterId).checked;
+  grid.innerHTML = '';
+  order.forEach(id=>{
+    const w = dataArr.find(x=>x.id===id);
+    if(!w) return;
+    if(onlyUnmastered && mastered[w.id]) return;
+    const card = document.createElement('div');
+    card.className = 'flip-card';
+    card.innerHTML = `
+      <div class="flip-inner">
+        <div class="flip-face front">
+          <span class="word-type">${typeLabel(w.type)}</span>
+          <span class="mastered-badge">${mastered[w.id] ? '⭐' : ''}</span>
+          <div class="card-hanzi">${w.hanzi}</div>
+          <button class="speak-btn" data-say="${w.hanzi}">🔊 Phát âm</button>
+        </div>
+        <div class="flip-face back">
+          <div class="back-pinyin pinyin">${w.pinyin}</div>
+          <div class="back-meaning">${w.meaning}</div>
+          <div class="back-example">VD: ${stripMarks(w.example)}</div>
+          <div class="card-actions">
+            <button class="mini-btn analyze-btn" data-id="${w.id}">🈶 Phân tích chữ</button>
+            <button class="mini-btn master-btn ${mastered[w.id]?'on':''}" data-id="${w.id}">${mastered[w.id] ? '✔ Đã thuộc' : 'Đánh dấu đã thuộc'}</button>
+          </div>
+        </div>
+      </div>`;
+    card.addEventListener('click', (e)=>{
+      if(e.target.closest('button')) return;
+      card.classList.toggle('flipped');
+    });
+    card.querySelector('.speak-btn').addEventListener('click', (e)=>{
+      e.stopPropagation();
+      speak(w.hanzi, 0.85);
+    });
+    card.querySelector('.analyze-btn').addEventListener('click', (e)=>{
+      e.stopPropagation();
+      openCharAnalysis(w.id);
+    });
+    card.querySelector('.master-btn').addEventListener('click', (e)=>{
+      e.stopPropagation();
+      toggleMastered(w.id);
+    });
+    grid.appendChild(card);
+  });
+  document.getElementById('masteredCount') && (document.getElementById('masteredCount').textContent =
+    `Đã thuộc: ${vocab.filter(w=>mastered[w.id]).length}/${vocab.length}`);
+}
+
+function typeLabel(t){
+  return {N:'Danh từ', V:'Động từ', A:'Tính từ', Pt:'Trợ từ', IDM:'Thành ngữ/Tục ngữ', PN:'Danh từ riêng', VO:'Động từ ly hợp', Adv:'Phó từ', Conj:'Liên từ', VP:'Cụm động từ', Prep:'Giới từ', 'A&Adv':'Tính từ/Phó từ', 'N&A':'Danh từ/Tính từ', 'N&V':'Danh từ/Động từ', 'V&N':'Động từ/Danh từ', 'A&N':'Tính từ/Danh từ', 'V&A':'Động từ/Tính từ', 'N&V&A':'Danh từ/Động từ/Tính từ', 'Adv&V':'Phó từ/Động từ', 'Pron&Adv':'Đại từ/Phó từ'}[t] || t;
+}
+
+function toggleMastered(id){
+  mastered[id] = !mastered[id];
+  renderCards('vocabGrid', vocab, vocabOrder, 'filterUnmastered');
+  renderCards('fuVocabGrid', extraVocab, fuOrder, 'filterUnmasteredFu');
+  renderCards('readVocabGrid', extraVocab, readOrder, 'filterUnmasteredRead');
+}
+
+document.getElementById('filterUnmastered').addEventListener('change', ()=> renderCards('vocabGrid', vocab, vocabOrder, 'filterUnmastered'));
+document.getElementById('filterUnmasteredFu').addEventListener('change', ()=> renderCards('fuVocabGrid', extraVocab, fuOrder, 'filterUnmasteredFu'));
+document.getElementById('filterUnmasteredRead').addEventListener('change', ()=> renderCards('readVocabGrid', extraVocab, readOrder, 'filterUnmasteredRead'));
+document.getElementById('shuffleBtn').addEventListener('click', ()=>{ vocabOrder = shuffleArr(vocabOrder); renderCards('vocabGrid', vocab, vocabOrder, 'filterUnmastered'); });
+document.getElementById('shuffleFuBtn').addEventListener('click', ()=>{ fuOrder = shuffleArr(fuOrder); renderCards('fuVocabGrid', extraVocab, fuOrder, 'filterUnmasteredFu'); });
+document.getElementById('shuffleReadBtn').addEventListener('click', ()=>{ readOrder = shuffleArr(readOrder); renderCards('readVocabGrid', extraVocab, readOrder, 'filterUnmasteredRead'); });
+
+/* =========================================================
+   二、词语 — CHẾ ĐỘ NGHE ĐOÁN CHỮ
+========================================================= */
+let quizOrder = [];
+let quizIdx = 0;
+let quizScore = {correct:0, total:0};
+let quizAnswered = false;
+
+function startQuizMode(){
+  quizOrder = shuffleArr(vocab.map(w=>w.id));
+  quizIdx = 0;
+  quizScore = {correct:0, total:0};
+  document.getElementById('vocabGrid').style.display = 'none';
+  document.getElementById('quizModeWrap').style.display = 'block';
+  renderQuizQuestion();
+}
+function endQuizMode(){
+  document.getElementById('vocabGrid').style.display = '';
+  document.getElementById('quizModeWrap').style.display = 'none';
+}
+function renderQuizQuestion(){
+  quizAnswered = false;
+  if(quizIdx >= quizOrder.length){
+    document.getElementById('quizProgress').textContent = `Xong! Điểm: ${quizScore.correct}/${quizScore.total}`;
+    document.getElementById('quizPlayBtn').style.display = 'none';
+    document.getElementById('quizOptions').innerHTML = '';
+    document.getElementById('quizFeedback').textContent = '';
+    document.getElementById('quizNextBtn').style.display = '';
+    document.getElementById('quizNextBtn').textContent = '🔁 Làm lại';
+    document.getElementById('quizNextBtn').onclick = startQuizMode;
+    return;
+  }
+  const word = vocab.find(w=>w.id===quizOrder[quizIdx]);
+  document.getElementById('quizPlayBtn').style.display = '';
+  document.getElementById('quizProgress').textContent = `Câu ${quizIdx+1}/${quizOrder.length} — Điểm: ${quizScore.correct}/${quizScore.total}`;
+  document.getElementById('quizPlayBtn').onclick = ()=> speak(word.hanzi, 0.8);
+  setTimeout(()=> speak(word.hanzi, 0.8), 200);
+
+  const others = vocab.filter(w=>w.id!==word.id);
+  const distractors = shuffleArr(others.map(w=>w.id)).slice(0,3).map(id=>others.find(w=>w.id===id));
+  const opts = shuffleArr([word, ...distractors]);
+  const optWrap = document.getElementById('quizOptions');
+  optWrap.innerHTML = '';
+  opts.forEach(opt=>{
+    const b = document.createElement('button');
+    b.className = 'choice-btn';
+    b.style.display = 'block';
+    b.style.width = '100%';
+    b.style.textAlign = 'left';
+    b.style.marginBottom = '8px';
+    b.textContent = opt.hanzi;
+    b.addEventListener('click', ()=>{
+      if(quizAnswered) return;
+      quizAnswered = true;
+      quizScore.total++;
+      const isCorrect = opt.id === word.id;
+      if(isCorrect) quizScore.correct++;
+      optWrap.querySelectorAll('.choice-btn').forEach(bb=>{
+        if(bb.textContent === word.hanzi) bb.classList.add('correct');
+        else if(bb === b) bb.classList.add('wrong');
+      });
+      const fb = document.getElementById('quizFeedback');
+      fb.textContent = isCorrect ? `✓ Chính xác! — ${word.pinyin} — ${word.meaning}` : `✗ Sai rồi. Đáp án: ${word.hanzi} (${word.pinyin}) — ${word.meaning}`;
+      fb.style.color = isCorrect ? '#2f7d32' : 'var(--red)';
+      document.getElementById('quizProgress').textContent = `Câu ${quizIdx+1}/${quizOrder.length} — Điểm: ${quizScore.correct}/${quizScore.total}`;
+      document.getElementById('quizNextBtn').style.display = '';
+    });
+    optWrap.appendChild(b);
+  });
+  document.getElementById('quizFeedback').textContent = '';
+  document.getElementById('quizNextBtn').style.display = 'none';
+  document.getElementById('quizNextBtn').textContent = 'Câu tiếp theo →';
+  document.getElementById('quizNextBtn').onclick = ()=>{ quizIdx++; renderQuizQuestion(); };
+}
+document.getElementById('btnCardMode').addEventListener('click', ()=>{
+  document.getElementById('btnCardMode').classList.add('mode-active');
+  document.getElementById('btnQuizMode').classList.remove('mode-active');
+  endQuizMode();
+});
+document.getElementById('btnQuizMode').addEventListener('click', ()=>{
+  document.getElementById('btnQuizMode').classList.add('mode-active');
+  document.getElementById('btnCardMode').classList.remove('mode-active');
+  startQuizMode();
+});
+
+/* =========================================================
+   MODAL PHÂN TÍCH CHỮ HÁN + HANZIWRITER
+========================================================= */
+let currentWriters = {};
+
+function openCharAnalysis(wordId){
+  const word = vocab.find(w=>w.id===wordId) || extraVocab.find(w=>w.id===wordId);
+  if(!word) return;
+  const uniqueChars = [...new Set(word.chars)];
+  document.getElementById('modalTitle').textContent = `🈶 Phân tích chữ — ${word.hanzi} (${word.pinyin})`;
+  const grid = document.getElementById('modalGrid');
+  grid.innerHTML = '';
+  currentWriters = {};
+
+  uniqueChars.forEach((ch, idx)=>{
+    const info = charDict[ch];
+    const key = ch + '_' + idx;
+    const block = document.createElement('div');
+    block.className = 'char-block';
+    if(!info){
+      block.innerHTML = `<div class="char-writer-row">
+        <div class="writer-target" id="w-${key}" style="display:flex;align-items:center;justify-content:center;font-size:2.4rem;font-family:'Noto Serif SC',serif;">${ch}</div>
+        <div class="char-info"><p><i>Chưa có dữ liệu phân tích cho chữ này trong charDict.</i></p></div>
+      </div>`;
+      grid.appendChild(block);
+      return;
+    }
+    block.innerHTML = `<div class="char-writer-row">
+        <div class="writer-target" id="w-${key}"></div>
+        <div class="char-info">
+          <dl>
+            <dt>部首 (Bộ thủ)</dt><dd>${info.r}</dd>
+            <dt>造字法</dt><dd>${info.f}</dd>
+            <dt>结构 & số nét</dt><dd>${info.s}</dd>
+            <dt>💡 Mẹo nhớ</dt><dd>${info.m}</dd>
+            <dt>4 từ ghép thông dụng</dt><dd>${info.c.join('、')}</dd>
+          </dl>
+          <button class="replay-btn" data-key="${key}">↻ Xem lại nét</button>
+        </div>
+      </div>`;
+    grid.appendChild(block);
+  });
+
+  document.getElementById('charModal').classList.add('show');
+
+  uniqueChars.forEach((ch, idx)=>{
+    if(!charDict[ch]) return;
+    const key = ch + '_' + idx;
+    setTimeout(()=>{
+      try{
+        const targetEl = document.getElementById('w-'+key);
+        const size = (targetEl && targetEl.clientWidth) ? targetEl.clientWidth : 110;
+        const pad = Math.max(4, Math.round(size * 0.055));
+        const writer = HanziWriter.create('w-'+key, ch, {
+          width: size, height: size, padding: pad,
+          strokeAnimationSpeed: 1, delayBetweenStrokes: 180,
+          showOutline: true,
+          charDataLoader: function(char, onComplete){
+            fetch(`https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0.1/${encodeURIComponent(char)}.json`)
+              .then(res=>{ if(!res.ok) throw new Error('no data'); return res.json(); })
+              .then(onComplete)
+              .catch(()=>{ onLoadFail(key, ch); });
+          },
+          onLoadCharDataError: function(){ onLoadFail(key, ch); }
+        });
+        currentWriters[key] = writer;
+        setTimeout(()=>{ try{ writer.animateCharacter(); }catch(e){} }, 80);
+      }catch(err){ onLoadFail(key, ch); }
+    }, idx * 350);
+  });
+
+  grid.querySelectorAll('.replay-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const key = btn.dataset.key;
+      const w = currentWriters[key];
+      if(w){ w.animateCharacter(); }
+    });
+  });
+}
+
+function onLoadFail(key, ch){
+  const el = document.getElementById('w-'+key);
+  if(el){
+    el.style.display = 'flex';
+    el.style.alignItems = 'center';
+    el.style.justifyContent = 'center';
+    el.style.fontSize = '2.4rem';
+    el.style.fontFamily = "'Noto Serif SC',serif";
+    el.textContent = ch;
+  }
+}
+
+document.getElementById('closeModalBtn').addEventListener('click', ()=>{
+  document.getElementById('charModal').classList.remove('show');
+});
+document.getElementById('charModal').addEventListener('click', (e)=>{
+  if(e.target.id === 'charModal') document.getElementById('charModal').classList.remove('show');
+});
+
+/* =========================================================
+   TIỆN ÍCH: trắc nghiệm chung (dùng cho nhiều bài tập có đáp án cố định)
+   items: [{q, options:[...], answer:<chuỗi đáp án đúng>, explain?, say?}]
+========================================================= */
+function renderMCList(wrapId, items, opts){
+  opts = opts || {};
+  const wrap = document.getElementById(wrapId);
+  wrap.innerHTML = '';
+  items.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    const sayBtn = item.say ? ` <button class="speak-btn">🔊 ${opts.sayLabel || 'Nghe'}</button>` : '';
+    div.innerHTML = `<div>${item.q}${sayBtn}</div>
+      ${item.img ? `<img src="${item.img}" alt="" style="max-width:100%;width:180px;border-radius:10px;border:1px solid var(--moss-200);margin:6px 0;">` : ''}
+      <div class="mc-opts"></div>
+      <div class="explain-box"></div>`;
+    wrap.appendChild(div);
+    if(item.say) div.querySelector('.speak-btn').addEventListener('click', ()=> speak(item.say, opts.rate || 0.85));
+    const optsWrap = div.querySelector('.mc-opts');
+    shuffleArr(item.options).forEach(opt=>{
+      const b = document.createElement('button');
+      b.className = 'choice-btn';
+      if(opts.block){ b.style.display = 'block'; b.style.width = '100%'; b.style.textAlign = 'left'; b.style.marginBottom = '6px'; }
+      b.textContent = opt;
+      b.addEventListener('click', ()=>{
+        optsWrap.querySelectorAll('.choice-btn').forEach(x=>x.classList.remove('selected'));
+        b.classList.add('selected');
+        div.dataset.selected = opt;
+      });
+      optsWrap.appendChild(b);
+    });
+  });
+}
+function checkMCList(wrapId, items, scoreId){
+  let correct = 0;
+  const divs = document.querySelectorAll('#'+wrapId+' > .ex-item');
+  items.forEach((item, idx)=>{
+    const div = divs[idx];
+    const sel = div.dataset.selected;
+    div.querySelectorAll('.choice-btn').forEach(b=>{
+      b.classList.remove('correct','wrong');
+      if(b.textContent === item.answer) b.classList.add('correct');
+      else if(b.textContent === sel) b.classList.add('wrong');
+    });
+    if(sel === item.answer) correct++;
+    const exp = div.querySelector('.explain-box');
+    exp.textContent = (sel === item.answer ? '✓ Đúng. ' : `✗ Đáp án đúng: ${item.answer}. `) + (item.explain || '');
+    exp.classList.add('show');
+  });
+  document.getElementById(scoreId).textContent = `Điểm: ${correct}/${items.length}`;
+}
+
+/* =========================================================
+   二、词语 — 词语活动 1 (6 câu mô tả + 2 hình)
+========================================================= */
+const wordAct1Items = [
+  {q:"(1) 短时间坐或站在那里，脑子里什么也不想", answer:"发呆", options:["发呆","睡神","实习","珍惜"]},
+  {q:"(2) 时间", answer:"日子", options:["日子","建议","水盆","枯木"]},
+  {q:"(3) 喜欢睡觉的人", answer:"睡神", options:["睡神","发呆","实习","院里"]},
+  {q:"(4) 说起（一件事或者一个人）", answer:"提", options:["提","开","过去","却"]},
+  {q:"(5) 不希望你说，可是你就要说这事儿", answer:"哪壶不开提哪壶", options:["哪壶不开提哪壶","发呆","凑热闹","珍惜"]},
+  {q:"(6) 向别人说出的看法", answer:"建议", options:["建议","日子","实习","倍"]},
+  {q:"(7) 看图，这是什么？", img:"images/bai16-ya.png", answer:"芽", options:["芽","枯木","碗","壶"]},
+  {q:"(8) 看图，这是什么？", img:"images/bai16-kumu.png", answer:"枯木", options:["枯木","芽","水盆","开花"]}
+];
+renderMCList('wordAct1', wordAct1Items);
+document.getElementById('checkWordAct1').addEventListener('click', ()=> checkMCList('wordAct1', wordAct1Items, 'wordAct1Score'));
+document.querySelectorAll('#panel-tab2 .compare-table .sp-btn').forEach(b=>{
+  b.addEventListener('click', ()=> speak(b.dataset.say, 0.8));
+});
+
+/* =========================================================
+   二、词语 — ⭐ BÀI TẬP ĐIỀN TỪ (19 câu)
+========================================================= */
+const fillVocabItems = [
+  {sentence:"春天到了，小树长出了新____。", answer:"芽"},
+  {sentence:"孩子们都在____玩儿，外面太冷了。", answer:"院里"},
+  {sentence:"这棵树早就死了，只剩下一根____。", answer:"枯木"},
+  {sentence:"三月以后，公园里的桃树都____了，特别漂亮。", answer:"开花"},
+  {sentence:"这个月我花的钱是上个月的三____。", answer:"倍"},
+  {sentence:"他周末能睡十二个小时，大家都叫他“____”。", answer:"睡神"},
+  {sentence:"老板，来一____牛肉面！", answer:"碗"},
+  {sentence:"天气预报说今天下雨，____出了大太阳。", answer:"却"},
+  {sentence:"他考试没考好，你别____，问他考了多少分。", answer:"哪壶不开提哪壶"},
+  {sentence:"妈妈，桌子上那____茶是给客人的吗？", answer:"壶"},
+  {sentence:"水____了，快去泡茶吧。", answer:"开"},
+  {sentence:"以后别再____这件事了，我不想听。", answer:"提"},
+  {sentence:"在中国留学的机会不容易，你要好好儿____。", answer:"珍惜"},
+  {sentence:"在中国的____里，我交了很多好朋友。", answer:"日子"},
+  {sentence:"洗脸的____在卫生间里。", answer:"水盆"},
+  {sentence:"时间过得真快，一年又____了。", answer:"过去"},
+  {sentence:"上课的时候别____，认真听老师讲。", answer:"发呆"},
+  {sentence:"你有什么好的____，可以跟我们说说。", answer:"建议"},
+  {sentence:"大学四年级的时候，我在一家银行____了三个月。", answer:"实习"}
+];
+const fillVocabOptions = fillVocabItems.map(i=>i.answer);
+
+function renderFillVocab(){
+  const wrap = document.getElementById('fillVocabWrap');
+  wrap.innerHTML = '';
+  fillVocabItems.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    const parts = item.sentence.split('____');
+    const opts = shuffleArr(fillVocabOptions);
+    let optHtml = '<option value="">--Chọn từ--</option>' + opts.map(o=>`<option value="${o}">${o}</option>`).join('');
+    div.innerHTML = `<span>${idx+1}. ${parts[0]}</span><select class="blank-select" data-idx="${idx}">${optHtml}</select><span>${parts[1]}</span><span class="explain-box" id="fillVocabExp${idx}"></span>`;
+    wrap.appendChild(div);
+  });
+}
+renderFillVocab();
+
+document.getElementById('checkFillVocab').addEventListener('click', ()=>{
+  let correct = 0;
+  fillVocabItems.forEach((item, idx)=>{
+    const sel = document.querySelector(`#fillVocabWrap select[data-idx="${idx}"]`);
+    const exp = document.getElementById('fillVocabExp'+idx);
+    if(sel.value === item.answer){
+      correct++;
+      sel.style.borderColor = '#5b9c5b';
+      exp.textContent = '✓ Đúng';
+      exp.style.color = '#2f7d32';
+    } else {
+      sel.style.borderColor = '#a83c34';
+      exp.textContent = `✗ Đáp án đúng: ${item.answer}`;
+      exp.style.color = '#a83c34';
+    }
+    exp.classList.add('show');
+  });
+  document.getElementById('fillVocabScore').textContent = `Điểm: ${correct}/${fillVocabItems.length}`;
+});
+
+/* =========================================================
+   三、语言点 — 小数、分数、倍数
+========================================================= */
+// 语法活动 — 用“还、可、才、都”填空
+const grammarActItems = [
+  {q:"3/4", answer:"四分之三", options:["四分之三","三分之四","三点四","四分三"], explain:"Phân số: mẫu (4) + 分之 + tử (3)."},
+  {q:"1/5", answer:"五分之一", options:["五分之一","一分之五","一点五","五分一"], explain:"Mẫu trước, tử sau: 五分之一."},
+  {q:"5/22", answer:"二十二分之五", options:["二十二分之五","五分之二十二","二二分之五","五点二二"], explain:"Mẫu 22 đọc như số nguyên: 二十二分之五."},
+  {q:"2.38", answer:"二点三八", options:["二点三八","两点三十八","二点三十八","两点三八"], explain:"Số thập phân: phần sau 点 đọc từng chữ số; phần nguyên dùng 二 (không dùng 两)."},
+  {q:"89.226", answer:"八十九点二二六", options:["八十九点二二六","八十九点二百二十六","八九点二二六","八十九点两两六"], explain:"八十九 + 点 + 二二六 (đọc từng chữ số)."},
+  {q:"11.98", answer:"十一点九八", options:["十一点九八","十一点九十八","一一点九八","十一分之九八"], explain:"十一 + 点 + 九八."},
+  {q:"61%", answer:"百分之六十一", options:["百分之六十一","六十一分之百","六十一百分","百分六十一"], explain:"Phần trăm = 百分之 + số."},
+  {q:"39%", answer:"百分之三十九", options:["百分之三十九","三十九百分之","百分之三九","三九百分之"], explain:"百分之三十九."},
+  {q:"78.5%", answer:"百分之七十八点五", options:["百分之七十八点五","百分之七十八点五十","七十八点五百分之","百分之七八点五"], explain:"百分之 + 七十八点五."}
+];
+renderMCList('grammarActWrap', grammarActItems);
+const grammarCalcItems = [
+  {q:"(1) 我的工资是6000元，我的工资是他工资的三分之一，他的工资是______元。", answer:"18000", options:["18000","2000","9000","12000"], explain:"6000 = ⅓ × X → X = 6000 × 3 = 18000 (一万八千)."},
+  {q:"(2) 我们班有20个学生，其中五分之二是女生，那么我们班的女生有______个。", answer:"8", options:["8","4","10","12"], explain:"20 × 2/5 = 8."},
+  {q:"(3) 这次旅行，我才花了1800元，他花的钱是我的四倍，那么他花了______元。", answer:"7200", options:["7200","5400","9000","450"], explain:"是……的四倍 = 1800 × 4 = 7200."},
+  {q:"(4) 我老家的人口是400万，上海的人口是2400万，上海的人口是我老家人口的______倍。", answer:"6", options:["6","5","2000","4"], explain:"2400 ÷ 400 = 6 → 是……的六倍 (= 比……多五倍)."},
+  {q:"(5) 他60岁，我才20岁，我的年龄是他年龄的______。", answer:"三分之一", options:["三分之一","一分之三","三倍","百分之三十"], explain:"20 ÷ 60 = ⅓ → 三分之一."}
+];
+renderMCList('grammarCalcWrap', grammarCalcItems, {block:true});
+document.getElementById('checkGrammarCalc').addEventListener('click', ()=> checkMCList('grammarCalcWrap', grammarCalcItems, 'grammarCalcScore'));
+document.getElementById('checkGrammarAct').addEventListener('click', ()=> checkMCList('grammarActWrap', grammarActItems, 'grammarActScore'));
+
+const grammarMCItems = [
+  {q:"(1) “他们班的学生人数比我们班多一倍” có nghĩa là:", answer:"Lớp họ đông gấp đôi lớp tôi.", options:["Lớp họ đông gấp đôi lớp tôi.","Lớp họ đông gấp ba lớp tôi.","Lớp họ chỉ đông hơn lớp tôi một người.","Lớp họ bằng một nửa lớp tôi."], explain:"比……多一倍 = 是……的两倍."},
+  {q:"(2) Câu nào cùng nghĩa với “我睡觉的时间是杰克的两倍”?", answer:"我睡觉的时间比杰克多一倍。", options:["我睡觉的时间比杰克多一倍。","我睡觉的时间比杰克多两倍。","杰克睡觉的时间是我的两倍。","我睡觉的时间是杰克的二分之一。"], explain:"是……的N倍 = 比……多(N−1)倍."},
+  {q:"(3) “七分之四” là số nào?", answer:"4/7", options:["4/7","7/4","7.4","4.7"], explain:"Mẫu (7) đọc trước, tử (4) đọc sau."},
+  {q:"(4) Câu nào đúng?", answer:"赵亮比杰克轻了20%。", options:["赵亮比杰克轻了20%。","赵亮比杰克轻了0.2倍。","赵亮是杰克的轻20%。","赵亮比杰克轻一倍。"], explain:"Sự giảm dùng phần trăm/phân số, không dùng 倍."},
+  {q:"(5) 3.14 đọc là:", answer:"三点一四", options:["三点一四","三点十四","三分之十四","三十一点四"], explain:"Phần sau 点 đọc từng chữ số."},
+  {q:"(6) “我吃一碗面，她____能吃两碗。” — chọn từ đúng:", answer:"却", options:["却","就","都","才"], explain:"却 biểu thị chuyển ý, trái với mình: “tôi ăn một bát, cô ấy lại ăn được hai bát”."},
+  {q:"(7) Dịch: “Số tiền tôi tiêu bằng một phần tư số tiền anh ấy tiêu.”", answer:"我花的钱是他花的钱的四分之一。", options:["我花的钱是他花的钱的四分之一。","我花的钱是他花的钱的一分之四。","他花的钱是我花的钱的四分之一。","我花的钱比他花的钱多四倍。"], explain:"A 是 B 的 N分之M; 1/4 = 四分之一."},
+  {q:"(8) “1/2” KHÔNG đọc là:", answer:"两分之一", options:["两分之一","二分之一","一半","百分之五十"], explain:"Trong phân số dùng 二: 二分之一 (= 一半 = 百分之五十)."}
+];
+renderMCList('grammarMCWrap', grammarMCItems, {block:true});
+document.getElementById('checkGrammarMC').addEventListener('click', ()=> checkMCList('grammarMCWrap', grammarMCItems, 'grammarMCScore'));
+
+/* =========================================================
+   二、词语活动 2 (06-1) + 四、主课文 课文活动 1-3
+========================================================= */
+const wordAct2Items = [
+  {q:"(1)", say:"我每天的时间有三分之一用来睡觉，三分之一在学校学习。",
+   answer:"Thời gian mỗi ngày của tôi có một phần ba dùng để ngủ, một phần ba học ở trường.",
+   options:["Thời gian mỗi ngày của tôi có một phần ba dùng để ngủ, một phần ba học ở trường.","Mỗi ngày tôi ngủ ba tiếng, học ở trường ba tiếng.","Mỗi ngày tôi dùng ba phần tư thời gian để ngủ."]},
+  {q:"(2)", say:"杰克说他每天只要睡4个小时就够了，而我每天睡10个小时还不够，我睡觉的时间是杰克的2.5倍。",
+   answer:"Jack nói mỗi ngày chỉ cần ngủ 4 tiếng là đủ, còn tôi ngủ 10 tiếng vẫn chưa đủ, thời gian ngủ của tôi gấp 2,5 lần Jack.",
+   options:["Jack nói mỗi ngày chỉ cần ngủ 4 tiếng là đủ, còn tôi ngủ 10 tiếng vẫn chưa đủ, thời gian ngủ của tôi gấp 2,5 lần Jack.","Jack ngủ 10 tiếng mỗi ngày, gấp 2,5 lần tôi.","Tôi và Jack đều ngủ 4 tiếng mỗi ngày."]},
+  {q:"(3)", say:"你们知道我吃不胖，我只有61.2公斤。",
+   answer:"Các bạn biết tôi ăn mãi không béo mà, tôi chỉ nặng 61,2 cân.",
+   options:["Các bạn biết tôi ăn mãi không béo mà, tôi chỉ nặng 61,2 cân.","Tôi không ăn được nữa, tôi đã nặng 61,2 cân rồi.","Các bạn biết tôi rất béo, tôi nặng 76,5 cân."]},
+  {q:"(4)", say:"李梅发呆的时间是杰克的两倍，杰克发呆的时间是李梅的二分之一。",
+   answer:"Thời gian ngẩn người của Lý Mai gấp đôi Jack, của Jack bằng một nửa Lý Mai.",
+   options:["Thời gian ngẩn người của Lý Mai gấp đôi Jack, của Jack bằng một nửa Lý Mai.","Lý Mai và Jack ngẩn người thời gian như nhau.","Thời gian ngẩn người của Jack gấp đôi Lý Mai."]},
+  {q:"(5)", say:"我吃一碗面，她却能吃两碗，吃的比我多一倍。",
+   answer:"Tôi ăn một bát mì, cô ấy lại ăn được hai bát, ăn nhiều gấp đôi tôi.",
+   options:["Tôi ăn một bát mì, cô ấy lại ăn được hai bát, ăn nhiều gấp đôi tôi.","Tôi ăn hai bát mì, cô ấy chỉ ăn một bát.","Tôi và cô ấy mỗi người ăn một bát mì."]},
+  {q:"(6)", say:"赵亮比杰克轻了20%。",
+   answer:"Triệu Lượng nhẹ hơn Jack 20%.",
+   options:["Triệu Lượng nhẹ hơn Jack 20%.","Triệu Lượng nặng hơn Jack 20%.","Triệu Lượng nhẹ hơn Jack 20 cân."]},
+  {q:"(7)", say:"赵亮差不多十分之九的时间都在图书馆里，只有十分之一的时间用来运动和陪女朋友。",
+   answer:"Triệu Lượng gần chín phần mười thời gian ở thư viện, chỉ một phần mười dùng để tập thể thao và ở bên bạn gái.",
+   options:["Triệu Lượng gần chín phần mười thời gian ở thư viện, chỉ một phần mười dùng để tập thể thao và ở bên bạn gái.","Triệu Lượng chín tiếng ở thư viện, mười tiếng ở bên bạn gái.","Triệu Lượng phần lớn thời gian dùng để tập thể thao và ở bên bạn gái."]}
+];
+renderMCList('wordAct2', wordAct2Items, {block:true, sayLabel:'Nghe (giọng tổng hợp)'});
+document.getElementById('checkWordAct2').addEventListener('click', ()=>{
+  checkMCList('wordAct2', wordAct2Items, 'wordAct2Score');
+  document.querySelectorAll('#wordAct2 > .ex-item').forEach((div, idx)=>{
+    div.querySelector('.explain-box').textContent += ` 原句：${wordAct2Items[idx].say}`;
+  });
+});
+
+const textQAItems = [
+  {q:"(1) 李梅最近喜欢什么歌？", answer:"《时间都去哪儿了》。",
+   options:["《时间都去哪儿了》。","《门前老树》。","《枯木又开花》。","杰克的中国阿姨唱的歌。"]},
+  {q:"(2) 杰克为什么会唱这首歌？", answer:"他的中国阿姨教他的。",
+   options:["他的中国阿姨教他的。","李梅教他的。","他在电视上学的。","他在学校学的。"]},
+  {q:"(3) 李梅每天的时间安排是什么样的？", answer:"三分之一用来睡觉，三分之一在学校学习。",
+   options:["三分之一用来睡觉，三分之一在学校学习。","一半用来睡觉，一半在学校学习。","每天只睡4个小时。","十分之九的时间都在图书馆里。"]},
+  {q:"(4) 李梅睡觉的时间是艾玛的几分之几？", answer:"五分之四（李梅睡8个小时，艾玛睡10个小时）。",
+   options:["五分之四（李梅睡8个小时，艾玛睡10个小时）。","二分之一。","四分之五。","2.5倍。"]},
+  {q:"(5) 赵亮和杰克的体重各是多少？赵亮比杰克轻多少？", answer:"赵亮61.2公斤，杰克76.5公斤；赵亮比杰克轻了20%。",
+   options:["赵亮61.2公斤，杰克76.5公斤；赵亮比杰克轻了20%。","赵亮76.5公斤，杰克61.2公斤；杰克比赵亮轻了20%。","赵亮61.2公斤，杰克76.5公斤；赵亮比杰克轻了一倍。","他们都是61.2公斤。"]},
+  {q:"(6) 赵亮十分之一的时间用来干什么？", answer:"用来运动和陪女朋友。",
+   options:["用来运动和陪女朋友。","在图书馆里看书。","发呆。","在公司实习。"]}
+];
+renderMCList('textQA', textQAItems, {block:true});
+document.getElementById('checkTextQA').addEventListener('click', ()=> checkMCList('textQA', textQAItems, 'textQAScore'));
+
+const choiceFillItems = [
+  {parts:["我知道，就是那首很多人在唱的“门前老树长新","，","枯木又","”的歌。"],
+   bank:["开花","芽","院里"], answers:["芽","院里","开花"]},
+  {parts:["我记得朱自清的书里说“","的时候，","从水盆里","；吃饭的时候，日子从","里","。”"],
+   bank:["日子","洗手","饭碗","过去"], answers:["洗手","日子","过去","饭碗","过去"]},
+  {parts:["哎呀，现在几点了？我要去公司","，会不会","？"],
+   bank:["迟到","实习"], answers:["实习","迟到"]}
+];
+function renderChoiceFill(){
+  const wrap = document.getElementById('choiceFillWrap');
+  wrap.innerHTML = '';
+  choiceFillItems.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    let html = `<div>(${idx+1}) ${item.parts[0]}`;
+    item.answers.forEach((_, bi)=>{
+      let optHtml = '<option value="">--选择--</option>' + item.bank.map(o=>`<option value="${o}">${o}</option>`).join('');
+      html += `<select class="blank-select" data-idx="${idx}" data-bi="${bi}">${optHtml}</select>${item.parts[bi+1]}`;
+    });
+    html += `</div><div class="tag-note">（${item.bank.join('、')}）</div><span class="explain-box" id="cfexp-${idx}"></span>`;
+    div.innerHTML = html;
+    wrap.appendChild(div);
+  });
+}
+renderChoiceFill();
+document.getElementById('checkChoiceFill').addEventListener('click', ()=>{
+  let correct = 0, total = 0;
+  choiceFillItems.forEach((item, idx)=>{
+    const div = document.querySelectorAll('#choiceFillWrap .ex-item')[idx];
+    const selects = div.querySelectorAll('select');
+    let allOk = true;
+    item.answers.forEach((ans, bi)=>{
+      total++;
+      if(selects[bi].value === ans){ correct++; selects[bi].style.borderColor = '#5b9c5b'; }
+      else { selects[bi].style.borderColor = '#a83c34'; allOk = false; }
+    });
+    const exp = document.getElementById('cfexp-'+idx);
+    exp.textContent = allOk ? '✓ Đúng' : `✗ Đáp án đúng: ${item.answers.join('、')}`;
+    exp.style.color = allOk ? '#2f7d32' : '#a83c34';
+    exp.classList.add('show');
+  });
+  document.getElementById('choiceFillScore').textContent = `Điểm: ${correct}/${total}`;
+});
+
+document.getElementById('courseAct3HintBtn').addEventListener('click', ()=>{
+  document.getElementById('courseAct3Hint').classList.toggle('show');
+});
+
+
+/* =========================================================
+   ⭐ 背诵 (主课文 / 副课文 / 拓展阅读)
+========================================================= */
+const recitationSets = {
+  main: { data: mainText, audio:'16-2', label:'Băng gốc 06-2 (toàn bài)' },
+  fu: { data: fuText, audio:'16-3', label:'Băng gốc 06-3 (toàn bài)' },
+  reading: { data: readingText, audio:'16-4', label:'Băng gốc 06-4' }
+};
+let activeRecKey = 'main';
+
+function setRecAudioTrack(code, label){
+  const a = document.getElementById('recAudio');
+  const warn = document.getElementById('recAudioMissing');
+  const row = document.getElementById('recAudioRow');
+  const labelEl = document.getElementById('recAudioLabel');
+  if(!code){
+    row.style.display = 'none';
+    return;
+  }
+  row.style.display = '';
+  a.style.display = '';
+  warn.style.display = 'none';
+  labelEl.textContent = `🎧 ${label}:`;
+  a.dataset.code = code;
+  warn.dataset.for = code;
+  a.src = `audio/${code}.mp3`;
+  a.load();
+}
+
+function renderMemorize(pct){
+  const wrap = document.getElementById('memorizeWrap');
+  wrap.innerHTML = '';
+  const data = recitationSets[activeRecKey].data;
+  data.forEach((line, idx)=>{
+    if(line.stage) return;
+    const clean = stripMarks(line.hanzi);
+    const div = document.createElement('div');
+    div.className = 'bi-line';
+    let chars = clean.split('').map((ch)=>{
+      const hide = Math.random()*100 < pct && !/[，。！？：；、""''（）()～\s\dA-Za-z《》“”‘’—…]/.test(ch);
+      if(hide){
+        return `<span class="reveal-word" data-ch="${ch}">${ch}</span>`;
+      }
+      return `<span>${ch}</span>`;
+    }).join('');
+    div.innerHTML = `<div class="speaker">${line.sp||''}</div><div>
+      <div class="hanzi">${chars} <button class="sp-btn" data-idx="${idx}">🔊</button></div>
+    </div>`;
+    wrap.appendChild(div);
+  });
+  wrap.querySelectorAll('.reveal-word').forEach(el=>{
+    el.addEventListener('click', ()=>{ el.classList.toggle('shown'); });
+  });
+  wrap.querySelectorAll('.sp-btn').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      const idx = b.dataset.idx;
+      const rate = parseFloat(document.getElementById('rateSelect').value);
+      speak(stripMarks(recitationSets[activeRecKey].data[idx].hanzi), rate);
+    });
+  });
+}
+
+document.getElementById('readAllBtn').addEventListener('click', ()=>{
+  const rate = parseFloat(document.getElementById('rateSelect').value);
+  const data = recitationSets[activeRecKey].data;
+  const fullText = data.filter(l=>!l.stage).map(l=>stripMarks(l.hanzi)).join('，');
+  speak(fullText, rate);
+});
+
+document.querySelectorAll('.hide-pct').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.hide-pct').forEach(b=>b.classList.remove('active-pct'));
+    btn.classList.add('active-pct');
+    renderMemorize(parseInt(btn.dataset.pct));
+  });
+});
+
+document.querySelectorAll('.subrec-nav button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.subrec-nav button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeRecKey = btn.dataset.rec;
+    const set = recitationSets[activeRecKey];
+    setRecAudioTrack(set.audio, set.label);
+    document.querySelectorAll('.hide-pct').forEach(b=>b.classList.remove('active-pct'));
+    document.querySelector('.hide-pct[data-pct="0"]').classList.add('active-pct');
+    renderMemorize(0);
+    document.getElementById('dictationInput').value = '';
+    document.getElementById('dictationScore').textContent = '';
+    document.getElementById('dictationDiff').innerHTML = '';
+  });
+});
+
+renderMemorize(0);
+setRecAudioTrack(recitationSets.main.audio, recitationSets.main.label);
+
+document.getElementById('checkDictation').addEventListener('click', ()=>{
+  const data = recitationSets[activeRecKey].data;
+  const original = data.filter(l=>!l.stage).map(l=>stripMarks(l.hanzi)).join('');
+  const input = document.getElementById('dictationInput').value.replace(/\s+/g,'');
+  const maxLen = Math.max(original.length, input.length);
+  let html = '';
+  let matchCount = 0;
+  for(let i=0;i<maxLen;i++){
+    const oc = original[i];
+    const ic = input[i];
+    if(ic === undefined){
+      if(oc !== undefined) html += `<span class="diff-char diff-missing">${oc}</span>`;
+    } else if(oc === ic){
+      html += `<span class="diff-char diff-ok">${ic}</span>`;
+      matchCount++;
+    } else {
+      html += `<span class="diff-char diff-bad">${ic}</span>`;
+    }
+  }
+  const pct = original.length ? Math.round((matchCount/original.length)*100) : 0;
+  document.getElementById('dictationScore').textContent = `Độ chính xác: ${pct}% (${matchCount}/${original.length} chữ đúng vị trí)`;
+  document.getElementById('dictationDiff').innerHTML = html;
+});
+
+/* =========================================================
+   五、副课文 + 六、拓展练习
+========================================================= */
+renderCards('vocabGrid', vocab, vocabOrder, 'filterUnmastered');
+renderCards('fuVocabGrid', extraVocab, fuOrder, 'filterUnmasteredFu');
+renderCards('readVocabGrid', extraVocab, readOrder, 'filterUnmasteredRead');
+
+function renderFuText(){
+  const wrap = document.getElementById('fuTextWrap');
+  wrap.innerHTML = '';
+  fuText.forEach((line, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'bi-line';
+    const hanziHtml = line.hanzi.replace(/\{\{(.*?)\}\}/g, '<b style="color:var(--gold)">$1</b>');
+    div.innerHTML = `<div></div><div>
+      <div class="hanzi">${hanziHtml} <button class="sp-btn" data-idx="${idx}">🔊</button></div>
+      <div class="pinyin">${line.pinyin}</div>
+      <div class="vi">${line.vi}</div>
+    </div>`;
+    wrap.appendChild(div);
+  });
+  wrap.querySelectorAll('.sp-btn').forEach(b=>{
+    b.addEventListener('click', ()=> speak(stripMarks(fuText[b.dataset.idx].hanzi), 0.85));
+  });
+}
+renderFuText();
+document.getElementById('toggleHideHanziFu').addEventListener('change', e=>{
+  const w = document.getElementById('fuTextWrap');
+  w.classList.toggle('hide-hz', e.target.checked);
+  w.querySelectorAll('.hanzi.revealed').forEach(h=>h.classList.remove('revealed'));
+});
+document.getElementById('toggleHidePinyinFu').addEventListener('change', e=>{
+  document.getElementById('fuTextWrap').classList.toggle('hide-py', e.target.checked);
+});
+document.getElementById('toggleHideViFu').addEventListener('change', e=>{
+  document.getElementById('fuTextWrap').classList.toggle('hide-vi', e.target.checked);
+});
+
+const tfItems = [
+  {q:"(1) 李梅和杰克都会唱《时间都去哪儿了》这首歌。", answer:false, explain:"Sai — bài chỉ nói 李梅 rất thích bài hát này; người hát được (说出了两句歌词) là 杰克, do cô người Trung Quốc dạy."},
+  {q:"(2) 赵亮知道自己的时间都去哪儿了，所以他不想讨论这个话题。", answer:false, explain:"Sai — 赵亮对这个话题很感兴趣，想跟大家讨论一下他们各自的时间都去哪儿了。"},
+  {q:"(3) 李梅每天睡觉的时间是艾玛的五分之四。", answer:true, explain:"Đúng — 李梅睡8个小时，艾玛睡10个小时：8/10 = 4/5 (五分之四)."},
+  {q:"(4) 赵亮不喜欢别人说他体重轻。", answer:true, explain:"Đúng — 赵亮很不好意思，觉得李梅哪壶不开提哪壶。"},
+  {q:"(5) 杰克读过朱自清的文章，知道朱自清写的话。", answer:true, explain:"Đúng — 杰克: 我记得朱自清的书里说“洗手的时候，日子从水盆里过去……”。"},
+  {q:"(6) 课文里没说艾玛喜欢发呆。", answer:true, explain:"Đúng — bài chỉ nói 杰克 và 李梅 hay ngẩn người; không nói gì về việc Emma thích ngẩn người."},
+  {q:"(7) 赵亮很喜欢在图书馆看书。", answer:false, explain:"Sai (đáp án tham khảo) — bài không nói 赵亮 thích đọc sách ở thư viện; chỉ là 李梅 nói cậu “差不多十分之九的时间都在图书馆里”, còn 赵亮 cười phản bác “那样的话，他就没有时间吃饭、喝水、睡觉了”."},
+  {q:"(8) 他们聊得很开心，艾玛就不去公司实习了。", answer:false, explain:"Sai — 艾玛几乎忘了自己要去公司实习 (suýt quên chứ không phải không đi)."}
+];
+function renderTF(){
+  const wrap = document.getElementById('tfWrap');
+  wrap.innerHTML = '';
+  tfItems.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    div.innerHTML = `<div>${item.q}</div>
+      <div>
+        <button class="choice-btn" data-val="true">对</button>
+        <button class="choice-btn" data-val="false">错</button>
+      </div>
+      <div class="explain-box" id="tfexp-${idx}">${item.explain}</div>`;
+    wrap.appendChild(div);
+    div.querySelectorAll('.choice-btn').forEach(b=>{
+      b.addEventListener('click', ()=>{
+        div.querySelectorAll('.choice-btn').forEach(x=>x.classList.remove('selected'));
+        b.classList.add('selected');
+        div.dataset.selected = b.dataset.val;
+      });
+    });
+  });
+}
+renderTF();
+document.getElementById('checkTF').addEventListener('click', ()=>{
+  let correct = 0;
+  tfItems.forEach((item, idx)=>{
+    const div = document.querySelectorAll('#tfWrap .ex-item')[idx];
+    const sel = div.dataset.selected;
+    const isCorrect = (sel === String(item.answer));
+    div.querySelectorAll('.choice-btn').forEach(b=>{
+      if((b.dataset.val === 'true') === item.answer) b.classList.add('correct');
+      else if(b.dataset.val === sel) b.classList.add('wrong');
+    });
+    if(isCorrect) correct++;
+    document.getElementById('tfexp-'+idx).classList.add('show');
+  });
+  document.getElementById('tfScore').textContent = `Điểm: ${correct}/${tfItems.length}`;
+});
+
+const dictFillItems = [
+  {parts:["杰克会唱《时间都去哪儿了》，艾玛非常（","），（","）是杰克的中国阿姨教他的。"], answers:["吃惊","原来"], audio:"杰克会唱时间都去哪儿了，艾玛非常吃惊，原来是杰克的中国阿姨教他的。"},
+  {parts:["杰克过来（","），说艾玛（","）能睡，（","）能吃，他自己吃一碗面，艾玛（","）要吃两碗，是自己的两（","）。"], answers:["凑热闹","不但","还","却","倍"], audio:"杰克过来凑热闹，说艾玛不但能睡，还能吃，他自己吃一碗面，艾玛却要吃两碗，是自己的两倍。"},
+  {parts:["赵亮很不好意思，觉得李梅哪（","）不开（","）哪（","）。赵亮是吃不胖的人，（","）只有61.2公斤，比杰克轻20%。"], answers:["壶","提","壶","体重"], audio:"赵亮很不好意思，觉得李梅哪壶不开提哪壶。赵亮是吃不胖的人，体重只有61.2公斤，比杰克轻20%。"}
+];
+function renderDictFill(){
+  const wrap = document.getElementById('dictFillWrap');
+  wrap.innerHTML = '';
+  dictFillItems.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    let bodyHtml = item.parts[0];
+    item.answers.forEach((ans, k)=>{
+      bodyHtml += `<input type="text" maxlength="8" class="blank-select" style="width:80px" data-k="${k}"/>` + item.parts[k+1];
+    });
+    div.innerHTML = `<div>(${idx+1}) <button class="speak-btn" data-say="${item.audio}">🔊 Nghe câu</button></div>
+      <div style="margin-top:6px;">${bodyHtml}</div>
+      <div class="explain-box" id="dfexp-${idx}"></div>`;
+    wrap.appendChild(div);
+    div.querySelector('.speak-btn').addEventListener('click', ()=> speak(item.audio, 0.8));
+  });
+}
+renderDictFill();
+document.getElementById('checkDictFill').addEventListener('click', ()=>{
+  let correct = 0, total = 0;
+  dictFillItems.forEach((item, idx)=>{
+    const div = document.querySelectorAll('#dictFillWrap .ex-item')[idx];
+    const inputs = div.querySelectorAll('input');
+    item.answers.forEach((ans, k)=>{
+      total++;
+      const val = inputs[k].value.trim();
+      if(val === ans){ correct++; inputs[k].style.borderColor = '#5b9c5b'; }
+      else inputs[k].style.borderColor = '#a83c34';
+    });
+    document.getElementById('dfexp-'+idx).textContent = `Đáp án: ${item.answers.join('、')}`;
+    document.getElementById('dfexp-'+idx).classList.add('show');
+  });
+  document.getElementById('dictFillScore').textContent = `Điểm: ${correct}/${total}`;
+});
+
+function renderReading(){
+  const wrap = document.getElementById('readingWrap');
+  wrap.innerHTML = '';
+  readingText.forEach((line, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'bi-line';
+    const hanziHtml = line.hanzi.replace(/\{\{(.*?)\}\}/g, '<b style="color:var(--gold)">$1</b>');
+    div.innerHTML = `<div></div><div>
+      <div class="hanzi">${hanziHtml} <button class="sp-btn" data-idx="${idx}">🔊</button></div>
+      <div class="pinyin">${line.pinyin}</div>
+      <div class="vi">${line.vi}</div>
+    </div>`;
+    wrap.appendChild(div);
+  });
+  wrap.querySelectorAll('.sp-btn').forEach(b=>{
+    b.addEventListener('click', ()=> speak(stripMarks(readingText[b.dataset.idx].hanzi), 0.85));
+  });
+}
+renderReading();
+document.getElementById('readAllReading').addEventListener('click', ()=>{
+  speak(readingText.map(l=>stripMarks(l.hanzi)).join(''), 0.85);
+});
+document.getElementById('toggleHideHanziReading').addEventListener('change', e=>{
+  const w = document.getElementById('readingWrap');
+  w.classList.toggle('hide-hz', e.target.checked);
+  w.querySelectorAll('.hanzi.revealed').forEach(h=>h.classList.remove('revealed'));
+});
+document.getElementById('toggleHidePinyinReading').addEventListener('change', e=>{
+  document.getElementById('readingWrap').classList.toggle('hide-py', e.target.checked);
+});
+document.getElementById('toggleHideViReading').addEventListener('change', e=>{
+  document.getElementById('readingWrap').classList.toggle('hide-vi', e.target.checked);
+});
+
+const listenQItems = [
+  {q:"(1) “三岁看大，七岁看老”是什么意思？", say:"这句话的意思是，一个孩子3岁的时候，就能看出他长大后是什么样的人；7岁的时候，就能看出他老的时候的情况。",
+   answer:"孩子3岁时就能看出他长大后是什么样的人；7岁时就能看出他老的时候的情况。", options:["孩子3岁时就能看出他长大后是什么样的人；7岁时就能看出他老的时候的情况。","孩子3岁就长大了，7岁就老了。","3岁的孩子要多看大人，7岁的孩子要多看老人。","孩子3岁到7岁时最需要父母照顾。"]},
+  {q:"(2) 一个人出生时大脑怎么样？", say:"一个人出生时，大脑的重量只有370克。",
+   answer:"大脑的重量只有370克。", options:["大脑的重量只有370克。","大脑的重量跟大人的差不多。","大脑的重量是大人的60%。","大脑的重量是大人的75%。"]},
+  {q:"(3) 1980年的研究结果怎么样？", say:"1980年，英国科学家们找了1000名3岁的孩子，等这些孩子长到26岁时再跟他们谈话。最后发现，这些人在26岁时的性格真的跟他们3岁时差不多。",
+   answer:"这些人26岁时的性格真的跟他们3岁时差不多。", options:["这些人26岁时的性格真的跟他们3岁时差不多。","这些人26岁时的性格跟3岁时完全不一样。","这些孩子长大后都成了科学家。","科学家们没有发现什么。"]},
+  {q:"(4) 为什么每一个爸爸、妈妈都要好好儿珍惜孩子在三岁前的时光？", say:"如果一个人在3岁以前的成长时期会对他以后的人生有那么大的影响，那么，每一个爸爸、妈妈的确应该好好儿珍惜孩子在3岁前的时光，让孩子有健康的性格，这样才会让孩子长大后更容易感受到幸福。",
+   answer:"因为3岁前的成长对人以后的人生影响很大；要让孩子有健康的性格，长大后更容易感受到幸福。", options:["因为3岁前的成长对人以后的人生影响很大；要让孩子有健康的性格，长大后更容易感受到幸福。","因为3岁以后孩子就不需要父母了。","因为3岁的孩子大脑最重。","因为孩子3岁以前不能上学。"]}
+];
+renderMCList('listenQWrap', listenQItems, {block:true, sayLabel:'Nghe đoạn liên quan'});
+document.getElementById('checkListenQ').addEventListener('click', ()=> checkMCList('listenQWrap', listenQItems, 'listenQScore'));
+
+const speakActItems = [
+  {q:"(1) 孩子出生后的3年中，大脑有什么变化？", words:"重量、占、差不多、发育、倍、变慢", hint:"孩子出生时，大脑的重量只有370克；1岁时，大脑重量已经差不多占大人的60%；2岁时，大脑重量差不多是出生时的3倍，占大人的75%；到3岁时，大脑重量跟大人的差不多了，以后的发育就变慢了。"},
+  {q:"(2) 爸爸、妈妈在孩子3岁前要做什么？", words:"把握、珍惜、健康", hint:"爸爸、妈妈要好好儿把握孩子3岁以前的时间，珍惜孩子在3岁前的时光，让孩子健康成长，有健康的性格。"},
+  {q:"(3) 将1000个孩子26岁时的性格跟他们3岁时进行对比，科学家们发现了什么？", words:"差不多、吃惊、有道理", hint:"科学家们发现，这些人26岁时的性格真的跟他们3岁时差不多。科学家们非常吃惊，这说明“三岁看大”还真有些道理。"}
+];
+function renderSpeakAct(){
+  const wrap = document.getElementById('speakActWrap');
+  wrap.innerHTML = '';
+  speakActItems.forEach((item, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    div.innerHTML = `<div>${item.q}</div>
+      <div class="tag-note">Từ gợi ý: ${item.words}</div>
+      <textarea class="answer-box" placeholder="Viết/nói câu trả lời của bạn..."></textarea>
+      <button class="btn small secondary" data-hint="${idx}">👁 Xem gợi ý đáp án</button>
+      <div class="hint-box" id="sahint-${idx}">${item.hint}</div>`;
+    wrap.appendChild(div);
+    div.querySelector('[data-hint]').addEventListener('click', ()=>{
+      document.getElementById('sahint-'+idx).classList.toggle('show');
+    });
+  });
+}
+renderSpeakAct();
+
+/* =========================================================
+   ⭐ 造句 — Đặt câu với từ mới (3 câu/từ: 1 câu trong sách + 2 câu giao tiếp HSK4)
+   src: nơi lấy câu trong sách (null = câu tự soạn)
+========================================================= */
+const zaojuData = [
+  {w:1, items:[
+    {src:"主课文", vi:"Cây già trước cửa đâm chồi mới.", zh:"门前老树长新{{芽}}。", py:"Mén qián lǎo shù zhǎng xīn yá."},
+    {src:null, vi:"Hạt đậu tôi trồng tuần trước đã nảy mầm rồi.", zh:"我上个星期种的豆子已经发{{芽}}了。", py:"Wǒ shàng ge xīngqī zhòng de dòuzi yǐjīng fā yá le."},
+    {src:null, vi:"Mùa xuân, trên cành cây mọc ra rất nhiều chồi non xanh.", zh:"春天，树上长出了很多绿色的新{{芽}}。", py:"Chūntiān, shù shang zhǎng chūle hěn duō lǜsè de xīn yá."}
+  ]},
+  {w:2, items:[
+    {src:"主课文", vi:"Cây khô trong sân lại nở hoa.", zh:"{{院里}}枯木又开花。", py:"Yuàn li kūmù yòu kāi huā."},
+    {src:null, vi:"Trong sân nhà ông tôi trồng rất nhiều hoa.", zh:"爷爷家{{院里}}种了很多花。", py:"Yéye jiā yuàn li zhòngle hěn duō huā."},
+    {src:null, vi:"Bọn trẻ đang chơi bóng trong sân.", zh:"孩子们正在{{院里}}踢球。", py:"Háizimen zhèngzài yuàn li tī qiú."}
+  ]},
+  {w:3, items:[
+    {src:"主课文", vi:"Cây khô trong sân lại nở hoa.", zh:"院里{{枯木}}又开花。", py:"Yuàn li kūmù yòu kāi huā."},
+    {src:null, vi:"Bên hồ có một cây khô, trông rất cô đơn.", zh:"湖边有一棵{{枯木}}，看起来很孤单。", py:"Hú biān yǒu yì kē kūmù, kàn qǐlái hěn gūdān."},
+    {src:null, vi:"Cây khô cũng có thể nở hoa lại, đừng mất hy vọng.", zh:"{{枯木}}也能再开花，别失去希望。", py:"Kūmù yě néng zài kāi huā, bié shīqù xīwàng."}
+  ]},
+  {w:4, items:[
+    {src:"主课文", vi:"Cây khô trong sân lại nở hoa.", zh:"院里枯木又{{开花}}。", py:"Yuàn li kūmù yòu kāi huā."},
+    {src:null, vi:"Hoa đào trong công viên nở rồi, chúng ta đi ngắm đi.", zh:"公园里的桃花{{开花}}了，我们去看看吧。", py:"Gōngyuán li de táohuā kāi huā le, wǒmen qù kànkan ba."},
+    {src:null, vi:"Chậu hoa này mỗi năm chỉ nở hoa một lần.", zh:"这盆花每年只{{开花}}一次。", py:"Zhè pén huā měi nián zhǐ kāi huā yí cì."}
+  ]},
+  {w:5, items:[
+    {src:"主课文", vi:"Thời gian ngủ của tôi gấp 2,5 lần Jack.", zh:"我睡觉的时间是杰克的2.5{{倍}}。", py:"Wǒ shuìjiào de shíjiān shì Jiékè de èr diǎn wǔ bèi."},
+    {src:null, vi:"Giá nhà ở đây gấp ba lần quê tôi.", zh:"这里的房价是我老家的三{{倍}}。", py:"Zhèlǐ de fángjià shì wǒ lǎojiā de sān bèi."},
+    {src:null, vi:"Năm nay số học sinh nhiều gấp đôi năm ngoái.", zh:"今年的学生比去年多了一{{倍}}。", py:"Jīnnián de xuésheng bǐ qùnián duōle yí bèi."}
+  ]},
+  {w:6, items:[
+    {src:"主课文", vi:"Emma, cậu ngủ giỏi thế, bọn tớ có thể gọi cậu là “thần ngủ”.", zh:"艾玛，你这么能睡，我们可以叫你“{{睡神}}”。", py:"Àimǎ, nǐ zhème néng shuì, wǒmen kěyǐ jiào nǐ “shuìshén”."},
+    {src:null, vi:"Em trai tôi là “thần ngủ”, cuối tuần ngủ đến tận trưa.", zh:"我弟弟是个“{{睡神}}”，周末要睡到中午。", py:"Wǒ dìdi shì ge “shuìshén”, zhōumò yào shuì dào zhōngwǔ."},
+    {src:null, vi:"Lên xe là ngủ ngay, cậu đúng là thần ngủ!", zh:"一上车就睡着了，你真是个{{睡神}}！", py:"Yí shàng chē jiù shuìzháo le, nǐ zhēn shì ge shuìshén!"}
+  ]},
+  {w:7, items:[
+    {src:"主课文", vi:"Tôi ăn một bát mì, cô ấy lại ăn được hai bát.", zh:"我吃一{{碗}}面，她却能吃两{{碗}}。", py:"Wǒ chī yì wǎn miàn, tā què néng chī liǎng wǎn."},
+    {src:null, vi:"Ăn xong nhớ rửa bát nhé.", zh:"吃完饭记得洗{{碗}}。", py:"Chī wán fàn jìde xǐ wǎn."},
+    {src:null, vi:"Sáng nay tôi chỉ uống một bát cháo.", zh:"今天早上我只喝了一{{碗}}粥。", py:"Jīntiān zǎoshang wǒ zhǐ hēle yì wǎn zhōu."}
+  ]},
+  {w:8, items:[
+    {src:"主课文", vi:"Tuy cậu ăn không nhiều bằng tớ, nhưng cân nặng thì đâu có kém tớ nhỉ?", zh:"虽然你吃饭没我多，但体重{{却}}不比我少吧？", py:"Suīrán nǐ chī fàn méi wǒ duō, dàn tǐzhòng què bù bǐ wǒ shǎo ba?"},
+    {src:null, vi:"Anh ấy học tiếng Trung chỉ một năm, nói lại rất lưu loát.", zh:"他学汉语才一年，说得{{却}}很流利。", py:"Tā xué Hànyǔ cái yì nián, shuō de què hěn liúlì."},
+    {src:null, vi:"Tôi gọi điện cho cô ấy mấy lần, cô ấy lại không nghe máy.", zh:"我给她打了好几次电话，她{{却}}一直没接。", py:"Wǒ gěi tā dǎle hǎo jǐ cì diànhuà, tā què yìzhí méi jiē."}
+  ]},
+  {w:9, items:[
+    {src:"主课文", vi:"Đừng có chọc đúng chỗ đau thế chứ, các cậu biết tớ ăn mãi không béo mà.", zh:"别{{哪壶不开提哪壶}}，你们知道我吃不胖。", py:"Bié nǎ hú bù kāi tí nǎ hú, nǐmen zhīdào wǒ chī bú pàng."},
+    {src:null, vi:"Anh ấy vừa chia tay, cậu đừng có nhắc chuyện bạn gái nữa.", zh:"他刚分手，你别{{哪壶不开提哪壶}}，问他女朋友的事。", py:"Tā gāng fēnshǒu, nǐ bié nǎ hú bù kāi tí nǎ hú, wèn tā nǚpéngyou de shì."},
+    {src:null, vi:"Tôi thi trượt rồi, cậu lại cứ nhắc đúng chuyện đó.", zh:"我考试没通过，你却{{哪壶不开提哪壶}}。", py:"Wǒ kǎoshì méi tōngguò, nǐ què nǎ hú bù kāi tí nǎ hú."}
+  ]},
+  {w:10, items:[
+    {src:"词语表", vi:"ấm nước", zh:"水{{壶}}", py:"shuǐhú"},
+    {src:null, vi:"Ông tôi mỗi sáng đều pha một ấm trà.", zh:"我爷爷每天早上都要泡一{{壶}}茶。", py:"Wǒ yéye měi tiān zǎoshang dōu yào pào yì hú chá."},
+    {src:null, vi:"Ấm nước này là quà tôi mua ở Trung Quốc.", zh:"这个水{{壶}}是我在中国买的礼物。", py:"Zhège shuǐhú shì wǒ zài Zhōngguó mǎi de lǐwù."}
+  ]},
+  {w:11, items:[
+    {src:"词语表", vi:"Nước sôi rồi.", zh:"水{{开}}了。", py:"Shuǐ kāi le."},
+    {src:null, vi:"Nước sôi rồi thì cho mì vào.", zh:"水{{开}}了以后再放面条。", py:"Shuǐ kāi le yǐhòu zài fàng miàntiáo."},
+    {src:null, vi:"Đừng uống nước lã, uống nước đun sôi đi.", zh:"别喝生水，喝{{开}}水吧。", py:"Bié hē shēngshuǐ, hē kāishuǐ ba."}
+  ]},
+  {w:12, items:[
+    {src:"词语表", vi:"nhắc đến chuyện này", zh:"{{提}}起这件事", py:"tí qǐ zhè jiàn shì"},
+    {src:null, vi:"Cậu xách hộ tôi cái túi này được không?", zh:"你能帮我{{提}}一下这个包吗？", py:"Nǐ néng bāng wǒ tí yíxià zhège bāo ma?"},
+    {src:null, vi:"Mỗi lần nhắc đến quê hương, bà tôi đều rất vui.", zh:"每次{{提}}起老家，奶奶都很高兴。", py:"Měi cì tí qǐ lǎojiā, nǎinai dōu hěn gāoxìng."}
+  ]},
+  {w:13, items:[
+    {src:"主课文", vi:"Bố mẹ và thầy cô lúc nào cũng bảo chúng ta phải quý trọng thời gian.", zh:"我们的父母和老师总是要我们{{珍惜}}时间。", py:"Wǒmen de fùmǔ hé lǎoshī zǒngshì yào wǒmen zhēnxī shíjiān."},
+    {src:null, vi:"Chúng ta phải trân trọng tình bạn này.", zh:"我们要{{珍惜}}这份友谊。", py:"Wǒmen yào zhēnxī zhè fèn yǒuyì."},
+    {src:null, vi:"Hãy tiết kiệm nước, trân trọng từng giọt nước.", zh:"请节约用水，{{珍惜}}每一滴水。", py:"Qǐng jiéyuē yòng shuǐ, zhēnxī měi yì dī shuǐ."}
+  ]},
+  {w:14, items:[
+    {src:"主课文", vi:"Lúc rửa tay, ngày tháng trôi qua từ chậu nước.", zh:"洗手的时候，{{日子}}从水盆里过去。", py:"Xǐ shǒu de shíhou, rìzi cóng shuǐpén li guòqu."},
+    {src:null, vi:"Những ngày ở Trung Quốc tôi sẽ không bao giờ quên.", zh:"在中国的{{日子}}，我永远不会忘记。", py:"Zài Zhōngguó de rìzi, wǒ yǒngyuǎn bú huì wàngjì."},
+    {src:null, vi:"Hôm nay là ngày gì vậy? Sao mọi người vui thế?", zh:"今天是什么{{日子}}？大家怎么这么高兴？", py:"Jīntiān shì shénme rìzi? Dàjiā zěnme zhème gāoxìng?"}
+  ]},
+  {w:15, items:[
+    {src:"主课文", vi:"Lúc rửa tay, ngày tháng trôi qua từ chậu nước.", zh:"洗手的时候，日子从{{水盆}}里过去。", py:"Xǐ shǒu de shíhou, rìzi cóng shuǐpén li guòqu."},
+    {src:null, vi:"Mẹ đổ đầy nước nóng vào chậu để tôi ngâm chân.", zh:"妈妈在{{水盆}}里倒满了热水让我泡脚。", py:"Māma zài shuǐpén li dàomǎnle rèshuǐ ràng wǒ pào jiǎo."},
+    {src:null, vi:"Con mèo uống nước trong chậu nước.", zh:"小猫在喝{{水盆}}里的水。", py:"Xiǎo māo zài hē shuǐpén li de shuǐ."}
+  ]},
+  {w:16, items:[
+    {src:"主课文", vi:"Lúc ăn cơm, ngày tháng trôi qua từ bát cơm.", zh:"吃饭的时候，日子从饭碗里{{过去}}。", py:"Chī fàn de shíhou, rìzi cóng fànwǎn li guòqu."},
+    {src:null, vi:"Một tuần trôi qua rồi mà anh ấy vẫn chưa trả lời tôi.", zh:"一个星期{{过去}}了，他还没回复我。", py:"Yí ge xīngqī guòqu le, tā hái méi huífù wǒ."},
+    {src:null, vi:"Chuyện đã qua rồi, đừng nghĩ nữa.", zh:"事情已经{{过去}}了，别再想了。", py:"Shìqing yǐjīng guòqu le, bié zài xiǎng le."}
+  ]},
+  {w:17, items:[
+    {src:"主课文", vi:"Tớ cũng hay ngồi thẫn thờ lúc nghỉ ngơi.", zh:"我也常常在休息的时候{{发呆}}。", py:"Wǒ yě chángcháng zài xiūxi de shíhou fā dāi."},
+    {src:null, vi:"Cậu đang ngẩn người gì thế? Thầy gọi cậu đấy.", zh:"你在{{发呆}}什么？老师叫你呢。", py:"Nǐ zài fā dāi shénme? Lǎoshī jiào nǐ ne."},
+    {src:null, vi:"Cô ấy ngồi bên cửa sổ ngẩn người cả buổi chiều.", zh:"她坐在窗户旁边{{发}}了一下午的{{呆}}。", py:"Tā zuò zài chuānghu pángbiān fāle yí xiàwǔ de dāi."}
+  ]},
+  {w:18, items:[
+    {src:"主课文", vi:"Haha, tớ đồng ý với đề nghị của Emma.", zh:"哈哈，我同意艾玛的{{建议}}。", py:"Hāha, wǒ tóngyì Àimǎ de jiànyì."},
+    {src:null, vi:"Cảm ơn lời khuyên của bạn, tôi sẽ cân nhắc kỹ.", zh:"谢谢你的{{建议}}，我会好好儿考虑的。", py:"Xièxie nǐ de jiànyì, wǒ huì hǎohāor kǎolǜ de."},
+    {src:null, vi:"Bác sĩ khuyên tôi mỗi ngày đi bộ nửa tiếng.", zh:"医生{{建议}}我每天走半个小时路。", py:"Yīshēng jiànyì wǒ měi tiān zǒu bàn ge xiǎoshí lù."}
+  ]},
+  {w:19, items:[
+    {src:"主课文", vi:"Tớ phải đến công ty thực tập, liệu có bị muộn không?", zh:"我要去公司{{实习}}，会不会迟到？", py:"Wǒ yào qù gōngsī shíxí, huì bu huì chídào?"},
+    {src:null, vi:"Hè này tôi muốn thực tập ở một công ty du lịch.", zh:"今年暑假我想在一家旅游公司{{实习}}。", py:"Jīnnián shǔjià wǒ xiǎng zài yì jiā lǚyóu gōngsī shíxí."},
+    {src:null, vi:"Sau ba tháng thực tập, anh ấy học được rất nhiều thứ.", zh:"{{实习}}了三个月，他学到了很多东西。", py:"Shíxíle sān ge yuè, tā xuédàole hěn duō dōngxi."}
+  ]}
+];
+
+let zjMixed = false;   // true = trộn tất cả câu, không nhóm theo từ
+let zjOrder = [];
+
+function zjItemHtml(it, key, num, wordHint){
+  const zhHtml = it.zh.replace(/\{\{(.+?)\}\}/g, '<b>$1</b>');
+  const badge = it.src ? `<span class="src-badge book">📖 ${it.src}</span>` : `<span class="src-badge">💬 Giao tiếp</span>`;
+  return `<div class="zj-item${it.src ? ' is-book' : ''}">
+    <div class="zj-vi"><span class="zj-num">${num}.</span>${it.vi} ${badge}${wordHint ? ` <span class="zj-hint">— dùng từ: <b>${wordHint}</b></span>` : ''}</div>
+    <input class="zj-input" type="text" placeholder="Viết câu tiếng Trung…" autocomplete="off">
+    <div class="zj-row"><button class="btn small secondary zj-toggle" data-key="${key}">👁 Đáp án</button></div>
+    <div class="zj-ans" id="zj-ans-${key}">
+      <div class="zj-zh">${zhHtml} <button class="sp-btn" data-say="${stripMarks(it.zh)}" title="Nghe">🔊</button></div>
+      <div class="pinyin">${it.py}</div>
+    </div>
+  </div>`;
+}
+
+function renderZaoju(){
+  const wrap = document.getElementById('zaojuWrap');
+  const filter = document.getElementById('zjWordFilter').value;
+  let html = '';
+  if(zjMixed){
+    zjOrder.forEach((ref, i)=>{
+      const g = zaojuData[ref.g];
+      if(filter !== 'all' && String(g.w) !== filter) return;
+      const w = vocab.find(v=>v.id===g.w);
+      html += zjItemHtml(g.items[ref.i], `${ref.g}-${ref.i}`, i+1, w.hanzi);
+    });
+  } else {
+    zaojuData.forEach((g, gi)=>{
+      if(filter !== 'all' && String(g.w) !== filter) return;
+      const w = vocab.find(v=>v.id===g.w);
+      html += `<div class="zj-word">
+        <div class="zj-head"><span class="zj-hz">${w.hanzi}</span><span class="pinyin">${w.pinyin}</span><span class="zj-mean">— ${w.meaning}</span>
+          <button class="sp-btn" data-say="${w.hanzi}" title="Nghe">🔊</button></div>
+        ${g.items.map((it, ii)=> zjItemHtml(it, `${gi}-${ii}`, ii+1, null)).join('')}
+      </div>`;
+    });
+  }
+  wrap.innerHTML = html;
+}
+
+(function initZaoju(){
+  const sel = document.getElementById('zjWordFilter');
+  sel.innerHTML = '<option value="all">Tất cả (' + zaojuData.length + ' từ)</option>' +
+    zaojuData.map(g=>{ const w = vocab.find(v=>v.id===g.w); return `<option value="${g.w}">${g.w}. ${w.hanzi}</option>`; }).join('');
+  sel.addEventListener('change', renderZaoju);
+  document.getElementById('zjHideBook').addEventListener('change', e=>{
+    document.getElementById('zaojuWrap').classList.toggle('zj-hide-book', e.target.checked);
+  });
+  document.getElementById('zjShowAll').addEventListener('click', ()=>{
+    document.querySelectorAll('#zaojuWrap .zj-ans').forEach(a=>a.classList.add('show'));
+  });
+  document.getElementById('zjHideAll').addEventListener('click', ()=>{
+    document.querySelectorAll('#zaojuWrap .zj-ans').forEach(a=>a.classList.remove('show'));
+  });
+  const shuffleBtn = document.getElementById('zjShuffle');
+  shuffleBtn.addEventListener('click', ()=>{
+    zjMixed = true;
+    const refs = [];
+    zaojuData.forEach((g, gi)=> g.items.forEach((_, ii)=> refs.push({g:gi, i:ii})));
+    zjOrder = shuffleArr(refs);
+    document.getElementById('zjGroupBtn').style.display = '';
+    renderZaoju();
+  });
+  document.getElementById('zjGroupBtn').addEventListener('click', e=>{
+    zjMixed = false;
+    e.target.style.display = 'none';
+    renderZaoju();
+  });
+  document.getElementById('zaojuWrap').addEventListener('click', e=>{
+    const t = e.target.closest('.zj-toggle');
+    if(t){ document.getElementById('zj-ans-'+t.dataset.key).classList.toggle('show'); return; }
+    const sp = e.target.closest('.sp-btn[data-say]');
+    if(sp) speak(sp.dataset.say, 0.85);
+  });
+  renderZaoju();
+})();
+
+/* =========================================================
+   ⭐ 综合测试
+========================================================= */
+const finalTestBank = [
+  {type:'mc', q:'“发呆”是什么意思？', options:['短时间坐或站在那里，脑子里什么也不想','一直在忙，不休息','喜欢睡觉','说别人不想听的话'], answer:0},
+  {type:'mc', q:'“哪壶不开提哪壶”是什么意思？', options:['别人不希望你说，你却偏要说这件事','水开了要马上提壶','不会烧水','喜欢喝茶'], answer:0},
+  {type:'mc', q:'“睡神”指什么样的人？', options:['很能睡、喜欢睡觉的人','睡不着觉的人','管睡觉的神仙','起得很早的人'], answer:0},
+  {type:'mc', q:'“凑热闹”的意思最接近：', options:['跟着别人一起参加、一起说（为了好玩儿）','一个人安静地待着','天气很热','吵架'], answer:0},
+  {type:'mc', q:'“亲戚”是什么人？', options:['有血缘或婚姻关系的家里人','同学','邻居','同事'], answer:0},
+  {type:'mc', q:'完成句子：门前老树长新____，院里枯木又开花。', options:['芽','花','碗','壶'], answer:0},
+  {type:'mc', q:'完成句子：父母和老师总是要我们____时间。', options:['珍惜','发呆','实习','提'], answer:0},
+  {type:'mc', q:'完成句子：我吃一碗面，她____能吃两碗。', options:['却','就','都','才'], answer:0},
+  {type:'mc', q:'完成句子：我要去公司____，会不会迟到？', options:['实习','建议','发育','把握'], answer:0},
+  {type:'mc', q:'完成句子：爸爸、妈妈要好好儿____孩子3岁以前的时间。', options:['把握','出生','重量','吃惊'], answer:0},
+  {type:'mc', q:'“5/22”怎么读？', options:['二十二分之五','五分之二十二','五点二二','二十二点五'], answer:0},
+  {type:'mc', q:'“89.226”怎么读？', options:['八十九点二二六','八十九点二百二十六','八九点二二六','八十九分之二二六'], answer:0},
+  {type:'mc', q:'“78.5%”怎么读？', options:['百分之七十八点五','七十八点五百分之','百分之七八点五','七十八分之五'], answer:0},
+  {type:'mc', q:'“他们班的人数比我们班多一倍”，意思是：', options:['他们班的人数是我们班的两倍','他们班的人数是我们班的三倍','他们班比我们班多一个人','两个班人数一样'], answer:0},
+  {type:'mc', q:'这次旅行我花了1800元，他花的钱是我的四倍，他花了多少钱？', options:['7200元','5400元','450元','9000元'], answer:0},
+  {type:'mc', q:'他60岁，我20岁，我的年龄是他年龄的：', options:['三分之一','一分之三','三倍','二分之一'], answer:0},
+  {type:'mc', q:'根据主课文，艾玛睡觉的时间是杰克的几倍？', options:['2.5倍','两倍','四倍','五分之四'], answer:0},
+  {type:'mc', q:'根据主课文，赵亮的体重是多少？', options:['61.2公斤','76.5公斤','60公斤','20公斤'], answer:0},
+  {type:'tf', q:'根据主课文，李梅发呆的时间是杰克的二分之一。', answer:false, explain:'李梅发呆的时间是杰克的两倍，杰克发呆的时间是李梅的二分之一。'},
+  {type:'tf', q:'根据主课文，《时间都去哪儿了》这首歌是杰克的中国阿姨教他的。', answer:true, explain:'杰克：我的中国阿姨教我的。'},
+  {type:'tf', q:'根据副课文，赵亮对“时间都去哪儿了”这个话题不感兴趣。', answer:false, explain:'赵亮对这个话题很感兴趣，想跟大家讨论一下。'},
+  {type:'mc', q:'根据拓展阅读，一个人出生时大脑的重量是多少？', options:['370克','是大人的60%','是大人的75%','跟大人差不多'], answer:0},
+  {type:'tf', q:'根据拓展阅读，科学家们发现那些人26岁时的性格跟3岁时差不多。', answer:true, explain:'最后发现，这些人在26岁时的性格真的跟他们3岁时差不多。'}
+];
+
+function startFinalTest(){
+  const order = shuffleArr(finalTestBank.map((_,i)=>i));
+  const wrap = document.getElementById('finalTestWrap');
+  wrap.innerHTML = '';
+  order.forEach((qi, idx)=>{
+    const item = finalTestBank[qi];
+    const div = document.createElement('div');
+    div.className = 'ex-item';
+    div.dataset.qi = qi;
+    if(item.type === 'mc'){
+      const optIdxArr = shuffleArr(item.options.map((_,i)=>i));
+      let optsHtml = optIdxArr.map(oi=>`<button class="choice-btn" data-oi="${oi}">${item.options[oi]}</button>`).join('');
+      div.innerHTML = `<div>${idx+1}. ${item.q}</div><div>${optsHtml}</div><div class="explain-box" id="ft-exp-${idx}"></div>`;
+    } else {
+      div.innerHTML = `<div>${idx+1}. ${item.q}</div>
+        <div><button class="choice-btn" data-val="true">对</button><button class="choice-btn" data-val="false">错</button></div>
+        <div class="explain-box" id="ft-exp-${idx}"></div>`;
+    }
+    wrap.appendChild(div);
+    div.querySelectorAll('.choice-btn').forEach(b=>{
+      b.addEventListener('click', ()=>{
+        div.querySelectorAll('.choice-btn').forEach(x=>x.classList.remove('selected'));
+        b.classList.add('selected');
+        div.dataset.selected = (item.type==='mc') ? b.dataset.oi : b.dataset.val;
+      });
+    });
+  });
+  document.getElementById('finalTestScore').innerHTML = '';
+  document.getElementById('checkFinalTest').style.display = '';
+}
+document.getElementById('startFinalTest').addEventListener('click', startFinalTest);
+document.getElementById('checkFinalTest').addEventListener('click', ()=>{
+  let correct = 0;
+  const items = document.querySelectorAll('#finalTestWrap .ex-item');
+  items.forEach((div, idx)=>{
+    const qi = parseInt(div.dataset.qi);
+    const item = finalTestBank[qi];
+    const sel = div.dataset.selected;
+    let isCorrect = false;
+    if(item.type === 'mc'){
+      isCorrect = (sel !== undefined && parseInt(sel) === item.answer);
+      div.querySelectorAll('.choice-btn').forEach(b=>{
+        if(parseInt(b.dataset.oi) === item.answer) b.classList.add('correct');
+        else if(b.dataset.oi === sel) b.classList.add('wrong');
+      });
+    } else {
+      isCorrect = (sel === String(item.answer));
+      div.querySelectorAll('.choice-btn').forEach(b=>{
+        if((b.dataset.val === 'true') === item.answer) b.classList.add('correct');
+        else if(b.dataset.val === sel) b.classList.add('wrong');
+      });
+    }
+    if(isCorrect) correct++;
+    if(item.explain){
+      const exp = document.getElementById('ft-exp-'+idx);
+      exp.textContent = item.explain;
+      exp.classList.add('show');
+    }
+  });
+  const pct = items.length ? Math.round((correct/items.length)*100) : 0;
+  document.getElementById('finalTestScore').innerHTML = `<div class="final-score-big">Kết quả: ${correct}/${items.length} (${pct}%)</div>`;
+});
+
+/* ===== 写作训练 + 聚宝盆 ===== */
+(function(){
+  const box = document.getElementById('writingBox');
+  const cnt = document.getElementById('writingCount');
+  const upd = ()=>{ cnt.textContent = 'Số chữ Hán: ' + ((box.value.match(/[一-鿿]/g)||[]).length) + ' (yêu cầu 150~200)'; };
+  box.addEventListener('input', upd); upd();
+  document.getElementById('writingHintBtn').addEventListener('click', ()=> document.getElementById('writingHint').classList.toggle('show'));
+  const jb = document.getElementById('jubaopenBox');
+  try{ jb.value = localStorage.getItem('bai16-jubaopen') || ''; }catch(e){}
+  jb.addEventListener('input', ()=>{ try{ localStorage.setItem('bai16-jubaopen', jb.value); }catch(e){} });
+})();
+
+/* ===== Ẩn chữ Hán: click ô mờ để hiện lại câu đó ===== */
+document.addEventListener('click', function(ev){
+  const hz = ev.target.closest ? ev.target.closest('.hanzi') : null;
+  if(!hz) return;
+  if(ev.target.closest('.sp-btn')) return;          /* nút loa vẫn phát audio */
+  const wrap = hz.closest('.hide-hz');
+  if(!wrap) return;
+  hz.classList.toggle('revealed');
+}, {capture:false});
+/* data-hz-reveal */
+</script>
+</body>
+</html>
